@@ -1,0 +1,14 @@
+{
+  "topstep_50k": {
+    "daily_loss": 1000,
+    "trailing_dd": 2000
+  },
+  "apex_50k": {
+    "daily_loss": null,
+    "trailing_dd": 2500
+  },
+  "ftmo_100k": {
+    "daily_loss": 5000,
+    "max_dd": 10000
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "model_id": "XAUUSD_smc_A",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:19:44.572492+00:00",
+  "instrument": "XAUUSD",
+  "data_series": "GC",
+  "point_value_usd": 100.0,
+  "tick": 0.1,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.1,
+    "comm_side": 0.0
+  },
+  "strategy": "smc",
+  "style": "A",
+  "config": {
+    "params": {
+      "disp_k": 1.0,
+      "killzone": true,
+      "bias": false,
+      "require_fvg": true
+    },
+    "rr": 3.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0075,
+    "conviction_scale": false,
+    "full_train_obj": 0.54
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 17,
+    "win_rate": 0.3529,
+    "avg_R": -0.1136,
+    "t_stat": -0.4,
+    "profit_factor": 0.794,
+    "total_return_pct": -1.5,
+    "ann_return_pct": -1.12,
+    "sharpe": -0.34,
+    "max_dd_pct": -4.36,
+    "trailing_dd_breaches": 0,
+    "oos_days": 339
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "model_id": "EURUSD_ta_B",
+  "version": 1,
+  "generated_utc": "2026-07-06T10:35:19.646483+00:00",
+  "instrument": "EURUSD",
+  "data_series": "EURUSD",
+  "point_value_usd": 100000.0,
+  "tick": 1e-05,
+  "costs": {
+    "spread": 6e-05,
+    "slip": 2e-05,
+    "comm_side": 4e-05
+  },
+  "strategy": "ta",
+  "style": "B",
+  "config": {
+    "params": {
+      "thresh": 3,
+      "don_n": 50,
+      "stop_k": 1.75
+    },
+    "rr": 3.0,
+    "time_exit": 192,
+    "max_concurrent": 1,
+    "risk_pct": 0.01,
+    "conviction_scale": false,
+    "full_train_obj": -3.25
+  },
+  "signal_timeframe": "15m",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 633,
+    "win_rate": 0.267,
+    "avg_R": -0.2043,
+    "t_stat": -3.32,
+    "profit_factor": 0.751,
+    "total_return_pct": -59.96,
+    "ann_return_pct": -5.31,
+    "sharpe": -0.62,
+    "max_dd_pct": -62.86,
+    "trailing_dd_breaches": 3,
+    "oos_days": 4231
+  }
+}

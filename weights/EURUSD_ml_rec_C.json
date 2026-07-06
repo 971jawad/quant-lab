@@ -1,0 +1,47 @@
+{
+  "model_id": "EURUSD_ml_rec_C",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:43:07.126325+00:00",
+  "instrument": "EURUSD",
+  "data_series": "EURUSD",
+  "point_value_usd": 100000.0,
+  "tick": 1e-05,
+  "costs": {
+    "spread": 6e-05,
+    "slip": 2e-05,
+    "comm_side": 4e-05
+  },
+  "strategy": "ml_rec",
+  "style": "C",
+  "config": {
+    "params": {
+      "p_thresh": 0.6,
+      "stop_k": 1.75
+    },
+    "rr": 2.0,
+    "time_exit": 24,
+    "max_concurrent": 3,
+    "risk_pct": 0.002,
+    "conviction_scale": true,
+    "full_train_obj": 1.64
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 1023,
+    "win_rate": 0.3871,
+    "avg_R": -0.0261,
+    "t_stat": -0.64,
+    "profit_factor": 0.959,
+    "total_return_pct": -1.43,
+    "ann_return_pct": -0.68,
+    "sharpe": 0.02,
+    "max_dd_pct": -14.65,
+    "trailing_dd_breaches": 14,
+    "oos_days": 534
+  }
+}

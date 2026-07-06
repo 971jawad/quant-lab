@@ -1,0 +1,48 @@
+{
+  "model_id": "MNQ_ta_B",
+  "version": 1,
+  "generated_utc": "2026-07-06T09:32:52.209036+00:00",
+  "instrument": "MNQ",
+  "data_series": "NSXUSD",
+  "point_value_usd": 2.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.5,
+    "slip": 0.5,
+    "comm_side": 0.31
+  },
+  "strategy": "ta",
+  "style": "B",
+  "config": {
+    "params": {
+      "thresh": 3,
+      "don_n": 50,
+      "stop_k": 1.75
+    },
+    "rr": 2.0,
+    "time_exit": 192,
+    "max_concurrent": 1,
+    "risk_pct": 0.0025,
+    "conviction_scale": false,
+    "full_train_obj": -1.06
+  },
+  "signal_timeframe": "15m",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 568,
+    "win_rate": 0.3239,
+    "avg_R": -0.0916,
+    "t_stat": -1.47,
+    "profit_factor": 0.878,
+    "total_return_pct": -19.12,
+    "ann_return_pct": -1.37,
+    "sharpe": -0.37,
+    "max_dd_pct": -24.62,
+    "trailing_dd_breaches": 3,
+    "oos_days": 3887
+  }
+}

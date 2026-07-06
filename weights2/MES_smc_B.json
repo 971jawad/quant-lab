@@ -1,0 +1,49 @@
+{
+  "model_id": "MES_smc_B",
+  "version": 1,
+  "generated_utc": "2026-07-06T08:31:23.509252+00:00",
+  "instrument": "MES",
+  "data_series": "SPXUSD",
+  "point_value_usd": 5.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.25,
+    "comm_side": 0.13
+  },
+  "strategy": "smc",
+  "style": "B",
+  "config": {
+    "params": {
+      "disp_k": 1.0,
+      "killzone": true,
+      "bias": true,
+      "require_fvg": true
+    },
+    "rr": 1.5,
+    "time_exit": 192,
+    "max_concurrent": 1,
+    "risk_pct": 0.0075,
+    "conviction_scale": false,
+    "full_train_obj": -0.63
+  },
+  "signal_timeframe": "15m",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 203,
+    "win_rate": 0.3645,
+    "avg_R": -0.1493,
+    "t_stat": -1.74,
+    "profit_factor": 0.779,
+    "total_return_pct": -13.23,
+    "ann_return_pct": -0.92,
+    "sharpe": -0.35,
+    "max_dd_pct": -17.73,
+    "trailing_dd_breaches": 1,
+    "oos_days": 3880
+  }
+}

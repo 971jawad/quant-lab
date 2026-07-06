@@ -1,0 +1,73 @@
+{
+  "model_id": "ES_ml_A",
+  "version": 1,
+  "generated_utc": "2026-07-06T09:00:01.176603+00:00",
+  "instrument": "ES",
+  "data_series": "SPXUSD",
+  "point_value_usd": 50.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.25,
+    "comm_side": 0.06
+  },
+  "strategy": "ml",
+  "style": "A",
+  "config": {
+    "params": {
+      "p_thresh": 0.6,
+      "stop_k": 1.75
+    },
+    "rr": 3.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0075,
+    "conviction_scale": false,
+    "full_train_obj": 0.86
+  },
+  "signal_timeframe": "15m",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 7311,
+    "win_rate": 0.3104,
+    "avg_R": -0.128,
+    "t_stat": -7.16,
+    "profit_factor": 0.825,
+    "total_return_pct": -99.94,
+    "ann_return_pct": -38.33,
+    "sharpe": -1.8,
+    "max_dd_pct": -99.95,
+    "trailing_dd_breaches": 1,
+    "oos_days": 3904
+  },
+  "ml": {
+    "model_file": "ES_ml_A.pkl",
+    "algorithm": "HistGradientBoostingClassifier",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ]
+  }
+}

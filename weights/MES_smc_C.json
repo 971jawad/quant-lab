@@ -1,0 +1,49 @@
+{
+  "model_id": "MES_smc_C",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:11:08.467508+00:00",
+  "instrument": "MES",
+  "data_series": "ES",
+  "point_value_usd": 5.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.25,
+    "comm_side": 0.13
+  },
+  "strategy": "smc",
+  "style": "C",
+  "config": {
+    "params": {
+      "disp_k": 1.0,
+      "killzone": false,
+      "bias": false,
+      "require_fvg": true
+    },
+    "rr": 1.5,
+    "time_exit": 24,
+    "max_concurrent": 3,
+    "risk_pct": 0.004,
+    "conviction_scale": true,
+    "full_train_obj": 0.15
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 17,
+    "win_rate": 0.4706,
+    "avg_R": 0.1352,
+    "t_stat": 0.46,
+    "profit_factor": 1.255,
+    "total_return_pct": 0.22,
+    "ann_return_pct": 0.22,
+    "sharpe": -0.03,
+    "max_dd_pct": -1.98,
+    "trailing_dd_breaches": 0,
+    "oos_days": 261
+  }
+}

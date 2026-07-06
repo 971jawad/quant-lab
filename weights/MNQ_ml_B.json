@@ -1,0 +1,95 @@
+{
+  "model_id": "MNQ_ml_B",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:16:56.278770+00:00",
+  "instrument": "MNQ",
+  "data_series": "NQ",
+  "point_value_usd": 2.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.5,
+    "slip": 0.5,
+    "comm_side": 0.31
+  },
+  "strategy": "ml",
+  "style": "B",
+  "config": {
+    "params": {
+      "p_thresh": 0.56,
+      "stop_k": 1.75
+    },
+    "rr": 3.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0025,
+    "conviction_scale": false,
+    "full_train_obj": 0.09
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 373,
+    "win_rate": 0.319,
+    "avg_R": -0.0418,
+    "t_stat": -0.54,
+    "profit_factor": 0.939,
+    "total_return_pct": -6.77,
+    "ann_return_pct": -4.57,
+    "sharpe": -0.42,
+    "max_dd_pct": -13.02,
+    "trailing_dd_breaches": 9,
+    "oos_days": 378
+  },
+  "ml": {
+    "model_file": "MNQ_ml_B.pkl",
+    "algorithm": "GradientBoostingClassifier(n=200,depth=3,lr=0.05)",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ],
+    "feature_importances": {
+      "pd_range_pct": 0.16839,
+      "sma50_dist": 0.10321,
+      "macd_hist": 0.07383,
+      "dist_pdh": 0.06943,
+      "atr_pct": 0.06464,
+      "sma200_dist": 0.06351,
+      "dist_pdl": 0.0625,
+      "ret24": 0.06031,
+      "vol_ratio": 0.0575,
+      "dow": 0.04923,
+      "bb_z": 0.04677,
+      "rsi": 0.03654,
+      "don_pos": 0.03299,
+      "ret6": 0.03157,
+      "body_ratio": 0.02411,
+      "range_atr": 0.01468,
+      "ret1": 0.01374,
+      "ret3": 0.01102,
+      "hour_sin": 0.00818,
+      "hour_cos": 0.00784
+    }
+  }
+}

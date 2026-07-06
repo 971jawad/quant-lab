@@ -1,0 +1,73 @@
+{
+  "model_id": "MNQ_ml_C",
+  "version": 1,
+  "generated_utc": "2026-07-06T09:13:10.930590+00:00",
+  "instrument": "MNQ",
+  "data_series": "NSXUSD",
+  "point_value_usd": 2.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.5,
+    "slip": 0.5,
+    "comm_side": 0.31
+  },
+  "strategy": "ml",
+  "style": "C",
+  "config": {
+    "params": {
+      "p_thresh": 0.56,
+      "stop_k": 1.75
+    },
+    "rr": 2.0,
+    "time_exit": 192,
+    "max_concurrent": 3,
+    "risk_pct": 0.002,
+    "conviction_scale": true,
+    "full_train_obj": -0.86
+  },
+  "signal_timeframe": "15m",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 9216,
+    "win_rate": 0.3438,
+    "avg_R": -0.0791,
+    "t_stat": -5.31,
+    "profit_factor": 0.891,
+    "total_return_pct": -92.61,
+    "ann_return_pct": -15.45,
+    "sharpe": -1.33,
+    "max_dd_pct": -94.45,
+    "trailing_dd_breaches": 1,
+    "oos_days": 3911
+  },
+  "ml": {
+    "model_file": "MNQ_ml_C.pkl",
+    "algorithm": "HistGradientBoostingClassifier",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ]
+  }
+}

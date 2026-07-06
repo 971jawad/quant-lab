@@ -1,0 +1,49 @@
+{
+  "model_id": "MNQ_smc_C",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:15:36.157487+00:00",
+  "instrument": "MNQ",
+  "data_series": "NQ",
+  "point_value_usd": 2.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.5,
+    "slip": 0.5,
+    "comm_side": 0.31
+  },
+  "strategy": "smc",
+  "style": "C",
+  "config": {
+    "params": {
+      "disp_k": 1.0,
+      "killzone": false,
+      "bias": false,
+      "require_fvg": true
+    },
+    "rr": 2.0,
+    "time_exit": 48,
+    "max_concurrent": 3,
+    "risk_pct": 0.004,
+    "conviction_scale": true,
+    "full_train_obj": 0.5
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 16,
+    "win_rate": 0.4375,
+    "avg_R": 0.0832,
+    "t_stat": 0.27,
+    "profit_factor": 1.165,
+    "total_return_pct": 0.51,
+    "ann_return_pct": 0.53,
+    "sharpe": 0.27,
+    "max_dd_pct": -1.21,
+    "trailing_dd_breaches": 0,
+    "oos_days": 246
+  }
+}

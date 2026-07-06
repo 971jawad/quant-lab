@@ -1,0 +1,47 @@
+{
+  "model_id": "ES_ml_err_C",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:15:30.927268+00:00",
+  "instrument": "ES",
+  "data_series": "ES",
+  "point_value_usd": 50.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.25,
+    "comm_side": 0.06
+  },
+  "strategy": "ml_err",
+  "style": "C",
+  "config": {
+    "params": {
+      "p_thresh": 0.56,
+      "stop_k": 1.0
+    },
+    "rr": 2.0,
+    "time_exit": 48,
+    "max_concurrent": 3,
+    "risk_pct": 0.002,
+    "conviction_scale": true,
+    "full_train_obj": -0.37
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 568,
+    "win_rate": 0.3891,
+    "avg_R": -0.0155,
+    "t_stat": -0.29,
+    "profit_factor": 0.975,
+    "total_return_pct": -0.31,
+    "ann_return_pct": -0.21,
+    "sharpe": 0.0,
+    "max_dd_pct": -7.14,
+    "trailing_dd_breaches": 6,
+    "oos_days": 377
+  }
+}

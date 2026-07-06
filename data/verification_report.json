@@ -1,0 +1,64 @@
+[
+  {
+    "series": "ES",
+    "vs": "NASDAQ:SPY",
+    "overlap_days": 750,
+    "return_days": 1,
+    "return_correlation": 0.97659,
+    "verdict": "VERIFIED"
+  },
+  {
+    "series": "ES",
+    "vs": "micro:MES=F",
+    "overlap_days": 750,
+    "return_days": 1,
+    "return_correlation": 1.0,
+    "median_abs_close_diff_pct": 0.0,
+    "verdict": "VERIFIED"
+  },
+  {
+    "series": "NQ",
+    "vs": "NASDAQ:NDX",
+    "overlap_days": 750,
+    "return_days": 1,
+    "return_correlation": 0.9826,
+    "median_abs_close_diff_pct": 0.5174,
+    "verdict": "VERIFIED"
+  },
+  {
+    "series": "NQ",
+    "vs": "micro:MNQ=F",
+    "overlap_days": 750,
+    "return_days": 1,
+    "return_correlation": 0.99931,
+    "median_abs_close_diff_pct": 0.0,
+    "verdict": "VERIFIED"
+  },
+  {
+    "series": "GC",
+    "vs": "LBMA:gold_pm",
+    "overlap_days": 750,
+    "return_days": 1,
+    "return_correlation": 0.84367,
+    "median_abs_close_diff_pct": 0.2803,
+    "verdict": "VERIFIED"
+  },
+  {
+    "series": "GC",
+    "vs": "micro:MGC=F",
+    "overlap_days": 750,
+    "return_days": 1,
+    "return_correlation": 0.9985,
+    "median_abs_close_diff_pct": 0.0,
+    "verdict": "VERIFIED"
+  },
+  {
+    "series": "EURUSD",
+    "vs": "ECB:refrate",
+    "overlap_days": 750,
+    "return_days": 5,
+    "return_correlation": 0.91338,
+    "median_abs_close_diff_pct": 0.1599,
+    "verdict": "VERIFIED"
+  }
+]

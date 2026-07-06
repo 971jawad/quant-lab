@@ -1,0 +1,73 @@
+{
+  "model_id": "EURUSD_ml_err_A",
+  "version": 1,
+  "generated_utc": "2026-07-06T10:20:42.104662+00:00",
+  "instrument": "EURUSD",
+  "data_series": "EURUSD",
+  "point_value_usd": 100000.0,
+  "tick": 1e-05,
+  "costs": {
+    "spread": 6e-05,
+    "slip": 2e-05,
+    "comm_side": 4e-05
+  },
+  "strategy": "ml_err",
+  "style": "A",
+  "config": {
+    "params": {
+      "p_thresh": 0.56,
+      "stop_k": 1.75
+    },
+    "rr": 3.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0075,
+    "conviction_scale": false,
+    "full_train_obj": -5.06
+  },
+  "signal_timeframe": "15m",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 7259,
+    "win_rate": 0.3082,
+    "avg_R": -0.1552,
+    "t_stat": -8.8,
+    "profit_factor": 0.789,
+    "total_return_pct": -99.99,
+    "ann_return_pct": -41.02,
+    "sharpe": -2.15,
+    "max_dd_pct": -99.99,
+    "trailing_dd_breaches": 3,
+    "oos_days": 4247
+  },
+  "ml": {
+    "model_file": "EURUSD_ml_err_A.pkl",
+    "algorithm": "HistGradientBoostingClassifier",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "model_id": "MNQ_ml_err_B",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:18:24.770517+00:00",
+  "instrument": "MNQ",
+  "data_series": "NQ",
+  "point_value_usd": 2.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.5,
+    "slip": 0.5,
+    "comm_side": 0.31
+  },
+  "strategy": "ml_err",
+  "style": "B",
+  "config": {
+    "params": {
+      "p_thresh": 0.56,
+      "stop_k": 1.75
+    },
+    "rr": 2.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.005,
+    "conviction_scale": false,
+    "full_train_obj": 0.31
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 324,
+    "win_rate": 0.2901,
+    "avg_R": -0.0679,
+    "t_stat": -0.8,
+    "profit_factor": 0.905,
+    "total_return_pct": -3.72,
+    "ann_return_pct": -2.49,
+    "sharpe": -0.22,
+    "max_dd_pct": -7.76,
+    "trailing_dd_breaches": 31,
+    "oos_days": 378
+  }
+}

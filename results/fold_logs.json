@@ -1,0 +1,6262 @@
+{
+  "MES_smc_A": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 6,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.62
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.25
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.12
+    }
+  ],
+  "MES_smc_B": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 6,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.64
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.37
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.25
+    }
+  ],
+  "MES_smc_C": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.22
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 6,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.36
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.81
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.7
+    }
+  ],
+  "MES_ml_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 112,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.17
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 45,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.08
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 108,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.41
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 102,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.3
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 41,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.17
+    }
+  ],
+  "MES_ml_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 157,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.77
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 43,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.35
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 108,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.41
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 81,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.95
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 48,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.67
+    }
+  ],
+  "MES_ml_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 215,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.27
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 100,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.02
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 173,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.05
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 122,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.1
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 69,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.61
+    }
+  ],
+  "MES_ml_err_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 108,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.24
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 39,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.74
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 44,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.81
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 74,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.41
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 31,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.96
+    }
+  ],
+  "MES_ml_err_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 95,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.01,
+      "conviction_scale": false,
+      "train_obj": -0.69
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 53,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.2
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 44,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.81
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 74,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.41
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 30,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.11
+    }
+  ],
+  "MES_ml_err_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 144,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.92
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 73,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.07
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 89,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.89
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 163,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.62
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 41,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.02
+    }
+  ],
+  "MES_ml_rec_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 116,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.3
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 63,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.35
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 63,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.71
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 105,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.07
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 37,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.41
+    }
+  ],
+  "MES_ml_rec_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 165,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.01,
+      "conviction_scale": false,
+      "train_obj": -0.28
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 57,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.37
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 85,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.85
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 98,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.27
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 52,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.01,
+      "conviction_scale": false,
+      "train_obj": 0.01
+    }
+  ],
+  "MES_ml_rec_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 170,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.5
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 187,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.34
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 182,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.61
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 144,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.51
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 81,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -1.08
+    }
+  ],
+  "MES_ta_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 34,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.09
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 37,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.14
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 29,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.53
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 30,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.2
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 26,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.55
+    }
+  ],
+  "MES_ta_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 32,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.42
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 39,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.26
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 28,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.01,
+      "conviction_scale": false,
+      "train_obj": -0.35
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 28,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.07
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 26,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": -0.16
+    }
+  ],
+  "MES_ta_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 56,
+      "params": {
+        "thresh": 2,
+        "don_n": 50,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.56
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 76,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.36
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 64,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.48
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 54,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.4
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 59,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.25
+    }
+  ],
+  "ES_smc_A": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 6,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.64
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.27
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.14
+    }
+  ],
+  "ES_smc_B": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 6,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.66
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.38
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.27
+    }
+  ],
+  "ES_smc_C": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.2
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 6,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.39
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.84
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.73
+    }
+  ],
+  "ES_ml_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 112,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.12
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 45,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.06
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 108,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.49
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 102,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.39
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 41,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.19
+    }
+  ],
+  "ES_ml_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 157,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.86
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 43,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.37
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 108,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.49
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 81,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.01
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 48,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.72
+    }
+  ],
+  "ES_ml_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 215,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.39
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 100,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.07
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 173,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.03
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 122,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.17
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 69,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.51
+    }
+  ],
+  "ES_ml_err_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 108,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.19
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 39,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.71
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 44,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.84
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 74,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.44
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 31,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.01
+    }
+  ],
+  "ES_ml_err_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 95,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.01,
+      "conviction_scale": false,
+      "train_obj": -0.65
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 53,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.16
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 44,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.84
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 74,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.44
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 30,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.15
+    }
+  ],
+  "ES_ml_err_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 201,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.81
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 73,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.17
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 89,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.95
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 163,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.54
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 42,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.04
+    }
+  ],
+  "ES_ml_rec_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 116,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.25
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 63,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.38
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 63,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.74
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 105,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.01
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 37,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.38
+    }
+  ],
+  "ES_ml_rec_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 165,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.01,
+      "conviction_scale": false,
+      "train_obj": -0.19
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 57,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.39
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 85,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.91
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 98,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.34
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 52,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.06
+    }
+  ],
+  "ES_ml_rec_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 220,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.39
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 187,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.2
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 182,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.69
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 144,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.44
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 81,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -1.01
+    }
+  ],
+  "ES_ta_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 34,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.14
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 37,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.09
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 29,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.48
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 30,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.14
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 26,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.48
+    }
+  ],
+  "ES_ta_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 32,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.46
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 39,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.32
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 28,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": -0.3
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 28,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.12
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 26,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": -0.11
+    }
+  ],
+  "ES_ta_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 56,
+      "params": {
+        "thresh": 2,
+        "don_n": 50,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.63
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 76,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.44
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 64,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.39
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 54,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.31
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13672,
+      "oos_trades": 59,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.15
+    }
+  ],
+  "MNQ_smc_A": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.31
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.28
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.89
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.68
+    }
+  ],
+  "MNQ_smc_B": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.69
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.43
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.01
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.77
+    }
+  ],
+  "MNQ_smc_C": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.38
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.16
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.72
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.5
+    }
+  ],
+  "MNQ_ml_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 94,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.3
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 101,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.24
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 54,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.72
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 95,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.36
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 43,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.46
+    }
+  ],
+  "MNQ_ml_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 92,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.06
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 79,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.88
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 54,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.72
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 70,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.77
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 78,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.28
+    }
+  ],
+  "MNQ_ml_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 165,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.64
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 169,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.33
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 123,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.07
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 185,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.4
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 90,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.31
+    }
+  ],
+  "MNQ_ml_err_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 113,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.51
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 46,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.77
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 64,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.96
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 42,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.7
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 48,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.35
+    }
+  ],
+  "MNQ_ml_err_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 113,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.51
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 52,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.87
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 56,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.24
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 48,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.97
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 55,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.4
+    }
+  ],
+  "MNQ_ml_err_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 184,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.48
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 78,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.49
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 81,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.12
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 80,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.6
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 61,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.69
+    }
+  ],
+  "MNQ_ml_rec_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 94,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.23
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 86,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.57
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 65,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.05
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 121,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.9
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 47,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.27
+    }
+  ],
+  "MNQ_ml_rec_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 73,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.41
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 86,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.57
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 81,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.48
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 121,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.9
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 43,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": -0.15
+    }
+  ],
+  "MNQ_ml_rec_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 156,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.1
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 169,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.52
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 188,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.88
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 186,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.32
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 155,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -0.9
+    }
+  ],
+  "MNQ_ta_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 34,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.29
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 4,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.18
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 7,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.16
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 4,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.05
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 5,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.26
+    }
+  ],
+  "MNQ_ta_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 40,
+      "params": {
+        "thresh": 2,
+        "don_n": 50,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.29
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 4,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.33
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 7,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.16
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 4,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.05
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 5,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": -0.26
+    }
+  ],
+  "MNQ_ta_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 63,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.11
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 67,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.03
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 72,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.56
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 4,
+      "params": {
+        "thresh": 3,
+        "don_n": 50,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.59
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13669,
+      "oos_trades": 4,
+      "params": {
+        "thresh": 3,
+        "don_n": 50,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.01
+    }
+  ],
+  "XAUUSD_smc_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.4
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 7,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.48
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.44
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 1,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": true,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.63
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 2,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": true,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.62
+    }
+  ],
+  "XAUUSD_smc_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.86
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 7,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.82
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.14
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 1,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": true,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.09
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 2,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": true,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.07
+    }
+  ],
+  "XAUUSD_smc_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 3,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.72
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 7,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.68
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 5,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.01
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 1,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": true,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.09
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 2,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": true,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.07
+    }
+  ],
+  "XAUUSD_ml_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 75,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.33
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 113,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.41
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 115,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.5
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 59,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.75
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 39,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 2.56
+    }
+  ],
+  "XAUUSD_ml_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 115,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.3
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 113,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.41
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 100,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.79
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 73,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.79
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 37,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 3.07
+    }
+  ],
+  "XAUUSD_ml_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 132,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.99
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 178,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.39
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 180,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.05
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 185,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.69
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 72,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.45
+    }
+  ],
+  "XAUUSD_ml_err_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 119,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.82
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 72,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.23
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 70,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.06
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 57,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.68
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 55,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 2.59
+    }
+  ],
+  "XAUUSD_ml_err_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 66,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.33
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 56,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.89
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 70,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.06
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 57,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.68
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 55,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 2.59
+    }
+  ],
+  "XAUUSD_ml_err_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 164,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.5
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 89,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.47
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 167,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.04
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 180,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.6
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 104,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.59
+    }
+  ],
+  "XAUUSD_ml_rec_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 58,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.24
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 106,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.69
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 92,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.59
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 68,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.75
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 97,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.77
+    }
+  ],
+  "XAUUSD_ml_rec_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 59,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.01,
+      "conviction_scale": false,
+      "train_obj": 2.28
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 80,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.8
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 81,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.37
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 68,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.75
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 58,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 2.15
+    }
+  ],
+  "XAUUSD_ml_rec_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 195,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.87
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 179,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.17
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 193,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.14
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 148,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.81
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 137,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.03
+    }
+  ],
+  "XAUUSD_ta_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 40,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.18
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 34,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.3
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 31,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.27
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 31,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.06
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 22,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.12
+    }
+  ],
+  "XAUUSD_ta_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 39,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.35
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 34,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.05
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 26,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.19
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 31,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.49
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 22,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.59
+    }
+  ],
+  "XAUUSD_ta_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 6,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.39
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 3,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.55
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 6,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.53
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 7,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.25
+    },
+    {
+      "train_end": 12500,
+      "test_end": 13712,
+      "oos_trades": 6,
+      "params": {
+        "thresh": 3,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 1.36
+    }
+  ],
+  "EURUSD_smc_A": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 6,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.09
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 10,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.7
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 2,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.48
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 5,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.25
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.2
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 7,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.47
+    }
+  ],
+  "EURUSD_smc_B": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 6,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.24
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 10,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.75
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 2,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.6
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 5,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.68
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.19
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 7,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.11
+    }
+  ],
+  "EURUSD_smc_C": [
+    {
+      "train_end": 6500,
+      "skipped": "no viable config"
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 6,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.72
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 11,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.22
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 2,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.44
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 5,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.52
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 4,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.06
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 7,
+      "params": {
+        "disp_k": 1.0,
+        "killzone": false,
+        "bias": false,
+        "require_fvg": true
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.23
+    }
+  ],
+  "EURUSD_ml_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 93,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.64
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 72,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.03
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 48,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.31
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 61,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.53
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 53,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.46
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 56,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.37
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 39,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.77
+    }
+  ],
+  "EURUSD_ml_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 74,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.73
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 72,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.03
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 48,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.31
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 54,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.55
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 79,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.61
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 53,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.44
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 55,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.19
+    }
+  ],
+  "EURUSD_ml_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 141,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.24
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 201,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.45
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 113,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.38
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 157,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.98
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 156,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.85
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 142,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.06
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 153,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.37
+    }
+  ],
+  "EURUSD_ml_err_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 63,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.71
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 69,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.4
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 45,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.41
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 105,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.91
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 24,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.99
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 51,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.24
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 51,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.08
+    }
+  ],
+  "EURUSD_ml_err_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 63,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.71
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 66,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.58
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 45,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.41
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 105,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.91
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 24,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.99
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 50,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.73
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 46,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.39
+    }
+  ],
+  "EURUSD_ml_err_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 108,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.61
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 170,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.36
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 90,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.06
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 156,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.37
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 39,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.23
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 134,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.41
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 119,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.37
+    }
+  ],
+  "EURUSD_ml_rec_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 100,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.45
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 123,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.93
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 54,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.12
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 60,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.21
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 58,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.93
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 65,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.02
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 55,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.82
+    }
+  ],
+  "EURUSD_ml_rec_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 91,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.21
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 106,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.0
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": -1.5
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 93,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.45
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 82,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.51
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 58,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.93
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 59,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.23
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 52,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.91
+    }
+  ],
+  "EURUSD_ml_rec_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 142,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.56
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 200,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.47
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 163,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.32
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 121,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 24,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.12
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 106,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.22
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 174,
+      "params": {
+        "p_thresh": 0.56,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.47
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 117,
+      "params": {
+        "p_thresh": 0.6,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.43
+    }
+  ],
+  "EURUSD_ta_A": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 47,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.44
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 40,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.42
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 31,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.38
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 50,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.9
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 51,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.38
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 55,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.0
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.83
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 31,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.66
+    }
+  ],
+  "EURUSD_ta_B": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 33,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 4.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.62
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 33,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.84
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 35,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.86
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 39,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 2.4
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 39,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.82
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 36,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.28
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 33,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.3
+    }
+  ],
+  "EURUSD_ta_C": [
+    {
+      "train_end": 6500,
+      "test_end": 8000,
+      "oos_trades": 64,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.13
+    },
+    {
+      "train_end": 8000,
+      "test_end": 9500,
+      "oos_trades": 56,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 1.5,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.54
+    },
+    {
+      "train_end": 9500,
+      "test_end": 11000,
+      "oos_trades": 62,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.89
+    },
+    {
+      "train_end": 11000,
+      "test_end": 12500,
+      "oos_trades": 65,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.73
+    },
+    {
+      "train_end": 12500,
+      "test_end": 14000,
+      "oos_trades": 68,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.88
+    },
+    {
+      "train_end": 14000,
+      "test_end": 15500,
+      "oos_trades": 71,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.05
+    },
+    {
+      "train_end": 15500,
+      "test_end": 17000,
+      "oos_trades": 56,
+      "params": {
+        "thresh": 2,
+        "don_n": 20,
+        "stop_k": 1.75
+      },
+      "rr": 2.0,
+      "time_exit": 48,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.94
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+# Walk-forward results - 75 models, all out-of-sample
+
+Every number below comes from trades in test windows the model
+never saw during parameter selection or fitting. Selection used
+training data only; ML labels were embargoed at fold boundaries.
+
+## Ranked by trade-level t-statistic
+
+| model           |   n_trades |   win_rate |   avg_R |   t_stat |   profit_factor |   total_return_pct |   ann_return_pct |   sharpe |   max_dd_pct |   worst_day_pct |   trailing_dd_breaches |   oos_days | instrument   | strategy   | style   |
+|:----------------|-----------:|-----------:|--------:|---------:|----------------:|-------------------:|-----------------:|---------:|-------------:|----------------:|-----------------------:|-----------:|:-------------|:-----------|:--------|
+| XAUUSD_ml_rec_C |        852 |     0.4073 |  0.0909 |     1.97 |           1.158 |              20.12 |            12.93 |     1.27 |        -5.28 |           -1.82 |                      3 |        380 | XAUUSD       | ml_rec     | C       |
+| XAUUSD_ml_rec_B |        346 |     0.3728 |  0.1245 |     1.47 |           1.201 |              38.32 |            24    |     1.38 |       -10.22 |           -3    |                      3 |        380 | XAUUSD       | ml_rec     | B       |
+| XAUUSD_ml_rec_A |        421 |     0.3048 |  0.1006 |     1.19 |           1.144 |              32.48 |            20.5  |     0.96 |       -18.89 |           -3.06 |                     19 |        380 | XAUUSD       | ml_rec     | A       |
+| EURUSD_ml_rec_A |        515 |     0.3216 |  0.0655 |     0.86 |           1.09  |              23.24 |            10.37 |     0.58 |       -23.53 |           -3.28 |                     23 |        534 | EURUSD       | ml_rec     | A       |
+| EURUSD_ta_B     |        248 |     0.3669 |  0.0595 |     0.62 |           1.09  |               4.69 |             2.19 |     0.44 |        -6.92 |           -1.59 |                     12 |        533 | EURUSD       | ta         | B       |
+| ES_smc_B        |         13 |     0.3846 |  0.3019 |     0.59 |           1.484 |               1.92 |             2.85 |     0.7  |        -2.91 |           -0.52 |                      0 |        171 | ES           | smc        | B       |
+| MES_smc_B       |         13 |     0.3846 |  0.2984 |     0.58 |           1.477 |               1.9  |             2.81 |     0.7  |        -2.93 |           -0.52 |                      0 |        171 | MES          | smc        | B       |
+| EURUSD_ml_B     |        435 |     0.354  |  0.042  |     0.55 |           1.062 |              -0.42 |            -0.2  |     0    |       -11.64 |           -1.56 |                      2 |        534 | EURUSD       | ml         | B       |
+| XAUUSD_ta_B     |        152 |     0.3026 |  0.0777 |     0.53 |           1.113 |               2.84 |             1.9  |     0.5  |        -3.71 |           -0.76 |                      0 |        376 | XAUUSD       | ta         | B       |
+| EURUSD_ta_C     |        442 |     0.3914 |  0.0333 |     0.52 |           1.053 |               1.99 |             0.94 |     0.18 |       -11.43 |           -1.7  |                      4 |        533 | EURUSD       | ta         | C       |
+| XAUUSD_smc_C    |         18 |     0.4444 |  0.1379 |     0.49 |           1.297 |               0.98 |             0.73 |     0.09 |        -1.77 |           -0.41 |                      0 |        338 | XAUUSD       | smc        | C       |
+| ES_smc_C        |         17 |     0.4706 |  0.1401 |     0.48 |           1.265 |               0.25 |             0.24 |    -0.02 |        -1.97 |           -0.41 |                      0 |        261 | ES           | smc        | C       |
+| EURUSD_ml_A     |        422 |     0.3318 |  0.038  |     0.47 |           1.053 |               9.12 |             4.21 |     0.35 |       -26.79 |           -2.6  |                      6 |        534 | EURUSD       | ml         | A       |
+| MNQ_smc_B       |         15 |     0.4667 |  0.1384 |     0.46 |           1.294 |               1.02 |             1.04 |     0.46 |        -1.51 |           -0.51 |                      0 |        246 | MNQ          | smc        | B       |
+| MES_smc_C       |         17 |     0.4706 |  0.1352 |     0.46 |           1.255 |               0.22 |             0.22 |    -0.03 |        -1.98 |           -0.42 |                      0 |        261 | MES          | smc        | C       |
+| XAUUSD_ml_err_B |        304 |     0.3191 |  0.0407 |     0.44 |           1.061 |               3.36 |             2.21 |     0.26 |       -12.93 |           -2    |                      6 |        380 | XAUUSD       | ml_err     | B       |
+| XAUUSD_ta_A     |        158 |     0.3165 |  0.054  |     0.42 |           1.08  |               5.37 |             3.57 |     0.41 |       -13.74 |           -2.27 |                      5 |        376 | XAUUSD       | ta         | A       |
+| MNQ_smc_A       |         15 |     0.4    |  0.167  |     0.42 |           1.31  |               1.79 |             1.84 |     0.42 |        -2.87 |           -0.76 |                      0 |        246 | MNQ          | smc        | A       |
+| ES_smc_A        |         13 |     0.3846 |  0.148  |     0.34 |           1.238 |               1.36 |             2.02 |     0.41 |        -4.35 |           -0.77 |                      0 |        171 | ES           | smc        | A       |
+| MES_smc_A       |         13 |     0.3846 |  0.1445 |     0.33 |           1.231 |               1.33 |             1.96 |     0.4  |        -4.37 |           -0.78 |                      0 |        171 | MES          | smc        | A       |
+| XAUUSD_smc_B    |         17 |     0.4118 |  0.0957 |     0.32 |           1.195 |               1.16 |             0.86 |    -0.07 |        -3.91 |           -0.77 |                      0 |        338 | XAUUSD       | smc        | B       |
+| XAUUSD_ta_C     |         28 |     0.4286 |  0.074  |     0.29 |           1.129 |               0.77 |             0.53 |     0.22 |        -3.18 |           -0.8  |                      0 |        365 | XAUUSD       | ta         | C       |
+| MNQ_smc_C       |         16 |     0.4375 |  0.0832 |     0.27 |           1.165 |               0.51 |             0.53 |     0.27 |        -1.21 |           -0.4  |                      0 |        246 | MNQ          | smc        | C       |
+| XAUUSD_ml_A     |        401 |     0.2793 |  0.0144 |     0.17 |           1.02  |               1.18 |             0.78 |     0.14 |       -25.98 |           -3.07 |                     11 |        380 | XAUUSD       | ml         | A       |
+| XAUUSD_ml_err_C |        704 |     0.3707 |  0.0085 |     0.17 |           1.014 |               3.16 |             2.09 |     0.27 |        -9.31 |           -2.04 |                     24 |        380 | XAUUSD       | ml_err     | C       |
+| XAUUSD_ml_C     |        747 |     0.3815 |  0.0061 |     0.13 |           1.01  |              -0.76 |            -0.5  |    -0.04 |        -6.66 |           -1.28 |                      7 |        380 | XAUUSD       | ml         | C       |
+| EURUSD_ta_A     |        305 |     0.2895 | -0.0019 |    -0.02 |           0.998 |              -2.97 |            -1.42 |    -0.04 |       -32.43 |           -3.33 |                      6 |        533 | EURUSD       | ta         | A       |
+| MNQ_ml_err_A    |        313 |     0.2748 | -0.0044 |    -0.05 |           0.994 |              -3.46 |            -2.32 |    -0.03 |       -19.5  |           -2.28 |                      8 |        378 | MNQ          | ml_err     | A       |
+| XAUUSD_ml_err_A |        373 |     0.2796 | -0.0052 |    -0.06 |           0.993 |              -4.31 |            -2.88 |    -0.03 |       -32.08 |           -3.03 |                      8 |        380 | XAUUSD       | ml_err     | A       |
+| ES_ml_err_B     |        296 |     0.2901 | -0.0119 |    -0.12 |           0.984 |               0.99 |             0.66 |     0.13 |       -15.68 |           -3.15 |                      8 |        377 | ES           | ml_err     | B       |
+| EURUSD_smc_C    |         35 |     0.3714 | -0.0324 |    -0.14 |           0.948 |              -0.5  |            -0.3  |    -0.12 |        -3.64 |           -0.43 |                      0 |        424 | EURUSD       | smc        | C       |
+| EURUSD_ml_err_B |        399 |     0.3033 | -0.0153 |    -0.18 |           0.979 |              -6.74 |            -3.24 |    -0.33 |       -19.92 |           -2.35 |                      1 |        534 | EURUSD       | ml_err     | B       |
+| MES_ml_err_B    |        296 |     0.2901 | -0.0183 |    -0.18 |           0.975 |              -0.36 |            -0.24 |     0.08 |       -16.18 |           -3.2  |                      8 |        377 | MES          | ml_err     | B       |
+| XAUUSD_ml_B     |        438 |     0.2877 | -0.0171 |    -0.22 |           0.976 |              -6.2  |            -4.16 |    -0.43 |       -11.56 |           -1.5  |                      7 |        380 | XAUUSD       | ml         | B       |
+| ES_ml_err_A     |        296 |     0.2804 | -0.0214 |    -0.22 |           0.971 |              -6.75 |            -4.57 |    -0.2  |       -18.59 |           -2.31 |                     18 |        377 | ES           | ml_err     | A       |
+| MES_ml_err_C    |        510 |     0.3902 | -0.015  |    -0.27 |           0.975 |              -0.94 |            -0.63 |    -0.03 |        -7.27 |           -2.22 |                     14 |        377 | MES          | ml_err     | C       |
+| MNQ_ml_rec_B    |        404 |     0.3094 | -0.0219 |    -0.28 |           0.969 |              -2.49 |            -1.67 |    -0.23 |       -10.88 |           -1.01 |                      2 |        378 | MNQ          | ml_rec     | B       |
+| EURUSD_ml_err_A |        408 |     0.3088 | -0.0231 |    -0.28 |           0.968 |              -9.68 |            -4.69 |    -0.19 |       -28.34 |           -3.33 |                      3 |        534 | EURUSD       | ml_err     | A       |
+| MNQ_ml_C        |        732 |     0.3798 | -0.0133 |    -0.28 |           0.979 |              -2.69 |            -1.8  |    -0.17 |       -10.41 |           -2.13 |                      7 |        378 | MNQ          | ml         | C       |
+| ES_ml_err_C     |        568 |     0.3891 | -0.0155 |    -0.29 |           0.975 |              -0.31 |            -0.21 |     0    |        -7.14 |           -1.19 |                      6 |        377 | ES           | ml_err     | C       |
+| MES_ml_err_A    |        296 |     0.2804 | -0.0279 |    -0.29 |           0.962 |              -8.08 |            -5.48 |    -0.25 |       -18.82 |           -2.34 |                     17 |        377 | MES          | ml_err     | A       |
+| MNQ_ml_err_C    |        484 |     0.3802 | -0.0188 |    -0.32 |           0.97  |              -3.6  |            -2.42 |    -0.29 |        -9.31 |           -1.51 |                     11 |        378 | MNQ          | ml_err     | C       |
+| EURUSD_ml_rec_B |        541 |     0.3179 | -0.0248 |    -0.35 |           0.966 |             -11.2  |            -5.45 |    -0.49 |       -15.43 |           -1.76 |                      6 |        534 | EURUSD       | ml_rec     | B       |
+| XAUUSD_smc_A    |         17 |     0.3529 | -0.1136 |    -0.4  |           0.794 |              -1.5  |            -1.12 |    -0.34 |        -4.36 |           -0.77 |                      0 |        339 | XAUUSD       | smc        | A       |
+| MNQ_ta_C        |        210 |     0.3857 | -0.0401 |    -0.5  |           0.93  |              -2.94 |            -2.01 |    -0.53 |        -4.73 |           -0.81 |                      0 |        370 | MNQ          | ta         | C       |
+| EURUSD_smc_A    |         34 |     0.3235 | -0.1249 |    -0.51 |           0.816 |              -3.32 |            -1.99 |    -0.39 |        -9.35 |           -0.81 |                      1 |        424 | EURUSD       | smc        | A       |
+| MNQ_ml_B        |        373 |     0.319  | -0.0418 |    -0.54 |           0.939 |              -6.77 |            -4.57 |    -0.42 |       -13.02 |           -2.28 |                      9 |        378 | MNQ          | ml         | B       |
+| EURUSD_ml_C     |       1063 |     0.3895 | -0.0227 |    -0.56 |           0.965 |              -7.67 |            -3.69 |    -0.57 |       -12.88 |           -1.28 |                     10 |        534 | EURUSD       | ml         | C       |
+| EURUSD_ml_err_C |        816 |     0.375  | -0.0279 |    -0.59 |           0.957 |              -6.48 |            -3.12 |    -0.3  |       -11.8  |           -2.38 |                      9 |        533 | EURUSD       | ml_err     | C       |
+| EURUSD_ml_rec_C |       1023 |     0.3871 | -0.0261 |    -0.64 |           0.959 |              -1.43 |            -0.68 |     0.02 |       -14.65 |           -2.34 |                     14 |        534 | EURUSD       | ml_rec     | C       |
+| EURUSD_smc_B    |         34 |     0.3529 | -0.1437 |    -0.67 |           0.778 |              -1.17 |            -0.7  |    -0.18 |        -5.5  |           -0.81 |                      1 |        424 | EURUSD       | smc        | B       |
+| ES_ml_rec_B     |        457 |     0.3113 | -0.0559 |    -0.76 |           0.921 |              -9.65 |            -6.56 |    -0.39 |       -16.74 |           -3.08 |                     15 |        377 | ES           | ml_rec     | B       |
+| MNQ_ml_err_B    |        324 |     0.2901 | -0.0679 |    -0.8  |           0.905 |              -3.72 |            -2.49 |    -0.22 |        -7.76 |           -2.25 |                     31 |        378 | MNQ          | ml_err     | B       |
+| ES_ml_C         |        679 |     0.3711 | -0.0416 |    -0.84 |           0.935 |              -8.42 |            -5.69 |    -0.47 |       -14.21 |           -1.88 |                      8 |        378 | ES           | ml         | C       |
+| MES_ml_rec_B    |        457 |     0.3113 | -0.0636 |    -0.86 |           0.911 |             -14.44 |            -9.9  |    -0.58 |       -16.85 |           -3.11 |                      7 |        377 | MES          | ml_rec     | B       |
+| MNQ_ml_A        |        387 |     0.2532 | -0.0742 |    -0.88 |           0.902 |             -21.74 |           -15.07 |    -0.72 |       -34.62 |           -2.32 |                      2 |        378 | MNQ          | ml         | A       |
+| MES_ml_C        |        679 |     0.3711 | -0.0492 |    -0.99 |           0.924 |             -10.22 |            -6.93 |    -0.58 |       -16.57 |           -2.18 |                      7 |        378 | MES          | ml         | C       |
+| MNQ_ml_rec_A    |        413 |     0.2518 | -0.0826 |    -1.02 |           0.891 |             -24.98 |           -17.44 |    -0.85 |       -36.88 |           -3.03 |                      6 |        378 | MNQ          | ml_rec     | A       |
+| ES_ta_B         |        153 |     0.2614 | -0.1341 |    -1.04 |           0.813 |              -7.96 |            -5.38 |    -0.89 |       -10.02 |           -1.02 |                      4 |        378 | ES           | ta         | B       |
+| MES_ta_B        |        153 |     0.2614 | -0.1394 |    -1.08 |           0.807 |               1.14 |             0.76 |     0.13 |        -9.36 |           -1.04 |                      6 |        378 | MES          | ta         | B       |
+| MNQ_ml_rec_C    |        854 |     0.3501 | -0.0545 |    -1.22 |           0.916 |             -11.34 |            -7.71 |    -0.82 |       -18.1  |           -2.51 |                      1 |        378 | MNQ          | ml_rec     | C       |
+| ES_ta_C         |        309 |     0.3269 | -0.095  |    -1.25 |           0.859 |             -11.72 |            -7.97 |    -0.93 |       -14.2  |           -1.83 |                      8 |        378 | ES           | ta         | C       |
+| ES_ta_A         |        156 |     0.2628 | -0.1516 |    -1.26 |           0.79  |             -17.09 |           -11.74 |    -1    |       -17.81 |           -2.28 |                      4 |        378 | ES           | ta         | A       |
+| MNQ_ta_A        |         54 |     0.2222 | -0.2516 |    -1.27 |           0.674 |              -9.99 |            -6.77 |    -0.98 |       -11.29 |           -2.25 |                      2 |        378 | MNQ          | ta         | A       |
+| MES_ta_A        |        156 |     0.2628 | -0.1569 |    -1.3  |           0.784 |             -17.59 |           -12.1  |    -1.04 |       -18.31 |           -2.3  |                      4 |        378 | MES          | ta         | A       |
+| MES_ta_C        |        309 |     0.3269 | -0.1004 |    -1.32 |           0.852 |             -12.17 |            -8.29 |    -0.97 |       -14.57 |           -1.84 |                      8 |        378 | MES          | ta         | C       |
+| ES_ml_A         |        408 |     0.2512 | -0.1065 |    -1.32 |           0.861 |             -29.85 |           -21.05 |    -1.06 |       -45.51 |           -3.06 |                     11 |        378 | ES           | ml         | A       |
+| MES_ml_A        |        408 |     0.2512 | -0.1143 |    -1.41 |           0.852 |             -31.5  |           -22.29 |    -1.14 |       -46.35 |           -3.08 |                      8 |        378 | MES          | ml         | A       |
+| MNQ_ta_B        |         60 |     0.3    | -0.2233 |    -1.44 |           0.679 |              -4.82 |            -3.24 |    -1.48 |        -5.53 |           -0.75 |                      1 |        378 | MNQ          | ta         | B       |
+| ES_ml_rec_A     |        384 |     0.2396 | -0.1599 |    -1.99 |           0.793 |             -38.58 |           -27.81 |    -1.55 |       -39.86 |           -2.99 |                      4 |        377 | ES           | ml_rec     | A       |
+| ES_ml_B         |        437 |     0.2677 | -0.1515 |    -2.04 |           0.799 |             -22.41 |           -15.56 |    -1.3  |       -25.33 |           -2.56 |                      3 |        378 | ES           | ml         | B       |
+| MES_ml_rec_A    |        384 |     0.2396 | -0.1667 |    -2.07 |           0.786 |             -39.78 |           -28.75 |    -1.61 |       -40.88 |           -2.99 |                      4 |        377 | MES          | ml_rec     | A       |
+| MES_ml_B        |        437 |     0.2677 | -0.1597 |    -2.15 |           0.79  |             -21.18 |           -14.67 |    -1.4  |       -22.8  |           -1.56 |                      5 |        378 | MES          | ml         | B       |
+| ES_ml_rec_C     |        814 |     0.3489 | -0.1099 |    -2.48 |           0.834 |             -20.91 |           -14.51 |    -1.66 |       -21.24 |           -2.05 |                      9 |        377 | ES           | ml_rec     | C       |
+| MES_ml_rec_C    |        764 |     0.3194 | -0.1657 |    -3.56 |           0.763 |             -27.45 |           -19.31 |    -2.26 |       -27.59 |           -2.08 |                      5 |        377 | MES          | ml_rec     | C       |
+
+## How to read this
+- `t_stat` >= 2.0 -> edge unlikely to be luck. **None reached it.**
+- `t_stat` 0.5-2.0 -> promising but unproven; needs more data.
+- Negative -> the strategy lost after realistic costs.
+
+## Aggregates by strategy family (mean across instruments/styles)
+
+| strategy   |   t_stat |   avg_R |   profit_factor |   total_return_pct |   max_dd_pct |
+|:-----------|---------:|--------:|----------------:|-------------------:|-------------:|
+| ml         |   -0.661 |  -0.046 |           0.938 |            -10.635 |      -21.622 |
+| ml_err     |   -0.203 |  -0.015 |           0.979 |             -3.128 |      -15.642 |
+| ml_rec     |   -0.649 |  -0.037 |           0.953 |             -5.873 |      -21.135 |
+| smc        |    0.201 |   0.092 |           1.17  |              0.397 |       -3.509 |
+| ta         |   -0.54  |  -0.066 |           0.91  |             -4.697 |      -11.815 |
+
+## Aggregates by style
+
+| style   |   t_stat |   avg_R |   profit_factor |   total_return_pct |   max_dd_pct |
+|:--------|---------:|--------:|----------------:|-------------------:|-------------:|
+| A       |   -0.406 |  -0.034 |           0.96  |             -7.812 |      -23.02  |
+| B       |   -0.286 |  -0.004 |           1.007 |             -2.488 |      -11.17  |
+| C       |   -0.419 |  -0.005 |           1.003 |             -4.062 |      -10.044 |
+
+## Verification & caveats (read this before believing anything)
+
+- **Data**: cross-verified against Nasdaq Inc. (SPY/NDX), LBMA gold PM
+  fix, ECB EUR/USD reference rate, and micro-vs-mini contract arbitrage
+  (all 7 checks VERIFIED, see data/verification_report.json).
+- **No-lookahead**: signals use bar-close info only; entries next bar
+  open; stops assumed to fill before targets intrabar; ML labels
+  embargoed ML_HORIZON+1 bars at every fold boundary; parameters and
+  risk configs selected on training windows only.
+- **Noise canary passed**: pure-random features produced no edge beyond
+  gold's unconditional drift (+0.099R on always-long) - the pipeline
+  does not leak future data.
+- **Drift benchmark**: XAUUSD ml_rec (the best family, t up to 1.97)
+  earns +0.08..0.13R on longs - statistically indistinguishable from
+  the drift baseline. Treat it as trend capture, not alpha.
+- **The learning-from-mistakes scheme (ml_err)** cut index losses
+  roughly in half vs uniform ML (t -1.4 -> -0.3 on MES) but did NOT
+  turn them positive. Recency weighting (ml_rec) helped only on gold
+  and hurt badly on indices (regime-chasing).
+- **NO MODEL reached t-stat 2.0.** Nothing here is a statistically
+  proven edge on ~13-21 months of OOS hourly data. The honest next
+  steps are: more history (minute-level, 8+ years), event/session
+  filters, and letting the SMC families accumulate sample size.
+- Costs modeled: spread + slippage per side + commissions. Untracked:
+  overnight funding on CFDs, futures roll gaps, extreme-event slippage.

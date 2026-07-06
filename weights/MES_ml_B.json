@@ -1,0 +1,95 @@
+{
+  "model_id": "MES_ml_B",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:12:32.401823+00:00",
+  "instrument": "MES",
+  "data_series": "ES",
+  "point_value_usd": 5.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.25,
+    "comm_side": 0.13
+  },
+  "strategy": "ml",
+  "style": "B",
+  "config": {
+    "params": {
+      "p_thresh": 0.56,
+      "stop_k": 1.75
+    },
+    "rr": 4.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0025,
+    "conviction_scale": false,
+    "full_train_obj": 0.8
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 437,
+    "win_rate": 0.2677,
+    "avg_R": -0.1597,
+    "t_stat": -2.15,
+    "profit_factor": 0.79,
+    "total_return_pct": -21.18,
+    "ann_return_pct": -14.67,
+    "sharpe": -1.4,
+    "max_dd_pct": -22.8,
+    "trailing_dd_breaches": 5,
+    "oos_days": 378
+  },
+  "ml": {
+    "model_file": "MES_ml_B.pkl",
+    "algorithm": "GradientBoostingClassifier(n=200,depth=3,lr=0.05)",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ],
+    "feature_importances": {
+      "pd_range_pct": 0.19271,
+      "sma200_dist": 0.10407,
+      "atr_pct": 0.09853,
+      "sma50_dist": 0.08304,
+      "ret24": 0.06723,
+      "vol_ratio": 0.06039,
+      "dist_pdl": 0.0579,
+      "macd_hist": 0.05225,
+      "dist_pdh": 0.05037,
+      "rsi": 0.03402,
+      "dow": 0.03297,
+      "ret6": 0.03051,
+      "body_ratio": 0.02982,
+      "don_pos": 0.0266,
+      "bb_z": 0.02195,
+      "ret1": 0.01892,
+      "ret3": 0.01739,
+      "range_atr": 0.01139,
+      "hour_cos": 0.00666,
+      "hour_sin": 0.00328
+    }
+  }
+}

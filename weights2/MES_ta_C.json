@@ -1,0 +1,48 @@
+{
+  "model_id": "MES_ta_C",
+  "version": 1,
+  "generated_utc": "2026-07-06T08:59:00.815799+00:00",
+  "instrument": "MES",
+  "data_series": "SPXUSD",
+  "point_value_usd": 5.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.25,
+    "comm_side": 0.13
+  },
+  "strategy": "ta",
+  "style": "C",
+  "config": {
+    "params": {
+      "thresh": 3,
+      "don_n": 50,
+      "stop_k": 1.75
+    },
+    "rr": 2.0,
+    "time_exit": 192,
+    "max_concurrent": 3,
+    "risk_pct": 0.002,
+    "conviction_scale": true,
+    "full_train_obj": -1.84
+  },
+  "signal_timeframe": "15m",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 584,
+    "win_rate": 0.3425,
+    "avg_R": -0.0672,
+    "t_stat": -1.11,
+    "profit_factor": 0.908,
+    "total_return_pct": -7.86,
+    "ann_return_pct": -0.53,
+    "sharpe": -0.23,
+    "max_dd_pct": -10.04,
+    "trailing_dd_breaches": 7,
+    "oos_days": 3889
+  }
+}

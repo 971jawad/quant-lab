@@ -1,0 +1,48 @@
+{
+  "model_id": "XAUUSD_ta_A",
+  "version": 1,
+  "generated_utc": "2026-07-06T10:02:01.545215+00:00",
+  "instrument": "XAUUSD",
+  "data_series": "XAUUSD",
+  "point_value_usd": 100.0,
+  "tick": 0.1,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.1,
+    "comm_side": 0.0
+  },
+  "strategy": "ta",
+  "style": "A",
+  "config": {
+    "params": {
+      "thresh": 3,
+      "don_n": 50,
+      "stop_k": 1.75
+    },
+    "rr": 3.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0075,
+    "conviction_scale": false,
+    "full_train_obj": -1.86
+  },
+  "signal_timeframe": "15m",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 550,
+    "win_rate": 0.2836,
+    "avg_R": -0.13,
+    "t_stat": -1.96,
+    "profit_factor": 0.825,
+    "total_return_pct": -43.67,
+    "ann_return_pct": -3.4,
+    "sharpe": -0.47,
+    "max_dd_pct": -51.32,
+    "trailing_dd_breaches": 5,
+    "oos_days": 4182
+  }
+}

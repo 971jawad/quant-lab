@@ -1,0 +1,73 @@
+{
+  "model_id": "MES_ml_rec_A",
+  "version": 1,
+  "generated_utc": "2026-07-06T08:56:41.206536+00:00",
+  "instrument": "MES",
+  "data_series": "SPXUSD",
+  "point_value_usd": 5.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.25,
+    "comm_side": 0.13
+  },
+  "strategy": "ml_rec",
+  "style": "A",
+  "config": {
+    "params": {
+      "p_thresh": 0.56,
+      "stop_k": 1.75
+    },
+    "rr": 3.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0075,
+    "conviction_scale": false,
+    "full_train_obj": -0.53
+  },
+  "signal_timeframe": "15m",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 8455,
+    "win_rate": 0.3014,
+    "avg_R": -0.1663,
+    "t_stat": -9.91,
+    "profit_factor": 0.782,
+    "total_return_pct": -100.0,
+    "ann_return_pct": -51.04,
+    "sharpe": -2.43,
+    "max_dd_pct": -100.0,
+    "trailing_dd_breaches": 1,
+    "oos_days": 3904
+  },
+  "ml": {
+    "model_file": "MES_ml_rec_A.pkl",
+    "algorithm": "HistGradientBoostingClassifier",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "model_id": "EURUSD_ml_C",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:38:50.973489+00:00",
+  "instrument": "EURUSD",
+  "data_series": "EURUSD",
+  "point_value_usd": 100000.0,
+  "tick": 1e-05,
+  "costs": {
+    "spread": 6e-05,
+    "slip": 2e-05,
+    "comm_side": 4e-05
+  },
+  "strategy": "ml",
+  "style": "C",
+  "config": {
+    "params": {
+      "p_thresh": 0.56,
+      "stop_k": 1.75
+    },
+    "rr": 2.0,
+    "time_exit": 24,
+    "max_concurrent": 3,
+    "risk_pct": 0.002,
+    "conviction_scale": true,
+    "full_train_obj": 0.61
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 1063,
+    "win_rate": 0.3895,
+    "avg_R": -0.0227,
+    "t_stat": -0.56,
+    "profit_factor": 0.965,
+    "total_return_pct": -7.67,
+    "ann_return_pct": -3.69,
+    "sharpe": -0.57,
+    "max_dd_pct": -12.88,
+    "trailing_dd_breaches": 10,
+    "oos_days": 534
+  },
+  "ml": {
+    "model_file": "EURUSD_ml_C.pkl",
+    "algorithm": "GradientBoostingClassifier(n=200,depth=3,lr=0.05)",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ],
+    "feature_importances": {
+      "pd_range_pct": 0.17142,
+      "sma200_dist": 0.10996,
+      "dist_pdh": 0.09134,
+      "vol_ratio": 0.08195,
+      "atr_pct": 0.05209,
+      "sma50_dist": 0.05122,
+      "ret24": 0.049,
+      "rsi": 0.04706,
+      "ret6": 0.04669,
+      "dist_pdl": 0.04577,
+      "hour_sin": 0.04441,
+      "don_pos": 0.04002,
+      "dow": 0.03298,
+      "macd_hist": 0.02946,
+      "ret1": 0.02401,
+      "ret3": 0.02177,
+      "bb_z": 0.01979,
+      "range_atr": 0.01719,
+      "body_ratio": 0.01313,
+      "hour_cos": 0.01074
+    }
+  }
+}

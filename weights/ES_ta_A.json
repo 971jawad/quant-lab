@@ -1,0 +1,48 @@
+{
+  "model_id": "ES_ta_A",
+  "version": 1,
+  "generated_utc": "2026-07-06T07:15:33.942268+00:00",
+  "instrument": "ES",
+  "data_series": "ES",
+  "point_value_usd": 50.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.25,
+    "comm_side": 0.06
+  },
+  "strategy": "ta",
+  "style": "A",
+  "config": {
+    "params": {
+      "thresh": 2,
+      "don_n": 20,
+      "stop_k": 1.75
+    },
+    "rr": 3.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0075,
+    "conviction_scale": false,
+    "full_train_obj": -0.84
+  },
+  "signal_timeframe": "1h",
+  "execution": "signal at bar close -> market entry next bar open; stop-first intrabar assumption; targets are limits",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 156,
+    "win_rate": 0.2628,
+    "avg_R": -0.1516,
+    "t_stat": -1.26,
+    "profit_factor": 0.79,
+    "total_return_pct": -17.09,
+    "ann_return_pct": -11.74,
+    "sharpe": -1.0,
+    "max_dd_pct": -17.81,
+    "trailing_dd_breaches": 4,
+    "oos_days": 378
+  }
+}

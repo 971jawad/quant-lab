@@ -1,0 +1,34 @@
+[
+  {
+    "series": "EURUSD",
+    "vs": "ECB",
+    "overlap_days": 762,
+    "ret_corr_5d": 0.8775,
+    "median_level_diff_pct": 0.165,
+    "verdict": "VERIFIED"
+  },
+  {
+    "series": "XAUUSD",
+    "vs": "LBMA",
+    "overlap_days": 4131,
+    "ret_corr_5d": 0.9347,
+    "median_level_diff_pct": 0.269,
+    "verdict": "VERIFIED"
+  },
+  {
+    "series": "SPXUSD",
+    "vs": "Yahoo-fut",
+    "overlap_days": 2506,
+    "ret_corr_5d": 0.9824,
+    "median_level_diff_pct": 0.168,
+    "verdict": "VERIFIED"
+  },
+  {
+    "series": "NSXUSD",
+    "vs": "Yahoo-fut",
+    "overlap_days": 2506,
+    "ret_corr_5d": 0.9828,
+    "median_level_diff_pct": 0.195,
+    "verdict": "VERIFIED"
+  }
+]

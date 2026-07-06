@@ -1,0 +1,11 @@
+# regenerable raw data (run run_data.py / run_data_15m.py)
+data/*.csv
+# bulk per-trade logs (regenerable via run_all.py; summaries are tracked)
+results2/trades_*.csv
+results/trades_*.csv
+# logs & temp
+*.log
+__pycache__/
+*.pyc
+quant_lab_release.zip
+smoke_15m.py
