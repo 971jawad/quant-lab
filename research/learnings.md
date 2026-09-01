@@ -134,3 +134,20 @@ XAU/MNQ/EUR daily.
   zero new mechanical rules found.
 - NET: zero promotable legs; holdout purity preserved (still 8 looks).
   The super-book remains the program's answer.
+
+## Round 6 — world schools + grand book (2026-09)
+
+- BNF/Kotegawa deep-dip reversion translated (close < 25dMA - 2.5sigma): MNQ
+  t 1.76 right-sign but sub-bar AND same theme as the COT washout leg (buy NQ
+  panic) — not promoted, would double-count. Gold negative (he traded equities;
+  the translation fails where it should). Ichimoku: weakly positive everywhere
+  (t <= 1.1) = slow trend, already better-captured by trend legs. EURUSD
+  continuation (from our triple-negative reversion finding): t 0.03 — clean
+  null; chop+costs eat BOTH directions there.
+- GRAND BOOK: correlation-aware ERC weights beat equal-weight ON DEV (1.24 vs
+  0.94), chosen there, evaluated once on holdout: Sharpe 1.31, Sortino 1.86,
+  Calmar 1.06, CAGR 9.9% @10% vol, maxDD -9.3%, DSR 0.947,
+  bootstrap 90% CI [0.57, 2.09], P(Sharpe>0) 99.8%. Holdout looks: 10.
+- The program's grand lesson holds: every point of Sharpe added since round 3
+  came from portfolio construction (vol targeting, diversification, ERC,
+  vol management) — zero came from new entry signals.
