@@ -110,3 +110,27 @@ PF ≥ 1.15, n ≥ 50 on dev. mrev_C carries a pre-registered fragility flag
 - LESSON OF THE PROGRAM: the edge was never in a better entry. It is in
   combining many thin, uncorrelated, slow premia and managing vol — portfolio
   construction, not prediction. Holdout looks used: 8 (all in ledger).
+
+## Round 5 — Market Wizards canon + adversarial verification (2026-09)
+
+Tested as published, canonical params, no grids (18 trials, ledger): Turtle
+S1/S2, Turtle Soup, LW volatility breakout, Holy Grail, Raschke squeeze, on
+XAU/MNQ/EUR daily.
+
+- HEADLINE LESSON: LW vol-breakout showed t=+8.0 on daily OHLC — then died
+  (t −2.8 to −5.3) under worst-case both-trigger + 2x cost, and the definitive
+  15m-PATH REPLAY put the truth at exp +0.04R (t 1.3) gold/NQ, negative EUR.
+  ~95% of the apparent edge was fill-ambiguity artifact. RULE: any intraday-
+  triggered system MUST be path-replayed on 15m data before believing daily
+  OHLC numbers.
+- Raschke squeeze: gold-only under worst-case (t 1.26, halves decay 0.48→0.13),
+  NQ flips sign. Not promoted.
+- Turtles: sub-threshold everywhere (best: gold S2 t 1.29); MNQ S1 negative.
+  The 1980s Donchian edge is decayed, as documented.
+- Turtle Soup: EURUSD strongly negative (t −2.1) — third independent
+  confirmation that EURUSD punishes mean-reversion.
+- Champion interviews/podcasts (FTMO, Chat With Traders): behavioral content
+  (risk caps, 1:2 RR, consistency) — already encoded in harness styles A/B/C;
+  zero new mechanical rules found.
+- NET: zero promotable legs; holdout purity preserved (still 8 looks).
+  The super-book remains the program's answer.

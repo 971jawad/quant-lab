@@ -222,3 +222,21 @@
 {"phase": "cot", "family": "COT_EUR_flow", "n_configs": 2, "dev_sharpe": -0.74}
 {"phase": "cot", "family": "COT_NQ_contra", "n_configs": 2, "dev_sharpe": 1.13}
 {"phase": "cot", "family": "COT_NQ_flow", "n_configs": 2, "dev_sharpe": -0.26}
+{"phase": "wizards", "family": "XAUUSD_turtle_s1", "n_configs": 1, "dev_t": 0.74, "dev_sharpe": 0.19}
+{"phase": "wizards", "family": "XAUUSD_turtle_s2", "n_configs": 1, "dev_t": 1.29, "dev_sharpe": 0.32}
+{"phase": "wizards", "family": "XAUUSD_tsoup", "n_configs": 1, "dev_t": 0.71, "dev_sharpe": 0.18}
+{"phase": "wizards", "family": "XAUUSD_lw_break", "n_configs": 1, "dev_t": 8.02, "dev_sharpe": 2.03}
+{"phase": "wizards", "family": "XAUUSD_holy_grail", "n_configs": 1, "dev_t": 0.28, "dev_sharpe": 0.07}
+{"phase": "wizards", "family": "XAUUSD_r_squeeze", "n_configs": 1, "dev_t": 3.27, "dev_sharpe": 0.79}
+{"phase": "wizards", "family": "MNQ_turtle_s1", "n_configs": 1, "dev_t": -1.96, "dev_sharpe": -0.51}
+{"phase": "wizards", "family": "MNQ_turtle_s2", "n_configs": 1, "dev_t": 0.67, "dev_sharpe": 0.18}
+{"phase": "wizards", "family": "MNQ_tsoup", "n_configs": 1, "dev_t": 0.9, "dev_sharpe": 0.24}
+{"phase": "wizards", "family": "MNQ_lw_break", "n_configs": 1, "dev_t": 5.15, "dev_sharpe": 1.36}
+{"phase": "wizards", "family": "MNQ_holy_grail", "n_configs": 1, "dev_t": -0.39, "dev_sharpe": -0.1}
+{"phase": "wizards", "family": "MNQ_r_squeeze", "n_configs": 1, "dev_t": 1.1, "dev_sharpe": 0.29}
+{"phase": "wizards", "family": "EURUSD_turtle_s1", "n_configs": 1, "dev_t": -0.37, "dev_sharpe": -0.09}
+{"phase": "wizards", "family": "EURUSD_turtle_s2", "n_configs": 1, "dev_t": -0.18, "dev_sharpe": -0.05}
+{"phase": "wizards", "family": "EURUSD_tsoup", "n_configs": 1, "dev_t": -2.14, "dev_sharpe": -0.53}
+{"phase": "wizards", "family": "EURUSD_lw_break", "n_configs": 1, "dev_t": 5.24, "dev_sharpe": 1.33}
+{"phase": "wizards", "family": "EURUSD_holy_grail", "n_configs": 1, "dev_t": -0.26, "dev_sharpe": -0.07}
+{"phase": "wizards", "family": "EURUSD_r_squeeze", "n_configs": 1, "dev_t": 1.55, "dev_sharpe": 0.39}
