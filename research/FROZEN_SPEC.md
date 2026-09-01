@@ -74,3 +74,16 @@ bond CFD legs for diversification, paper forward-validation via run_live.py.
   rule (Sharpe -25%, Calmar -33% for a 0.9pt DD gain). Regime gate: standalone
   book weaker than baseline; not admitted. BASELINE BOOK UNCHANGED and champion:
   holdout Sharpe 1.31, Calmar 1.06, DSR 0.937. Holdout looks: 12.
+
+## Amendment 2 (2026-09-01) — implementation + prop sizing (cycle 3, partial)
+
+- Rebalance rule: update allocation weights only when any |w - w_prev| > 0.02
+  (dev-identical performance, 54% less allocation churn). Implementation-level
+  change, applied from the next holdout look onward.
+- Prop-challenge sizing (Monte Carlo, block bootstrap on the champion book,
+  1y horizon, 8% target, 5% trailing DD): P(pass) peaks ≈58% at 1.0x the 10%
+  vol target; leverage beyond 1x strictly reduces pass probability. Raising
+  book Sharpe (breadth) is the only lever that raises the ceiling.
+- Breadth block (cycle 3): silver FAILS Stage 1 individually (dev Sharpe
+  −0.21; costs eat the trend) -> excluded from the block by existing spec.
+  WTI/DAX/Nikkei/USDJPY pending download; block decision deferred.

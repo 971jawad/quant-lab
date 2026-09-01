@@ -1,0 +1,35 @@
+{
+  "verify": [
+    {
+      "series": "XAGUSD",
+      "bars": 392059,
+      "range": "2010-01-03->2026-08-28",
+      "ohlc_violations": 0,
+      "dups": 0,
+      "absret_gt5pct": 17,
+      "median_bars_per_year": 23643
+    }
+  ],
+  "legs_dev": {
+    "trend_XAGUSD": {
+      "sharpe": -0.21,
+      "calmar": -0.06,
+      "max_dd_pct": -46.65,
+      "cagr_pct": -2.74,
+      "corr_vs_base": 0.19
+    }
+  },
+  "baseline_dev": {
+    "sharpe": 1.24,
+    "calmar": 1.05,
+    "max_dd_pct": -8.3,
+    "cagr_pct": 8.74
+  },
+  "breadth_dev": {
+    "sharpe": 1.1,
+    "calmar": 0.8,
+    "max_dd_pct": -9.33,
+    "cagr_pct": 7.5
+  },
+  "admitted": false
+}

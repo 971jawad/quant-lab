@@ -1,0 +1,31 @@
+  wtiusd 2010: 41143 rows
+  wtiusd 2011: 318466 rows
+  wtiusd 2012: 333544 rows
+  wtiusd 2013: 320814 rows
+  wtiusd 2014: 308208 rows
+  wtiusd 2015: 326253 rows
+  wtiusd 2016: 317338 rows
+  wtiusd 2017: 271477 rows
+  wtiusd 2018: 318142 rows
+  wtiusd 2019: 325027 rows
+  wtiusd 2020: 342692 rows
+  wtiusd 2021: 346851 rows
+  wtiusd 2022: 354224 rows
+  wtiusd 2023: 280046 rows
+  wtiusd 2024: FAILED (not a zip for wtiusd 2024/None: b'')
+  wtiusd 2025: FAILED (not a zip for wtiusd 2025/None: b'')
+SAVED WTIUSD: 303782 bars 2010-11-15 01:15:00+00:00 -> 2023-12-01 21:45:00+00:00
+  grxeur 2010: 26866 rows
+  grxeur 2011: 213706 rows
+  grxeur 2012: 211671 rows
+  grxeur 2013: 210927 rows
+  grxeur 2014: 209954 rows
+  grxeur 2015: 211996 rows
+  grxeur 2016: 213764 rows
+  grxeur 2017: 206648 rows
+  grxeur 2018: 213273 rows
+  grxeur 2019: 326032 rows
+  grxeur 2020: 259840 rows
+  grxeur 2021: 187516 rows
+  grxeur 2022: 205728 rows
+  grxeur 2023: 159626 rows
