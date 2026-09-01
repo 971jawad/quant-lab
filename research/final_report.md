@@ -83,6 +83,35 @@ its best leg (t 2.44, DSR 0.914) and its diversified momentum book at DSR
   +0.94, +0.02 — the 2023-24 Nasdaq rally carried it) and outlier-dependent
   (pull_A exp falls 0.36→0.10 without its top 5 trades; pull_C 0.32→0.24).
 
+## Round 3 addendum — data audit, external drivers, macro events, regimes
+
+**Data reliability (audited 2026-09):** all four 15m series are institutionally
+cross-verified (gold vs LBMA corr 0.93 over 4,131 overlap days; indices vs
+Yahoo futures 0.98; EURUSD vs ECB 0.88), with zero OHLC violations, zero
+duplicate timestamps, no absurd prints, stable ~23k bars/year, and gaps that
+are exactly the weekly market closures. Data ends 2026-06-26 (HistData lag).
+Verdict: the data is real and clean; results are not data artifacts.
+
+**External data added:** FRED real yields (DFII10), 10y (DGS10), VIX, broad
+dollar (DTWEXBGS); 132 FOMC announcement dates (2010-2026) from the Fed;
+16y of silver (XAGUSD) from HistData.
+
+**What moves these markets (daily):** gold = real yields (corr −0.31) +
+dollar (−0.27), R² 16%; indices = VIX (−0.62/−0.65), R² 39-43%; EURUSD =
+dollar factor (−0.48), R² 24%. All of it CONTEMPORANEOUS — lagged versions
+of every driver correlate ≈ 0 with next-day returns. The drivers are real;
+they are also priced the same day they move. That, in one table, is why
+prediction-based trading failed in every phase of this program and why only
+slow harvest-style premia survive.
+
+**Macro-event studies:** pre-FOMC drift was alive in dev (MNQ +38.6bp vs
++4.4bp, t 1.78) but failed its pre-declared confirmatory holdout test (MNQ
+t 0.63, SPX −0.11) — consistent with the anomaly's published post-2015 decay.
+Turn-of-month: dead post-2010 (as the literature says). NFP-day and FOMC-day
+holds: right-signed, insignificant. Gold/silver ratio reversion: firmly
+negative at CFD costs (t −2.5). VIX-regime splits of the momentum edge:
+non-monotone → noise, not promoted.
+
 ## Verdict
 
 - **No intraday edge exists in this data at retail/prop cost levels.** Not in

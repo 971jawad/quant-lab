@@ -1,0 +1,25 @@
+  xagusd 2010: 298572 rows
+  xagusd 2011: 332009 rows
+  xagusd 2012: 347324 rows
+  xagusd 2013: 342532 rows
+  xagusd 2014: 335480 rows
+  xagusd 2015: 333551 rows
+  xagusd 2016: 338733 rows
+  xagusd 2017: 322329 rows
+  xagusd 2018: 345881 rows
+  xagusd 2019: 334890 rows
+  xagusd 2020: 351480 rows
+  xagusd 2021: 350736 rows
+  xagusd 2022: 351359 rows
+  xagusd 2023: 304557 rows
+  xagusd 2024: 353379 rows
+  xagusd 2025: 353701 rows
+  xagusd 2026/01: 28694 rows
+  xagusd 2026/02: 27337 rows
+  xagusd 2026/03: 30322 rows
+  xagusd 2026/04: 28940 rows
+  xagusd 2026/05: 28821 rows
+  xagusd 2026/06: 30129 rows
+  xagusd 2026/07: 31186 rows
+  xagusd 2026/08: 27559 rows
+saved 392059 2010-01-03 23:00:00+00:00 -> 2026-08-28 21:45:00+00:00

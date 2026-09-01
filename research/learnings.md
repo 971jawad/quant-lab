@@ -68,6 +68,30 @@ economic story that exists in the external literature (not invented post hoc).
   dead both directions; ORB = weak-negative as literature said; equity-index
   momentum = the only externally documented premium that shows up here too.
 
+## Round 3 — external drivers, macro events, regimes (2026-09)
+
+Data audit first: all four 15m series VERIFIED vs LBMA/ECB/Yahoo-futures, zero
+OHLC violations/dups, gaps = weekends only, coverage stable, ends 2026-06-26
+(HistData publishing lag). Silver (XAGUSD) downloaded + FRED DFII10/DGS10/
+VIXCLS/DTWEXBGS + 132 FOMC dates fetched.
+
+Science (dev): gold macro R² 16% (real yields −0.31, dollar −0.27), index R²
+39-43% (VIX), EURUSD 24% (dollar) — all CONTEMPORANEOUS; lagged corrs ≈ 0.
+The drivers are real but priced same-day: no daily-horizon prediction trade.
+
+Dead on dev (no holdout look): turn-of-month (faded post-2010, as literature
+says), NFP-day holds, real-yield/dollar-gated gold (gates don't beat buy-and-
+hold's own risk), VIX-regime trend splits (non-monotone), gold/silver ratio
+reversion (t −2.5 — pairs trade dies at CFD costs).
+
+PRE-DECLARED confirmatory holdout test (single look, logged): the pre-FOMC
+drift theme (Lucca-Moench 2015, published on pre-2011 data) — dev shows MNQ
+pre-FOMC +38.6bp vs +4.4bp (t 1.78), SPX same sign. Promotion criterion:
+holdout mean pre-FOMC-window excess return > 0 with t > 0 on both indices.
+OUTCOME: FAILED — MNQ right sign (+18.9 vs +7.7bp, t 0.63) but SPX flat
+(t −0.11). Consistent with the published post-2015 decay of the anomaly.
+Not promoted. Holdout look #2 recorded in ledger.
+
 ## FROZEN survivor set (before any holdout look)
 
 `MNQ_1d_pull_A`, `MNQ_1d_pull_C`, `MNQ_1d_mrev_C` — all three meet t ≥ 2,

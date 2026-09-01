@@ -1,0 +1,182 @@
+{
+  "XAUUSD": {
+    "contemp_R2": 0.157,
+    "contemp_corr": {
+      "d_real_yield": -0.306,
+      "d_10y": -0.235,
+      "d_vix": -0.028,
+      "d_dollar": -0.269
+    },
+    "lagged_corr": {
+      "d_real_yield": -0.084,
+      "d_10y": -0.054,
+      "d_vix": 0.005,
+      "d_dollar": 0.006
+    },
+    "events": {
+      "fomc": {
+        "n": 100,
+        "mean_bp": 17.0,
+        "other_bp": 1.2,
+        "t": 1.36,
+        "p": 0.1782
+      },
+      "pre_fomc": {
+        "n": 100,
+        "mean_bp": 1.7,
+        "other_bp": 1.6,
+        "t": 0.01,
+        "p": 0.9911
+      },
+      "nfp": {
+        "n": 146,
+        "mean_bp": 13.0,
+        "other_bp": 1.2,
+        "t": 1.29,
+        "p": 0.1993
+      },
+      "tom": {
+        "n": 600,
+        "mean_bp": 6.7,
+        "other_bp": 0.7,
+        "t": 1.5,
+        "p": 0.1335
+      }
+    }
+  },
+  "MNQ": {
+    "contemp_R2": 0.387,
+    "contemp_corr": {
+      "d_real_yield": 0.047,
+      "d_10y": 0.158,
+      "d_vix": -0.621,
+      "d_dollar": -0.173
+    },
+    "lagged_corr": {
+      "d_real_yield": -0.007,
+      "d_10y": 0.004,
+      "d_vix": 0.043,
+      "d_dollar": 0.024
+    },
+    "events": {
+      "fomc": {
+        "n": 93,
+        "mean_bp": 11.3,
+        "other_bp": 5.2,
+        "t": 0.37,
+        "p": 0.7138
+      },
+      "pre_fomc": {
+        "n": 93,
+        "mean_bp": 38.6,
+        "other_bp": 4.4,
+        "t": 1.78,
+        "p": 0.0785
+      },
+      "nfp": {
+        "n": 137,
+        "mean_bp": -0.2,
+        "other_bp": 5.5,
+        "t": -0.58,
+        "p": 0.5607
+      },
+      "tom": {
+        "n": 560,
+        "mean_bp": 1.9,
+        "other_bp": 6.0,
+        "t": -0.79,
+        "p": 0.4276
+      }
+    }
+  },
+  "SPX": {
+    "contemp_R2": 0.43,
+    "contemp_corr": {
+      "d_real_yield": 0.073,
+      "d_10y": 0.221,
+      "d_vix": -0.65,
+      "d_dollar": -0.217
+    },
+    "lagged_corr": {
+      "d_real_yield": -0.018,
+      "d_10y": 0.001,
+      "d_vix": 0.046,
+      "d_dollar": 0.021
+    },
+    "events": {
+      "fomc": {
+        "n": 93,
+        "mean_bp": 4.3,
+        "other_bp": 3.6,
+        "t": 0.04,
+        "p": 0.9656
+      },
+      "pre_fomc": {
+        "n": 93,
+        "mean_bp": 25.5,
+        "other_bp": 3.1,
+        "t": 1.3,
+        "p": 0.1953
+      },
+      "nfp": {
+        "n": 137,
+        "mean_bp": 8.4,
+        "other_bp": 3.5,
+        "t": 0.64,
+        "p": 0.5225
+      },
+      "tom": {
+        "n": 560,
+        "mean_bp": 1.3,
+        "other_bp": 4.1,
+        "t": -0.65,
+        "p": 0.5166
+      }
+    }
+  },
+  "EURUSD": {
+    "contemp_R2": 0.238,
+    "contemp_corr": {
+      "d_real_yield": -0.079,
+      "d_10y": -0.023,
+      "d_vix": -0.078,
+      "d_dollar": -0.483
+    },
+    "lagged_corr": {
+      "d_real_yield": -0.034,
+      "d_10y": -0.005,
+      "d_vix": 0.012,
+      "d_dollar": -0.025
+    },
+    "events": {
+      "fomc": {
+        "n": 100,
+        "mean_bp": 10.4,
+        "other_bp": -1.0,
+        "t": 1.68,
+        "p": 0.0968
+      },
+      "pre_fomc": {
+        "n": 100,
+        "mean_bp": 3.3,
+        "other_bp": -0.8,
+        "t": 0.87,
+        "p": 0.3887
+      },
+      "nfp": {
+        "n": 147,
+        "mean_bp": -2.7,
+        "other_bp": -0.6,
+        "t": -0.42,
+        "p": 0.6754
+      },
+      "tom": {
+        "n": 600,
+        "mean_bp": 0.7,
+        "other_bp": -0.9,
+        "t": 0.75,
+        "p": 0.4538
+      }
+    }
+  }
+}

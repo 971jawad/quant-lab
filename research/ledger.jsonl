@@ -202,3 +202,17 @@
 {"phase": "mlx", "tf": "1h", "inst": "EURUSD", "family": "aix", "style": "A", "n_configs": 16, "dev_expectancy_R": -0.0578, "dev_sharpe": -0.51, "dev_t": -1.81, "ts": "2026-09-01T07:14:20.590018+00:00"}
 {"phase": "mlx", "tf": "1h", "inst": "EURUSD", "family": "aix", "style": "B", "n_configs": 16, "dev_expectancy_R": -0.0653, "dev_sharpe": -0.38, "dev_t": -2.13, "ts": "2026-09-01T07:14:27.417455+00:00"}
 {"phase": "mlx", "tf": "1h", "inst": "EURUSD", "family": "aix", "style": "C", "n_configs": 16, "dev_expectancy_R": -0.0548, "dev_sharpe": -0.85, "dev_t": -3.22, "ts": "2026-09-01T07:14:34.376923+00:00"}
+{"phase": "external", "family": "MNQ_prefomc_hold", "n_configs": 1, "dev_sharpe": 0.44}
+{"phase": "external", "family": "MNQ_tom_hold", "n_configs": 1, "dev_sharpe": -0.1}
+{"phase": "external", "family": "SPX_prefomc_hold", "n_configs": 1, "dev_sharpe": 0.28}
+{"phase": "external", "family": "SPX_tom_hold", "n_configs": 1, "dev_sharpe": -0.12}
+{"phase": "external", "family": "XAUUSD_prefomc_hold", "n_configs": 1, "dev_sharpe": 0.23}
+{"phase": "external", "family": "XAUUSD_tom_hold", "n_configs": 1, "dev_sharpe": 0.23}
+{"phase": "external", "family": "XAUUSD_realyield_gate", "n_configs": 1, "dev_sharpe": 0.17}
+{"phase": "external", "family": "XAUUSD_dollar_gate", "n_configs": 1, "dev_sharpe": 0.19}
+{"phase": "external", "family": "XAUUSD_ry_dxy_gate", "n_configs": 1, "dev_sharpe": -0.07}
+{"phase": "external", "family": "MNQ_trend_lowvix", "n_configs": 3, "dev_sharpe": 0.19}
+{"phase": "external", "family": "MNQ_trend_midvix", "n_configs": 3, "dev_sharpe": -0.27}
+{"phase": "external", "family": "MNQ_trend_hivix", "n_configs": 3, "dev_sharpe": 0.34}
+{"phase": "external", "family": "XAU_XAG_ratio_rev", "n_configs": 1, "dev_sharpe": -0.64}
+{"phase": "external-holdout-look", "family": "prefomc_theme", "n_configs": 2}
