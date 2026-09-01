@@ -247,3 +247,5 @@
 {"phase": "schools", "family": "XAUUSD_ichimoku", "n_configs": 1, "dev_t": 1.09, "dev_sharpe": 0.28}
 {"phase": "schools", "family": "EURUSD_ichimoku", "n_configs": 1, "dev_t": 0.44, "dev_sharpe": 0.11}
 {"phase": "schools", "family": "EURUSD_eur_cont", "n_configs": 1, "dev_t": 0.03, "dev_sharpe": 0.01}
+{"phase": "cycle2", "n_configs": 16, "note": "multi-speed trend + TWAP-MR + regime gate"}
+{"phase": "admission", "holdout_look": 12, "n_configs": 17}

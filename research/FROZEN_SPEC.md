@@ -50,3 +50,27 @@ continuation-at-extremes.
 VWAP/TWAP-deviation intraday reversion (approximation only — no volume in
 quote data; true volume-profile/TPO is UNTESTABLE on this dataset), energy/
 bond CFD legs for diversification, paper forward-validation via run_live.py.
+
+## Amendment 1 (2026-09-01) — admission test + weighting label
+
+- Weighting method correctly relabeled: **inverse-correlation heuristic**
+  (weight_i ∝ 1/Σ|corr_ij|), NOT true ERC. Three-way comparison ran (look #12):
+  invcorr dev 1.24 / holdout 1.31 (DSR 0.937); equal 0.94/1.26; TRUE ERC
+  (iterative risk-contribution, 120d cov, monthly) 1.16/0.92. Invcorr retained
+  — wins both windows.
+- STRATEGY ADMISSION TEST (all 5 stages required):
+  1 individual: exp>0, PF>1, Sharpe>0 (dev)
+  2 statistical: bootstrap CI, DSR, t-stat reported
+  3 robustness: small perturbations of entry/exit/params/costs must not
+    collapse the result; intraday-triggered systems MUST be 15m path-replayed
+  4 diversification: corr vs existing book reported
+  5 portfolio contribution (DOMINANCE-AWARE, amended after the twapmr case):
+    must improve >=1 of {Sharpe, Calmar, maxDD, tail} on dev WITHOUT degrading
+    any other of those by more than 10%. An uncorrelated leg with weak
+    standalone expectancy is dilution, not diversification — inverse-corr
+    weighting overweights exactly such legs.
+- Cycle-2 verdicts: multispeed trend REJECTED (corr 0.69, dilutive; per-fold
+  lookback selection already adapts speed). TWAP-MR REJECTED under the amended
+  rule (Sharpe -25%, Calmar -33% for a 0.9pt DD gain). Regime gate: standalone
+  book weaker than baseline; not admitted. BASELINE BOOK UNCHANGED and champion:
+  holdout Sharpe 1.31, Calmar 1.06, DSR 0.937. Holdout looks: 12.

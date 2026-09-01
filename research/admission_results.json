@@ -1,0 +1,105 @@
+{
+  "baseline_dev": {
+    "sharpe": 1.24,
+    "calmar": 1.05,
+    "max_dd_pct": -8.3,
+    "cagr_pct": 8.74,
+    "sortino": 1.44
+  },
+  "candidates": {
+    "multispeed": {
+      "corr_vs_base": 0.694,
+      "dev": {
+        "sharpe": 0.74,
+        "calmar": 0.22,
+        "max_dd_pct": -19.42,
+        "cagr_pct": 4.33,
+        "sortino": 0.89
+      },
+      "admitted": false
+    },
+    "twapmr": {
+      "corr_vs_base": 0.124,
+      "dev": {
+        "sharpe": 0.93,
+        "calmar": 0.7,
+        "max_dd_pct": -7.42,
+        "cagr_pct": 5.2,
+        "sortino": 0.98
+      },
+      "admitted": true
+    },
+    "both": {
+      "corr_vs_base": 0.693,
+      "dev": {
+        "sharpe": 0.63,
+        "calmar": 0.19,
+        "max_dd_pct": -17.73,
+        "cagr_pct": 3.3,
+        "sortino": 0.72
+      },
+      "admitted": false
+    }
+  },
+  "weighting": {
+    "equal": {
+      "dev": {
+        "sharpe": 0.94,
+        "calmar": 0.67,
+        "max_dd_pct": -11.29,
+        "cagr_pct": 7.62,
+        "sortino": 1.03
+      },
+      "holdout": {
+        "sharpe": 1.26,
+        "calmar": 0.98,
+        "max_dd_pct": -11.21,
+        "cagr_pct": 11.03,
+        "sortino": 1.71,
+        "DSR": 0.917
+      }
+    },
+    "invcorr": {
+      "dev": {
+        "sharpe": 1.24,
+        "calmar": 1.05,
+        "max_dd_pct": -8.3,
+        "cagr_pct": 8.74,
+        "sortino": 1.44
+      },
+      "holdout": {
+        "sharpe": 1.31,
+        "calmar": 1.06,
+        "max_dd_pct": -9.34,
+        "cagr_pct": 9.86,
+        "sortino": 1.86,
+        "DSR": 0.937
+      }
+    },
+    "trueERC": {
+      "dev": {
+        "sharpe": 1.16,
+        "calmar": 0.67,
+        "max_dd_pct": -10.28,
+        "cagr_pct": 6.89,
+        "sortino": 1.38
+      },
+      "holdout": {
+        "sharpe": 0.92,
+        "calmar": 0.58,
+        "max_dd_pct": -7.07,
+        "cagr_pct": 4.1,
+        "sortino": 1.6,
+        "DSR": 0.775
+      }
+    }
+  },
+  "final_holdout": {
+    "sharpe": 0.98,
+    "calmar": 0.68,
+    "max_dd_pct": -8.49,
+    "cagr_pct": 5.78,
+    "sortino": 1.17,
+    "DSR": 0.758
+  }
+}
