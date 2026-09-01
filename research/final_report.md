@@ -112,6 +112,37 @@ holds: right-signed, insignificant. Gold/silver ratio reversion: firmly
 negative at CFD costs (t −2.5). VIX-regime splits of the momentum edge:
 non-monotone → noise, not promoted.
 
+## Round 4 addendum — COT positioning + the super-book
+
+**COT (CFTC) positioning, 869 weeks 2010-2026:** gold ICs ≈ 0; EUR positioning
+is momentum-shaped (contrarian loses, t −5.3); NQ has one asymmetric effect —
+extreme speculative SHORT positioning (2y z < −1.5) precedes +111bp forward
+weeks vs +26bp baseline (dev t 2.3), stable across both dev halves, and NOT
+explained by naive drawdown-buying (+130bp t 2.05 for COT-weeks outside
+drawdowns vs +58bp insignificant for drawdown-only weeks). Academic prior is
+skeptical of COT signals generally — promoted only as the narrow long-only
+washout leg, declared before its holdout look (holdout leg Sharpe +0.74).
+
+**Super-book** (a-priori rules, nothing optimized: each leg vol-targeted to
+10% trailing, equal weight, Moreira-Muir vol management ×2 cap) over 7 legs —
+trend ES/NQ/XAU/EUR, cross-asset momentum, MNQ pull-C, COT-NQ washout:
+
+| book | dev Sharpe | holdout Sharpe | holdout Calmar | holdout maxDD | DSR |
+|---|--:|--:|--:|--:|--:|
+| raw equal-risk | 1.00 | **1.12** | 0.86 | −7.1% | 0.895 |
+| vol-managed | 1.02 | **1.24** | 1.02 | −11.7% | **0.940** |
+
+Holdout ≥ dev (no OOS decay — the signature of diversified real premia).
+6 of 7 legs positive on holdout; leg correlations ≈ 0 outside the ES/NQ pair;
+book Sharpe 0.96 without the COT leg. Best single leg on holdout:
+trend_XAUUSD (+1.44) — gold's real edge is slow trend, not intraday.
+Caveat: the COT leg's weekly→daily smoothing slightly understates its vol;
+the no-COT sensitivity bounds the effect (Sharpe 0.96 floor).
+
+Prop framing: at 10% vol the book's −7% max DD sits inside a 10% trailing
+limit; scaled to a 5% trailing budget (~0.7×) it becomes ≈7%/yr at ≈7% vol —
+it passes challenges slowly and survives, rather than sprinting.
+
 ## Verdict
 
 - **No intraday edge exists in this data at retail/prop cost levels.** Not in

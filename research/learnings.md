@@ -97,3 +97,16 @@ Not promoted. Holdout look #2 recorded in ledger.
 `MNQ_1d_pull_A`, `MNQ_1d_pull_C`, `MNQ_1d_mrev_C` — all three meet t ≥ 2,
 PF ≥ 1.15, n ≥ 50 on dev. mrev_C carries a pre-registered fragility flag
 (sign flips across styles A/B). No other model qualifies.
+
+## Round 4 — COT positioning + super-book (2026-09)
+
+- COT fetched (17y, 869 wks): gold nothing; EUR positioning = momentum (fading
+  it loses hard); NQ spec-short washout (z<-1.5 -> +111bp fwd, dev t 2.3,
+  stable halves, beats naive drawdown-buying) promoted long-only, declared.
+- SUPER-BOOK (a-priori rules): 7 legs, vol-targeted, equal-weight, Moreira-Muir
+  overlay. Dev Sharpe 1.0 -> HOLDOUT 1.12 raw / 1.24 vol-managed, Calmar ~1.0,
+  maxDD -7%/-12%, DSR 0.895/0.940. Holdout >= dev; 6/7 legs positive OOS;
+  correlations ~0; Sharpe 0.96 without COT leg. PROMOTED per declared criteria.
+- LESSON OF THE PROGRAM: the edge was never in a better entry. It is in
+  combining many thin, uncorrelated, slow premia and managing vol — portfolio
+  construction, not prediction. Holdout looks used: 8 (all in ledger).

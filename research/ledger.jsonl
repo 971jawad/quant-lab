@@ -216,3 +216,9 @@
 {"phase": "external", "family": "MNQ_trend_hivix", "n_configs": 3, "dev_sharpe": 0.34}
 {"phase": "external", "family": "XAU_XAG_ratio_rev", "n_configs": 1, "dev_sharpe": -0.64}
 {"phase": "external-holdout-look", "family": "prefomc_theme", "n_configs": 2}
+{"phase": "cot", "family": "COT_GOLD_contra", "n_configs": 2, "dev_sharpe": 0.1}
+{"phase": "cot", "family": "COT_GOLD_flow", "n_configs": 2, "dev_sharpe": -0.95}
+{"phase": "cot", "family": "COT_EUR_contra", "n_configs": 2, "dev_sharpe": -1.62}
+{"phase": "cot", "family": "COT_EUR_flow", "n_configs": 2, "dev_sharpe": -0.74}
+{"phase": "cot", "family": "COT_NQ_contra", "n_configs": 2, "dev_sharpe": 1.13}
+{"phase": "cot", "family": "COT_NQ_flow", "n_configs": 2, "dev_sharpe": -0.26}
