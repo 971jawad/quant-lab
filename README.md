@@ -16,6 +16,48 @@ any negative family positive. Details in `results2/report.md` and
 This repo's value is the machine, not a magic signal: verified data pipeline,
 leak-free walk-forward, adversarially reviewed backtester, honest statistics.
 
+## Extension: RULE + ML + AI ensemble + genuine-edge meta-analysis (2026)
+
+A later build adds a fourth **AI** leg and combines all three approaches:
+
+- `qlab/strategies.py::_nn_fit` — **AI leg**: a neural net (sklearn `MLPClassifier`)
+  refit per fold through the *same* embargoed walk-forward as the tree ML leg.
+  Runs as family `ai`; generate it with `python run_ai.py`.
+- `qlab/ensemble.py` + `run_ensemble.py` — leak-free **ensemble**: each fold picks
+  every approach's best variant on trailing (already-closed) trades only, keeps
+  those with positive trailing avg-R, inverse-variance weights them, and holds
+  **cash** when none qualifies. Per-instrument books + a global cross-market book.
+- `run_meta_analysis.py` — **genuine-edge** stats corrected for the number of
+  strategies tried: Deflated Sharpe (Bailey/LdP), White's Reality Check
+  (studentized stationary bootstrap), and PBO/CSCV.
+- `run_conditional.py` — **rule-based conditional-edge** search: does avg-R turn
+  positive under a time/session/volatility/trend condition? Best bucket picked on
+  the first 60% by date, verified on the untouched last 40%, plus BH-FDR.
+- `run_live.py` — **walk-forward live, PAPER ONLY** (`--replay` / `--watch`). No
+  broker, no real orders. Metrics now also report **Calmar** alongside Sharpe.
+- `make_ensemble_report.py` — assembles it all into `results3/report_ensemble.md`.
+
+Reproduce: `python run_ai.py && python run_ensemble.py && python run_meta_analysis.py
+&& python run_conditional.py && python make_ensemble_report.py`.
+
+## Extension: multi-timeframe prop-edge research program (2026-09)
+
+`run_research.py` + `run_final_holdout.py`: 204 models (session breakouts,
+London fade, ORB, trend-pullback, squeeze, mean reversion, ICT fib-zone,
+session/day-of-week drifts, ML/AI with cross-asset features) × {XAUUSD, MNQ,
+EURUSD} × {15m, 1h, 1d}, iterated on a dev window (2010→2022-06) with a
+trials ledger (4,272 configs) and tested ONCE on a frozen holdout
+(2022-07→2026-06). Full metrics suite in `qlab/metrics.py`.
+
+**Result** (`research/final_report.md`): no intraday edge at realistic costs —
+again. One thin slow edge survived: **Nasdaq daily trend-pullback momentum**,
+holdout Sharpe 0.82 / Calmar 0.45 / max DD −3.7% (ensemble book), DSR 0.78
+holdout-frame (0.94 for the corroborating lowfreq momentum book). Real-ish,
+small, lumpy; not an intraday challenge machine. The `ict` family
+(sweep→displacement→0.618 retest, session liquidity pools, Heikin-Ashi and
+break-even/structural-TP variants) is negative over 16y on gold and Nasdaq
+(`results_ict/report.md`).
+
 ## Layout
 
 - `qlab/` - engine: features, strategies (SMC/ML/TA), backtester, walk-forward

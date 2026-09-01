@@ -1,0 +1,72 @@
+{
+  "model_id": "EURUSD_ai_A",
+  "version": 1,
+  "generated_utc": "2026-08-26T04:53:37.138030+00:00",
+  "instrument": "EURUSD",
+  "data_series": "EURUSD",
+  "point_value_usd": 100000.0,
+  "tick": 1e-05,
+  "costs": {
+    "spread": 6e-05,
+    "slip": 2e-05,
+    "comm_side": 4e-05
+  },
+  "strategy": "ai",
+  "style": "A",
+  "config": {
+    "params": {
+      "p_thresh": 0.6,
+      "stop_k": 1.75
+    },
+    "rr": 3.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0075,
+    "conviction_scale": false,
+    "full_train_obj": -5.85
+  },
+  "signal_timeframe": "15m",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 9299,
+    "win_rate": 0.3031,
+    "avg_R": -0.1447,
+    "t_stat": -9.03,
+    "profit_factor": 0.807,
+    "total_return_pct": -100.0,
+    "ann_return_pct": -46.98,
+    "sharpe": -2.15,
+    "calmar": -0.47,
+    "max_dd_pct": -100.0,
+    "oos_days": 4247
+  },
+  "ml": {
+    "model_file": "EURUSD_ai_A.pkl",
+    "algorithm": "Pipeline",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ]
+  }
+}

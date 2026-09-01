@@ -1,0 +1,72 @@
+{
+  "model_id": "XAUUSD_ai_A",
+  "version": 1,
+  "generated_utc": "2026-08-26T04:46:47.194614+00:00",
+  "instrument": "XAUUSD",
+  "data_series": "XAUUSD",
+  "point_value_usd": 100.0,
+  "tick": 0.1,
+  "costs": {
+    "spread": 0.25,
+    "slip": 0.1,
+    "comm_side": 0.0
+  },
+  "strategy": "ai",
+  "style": "A",
+  "config": {
+    "params": {
+      "p_thresh": 0.6,
+      "stop_k": 1.75
+    },
+    "rr": 3.0,
+    "time_exit": 48,
+    "max_concurrent": 1,
+    "risk_pct": 0.0075,
+    "conviction_scale": false,
+    "full_train_obj": -2.54
+  },
+  "signal_timeframe": "15m",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 8477,
+    "win_rate": 0.3133,
+    "avg_R": -0.0922,
+    "t_stat": -5.56,
+    "profit_factor": 0.869,
+    "total_return_pct": -99.83,
+    "ann_return_pct": -31.91,
+    "sharpe": -1.35,
+    "calmar": -0.32,
+    "max_dd_pct": -99.88,
+    "oos_days": 4199
+  },
+  "ml": {
+    "model_file": "XAUUSD_ai_A.pkl",
+    "algorithm": "Pipeline",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ]
+  }
+}

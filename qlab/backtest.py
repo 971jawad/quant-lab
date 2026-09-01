@@ -30,6 +30,9 @@ def bt_trades(o: np.ndarray, h: np.ndarray, l: np.ndarray, c: np.ndarray,
     open_exits: list[int] = []          # exit bars of accepted trades
     for sig in signals.itertuples(index=False):
         i, d, stop, conv = int(sig.i), int(sig.dir), float(sig.stop), float(sig.conviction)
+        # optional per-signal overrides (ict family); absent -> NaN -> ignored
+        tgt_ovr = float(getattr(sig, "target", np.nan))
+        be_r = float(getattr(sig, "be_r", np.nan))
         e = i + 1
         if e >= n:
             continue
@@ -41,23 +44,33 @@ def bt_trades(o: np.ndarray, h: np.ndarray, l: np.ndarray, c: np.ndarray,
         if dist <= 0:                   # gapped through the stop -> stand aside
             continue
         target = entry + d * rr * dist
+        if not np.isnan(tgt_ovr) and (tgt_ovr - entry) * d > 0:
+            target = tgt_ovr            # structural target = opposite liquidity pool
+        cur_stop = stop                 # may ratchet to break-even below
+        be_level = entry + d * be_r * dist if not np.isnan(be_r) else None
+        be_armed = False
         exit_i, exit_px, reason = None, None, None
         last = min(e + time_exit, n - 1)
         for j in range(e, last + 1):
             if d == 1:
-                if l[j] <= stop:
-                    exit_i, exit_px, reason = j, stop - half, "stop"
+                if l[j] <= cur_stop:
+                    exit_i, exit_px, reason = j, cur_stop - half, "stop"
                     break
                 if h[j] > target:
                     exit_i, exit_px, reason = j, target, "target"
                     break
             else:
-                if h[j] >= stop:
-                    exit_i, exit_px, reason = j, stop + half, "stop"
+                if h[j] >= cur_stop:
+                    exit_i, exit_px, reason = j, cur_stop + half, "stop"
                     break
                 if l[j] < target:
                     exit_i, exit_px, reason = j, target, "target"
                     break
+            # arm break-even only AFTER a bar closes past +be_r*R (no intrabar peek)
+            if be_level is not None and not be_armed:
+                fav = h[j] if d == 1 else l[j]
+                if (fav - be_level) * d >= 0:
+                    cur_stop, be_armed = entry, True
         if exit_i is None:
             exit_i, exit_px, reason = last, c[last] - d * half, "time"
         pnl = (exit_px - entry) * d - 2 * costs.comm_side
@@ -69,7 +82,8 @@ def bt_trades(o: np.ndarray, h: np.ndarray, l: np.ndarray, c: np.ndarray,
 
 def simulate(trades: pd.DataFrame, et_date: np.ndarray, risk_pct: float,
              conviction_scale: bool = False, daily_cap: float = 0.03,
-             trail_limit: float = 0.05, start_eq: float = 1.0) -> dict:
+             trail_limit: float = 0.05, start_eq: float = 1.0,
+             want_daily: bool = False) -> dict:
     """Chronological equity sim. Risk is committed at entry (fraction of
     equity THEN), PnL realized at exit. New entries are blocked for the rest
     of an ET day once the realized day loss exceeds daily_cap (prop-firm
@@ -146,7 +160,19 @@ def simulate(trades: pd.DataFrame, et_date: np.ndarray, risk_pct: float,
     wins = r_all[r_all > 0]
     losses = r_all[r_all <= 0]
     pf = float(wins.sum() / -losses.sum()) if losses.sum() < 0 else float("inf")
+    ann_return_pct = ((eq / start_eq) ** (252 / n_days) - 1) * 100
+    sharpe = float(dret.mean() / (dret.std() + 1e-12) * np.sqrt(252))
+    # Calmar = annualized return / |max drawdown| (both in %). A prop-desk
+    # favourite: unlike Sharpe it punishes the single worst peak-to-trough, not
+    # daily wobble. Undefined with no drawdown -> reported as None.
+    calmar = round(ann_return_pct / abs(max_dd * 100), 2) if max_dd < 0 else None
+    extra = {}
+    if want_daily:
+        dr = ds.pct_change().dropna()
+        dr.index = pd.to_datetime(dr.index)
+        extra["daily_returns"] = dr
     return {
+        **extra,
         "n_trades": int(len(trades)), "n_taken": taken,
         "skipped_by_daily_cap": skipped_by_cap,
         "win_rate": round(float((r_all > 0).mean()), 4),
@@ -154,8 +180,9 @@ def simulate(trades: pd.DataFrame, et_date: np.ndarray, risk_pct: float,
         "t_stat": round(float(r_all.mean() / (r_all.std() + 1e-12) * np.sqrt(len(r_all))), 2),
         "profit_factor": round(pf, 3),
         "total_return_pct": round((eq / start_eq - 1) * 100, 2),
-        "ann_return_pct": round(((eq / start_eq) ** (252 / n_days) - 1) * 100, 2),
-        "sharpe": round(float(dret.mean() / (dret.std() + 1e-12) * np.sqrt(252)), 2),
+        "ann_return_pct": round(ann_return_pct, 2),
+        "sharpe": round(sharpe, 2),
+        "calmar": calmar,
         "max_dd_pct": round(max_dd * 100, 2),
         "worst_day_pct": round(float(dret.min() * 100) if len(dret) else 0.0, 2),
         "trailing_dd_breaches": breaches,

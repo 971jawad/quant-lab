@@ -1,0 +1,56 @@
+{
+  "n_trials": 8,
+  "rows": [
+    {
+      "n_days": 4136,
+      "ann_return_pct": 4.37,
+      "sharpe": 0.657,
+      "calmar": 0.33,
+      "max_dd_pct": -13.4,
+      "t_stat": 2.66,
+      "DSR_prob_true_SR_gt_0": 0.8814,
+      "variant": "momentum_BOOK (baseline)"
+    },
+    {
+      "n_days": 5086,
+      "ann_return_pct": 4.39,
+      "sharpe": 0.449,
+      "calmar": 0.15,
+      "max_dd_pct": -29.26,
+      "t_stat": 2.02,
+      "DSR_prob_true_SR_gt_0": 0.7099,
+      "variant": "base_blend"
+    },
+    {
+      "n_days": 5086,
+      "ann_return_pct": 5.37,
+      "sharpe": 0.537,
+      "calmar": 0.18,
+      "max_dd_pct": -29.09,
+      "t_stat": 2.41,
+      "DSR_prob_true_SR_gt_0": 0.827,
+      "variant": "tanh"
+    },
+    {
+      "n_days": 5086,
+      "ann_return_pct": 3.23,
+      "sharpe": 0.353,
+      "calmar": 0.09,
+      "max_dd_pct": -34.26,
+      "t_stat": 1.58,
+      "DSR_prob_true_SR_gt_0": 0.5494,
+      "variant": "skip12_1"
+    },
+    {
+      "n_days": 5086,
+      "ann_return_pct": 3.93,
+      "sharpe": 0.42,
+      "calmar": 0.11,
+      "max_dd_pct": -36.47,
+      "t_stat": 1.89,
+      "DSR_prob_true_SR_gt_0": 0.6638,
+      "variant": "combo"
+    }
+  ],
+  "verdict": "best after deflation: momentum_BOOK (baseline) (sharpe=0.657, DSR=0.8814). Enhancements did NOT beat the baseline once deflated - still below the 0.95 proven-edge bar; forward-test before trusting."
+}

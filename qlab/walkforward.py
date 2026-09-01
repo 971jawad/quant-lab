@@ -60,7 +60,8 @@ class WFResult:
 # is deterministic in fold order, so the key stays valid.
 _FIT_CACHE: dict = {}
 
-STRAT_SCHEME = {"ml": "uniform", "ml_err": "error", "ml_rec": "recency"}
+STRAT_SCHEME = {"ml": "uniform", "ml_err": "error", "ml_rec": "recency",
+                "ai": "nn"}
 
 
 def _ml_fit_cached(feats: pd.DataFrame, lo: int, hi: int, key: str,
@@ -113,9 +114,14 @@ def _risk_by_sim(trades: pd.DataFrame, et_date: np.ndarray, risk_grid,
     return best
 
 
+RULES_STRATS = ("smc", "ta", "ict")
+_RULES_GRID = {"smc": "SMC_GRID", "ta": "TA_GRID", "ict": "ICT_GRID"}
+_RULES_GEN = {"smc": "smc_signals", "ta": "ta_signals", "ict": "ict_signals"}
+
+
 def _rules_signal_cache(feats: pd.DataFrame, strat: str) -> dict:
-    grid = S.SMC_GRID if strat == "smc" else S.TA_GRID
-    gen = S.smc_signals if strat == "smc" else S.ta_signals
+    grid = getattr(S, _RULES_GRID[strat])
+    gen = getattr(S, _RULES_GEN[strat])
     return {tuple(sorted(p.items())): (p, gen(feats, p)) for p in grid}
 
 
@@ -132,7 +138,7 @@ def run_wf(bars: pd.DataFrame, feats: pd.DataFrame, strat: str, style: str,
     oos_parts, fold_log = [], []
     deploy = {}
 
-    if strat in ("smc", "ta"):
+    if strat in RULES_STRATS:
         sig_cache = _rules_signal_cache(feats, strat)
         bt_cache: dict = {}
 
@@ -226,7 +232,7 @@ def deploy_final(bars: pd.DataFrame, feats: pd.DataFrame, strat: str, style: str
     risk_grid = RISK_GRID_C if style == "C" else (RISK_GRID_B if style == "B" else [STYLE_A["risk"]])
 
     model = None
-    if strat in ("smc", "ta"):
+    if strat in RULES_STRATS:
         best = None
         for key, (p, sig) in _rules_signal_cache(feats, strat).items():
             for ex in execs:

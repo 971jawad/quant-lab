@@ -1,0 +1,24 @@
+{
+  "universe_size": 115,
+  "aligned_days": 5085,
+  "deflated_sharpe": {
+    "best_by_sharpe": "LF_clue_gold_trend",
+    "daily_sharpe": 0.0595,
+    "ann_sharpe": 0.944,
+    "E_max_sharpe_under_null": 0.1819,
+    "DSR_prob_true_SR_gt_0": 0.0
+  },
+  "white_reality_check": {
+    "best_model": "LF_clue_buyhold_NQ",
+    "V": 3.418,
+    "rc_pvalue": 0.0555,
+    "n_models": 115,
+    "T": 5085
+  },
+  "pbo_cscv": {
+    "pbo": 0.3571,
+    "n_splits": 252,
+    "median_logit": 1.609
+  },
+  "verdict": "NO genuine edge: best result is consistent with luck after correcting for the number of strategies tried"
+}

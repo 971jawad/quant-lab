@@ -1,0 +1,1391 @@
+{
+  "XAUUSD_ict_A": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "oos_trades": 79,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": false,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.92
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "oos_trades": 54,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.58
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "oos_trades": 59,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.38
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "oos_trades": 58,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.32
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "oos_trades": 53,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 1.21
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "oos_trades": 58,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.68
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "oos_trades": 52,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.91
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "oos_trades": 33,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.37
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "oos_trades": 54,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": 0.25
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "oos_trades": 56,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.29
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "oos_trades": 59,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.04
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "oos_trades": 64,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.44
+    },
+    {
+      "train_end": 348000,
+      "test_end": 371000,
+      "oos_trades": 35,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.51
+    },
+    {
+      "train_end": 371000,
+      "test_end": 388283,
+      "oos_trades": 31,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.46
+    }
+  ],
+  "XAUUSD_ict_B": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "oos_trades": 68,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": false,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 2.11
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "oos_trades": 84,
+      "params": {
+        "disp_k": 1.0,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 2.17
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "oos_trades": 52,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.53
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "oos_trades": 52,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.38
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "oos_trades": 52,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 1.44
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "oos_trades": 54,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.9
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "oos_trades": 56,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 1.03
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "oos_trades": 41,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.85
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "oos_trades": 60,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.79
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "oos_trades": 57,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.41
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "oos_trades": 60,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.58
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "oos_trades": 80,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": false,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.35
+    },
+    {
+      "train_end": 348000,
+      "test_end": 371000,
+      "oos_trades": 74,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": false,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": 0.38
+    },
+    {
+      "train_end": 371000,
+      "test_end": 388283,
+      "oos_trades": 33,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.005,
+      "conviction_scale": false,
+      "train_obj": 0.29
+    }
+  ],
+  "XAUUSD_ict_C": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "oos_trades": 44,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 2.21
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "oos_trades": 98,
+      "params": {
+        "disp_k": 1.0,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 2.24
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "oos_trades": 55,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.35
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "oos_trades": 51,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.43
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "oos_trades": 41,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 1.36
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "oos_trades": 61,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.67
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "oos_trades": 53,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.6
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "oos_trades": 44,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": 0.4
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "oos_trades": 55,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": 0.42
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "oos_trades": 63,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.16
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "oos_trades": 60,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.05
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "oos_trades": 65,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.37
+    },
+    {
+      "train_end": 348000,
+      "test_end": 371000,
+      "oos_trades": 36,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.5
+    },
+    {
+      "train_end": 371000,
+      "test_end": 388283,
+      "oos_trades": 32,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -0.59
+    }
+  ],
+  "MNQ_ict_A": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "oos_trades": 66,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -3.22
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "oos_trades": 73,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.98
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "oos_trades": 62,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.52
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "oos_trades": 48,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.97
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "oos_trades": 58,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.02
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "oos_trades": 50,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.54
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "oos_trades": 47,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.75
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "oos_trades": 65,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.91
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "oos_trades": 54,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.7
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "oos_trades": 62,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": true,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.65
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "oos_trades": 57,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.3
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "oos_trades": 58,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.73
+    },
+    {
+      "train_end": 348000,
+      "test_end": 360113,
+      "oos_trades": 33,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 3.0,
+      "time_exit": 48,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -2.68
+    }
+  ],
+  "MNQ_ict_B": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "oos_trades": 61,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 1.5,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0025,
+      "conviction_scale": false,
+      "train_obj": -2.04
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "oos_trades": 98,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": false,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.01,
+      "conviction_scale": false,
+      "train_obj": -1.75
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "oos_trades": 58,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.27
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "oos_trades": 41,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.97
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "oos_trades": 54,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.04
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "oos_trades": 47,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.29
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "oos_trades": 43,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.43
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "oos_trades": 56,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.54
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "oos_trades": 52,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.27
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "oos_trades": 49,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -1.11
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "oos_trades": 55,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.76
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "oos_trades": 56,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.99
+    },
+    {
+      "train_end": 348000,
+      "test_end": 360113,
+      "oos_trades": 28,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 4.0,
+      "time_exit": 192,
+      "max_concurrent": 1,
+      "risk_pct": 0.0075,
+      "conviction_scale": false,
+      "train_obj": -0.94
+    }
+  ],
+  "MNQ_ict_C": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "oos_trades": 68,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 1.5,
+      "time_exit": 192,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -1.88
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "oos_trades": 75,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.004,
+      "conviction_scale": true,
+      "train_obj": -2.11
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "oos_trades": 64,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.75
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "oos_trades": 49,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.44
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "oos_trades": 59,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.19
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "oos_trades": 50,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.72
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "oos_trades": 49,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.91
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "oos_trades": 67,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -2.14
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "oos_trades": 58,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -2.08
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "oos_trades": 54,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.81
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "oos_trades": 57,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -1.92
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "oos_trades": 58,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -2.25
+    },
+    {
+      "train_end": 348000,
+      "test_end": 360113,
+      "oos_trades": 33,
+      "params": {
+        "disp_k": 1.5,
+        "use_ha": false,
+        "bias": true,
+        "manage": "raw"
+      },
+      "rr": 2.0,
+      "time_exit": 96,
+      "max_concurrent": 3,
+      "risk_pct": 0.002,
+      "conviction_scale": true,
+      "train_obj": -2.5
+    }
+  ]
+}

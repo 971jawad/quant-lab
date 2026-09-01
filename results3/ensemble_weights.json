@@ -1,0 +1,512 @@
+{
+  "MES": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "state": "cash"
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "state": "cash"
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "RULE": {
+        "pick": "ta_C",
+        "w": 1.0,
+        "trail_avgR": 0.0342,
+        "trail_t": 0.2
+      }
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "state": "cash"
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "state": "cash"
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "state": "cash"
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0848,
+        "trail_t": 0.58
+      }
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0705,
+        "trail_t": 0.49
+      }
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0556,
+        "trail_t": 0.39
+      }
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "state": "cash"
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "state": "cash"
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "state": "cash"
+    },
+    {
+      "train_end": 348000,
+      "test_end": 358409,
+      "state": "cash"
+    }
+  ],
+  "ES": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "state": "cash"
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "state": "cash"
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "RULE": {
+        "pick": "ta_C",
+        "w": 1.0,
+        "trail_avgR": 0.0798,
+        "trail_t": 0.47
+      }
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "state": "cash"
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "state": "cash"
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.0178,
+        "trail_t": 0.1
+      }
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.112,
+        "trail_t": 0.77
+      }
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.0549,
+        "trail_t": 0.42
+      }
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.1299,
+        "trail_t": 1.09
+      }
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.0749,
+        "trail_t": 0.74
+      }
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0126,
+        "trail_t": 0.13
+      }
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "state": "cash"
+    },
+    {
+      "train_end": 348000,
+      "test_end": 358409,
+      "state": "cash"
+    }
+  ],
+  "MNQ": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "state": "cash"
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "state": "cash"
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "RULE": {
+        "pick": "ta_C",
+        "w": 1.0,
+        "trail_avgR": 0.0885,
+        "trail_t": 0.56
+      }
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "RULE": {
+        "pick": "ta_C",
+        "w": 1.0,
+        "trail_avgR": 0.0701,
+        "trail_t": 0.54
+      }
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "state": "cash"
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "state": "cash"
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "state": "cash"
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "state": "cash"
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "state": "cash"
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "state": "cash"
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "state": "cash"
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "state": "cash"
+    },
+    {
+      "train_end": 348000,
+      "test_end": 360113,
+      "state": "cash"
+    }
+  ],
+  "XAUUSD": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "state": "cash"
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "state": "cash"
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "RULE": {
+        "pick": "ta_A",
+        "w": 1.0,
+        "trail_avgR": 0.0139,
+        "trail_t": 0.08
+      }
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "state": "cash"
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "state": "cash"
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "state": "cash"
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.0182,
+        "trail_t": 0.08
+      }
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "state": "cash"
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.0451,
+        "trail_t": 0.2
+      }
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "state": "cash"
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.0037,
+        "trail_t": 0.02
+      }
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "state": "cash"
+    },
+    {
+      "train_end": 348000,
+      "test_end": 371000,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.0143,
+        "trail_t": 0.07
+      }
+    },
+    {
+      "train_end": 371000,
+      "test_end": 388283,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.0128,
+        "trail_t": 0.07
+      }
+    }
+  ],
+  "EURUSD": [
+    {
+      "train_end": 72000,
+      "test_end": 95000,
+      "state": "cash"
+    },
+    {
+      "train_end": 95000,
+      "test_end": 118000,
+      "state": "cash"
+    },
+    {
+      "train_end": 118000,
+      "test_end": 141000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.1268,
+        "trail_t": 0.49
+      }
+    },
+    {
+      "train_end": 141000,
+      "test_end": 164000,
+      "RULE": {
+        "pick": "smc_B",
+        "w": 1.0,
+        "trail_avgR": 0.2358,
+        "trail_t": 1.23
+      }
+    },
+    {
+      "train_end": 164000,
+      "test_end": 187000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.1925,
+        "trail_t": 0.87
+      }
+    },
+    {
+      "train_end": 187000,
+      "test_end": 210000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.1444,
+        "trail_t": 0.74
+      }
+    },
+    {
+      "train_end": 210000,
+      "test_end": 233000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.1269,
+        "trail_t": 0.69
+      }
+    },
+    {
+      "train_end": 233000,
+      "test_end": 256000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.136,
+        "trail_t": 0.79
+      }
+    },
+    {
+      "train_end": 256000,
+      "test_end": 279000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0503,
+        "trail_t": 0.32
+      }
+    },
+    {
+      "train_end": 279000,
+      "test_end": 302000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0796,
+        "trail_t": 0.53
+      }
+    },
+    {
+      "train_end": 302000,
+      "test_end": 325000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0468,
+        "trail_t": 0.33
+      }
+    },
+    {
+      "train_end": 325000,
+      "test_end": 348000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0424,
+        "trail_t": 0.31
+      }
+    },
+    {
+      "train_end": 348000,
+      "test_end": 371000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0083,
+        "trail_t": 0.06
+      }
+    },
+    {
+      "train_end": 371000,
+      "test_end": 394000,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0252,
+        "trail_t": 0.2
+      }
+    },
+    {
+      "train_end": 394000,
+      "test_end": 406945,
+      "RULE": {
+        "pick": "smc_C",
+        "w": 1.0,
+        "trail_avgR": 0.0125,
+        "trail_t": 0.1
+      }
+    }
+  ]
+}

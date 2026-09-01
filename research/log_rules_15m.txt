@@ -1,0 +1,68 @@
+XAUUSD 15m: 297005 bars 2010-01-03 -> 2022-06-30, folds=10
+[     8s] XAUUSD_15m_arb_A                   n= 1360 exp= 0.0061 PF= 1.011 shp=  0.06 cal=   0.0 dd= -36.34 t=  0.17
+[    12s] XAUUSD_15m_arb_B                   n= 1158 exp=-0.0296 PF= 0.952 shp= -0.07 cal= -0.02 dd= -25.86 t= -0.78
+[    15s] XAUUSD_15m_arb_C                   n= 1361 exp= -0.008 PF= 0.987 shp= -0.21 cal= -0.04 dd=  -19.4 t= -0.24
+[    16s] XAUUSD_15m_lfade_A                 n= 1163 exp=-0.3651 PF= 0.606 shp= -2.21 cal= -0.25 dd= -96.29 t= -7.71
+[    19s] XAUUSD_15m_lfade_B                 n= 1124 exp=-0.3829 PF= 0.607 shp= -2.06 cal= -0.13 dd= -66.97 t= -7.16
+[    21s] XAUUSD_15m_lfade_C                 n= 1180 exp=-0.2818 PF= 0.663 shp= -1.99 cal= -0.11 dd= -49.02 t= -6.83
+[    23s] XAUUSD_15m_orb_A                   n= 2074 exp=-0.0696 PF= 0.838 shp=  -0.9 cal= -0.13 dd= -70.82 t= -3.15
+[    27s] XAUUSD_15m_orb_B                   n= 1747 exp=-0.0761 PF= 0.895 shp= -0.45 cal= -0.13 dd= -72.78 t= -1.99
+[    32s] XAUUSD_15m_orb_C                   n= 2075 exp=-0.0553 PF= 0.913 shp= -0.34 cal= -0.07 dd= -30.64 t= -1.94
+[    35s] XAUUSD_15m_pull_A                  n= 3050 exp=-0.1478 PF= 0.809 shp= -1.44 cal= -0.27 dd= -97.53 t= -5.09
+[    42s] XAUUSD_15m_pull_B                  n= 2697 exp=-0.1105 PF= 0.873 shp= -0.48 cal= -0.11 dd=  -77.1 t= -2.89
+[    49s] XAUUSD_15m_pull_C                  n= 3441 exp=-0.1509 PF= 0.802 shp= -1.69 cal= -0.19 dd=  -88.6 t=  -6.2
+[    53s] XAUUSD_15m_sqz_A                   n= 3491 exp=-0.2094 PF= 0.755 shp= -2.01 cal= -0.39 dd= -99.69 t= -7.33
+[    63s] XAUUSD_15m_sqz_B                   n= 3275 exp=-0.2253 PF=  0.75 shp= -1.94 cal= -0.23 dd= -94.77 t= -7.07
+[    71s] XAUUSD_15m_sqz_C                   n= 5260 exp=  -0.21 PF= 0.737 shp= -2.44 cal= -0.31 dd= -98.65 t=-10.58
+[    86s] XAUUSD_15m_mrev_A                  n= 2383 exp=-0.2315 PF= 0.717 shp= -1.96 cal= -0.31 dd=  -98.7 t= -7.16
+[   107s] XAUUSD_15m_mrev_B                  n= 2247 exp=-0.2426 PF=  0.73 shp= -1.48 cal= -0.17 dd=  -82.6 t= -6.24
+[   130s] XAUUSD_15m_mrev_C                  n= 3905 exp= -0.142 PF=  0.81 shp=  -1.2 cal= -0.18 dd=  -87.1 t= -6.34
+[   139s] XAUUSD_15m_ict_A                   n=  549 exp=-0.1154 PF= 0.817 shp= -0.56 cal= -0.09 dd=  -45.3 t= -1.98
+[   151s] XAUUSD_15m_ict_B                   n=  568 exp=-0.1267 PF= 0.841 shp= -0.35 cal= -0.07 dd= -24.87 t= -1.74
+[   160s] XAUUSD_15m_ict_C                   n=  556 exp=-0.1428 PF= 0.805 shp= -0.49 cal= -0.07 dd= -12.78 t= -2.43
+MNQ 15m: 272023 bars 2010-11-14 -> 2022-06-30, folds=9
+[   168s] MNQ_15m_arb_A                      n= 1296 exp=-0.0774 PF= 0.888 shp= -0.56 cal= -0.13 dd= -57.62 t= -1.86
+[   172s] MNQ_15m_arb_B                      n= 1027 exp=-0.0125 PF= 0.984 shp= -0.06 cal= -0.04 dd= -45.03 t= -0.21
+[   175s] MNQ_15m_arb_C                      n= 1219 exp=-0.0806 PF= 0.881 shp= -0.65 cal=  -0.1 dd= -32.15 t= -2.09
+[   176s] MNQ_15m_lfade_A                    n= 1013 exp=-0.4256 PF= 0.581 shp= -2.38 cal= -0.28 dd= -96.76 t=  -8.0
+[   179s] MNQ_15m_lfade_B                    n= 1019 exp= -0.481 PF= 0.558 shp= -2.43 cal= -0.15 dd= -71.82 t= -8.11
+[   181s] MNQ_15m_lfade_C                    n= 1066 exp=-0.4257 PF= 0.547 shp= -2.98 cal= -0.14 dd= -59.81 t= -9.73
+[   184s] MNQ_15m_orb_A                      n= 2414 exp=-0.0401 PF= 0.928 shp= -0.46 cal=  -0.1 dd= -78.36 t= -1.52
+[   188s] MNQ_15m_orb_B                      n= 1548 exp= 0.0158 PF= 1.022 shp= -0.02 cal= -0.02 dd= -39.38 t=  0.35
+[   192s] MNQ_15m_orb_C                      n= 2415 exp=-0.0417 PF= 0.938 shp= -0.46 cal= -0.07 dd= -54.72 t= -1.49
+[   195s] MNQ_15m_pull_A                     n= 2477 exp=-0.1771 PF= 0.782 shp= -1.65 cal= -0.29 dd=  -97.6 t= -5.43
+[   200s] MNQ_15m_pull_B                     n= 2196 exp=-0.1741 PF= 0.809 shp= -1.25 cal=  -0.2 dd= -88.59 t= -4.14
+[   203s] MNQ_15m_pull_C                     n= 2714 exp=-0.1901 PF= 0.758 shp= -2.01 cal=  -0.2 dd= -89.72 t= -6.96
+[   206s] MNQ_15m_sqz_A                      n= 2891 exp=-0.3414 PF= 0.643 shp=  -3.0 cal= -0.51 dd= -99.94 t=-10.91
+[   211s] MNQ_15m_sqz_B                      n= 3062 exp=-0.3172 PF= 0.685 shp= -2.31 cal= -0.54 dd= -99.97 t= -8.96
+[   215s] MNQ_15m_sqz_C                      n= 4527 exp=-0.3435 PF= 0.615 shp= -3.68 cal= -0.45 dd= -99.82 t=-15.96
+[   222s] MNQ_15m_mrev_A                     n= 2612 exp=-0.2912 PF= 0.667 shp= -2.45 cal= -0.41 dd= -99.62 t=  -9.3
+[   234s] MNQ_15m_mrev_B                     n= 2451 exp=-0.2943 PF= 0.691 shp= -2.03 cal=  -0.3 dd= -97.39 t= -7.69
+[   247s] MNQ_15m_mrev_C                     n= 4174 exp=-0.2033 PF= 0.746 shp= -1.85 cal= -0.18 dd=  -82.2 t= -9.17
+[   254s] MNQ_15m_ict_A                      n=  508 exp=-0.0836 PF= 0.877 shp= -0.36 cal= -0.09 dd= -36.12 t= -1.26
+[   267s] MNQ_15m_ict_B                      n=  495 exp=-0.0399 PF= 0.951 shp= -0.05 cal= -0.03 dd= -29.98 t= -0.46
+[   279s] MNQ_15m_ict_C                      n=  523 exp= -0.073 PF= 0.894 shp=  -0.3 cal= -0.07 dd=   -7.9 t= -1.21
+EURUSD 15m: 310824 bars 2010-01-03 -> 2022-06-30, folds=11
+[   291s] EURUSD_15m_arb_A                   n= 1734 exp=-0.1508 PF= 0.802 shp= -1.15 cal= -0.18 dd= -89.01 t= -4.04
+[   299s] EURUSD_15m_arb_B                   n= 1599 exp=-0.1037 PF= 0.853 shp= -0.86 cal= -0.12 dd=  -60.4 t= -3.01
+[   304s] EURUSD_15m_arb_C                   n= 1828 exp=-0.0941 PF= 0.866 shp= -0.83 cal= -0.11 dd= -54.53 t= -2.91
+[   307s] EURUSD_15m_lfade_A                 n= 1602 exp=-0.2172 PF= 0.761 shp= -1.49 cal= -0.22 dd= -94.51 t= -4.99
+[   311s] EURUSD_15m_lfade_B                 n= 1563 exp=-0.2576 PF=  0.74 shp= -1.12 cal= -0.17 dd=  -87.1 t=  -5.1
+[   315s] EURUSD_15m_lfade_C                 n= 1622 exp=-0.2138 PF= 0.737 shp= -1.87 cal= -0.15 dd= -76.63 t= -6.02
+[   319s] EURUSD_15m_orb_A                   n= 2316 exp=-0.0998 PF= 0.775 shp= -1.38 cal= -0.17 dd= -83.74 t= -4.92
+[   326s] EURUSD_15m_orb_B                   n= 1765 exp=-0.1017 PF= 0.859 shp= -0.76 cal= -0.12 dd= -67.99 t= -2.77
+[   333s] EURUSD_15m_orb_C                   n= 2266 exp=-0.0761 PF= 0.877 shp= -0.87 cal=  -0.1 dd= -55.43 t= -3.02
+[   337s] EURUSD_15m_pull_A                  n= 3129 exp=-0.1876 PF= 0.768 shp= -1.87 cal= -0.32 dd= -99.19 t= -6.54
+[   342s] EURUSD_15m_pull_B                  n= 2684 exp=-0.1846 PF= 0.796 shp= -1.41 cal= -0.37 dd= -99.73 t= -4.93
+[   347s] EURUSD_15m_pull_C                  n= 3458 exp=-0.1743 PF= 0.772 shp=  -2.0 cal=  -0.2 dd= -91.84 t= -7.35
+[   350s] EURUSD_15m_sqz_A                   n= 5064 exp=-0.2761 PF= 0.692 shp= -3.24 cal= -0.58 dd= -100.0 t= -11.9
+[   355s] EURUSD_15m_sqz_B                   n= 3596 exp=-0.3267 PF= 0.669 shp= -2.87 cal=  -0.4 dd=  -99.8 t=-10.28
+[   360s] EURUSD_15m_sqz_C                   n= 5914 exp= -0.356 PF= 0.591 shp= -4.56 cal=  -0.3 dd= -98.59 t=-19.91
+[   369s] EURUSD_15m_mrev_A                  n= 2508 exp=-0.2077 PF=  0.75 shp= -1.54 cal= -0.27 dd= -97.55 t= -6.45
+[   382s] EURUSD_15m_mrev_B                  n= 2383 exp=-0.2104 PF= 0.773 shp= -1.36 cal= -0.21 dd= -92.55 t= -5.26
+[   398s] EURUSD_15m_mrev_C                  n= 4107 exp=-0.1336 PF= 0.826 shp= -1.15 cal= -0.13 dd=  -68.2 t= -5.95
+[   404s] EURUSD_15m_ict_A                   n= 1138 exp=-0.0664 PF= 0.903 shp= -0.41 cal= -0.09 dd= -56.13 t= -1.48
+[   414s] EURUSD_15m_ict_B                   n=  787 exp=-0.1293 PF= 0.844 shp= -0.38 cal= -0.09 dd= -48.45 t= -2.04
+[   428s] EURUSD_15m_ict_C                   n= 1210 exp=-0.0437 PF= 0.938 shp= -0.31 cal= -0.06 dd= -15.92 t= -1.06
+
+wrote research/summary_rules_15m_dev.csv (63 rows)

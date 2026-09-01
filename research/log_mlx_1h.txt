@@ -1,0 +1,35 @@
+XAUUSD 1h mlx: 75038 bars, 26 features
+[    83s] XAUUSD_1h_mlx_A                    n= 2997 exp=-0.1057 PF= 0.862 shp=  -1.0 cal= -0.21 dd= -93.33 t= -3.54
+[   101s] XAUUSD_1h_mlx_B                    n= 2770 exp=-0.0863 PF=  0.88 shp=  -0.7 cal= -0.13 dd= -70.01 t= -2.97
+[   120s] XAUUSD_1h_mlx_C                    n= 6090 exp=-0.0404 PF= 0.935 shp= -0.62 cal= -0.12 dd= -63.05 t= -2.45
+C:\Users\Ayyan\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (70) reached and the optimization hasn't converged yet.
+  warnings.warn(
+C:\Users\Ayyan\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (70) reached and the optimization hasn't converged yet.
+  warnings.warn(
+C:\Users\Ayyan\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (70) reached and the optimization hasn't converged yet.
+  warnings.warn(
+C:\Users\Ayyan\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (70) reached and the optimization hasn't converged yet.
+  warnings.warn(
+[   205s] XAUUSD_1h_aix_A                    n= 2207 exp=-0.0392 PF= 0.944 shp= -0.33 cal= -0.11 dd=  -59.9 t= -1.17
+[   211s] XAUUSD_1h_aix_B                    n= 2189 exp=-0.0066 PF=  0.99 shp= -0.14 cal= -0.05 dd= -40.88 t= -0.19
+[   218s] XAUUSD_1h_aix_C                    n= 5992 exp=-0.0346 PF= 0.946 shp= -0.55 cal=  -0.1 dd= -59.68 t= -2.04
+MNQ 1h mlx: 69778 bars, 26 features
+[   275s] MNQ_1h_mlx_A                       n= 2275 exp= -0.014 PF= 0.981 shp= -0.13 cal= -0.06 dd=  -69.1 t=  -0.4
+[   290s] MNQ_1h_mlx_B                       n= 2676 exp=-0.0567 PF= 0.923 shp= -0.56 cal=  -0.1 dd= -59.66 t= -1.83
+[   306s] MNQ_1h_mlx_C                       n= 5913 exp=-0.0608 PF= 0.906 shp= -0.94 cal= -0.11 dd= -65.47 t=  -3.6
+C:\Users\Ayyan\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (70) reached and the optimization hasn't converged yet.
+  warnings.warn(
+[   369s] MNQ_1h_aix_A                       n= 2300 exp= -0.104 PF= 0.865 shp=  -0.9 cal= -0.19 dd= -90.73 t= -3.05
+[   374s] MNQ_1h_aix_B                       n= 2301 exp=-0.0482 PF= 0.934 shp= -0.54 cal=  -0.1 dd= -46.21 t= -1.42
+[   379s] MNQ_1h_aix_C                       n= 4996 exp= -0.052 PF= 0.922 shp= -0.41 cal= -0.09 dd= -52.31 t= -2.73
+EURUSD 1h mlx: 77723 bars, 26 features
+[   437s] EURUSD_1h_mlx_A                    n= 2661 exp=-0.0233 PF= 0.968 shp= -0.22 cal= -0.07 dd= -77.59 t= -0.73
+[   451s] EURUSD_1h_mlx_B                    n= 2562 exp=-0.0299 PF= 0.957 shp= -0.37 cal= -0.09 dd= -57.42 t= -0.95
+[   466s] EURUSD_1h_mlx_C                    n= 7001 exp=-0.0409 PF= 0.936 shp= -0.63 cal= -0.11 dd= -65.26 t= -2.61
+C:\Users\Ayyan\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\neural_network\_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (70) reached and the optimization hasn't converged yet.
+  warnings.warn(
+[   543s] EURUSD_1h_aix_A                    n= 2602 exp=-0.0578 PF= 0.922 shp= -0.51 cal= -0.13 dd= -78.12 t= -1.81
+[   549s] EURUSD_1h_aix_B                    n= 2732 exp=-0.0653 PF=  0.91 shp= -0.38 cal=  -0.1 dd= -51.77 t= -2.13
+[   556s] EURUSD_1h_aix_C                    n= 5702 exp=-0.0548 PF= 0.914 shp= -0.85 cal= -0.12 dd=  -70.9 t= -3.22
+
+wrote research/summary_mlx_1h_dev.csv (18 rows)

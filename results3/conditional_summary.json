@@ -1,0 +1,5 @@
+{
+  "n_trades": 478871,
+  "survivors": [],
+  "verdict": "no condition held out-of-sample at t>=2 - the pooled edge is not hiding in these metrics (consistent with the no-edge finding)"
+}

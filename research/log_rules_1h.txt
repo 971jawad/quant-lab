@@ -1,0 +1,86 @@
+XAUUSD 1h: 75038 bars 2010-01-03 -> 2022-06-30, folds=10
+[     3s] XAUUSD_1h_arb_A                    n=  842 exp=-0.0515 PF= 0.924 shp= -0.29 cal= -0.08 dd= -40.42 t= -0.99
+[     5s] XAUUSD_1h_arb_B                    n=  845 exp= -0.058 PF= 0.913 shp= -0.32 cal= -0.07 dd= -31.63 t= -1.14
+[     7s] XAUUSD_1h_arb_C                    n= 1062 exp=-0.0604 PF= 0.913 shp= -0.29 cal= -0.07 dd= -17.16 t= -1.41
+[     8s] XAUUSD_1h_lfade_A                  n=  746 exp=-0.2376 PF= 0.721 shp= -1.15 cal= -0.15 dd= -76.29 t= -3.97
+[     9s] XAUUSD_1h_lfade_B                  n=  727 exp=-0.1176 PF= 0.828 shp= -0.71 cal= -0.12 dd= -57.62 t=  -2.5
+[    10s] XAUUSD_1h_lfade_C                  n=  744 exp=-0.1169 PF= 0.828 shp= -0.74 cal= -0.09 dd= -16.59 t= -2.52
+[    11s] XAUUSD_1h_orb_A                    n= 1014 exp=-0.0118 PF= 0.982 shp= -0.07 cal= -0.04 dd= -34.43 t= -0.25
+[    13s] XAUUSD_1h_orb_B                    n=  981 exp=-0.0235 PF= 0.964 shp=  0.11 cal=  0.03 dd= -16.25 t= -0.47
+[    14s] XAUUSD_1h_orb_C                    n= 1386 exp=-0.0356 PF= 0.941 shp= -0.44 cal= -0.08 dd= -19.91 t= -1.04
+[    15s] XAUUSD_1h_pull_A                   n= 1287 exp=-0.0365 PF= 0.949 shp= -0.23 cal= -0.07 dd= -53.32 t= -0.81
+[    17s] XAUUSD_1h_pull_B                   n= 1212 exp=-0.0217 PF=  0.97 shp= -0.11 cal= -0.04 dd= -25.53 t= -0.43
+[    19s] XAUUSD_1h_pull_C                   n= 2386 exp=-0.0039 PF= 0.994 shp=  -0.0 cal= -0.01 dd= -17.42 t= -0.14
+[    19s] XAUUSD_1h_sqz_A                    n= 1188 exp=-0.0217 PF= 0.971 shp= -0.12 cal= -0.05 dd= -50.82 t= -0.44
+[    21s] XAUUSD_1h_sqz_B                    n= 1220 exp=-0.0339 PF= 0.953 shp= -0.21 cal= -0.05 dd= -18.79 t= -0.72
+[    22s] XAUUSD_1h_sqz_C                    n= 1369 exp=-0.0701 PF= 0.888 shp= -0.62 cal= -0.09 dd= -27.92 t= -2.13
+[    24s] XAUUSD_1h_mrev_A                   n=  795 exp=-0.1683 PF= 0.782 shp= -0.79 cal= -0.13 dd= -66.41 t= -3.05
+[    28s] XAUUSD_1h_mrev_B                   n=  732 exp=-0.1923 PF= 0.751 shp= -0.73 cal= -0.11 dd= -49.07 t= -3.26
+[    33s] XAUUSD_1h_mrev_C                   n= 1145 exp=-0.1281 PF= 0.801 shp= -0.75 cal= -0.11 dd= -48.81 t= -3.62
+[    35s] XAUUSD_1h_ict_A                    n=  178 exp=-0.0843 PF= 0.878 shp= -0.22 cal= -0.05 dd= -23.06 t= -0.73
+[    39s] XAUUSD_1h_ict_B                    n=  175 exp=-0.0557 PF= 0.924 shp= -0.13 cal= -0.03 dd=  -6.85 t= -0.43
+[    43s] XAUUSD_1h_ict_C                    n=  225 exp=-0.1623 PF= 0.724 shp= -0.57 cal= -0.09 dd=  -8.67 t= -2.13
+[    44s] XAUUSD_1h_smc_A                    n=   65 exp=-0.0363 PF= 0.939 shp= -0.16 cal= -0.03 dd= -12.24 t= -0.22
+[    46s] XAUUSD_1h_smc_B                    n=   67 exp= 0.0492 PF= 1.085 shp= -0.05 cal= -0.01 dd=  -14.9 t=  0.29
+[    48s] XAUUSD_1h_smc_C                    n=   69 exp= 0.0882 PF= 1.161 shp=  0.12 cal=  0.02 dd=  -6.47 t=  0.56
+[    49s] XAUUSD_1h_ta_A                     n=  226 exp=-0.2453 PF= 0.708 shp= -0.61 cal= -0.08 dd= -42.87 t=  -2.3
+[    52s] XAUUSD_1h_ta_B                     n=  164 exp=-0.2767 PF= 0.637 shp= -0.61 cal= -0.08 dd= -22.77 t= -2.78
+[    56s] XAUUSD_1h_ta_C                     n=  165 exp=-0.2098 PF= 0.679 shp= -0.59 cal= -0.07 dd= -14.72 t=  -2.4
+MNQ 1h: 69778 bars 2010-11-14 -> 2022-06-30, folds=9
+[    62s] MNQ_1h_arb_A                       n=  746 exp=  -0.07 PF= 0.907 shp= -0.36 cal= -0.08 dd=  -49.0 t= -1.17
+[    65s] MNQ_1h_arb_B                       n=  731 exp=-0.0128 PF= 0.983 shp= -0.06 cal= -0.04 dd= -46.44 t= -0.19
+[    67s] MNQ_1h_arb_C                       n=  856 exp=-0.1007 PF= 0.848 shp=  -0.7 cal= -0.11 dd= -30.95 t= -2.24
+[    68s] MNQ_1h_lfade_A                     n=  566 exp=-0.2523 PF= 0.717 shp=  -1.1 cal= -0.15 dd= -68.58 t= -3.57
+[    70s] MNQ_1h_lfade_B                     n=  567 exp=-0.2646 PF= 0.707 shp= -0.98 cal=  -0.1 dd= -33.28 t= -3.65
+[    72s] MNQ_1h_lfade_C                     n=  598 exp=-0.2083 PF= 0.739 shp=  -1.1 cal=  -0.1 dd= -23.09 t= -3.58
+[    73s] MNQ_1h_orb_A                       n=  954 exp= 0.0739 PF= 1.129 shp=  0.49 cal=  0.18 dd= -25.93 t=  1.59
+[    76s] MNQ_1h_orb_B                       n=  922 exp= 0.0751 PF= 1.129 shp=  0.46 cal=  0.19 dd=  -8.43 t=  1.51
+[    78s] MNQ_1h_orb_C                       n= 1458 exp= 0.0315 PF= 1.059 shp=  0.07 cal=  0.01 dd= -17.46 t=  0.98
+[    79s] MNQ_1h_pull_A                      n= 1161 exp=-0.0676 PF=  0.91 shp= -0.43 cal= -0.09 dd= -68.48 t= -1.41
+[    83s] MNQ_1h_pull_B                      n= 1183 exp=-0.0646 PF= 0.916 shp= -0.38 cal= -0.07 dd= -26.37 t= -1.25
+[    85s] MNQ_1h_pull_C                      n= 1803 exp=-0.0676 PF= 0.901 shp= -0.58 cal= -0.08 dd= -29.23 t= -2.09
+[    86s] MNQ_1h_sqz_A                       n= 1050 exp=-0.0126 PF= 0.984 shp= -0.05 cal= -0.03 dd= -53.36 t= -0.24
+[    89s] MNQ_1h_sqz_B                       n= 1039 exp=-0.0258 PF= 0.967 shp= -0.03 cal= -0.02 dd= -37.98 t= -0.48
+[    91s] MNQ_1h_sqz_C                       n= 1665 exp=-0.0475 PF= 0.932 shp= -0.32 cal= -0.05 dd= -32.46 t= -1.36
+[    94s] MNQ_1h_mrev_A                      n=  676 exp=-0.1447 PF= 0.817 shp= -0.61 cal= -0.12 dd= -55.26 t= -2.32
+[   100s] MNQ_1h_mrev_B                      n=  688 exp=-0.1439 PF= 0.801 shp= -0.79 cal= -0.11 dd= -37.61 t= -2.63
+[   107s] MNQ_1h_mrev_C                      n= 1130 exp=-0.0655 PF= 0.896 shp= -0.36 cal= -0.08 dd=  -36.5 t= -1.79
+[   109s] MNQ_1h_ict_A                       n=  201 exp=-0.0864 PF=  0.88 shp= -0.25 cal= -0.04 dd=  -30.9 t= -0.79
+[   114s] MNQ_1h_ict_B                       n=  226 exp=-0.1296 PF=  0.82 shp= -0.52 cal= -0.07 dd= -41.09 t= -1.31
+[   117s] MNQ_1h_ict_C                       n=  228 exp=-0.2135 PF= 0.654 shp= -0.82 cal= -0.08 dd=  -7.92 t= -2.99
+[   118s] MNQ_1h_smc_A                       n=   63 exp= 0.0207 PF=  1.03 shp=  0.03 cal=   0.0 dd= -10.18 t=   0.1
+[   119s] MNQ_1h_smc_B                       n=   60 exp=-0.1062 PF= 0.844 shp= -0.09 cal= -0.04 dd=  -6.81 t= -0.59
+[   121s] MNQ_1h_smc_C                       n=   62 exp=-0.0866 PF= 0.856 shp= -0.02 cal= -0.01 dd=  -3.53 t= -0.56
+[   122s] MNQ_1h_ta_A                        n=  140 exp=-0.0199 PF= 0.975 shp= -0.02 cal= -0.02 dd= -11.69 t= -0.13
+[   124s] MNQ_1h_ta_B                        n=  140 exp=-0.1381 PF= 0.821 shp= -0.32 cal= -0.07 dd=  -7.38 t= -1.08
+[   127s] MNQ_1h_ta_C                        n=  192 exp=-0.1202 PF= 0.837 shp= -0.39 cal= -0.08 dd=  -7.56 t= -1.19
+EURUSD 1h: 77723 bars 2010-01-03 -> 2022-06-30, folds=10
+[   132s] EURUSD_1h_arb_A                    n= 1090 exp=   -0.1 PF= 0.864 shp=  -0.6 cal= -0.11 dd= -64.44 t=  -2.1
+[   136s] EURUSD_1h_arb_B                    n= 1198 exp=-0.1059 PF=  0.85 shp= -0.54 cal=  -0.1 dd= -46.79 t= -2.51
+[   138s] EURUSD_1h_arb_C                    n= 1337 exp= -0.097 PF= 0.853 shp= -0.58 cal= -0.08 dd= -31.98 t= -2.77
+[   139s] EURUSD_1h_lfade_A                  n=  972 exp=-0.0655 PF= 0.918 shp= -0.35 cal= -0.09 dd= -52.56 t= -1.18
+[   141s] EURUSD_1h_lfade_B                  n=  952 exp=-0.0094 PF= 0.989 shp=   0.1 cal=  0.02 dd= -27.93 t= -0.15
+[   142s] EURUSD_1h_lfade_C                  n= 1127 exp= -0.142 PF= 0.809 shp= -1.04 cal= -0.11 dd= -49.65 t= -3.42
+[   143s] EURUSD_1h_orb_A                    n= 1195 exp=-0.0458 PF=  0.93 shp= -0.31 cal= -0.09 dd= -44.08 t= -1.07
+[   146s] EURUSD_1h_orb_B                    n= 1195 exp=-0.0618 PF= 0.905 shp= -0.42 cal= -0.09 dd= -36.23 t= -1.44
+[   148s] EURUSD_1h_orb_C                    n= 1557 exp=-0.0781 PF=  0.87 shp= -0.76 cal=  -0.1 dd= -43.56 t= -2.64
+[   150s] EURUSD_1h_pull_A                   n= 1530 exp=-0.1496 PF=  0.82 shp=  -1.0 cal= -0.17 dd= -84.42 t= -3.45
+[   152s] EURUSD_1h_pull_B                   n= 1481 exp=-0.1396 PF= 0.837 shp= -0.68 cal= -0.14 dd= -72.25 t= -2.84
+[   154s] EURUSD_1h_pull_C                   n= 1762 exp=-0.0915 PF= 0.865 shp= -0.74 cal=  -0.1 dd= -41.48 t= -2.85
+[   155s] EURUSD_1h_sqz_A                    n= 1340 exp=-0.0468 PF= 0.938 shp= -0.29 cal= -0.09 dd= -50.95 t= -1.03
+[   157s] EURUSD_1h_sqz_B                    n= 1278 exp=-0.0213 PF= 0.972 shp=  0.06 cal=  -0.0 dd= -34.35 t= -0.42
+[   159s] EURUSD_1h_sqz_C                    n= 2208 exp=-0.0724 PF= 0.894 shp=  -0.5 cal=  -0.1 dd= -45.62 t= -2.49
+[   161s] EURUSD_1h_mrev_A                   n=  695 exp=-0.1583 PF= 0.799 shp= -0.61 cal=  -0.1 dd= -61.74 t= -2.62
+[   166s] EURUSD_1h_mrev_B                   n=  681 exp=-0.1878 PF= 0.766 shp= -0.76 cal= -0.08 dd= -32.71 t= -2.89
+[   170s] EURUSD_1h_mrev_C                   n= 1145 exp=-0.0665 PF= 0.893 shp= -0.43 cal= -0.06 dd= -30.42 t= -1.85
+[   172s] EURUSD_1h_ict_A                    n=  162 exp= -0.043 PF=  0.94 shp=  -0.1 cal= -0.03 dd= -18.34 t= -0.34
+[   175s] EURUSD_1h_ict_B                    n=  162 exp= -0.043 PF=  0.94 shp= -0.07 cal= -0.02 dd=  -10.8 t= -0.34
+[   178s] EURUSD_1h_ict_C                    n=  311 exp=-0.0923 PF= 0.831 shp= -0.34 cal= -0.09 dd=  -6.11 t= -1.47
+[   179s] EURUSD_1h_smc_A                    n=  142 exp= 0.0382 PF= 1.066 shp=   0.1 cal=  0.03 dd=  -9.32 t=  0.33
+[   180s] EURUSD_1h_smc_B                    n=  101 exp= 0.0894 PF=  1.17 shp=  0.17 cal=  0.07 dd=  -6.65 t=  0.72
+[   181s] EURUSD_1h_smc_C                    n=  171 exp=   0.05 PF= 1.122 shp=  0.19 cal=  0.07 dd=  -4.14 t=  0.64
+[   182s] EURUSD_1h_ta_A                     n=  253 exp= -0.132 PF= 0.832 shp= -0.36 cal= -0.09 dd=  -25.0 t= -1.29
+[   184s] EURUSD_1h_ta_B                     n=  249 exp=-0.0707 PF=   0.9 shp= -0.15 cal= -0.04 dd=  -27.2 t= -0.72
+[   186s] EURUSD_1h_ta_C                     n=  167 exp= 0.0587 PF= 1.099 shp=   0.1 cal=  0.03 dd=  -5.81 t=   0.6
+
+wrote research/summary_rules_1h_dev.csv (81 rows)

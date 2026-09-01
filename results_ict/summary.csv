@@ -1,0 +1,7 @@
+n_trades,n_taken,skipped_by_daily_cap,win_rate,avg_R,t_stat,profit_factor,total_return_pct,ann_return_pct,sharpe,calmar,max_dd_pct,worst_day_pct,trailing_dd_breaches,oos_days,model,instrument,strategy,style
+745,745,0,0.3503,-0.0803,-1.58,0.871,-38.67,-2.89,-0.38,-0.05,-53.07,-2.35,6,4199,XAUUSD_ict_A,XAUUSD,ict,A
+823,823,0,0.2357,-0.1138,-1.83,0.858,-24.62,-1.68,-0.29,-0.05,-31.99,-1.57,3,4199,XAUUSD_ict_B,XAUUSD,ict,B
+758,758,0,0.314,-0.1216,-2.41,0.831,-11.58,-0.74,-0.34,-0.04,-16.8,-1.05,4,4198,XAUUSD_ict_C,XAUUSD,ict,C
+733,733,0,0.3315,-0.0808,-1.47,0.88,-38.69,-3.11,-0.36,-0.07,-44.16,-2.33,19,3900,MNQ_ict_A,MNQ,ict,A
+698,698,0,0.2493,-0.0277,-0.38,0.966,-12.14,-0.83,-0.03,-0.03,-29.98,-3.72,14,3900,MNQ_ict_B,MNQ,ict,B
+741,741,0,0.3374,-0.0975,-1.95,0.859,-10.66,-0.73,-0.41,-0.06,-11.62,-0.79,6,3900,MNQ_ict_C,MNQ,ict,C

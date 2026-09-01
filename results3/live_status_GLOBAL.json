@@ -1,0 +1,17 @@
+{
+  "scope": "GLOBAL",
+  "mode": "replay",
+  "paper": true,
+  "window_days": 180,
+  "n_trades": 11,
+  "start": "2025-12-08T15:00:00+00:00",
+  "end": "2026-05-20T09:00:00+00:00",
+  "equity_mult": 0.9736,
+  "return_pct": -2.64,
+  "ann_return_pct": -5.84,
+  "max_drawdown_pct": -2.64,
+  "calmar": -2.21,
+  "sharpe": -9.15,
+  "win_rate": 0.182,
+  "note": "PAPER SIMULATION - no broker, no real orders."
+}

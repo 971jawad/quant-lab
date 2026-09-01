@@ -1,0 +1,72 @@
+{
+  "model_id": "MNQ_ai_C",
+  "version": 1,
+  "generated_utc": "2026-08-26T04:40:23.961774+00:00",
+  "instrument": "MNQ",
+  "data_series": "NSXUSD",
+  "point_value_usd": 2.0,
+  "tick": 0.25,
+  "costs": {
+    "spread": 0.5,
+    "slip": 0.5,
+    "comm_side": 0.31
+  },
+  "strategy": "ai",
+  "style": "C",
+  "config": {
+    "params": {
+      "p_thresh": 0.56,
+      "stop_k": 1.75
+    },
+    "rr": 2.0,
+    "time_exit": 192,
+    "max_concurrent": 3,
+    "risk_pct": 0.002,
+    "conviction_scale": true,
+    "full_train_obj": -1.42
+  },
+  "signal_timeframe": "15m",
+  "risk_guardrails": {
+    "daily_loss_cap": 0.03,
+    "trailing_dd_limit": 0.05
+  },
+  "walkforward_oos": {
+    "n_trades": 9859,
+    "win_rate": 0.3338,
+    "avg_R": -0.0889,
+    "t_stat": -6.15,
+    "profit_factor": 0.879,
+    "total_return_pct": -93.11,
+    "ann_return_pct": -15.84,
+    "sharpe": -1.5,
+    "calmar": -0.17,
+    "max_dd_pct": -93.76,
+    "oos_days": 3911
+  },
+  "ml": {
+    "model_file": "MNQ_ai_C.pkl",
+    "algorithm": "Pipeline",
+    "features": [
+      "ret1",
+      "ret3",
+      "ret6",
+      "ret24",
+      "rsi",
+      "macd_hist",
+      "bb_z",
+      "atr_pct",
+      "vol_ratio",
+      "sma50_dist",
+      "sma200_dist",
+      "don_pos",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "pd_range_pct",
+      "dist_pdh",
+      "dist_pdl",
+      "body_ratio",
+      "range_atr"
+    ]
+  }
+}
