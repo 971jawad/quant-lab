@@ -167,3 +167,16 @@ XAU/MNQ/EUR daily.
   Diversification proof in one line: the dev-best leg (COT, dev 2.00)
   regressed to 0.74 on holdout, while the book went 1.24 -> 1.31.
 - Bar set by the external review ("CI comfortably above zero") is MET.
+
+## Round 8 — cycle 3 complete (2026-09-01)
+
+- Strength-aware weights (trailing-Sharpe x invcorr): the single biggest
+  weighting gain of the program — dev 1.24->1.46, holdout 1.31->1.47, robust
+  across all perturbations. Fixes the discovered invcorr flaw (overweighting
+  uncorrelated-but-weak legs) with the mechanism the flaw implied.
+- Breadth done RIGHT finally worked: 4 new Stage-1-passing markets under
+  strength weights -> champion v1.1: holdout Sharpe 1.41, Calmar 1.26,
+  maxDD -9.8%, DSR 0.977 (first >0.95 of the program), CI floor 0.70.
+- Silver: Stage-1 fail (costs). WTI data ends 2023-12 (vendor stopped).
+- Prop math: pass prob 58%->60%, breach risk 38%->29% at 1.0x.
+- Pattern intact: every gain since round 3 is construction, not prediction.

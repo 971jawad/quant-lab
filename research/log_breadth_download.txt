@@ -29,3 +29,64 @@ SAVED WTIUSD: 303782 bars 2010-11-15 01:15:00+00:00 -> 2023-12-01 21:45:00+00:00
   grxeur 2021: 187516 rows
   grxeur 2022: 205728 rows
   grxeur 2023: 159626 rows
+  grxeur 2024: 332498 rows
+  grxeur 2025: 335900 rows
+  grxeur 2026/01: 27539 rows
+  grxeur 2026/02: 26235 rows
+  grxeur 2026/03: 29379 rows
+  grxeur 2026/04: 27894 rows
+  grxeur 2026/05: 27805 rows
+  grxeur 2026/06: 29165 rows
+  grxeur 2026/07: 30162 rows
+  grxeur 2026/08: 26335 rows
+SAVED GRXEUR: 258939 bars 2010-11-15 07:00:00+00:00 -> 2026-08-28 20:45:00+00:00
+  jpxjpy 2010: 20339 rows
+  jpxjpy 2011: 191642 rows
+  jpxjpy 2012: 160209 rows
+  jpxjpy 2013: 256035 rows
+  jpxjpy 2014: 241703 rows
+  jpxjpy 2015: 275366 rows
+  jpxjpy 2016: 281637 rows
+  jpxjpy 2017: 220622 rows
+  jpxjpy 2018: 292655 rows
+  jpxjpy 2019: 261957 rows
+  jpxjpy 2020: 305925 rows
+  jpxjpy 2021: 318201 rows
+  jpxjpy 2022: 326027 rows
+  jpxjpy 2023: 278625 rows
+  jpxjpy 2024: 333516 rows
+  jpxjpy 2025: 335998 rows
+  jpxjpy 2026/01: 27645 rows
+  jpxjpy 2026/02: 26465 rows
+  jpxjpy 2026/03: 29393 rows
+  jpxjpy 2026/04: 27707 rows
+  jpxjpy 2026/05: 27621 rows
+  jpxjpy 2026/06: 29025 rows
+  jpxjpy 2026/07: 29744 rows
+  jpxjpy 2026/08: 26096 rows
+SAVED JPXJPY: 359936 bars 2010-11-14 23:00:00+00:00 -> 2026-08-28 21:00:00+00:00
+  usdjpy 2010: 328836 rows
+  usdjpy 2011: 300286 rows
+  usdjpy 2012: 365686 rows
+  usdjpy 2013: 370808 rows
+  usdjpy 2014: 366741 rows
+  usdjpy 2015: 371891 rows
+  usdjpy 2016: 372417 rows
+  usdjpy 2017: 371298 rows
+  usdjpy 2018: 371800 rows
+  usdjpy 2019: 372585 rows
+  usdjpy 2020: 372200 rows
+  usdjpy 2021: 369393 rows
+  usdjpy 2022: 372596 rows
+  usdjpy 2023: 322956 rows
+  usdjpy 2024: 372083 rows
+  usdjpy 2025: 371703 rows
+  usdjpy 2026/01: 30128 rows
+  usdjpy 2026/02: 28731 rows
+  usdjpy 2026/03: 31931 rows
+  usdjpy 2026/04: 31471 rows
+  usdjpy 2026/05: 30054 rows
+  usdjpy 2026/06: 31248 rows
+  usdjpy 2026/07: 32641 rows
+  usdjpy 2026/08: 28740 rows
+SAVED USDJPY: 411197 bars 2010-01-03 22:00:00+00:00 -> 2026-08-28 21:45:00+00:00

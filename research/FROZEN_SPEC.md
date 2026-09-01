@@ -87,3 +87,19 @@ bond CFD legs for diversification, paper forward-validation via run_live.py.
 - Breadth block (cycle 3): silver FAILS Stage 1 individually (dev Sharpe
   −0.21; costs eat the trend) -> excluded from the block by existing spec.
   WTI/DAX/Nikkei/USDJPY pending download; block decision deferred.
+
+## Amendment 3 (2026-09-01) — cycle 3 complete: strength weights + breadth ADMITTED
+
+- WEIGHTS: w_i ∝ (max(trailing-756d Sharpe, 0) + 0.1) x invcorr_i, normalized,
+  shift(1). Stage-3 robust (all 9 perturbations of lb/floor beat old champion
+  on dev). Declared singly, not gridded.
+- UNIVERSE: + WTIUSD (ends 2023-12, HistData discontinued), GRXEUR, JPXJPY,
+  USDJPY trend legs (all Stage-1 pass, corr 0.07-0.25 vs book). XAGUSD
+  excluded (Stage-1 fail). Champion book now 11 legs / 8 markets.
+- HOLDOUT LOOK #13 (confirmation): strength_baseline 1.47/1.15/DSR 0.970;
+  strength_breadth 1.41/1.26/-9.8%/DSR 0.977, CI [0.70, 2.12]. Both beat the
+  old champion (1.31) OOS; no dev->holdout decay. NEW CHAMPION v1.1 =
+  strength_breadth (Calmar/DD/CI-floor priority under prop constraints).
+- DSR > 0.95 achieved for the first time (0.977).
+- Prop MC updated: P(pass 8%/5%-trail, 1y) ~60% at 1.0x, breach risk 38%->29%.
+- Holdout looks: 13. Series: research/strength_breadth_daily.csv.

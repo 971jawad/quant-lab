@@ -249,3 +249,4 @@
 {"phase": "schools", "family": "EURUSD_eur_cont", "n_configs": 1, "dev_t": 0.03, "dev_sharpe": 0.01}
 {"phase": "cycle2", "n_configs": 16, "note": "multi-speed trend + TWAP-MR + regime gate"}
 {"phase": "admission", "holdout_look": 12, "n_configs": 17}
+{"phase": "cycle3", "holdout_look": 13, "n_configs": 11}

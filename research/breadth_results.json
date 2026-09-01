@@ -8,6 +8,42 @@
       "dups": 0,
       "absret_gt5pct": 17,
       "median_bars_per_year": 23643
+    },
+    {
+      "series": "WTIUSD",
+      "bars": 303782,
+      "range": "2010-11-15->2023-12-01",
+      "ohlc_violations": 0,
+      "dups": 0,
+      "absret_gt5pct": 58,
+      "median_bars_per_year": 23614
+    },
+    {
+      "series": "GRXEUR",
+      "bars": 258939,
+      "range": "2010-11-15->2026-08-28",
+      "ohlc_violations": 0,
+      "dups": 0,
+      "absret_gt5pct": 7,
+      "median_bars_per_year": 14353
+    },
+    {
+      "series": "JPXJPY",
+      "bars": 359936,
+      "range": "2010-11-14->2026-08-28",
+      "ohlc_violations": 0,
+      "dups": 0,
+      "absret_gt5pct": 8,
+      "median_bars_per_year": 22847
+    },
+    {
+      "series": "USDJPY",
+      "bars": 411197,
+      "range": "2010-01-03->2026-08-28",
+      "ohlc_violations": 0,
+      "dups": 0,
+      "absret_gt5pct": 0,
+      "median_bars_per_year": 24877
     }
   ],
   "legs_dev": {
@@ -17,6 +53,34 @@
       "max_dd_pct": -46.65,
       "cagr_pct": -2.74,
       "corr_vs_base": 0.19
+    },
+    "trend_WTIUSD": {
+      "sharpe": 0.51,
+      "calmar": 0.18,
+      "max_dd_pct": -28.22,
+      "cagr_pct": 5.13,
+      "corr_vs_base": 0.068
+    },
+    "trend_GRXEUR": {
+      "sharpe": 0.15,
+      "calmar": 0.04,
+      "max_dd_pct": -30.06,
+      "cagr_pct": 1.28,
+      "corr_vs_base": 0.133
+    },
+    "trend_JPXJPY": {
+      "sharpe": 0.25,
+      "calmar": 0.08,
+      "max_dd_pct": -28.68,
+      "cagr_pct": 2.18,
+      "corr_vs_base": 0.253
+    },
+    "trend_USDJPY": {
+      "sharpe": 0.22,
+      "calmar": 0.07,
+      "max_dd_pct": -27.18,
+      "cagr_pct": 1.82,
+      "corr_vs_base": 0.216
     }
   },
   "baseline_dev": {
@@ -26,10 +90,10 @@
     "cagr_pct": 8.74
   },
   "breadth_dev": {
-    "sharpe": 1.1,
-    "calmar": 0.8,
-    "max_dd_pct": -9.33,
-    "cagr_pct": 7.5
+    "sharpe": 1.13,
+    "calmar": 0.65,
+    "max_dd_pct": -10.64,
+    "cagr_pct": 6.93
   },
   "admitted": false
 }

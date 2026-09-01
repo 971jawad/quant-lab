@@ -1,0 +1,22 @@
+{
+  "strength_baseline": {
+    "sharpe": 1.47,
+    "sortino": 2.08,
+    "calmar": 1.15,
+    "max_dd_pct": -10.58,
+    "cagr_pct": 12.14,
+    "DSR": 0.97,
+    "boot90CI": "[0.59,2.29]",
+    "P(SR>0)": 0.998
+  },
+  "strength_breadth": {
+    "sharpe": 1.41,
+    "sortino": 2.18,
+    "calmar": 1.26,
+    "max_dd_pct": -9.8,
+    "cagr_pct": 12.35,
+    "DSR": 0.977,
+    "boot90CI": "[0.7,2.12]",
+    "P(SR>0)": 0.998
+  }
+}
