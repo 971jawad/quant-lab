@@ -151,3 +151,19 @@ XAU/MNQ/EUR daily.
 - The program's grand lesson holds: every point of Sharpe added since round 3
   came from portfolio construction (vol targeting, diversification, ERC,
   vol management) — zero came from new entry signals.
+
+## Round 7 — freeze + final table (2026-09-01)
+
+- External review critique addressed: (a) ERC weights verified mechanically
+  leak-free (max |dev-only vs full-sample weight diff| = 0.00e+00 over 3,416
+  dev dates); (b) FULL SPEC FROZEN in research/FROZEN_SPEC.md; (c) definitive
+  table produced (research/final_table.csv). Correction to the review's
+  premise: LW-break t=8 was already falsified by 15m path replay — it is an
+  OHLC artifact, not a cross-asset edge; the real cross-asset trend evidence
+  is the slow legs.
+- FINAL TABLE: BOOK_erc_mm holdout Sharpe 1.31 (dev 1.24), CAGR 9.9%, maxDD
+  -9.3%, Calmar 1.06, bootstrap 90% CI [0.57, 2.09], P(SR>0) 99.8%, DSR 0.942.
+  Equal-weight book 1.26 — the dev-time ERC choice also won on holdout.
+  Diversification proof in one line: the dev-best leg (COT, dev 2.00)
+  regressed to 0.74 on holdout, while the book went 1.24 -> 1.31.
+- Bar set by the external review ("CI comfortably above zero") is MET.
