@@ -1,0 +1,63 @@
+{
+  "as_of": "2026-08-28",
+  "positions": [
+    {
+      "leg": "trend_XAUUSD",
+      "weight": 0.1992,
+      "direction": "SHORT",
+      "lookback_days": 160
+    },
+    {
+      "leg": "trend_MNQ",
+      "weight": 0.0955,
+      "direction": "LONG",
+      "lookback_days": 160
+    },
+    {
+      "leg": "trend_ES",
+      "weight": 0.1064,
+      "direction": "LONG",
+      "lookback_days": 240
+    },
+    {
+      "leg": "trend_EURUSD",
+      "weight": 0.0116,
+      "direction": "SHORT",
+      "lookback_days": 160
+    },
+    {
+      "leg": "trend_USDJPY",
+      "weight": 0.0117,
+      "direction": "LONG",
+      "lookback_days": 80
+    },
+    {
+      "leg": "trend_WTIUSD",
+      "weight": 0.0172,
+      "direction": "SHORT",
+      "lookback_days": 40
+    },
+    {
+      "leg": "trend_JPXJPY",
+      "weight": 0.0885,
+      "direction": "LONG",
+      "lookback_days": 240
+    },
+    {
+      "leg": "xsec_ALL",
+      "weight": 0.228,
+      "direction": "event-driven"
+    },
+    {
+      "leg": "MNQ_pull_C",
+      "weight": 0.1214,
+      "direction": "event-driven"
+    },
+    {
+      "leg": "COT_NQ_washout",
+      "weight": 0.1206,
+      "direction": "event-driven"
+    }
+  ],
+  "risk_events": 653
+}

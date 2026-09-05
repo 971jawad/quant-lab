@@ -368,3 +368,42 @@ VERDICT — THE CHAMPION SITS AT THE BOUNDARY OF STATISTICAL DETECTABILITY.
   (1.43 vs 0.83) because the luck bar falls as 1/sqrt(n_obs).
   Low PBO + backward-validation failure together give the sharpest reading:
   the edge is internally consistent but REGIME-DEPENDENT, not universal.
+
+## Amendment 12 (2026-09-05) — the ENSEMBLER: production build
+
+run_ensembler.py is the DEPLOYABLE form of the research. It is not "all models
+combined" (cycle 13 proved that loses); it is the admitted legs, strength-
+weighted, with an explicit risk engine. Every design choice traces to a measured
+result:
+  * legs = champion v1.2 minus the contaminated DAX series
+  * equity-index trend legs run LONG-ONLY (cycle 12 measured the short side at
+    -108%, concentrated in indices; FX/oil keep both sides)
+  * 2% weight-drift rebalancing (identical performance, 54% less churn)
+  * signal at daily close -> execute next open (no lookahead; the only honest
+    form of "timing" -- perfect entry/exit requires foresight and is not on offer)
+  * risk engine: 3% daily loss cap, 5% trailing-DD monitor, kill switch at 12%
+    drawdown or 1y rolling Sharpe <= -1.0, followed by a 60-day cool-off and
+    restart (a permanent halt zeroed the backtest and was a modelling error)
+
+PERFORMANCE (net, after the risk engine):
+  dev 2010-2022 : Sharpe 1.47  Calmar 1.04  maxDD  -8.83%  CAGR 9.17%
+  HOLDOUT 22-26 : Sharpe 1.39  Calmar 1.01  maxDD -10.53%  CAGR 10.59%
+  full sample   : Sharpe 1.43  Calmar 0.91  maxDD -10.53%  underwater 88%
+
+CRITICAL PRACTICAL FINDING — the book does NOT fit a 5% trailing-DD challenge
+at full size. 852 breach-days at 1.0x. Sizing table:
+    scale   maxDD    CAGR    5%-trailing breaches   MC pass / breach
+     0.40   -4.34%   3.79%            0             15.1% / 2.3%
+     0.50   -5.40%   4.75%            4             29.1% / 5.9%
+     0.75   -8.00%   7.16%          382             50.5% / 21.8%
+     1.00  -10.53%   9.60%          852             60.6% / 30.7%
+  There is no sizing that both passes reliably and survives: maximum pass
+  probability is ~61% and it comes with a ~31% chance of blowing the account.
+  A 5% trailing limit is structurally hostile to a Sharpe-1.4 book -- the
+  mathematics of the challenge, not a defect of the strategy.
+
+CURRENT TARGET POSITIONS (data as of 2026-08-28, refresh before any use):
+  trend_XAUUSD 19.9% SHORT | xsec_ALL 22.8% | MNQ_pull_C 12.1% |
+  COT_NQ_washout 12.1% | trend_ES 10.6% LONG | trend_MNQ 9.6% LONG |
+  trend_JPXJPY 8.8% LONG | trend_WTIUSD 1.7% SHORT | trend_EURUSD 1.2% SHORT |
+  trend_USDJPY 1.2% LONG
