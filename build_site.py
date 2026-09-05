@@ -74,6 +74,7 @@ def main():
     payload = {
         "generated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "positions": jload("ensembler_positions.json", {}),
+        "trades": jload("trade_details.json", {}),
         "metrics": {
             "ensembler_full": metrics(ens),
             "ensembler_dev": metrics(ens[ens.index < DEV]) if ens is not None else {},

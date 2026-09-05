@@ -110,6 +110,7 @@
 
 <nav>
   <button class="on" data-t="sig">Live Signals</button>
+  <button data-t="trades">Trade Details</button>
   <button data-t="perf">Performance</button>
   <button data-t="edges">Edges Tested</button>
   <button data-t="valid">Validation</button>
@@ -125,6 +126,27 @@
     <div class="tw"><table><thead><tr><th>Leg</th><th>Direction</th><th class="n">Weight</th>
       <th class="opt" style="width:160px">Allocation</th><th class="n opt2">Lookback</th></tr></thead>
       <tbody id="postbl"></tbody></table></div>
+  </section>
+
+
+  <section id="trades">
+    <h2>Open positions — full trade detail</h2>
+    <p class="note"><strong>Timeframe: daily bars.</strong> The signal is read at the daily close and
+      executed at the <strong>next session's open</strong>. This is a position-based book, so there is
+      no fixed stop-loss order: risk is controlled by volatility sizing and the book risk engine.
+      The <em>flip level</em> is the price at which the signal reverses — the functional equivalent
+      of a stop, and where the position would turn over.</p>
+    <div class="tw"><table><thead><tr><th>Market</th><th>Dir</th><th>Entry date</th>
+      <th class="n">Entry price</th><th class="n">Current</th><th class="n">Unrealised</th>
+      <th class="n">Flip level</th><th class="n opt">% to flip</th>
+      <th class="n opt2">Held</th><th class="n opt2">ATR(14)</th></tr></thead>
+      <tbody id="opentbl"></tbody></table></div>
+    <h2>Recent closed round-trips</h2>
+    <p class="note">Real executed prices. Note the shape of the edge: most trades are small losses,
+      a few run for hundreds of days and carry the whole result.</p>
+    <div class="tw"><table><thead><tr><th>Market</th><th>Dir</th><th>Entry</th>
+      <th class="n">@</th><th>Exit</th><th class="n">@</th><th class="n opt">Days</th>
+      <th class="n">Net</th></tr></thead><tbody id="closedtbl"></tbody></table></div>
   </section>
 
   <section id="perf">
@@ -292,6 +314,26 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
     screen.orientation.addEventListener("change", () => setTimeout(drawChart, 250));
   if (window.ResizeObserver) new ResizeObserver(relayout).observe(document.body);
   document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>setTimeout(drawChart,20)));
+
+
+  // ---- trade details
+  const T = D.trades||{};
+  $("#opentbl").innerHTML = (T.open||[]).map(r=>{
+    const k = r.direction==="LONG"?"long":r.direction==="SHORT"?"short":"flat";
+    return `<tr><td>${r.market}</td><td><span class="pill ${k}">${r.direction}</span></td>
+      <td class="dim">${r.entry_date}</td><td class="n">${r.entry_price}</td>
+      <td class="n">${r.current_price}</td>
+      <td class="n ${cls(r.unrealised_pct)}">${num(r.unrealised_pct)}%</td>
+      <td class="n warn" style="color:#d29922">${r.flip_level??"—"}</td>
+      <td class="n dim opt">${r.pct_to_flip==null?"—":num(r.pct_to_flip)+"%"}</td>
+      <td class="n dim opt2">${r.days_held}d</td>
+      <td class="n dim opt2">${r.atr14}</td></tr>`;}).join("");
+  $("#closedtbl").innerHTML = (T.recent||[]).map(r=>
+    `<tr><td>${r.market}</td><td><span class="pill ${r.dir==="LONG"?"long":"short"}">${r.dir}</span></td>
+     <td class="dim">${r.entry_date}</td><td class="n">${r.entry_price}</td>
+     <td class="dim">${r.exit_date}</td><td class="n">${r.exit_price}</td>
+     <td class="n dim opt">${r.days}</td>
+     <td class="n ${cls(r.net_pct)}">${num(r.net_pct)}%</td></tr>`).join("");
 
   // ---- edges
   $("#edgetbl").innerHTML=(D.tested||[]).map(t=>
