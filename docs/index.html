@@ -112,6 +112,7 @@
   <button class="on" data-t="sig">Live Signals</button>
   <button data-t="trades">Trade Details</button>
   <button data-t="perf">Performance</button>
+  <button data-t="status">Live vs Backtest</button>
   <button data-t="edges">Edges Tested</button>
   <button data-t="valid">Validation</button>
   <button data-t="risk">Sizing &amp; Risk</button>
@@ -160,6 +161,32 @@
     <p class="note">Dev = the window all iteration happened on. <strong>Holdout</strong> = untouched
       until the strategy was frozen. The naive benchmark is 12-month momentum with zero fitting —
       the bar any machinery must clear.</p>
+  </section>
+
+
+  <section id="status">
+    <h2>Three separate track records</h2>
+    <p class="note">These are <strong>not</strong> the same thing and should never be quoted together.
+      <strong>DEV</strong> is in-sample — every iteration and decision happened on it.
+      <strong>HOLDOUT</strong> was frozen and looked at 17 times, so the sample is worn.
+      <strong>LIVE</strong> is data that did not exist when the system was frozen; it arrives
+      through the automated feed and is the only track record that can still surprise us.</p>
+    <div class="tw"><table><thead><tr><th>Regime</th><th>Status</th><th>Period</th>
+      <th class="n">Days</th><th class="n">Return</th><th class="n">Sharpe</th>
+      <th class="n">Max DD</th><th class="n opt">Win days</th></tr></thead>
+      <tbody id="regtbl"></tbody></table></div>
+    <p class="note" id="livenote"></p>
+
+    <h2>System audit</h2>
+    <p class="note">Automated integrity checks over the data, the seam between the frozen archive
+      and the live feed, lookahead, and metric reproducibility. Re-run on every refresh.</p>
+    <div class="tw"><table><thead><tr><th>Check</th><th>Result</th><th class="opt">Detail</th>
+      </tr></thead><tbody id="chktbl"></tbody></table></div>
+
+    <h2>Live data feed</h2>
+    <div class="tw"><table><thead><tr><th>Market</th><th>Status</th><th class="n">Bars added</th>
+      <th class="n">Through</th><th class="n opt">Feed correlation</th></tr></thead>
+      <tbody id="feedtbl"></tbody></table></div>
   </section>
 
   <section id="edges">
@@ -324,7 +351,7 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
       <td class="dim">${r.entry_date}</td><td class="n">${r.entry_price}</td>
       <td class="n">${r.current_price}</td>
       <td class="n ${cls(r.unrealised_pct)}">${num(r.unrealised_pct)}%</td>
-      <td class="n warn" style="color:#d29922">${r.flip_level??"—"}</td>
+      <td class="n" style="color:#d29922">${r.flip_level??"—"}${r.pending_flip?` <span class="pill no">flips → ${r.next_direction}</span>`:""}</td>
       <td class="n dim opt">${r.pct_to_flip==null?"—":num(r.pct_to_flip)+"%"}</td>
       <td class="n dim opt2">${r.days_held}d</td>
       <td class="n dim opt2">${r.atr14}</td></tr>`;}).join("");
@@ -334,6 +361,43 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
      <td class="dim">${r.exit_date}</td><td class="n">${r.exit_price}</td>
      <td class="n dim opt">${r.days}</td>
      <td class="n ${cls(r.net_pct)}">${num(r.net_pct)}%</td></tr>`).join("");
+
+
+  // ---- live vs backtest
+  const V = D.verification||{}, R = V.regimes||{};
+  const LBL = {dev:["DEV","in-sample"], holdout:["HOLDOUT","frozen, 17 looks"],
+               live:["LIVE","never seen"]};
+  $("#regtbl").innerHTML = ["dev","holdout","live"].map(k=>{
+    const m = R[k]||{}, l = LBL[k];
+    if(!m.days || m.days<2) return `<tr><td>${l[0]}</td><td colspan="7" class="dim">not enough data yet</td></tr>`;
+    const badge = k==="live" ? "ok" : (k==="dev" ? "no" : "");
+    return `<tr><td><strong>${l[0]}</strong></td>
+      <td><span class="pill ${k==="live"?"ok":"flat"}">${l[1]}</span></td>
+      <td class="dim">${m.start} → ${m.end}</td>
+      <td class="n">${m.days}</td>
+      <td class="n ${cls(m.total_return_pct)}">${num(m.total_return_pct)}%</td>
+      <td class="n ${cls(m.sharpe)}">${num(m.sharpe)}</td>
+      <td class="n neg">${num(m.max_dd_pct)}%</td>
+      <td class="n dim opt">${num(m.pct_days_positive,1)}%</td></tr>`;
+  }).join("");
+  const lv = R.live||{};
+  if(lv.days){
+    $("#livenote").innerHTML = `<strong>Reading the live number honestly:</strong> ${lv.days} trading
+      days is far too short to measure skill — at this book's volatility a stretch like this is
+      well inside normal noise, and the strategy spends ~88% of its days below a prior peak by
+      design. It is reported because hiding it would be dishonest, not because it is yet
+      meaningful. Judge it after a year or more.`;
+  }
+  $("#chktbl").innerHTML = (V.checks||[]).map(c=>
+    `<tr><td>${c.check}</td>
+     <td><span class="pill ${c.status==="PASS"?"ok":"no"}">${c.status}</span></td>
+     <td class="dim opt">${c.detail}</td></tr>`).join("");
+  const F = (D.live_feed&&D.live_feed.markets)||[];
+  $("#feedtbl").innerHTML = F.map(m=>
+    `<tr><td>${m.market}</td>
+     <td><span class="pill ${m.status==="refused"?"no":"ok"}">${m.status}</span></td>
+     <td class="n">${m.added??"—"}</td><td class="n dim">${m.live_end||m.hist_end||"—"}</td>
+     <td class="n dim opt">${m.corr??"—"}</td></tr>`).join("");
 
   // ---- edges
   $("#edgetbl").innerHTML=(D.tested||[]).map(t=>

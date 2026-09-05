@@ -1,0 +1,108 @@
+{
+  "live_start": "2026-06-28",
+  "regimes": {
+    "dev": {
+      "days": 3395,
+      "start": "2012-09-25",
+      "end": "2022-06-30",
+      "total_return_pct": 226.14,
+      "max_dd_pct": -8.83,
+      "best_day_pct": 2.58,
+      "worst_day_pct": -3.32,
+      "pct_days_positive": 45.8,
+      "sharpe": 1.47,
+      "sortino": 1.7,
+      "calmar": 1.04,
+      "cagr_pct": 9.17,
+      "vol_pct": null
+    },
+    "holdout": {
+      "days": 1437,
+      "start": "2022-07-01",
+      "end": "2026-06-26",
+      "total_return_pct": 87.7,
+      "max_dd_pct": -10.53,
+      "best_day_pct": 2.79,
+      "worst_day_pct": -2.28,
+      "pct_days_positive": 49.1,
+      "sharpe": 1.48,
+      "sortino": 1.97,
+      "calmar": 1.11,
+      "cagr_pct": 11.68,
+      "vol_pct": null
+    },
+    "live": {
+      "days": 60,
+      "start": "2026-06-28",
+      "end": "2026-09-04",
+      "total_return_pct": -2.19,
+      "max_dd_pct": -3.83,
+      "best_day_pct": 0.54,
+      "worst_day_pct": -0.65,
+      "pct_days_positive": 48.3,
+      "sharpe": -2.25,
+      "sortino": -3.18,
+      "calmar": -2.32,
+      "cagr_pct": -8.87,
+      "vol_pct": null
+    }
+  },
+  "checks": [
+    {
+      "check": "no duplicate bars",
+      "status": "PASS",
+      "detail": "0 duplicates"
+    },
+    {
+      "check": "no non-positive prices",
+      "status": "PASS",
+      "detail": "0 bad values"
+    },
+    {
+      "check": "no unexplained data gaps",
+      "status": "PASS",
+      "detail": "4 gap(s); known: HistData outage w/c 2017-02-17"
+    },
+    {
+      "check": "archive->live seam is smooth",
+      "status": "PASS",
+      "detail": "largest 1-day jump at the seam: MNQ 1.90%"
+    },
+    {
+      "check": "live feed only appends",
+      "status": "PASS",
+      "detail": "0 overlapping bars"
+    },
+    {
+      "check": "signal is lagged (no lookahead)",
+      "status": "PASS",
+      "detail": "position at bar t uses close at t-1 or earlier"
+    },
+    {
+      "check": "flip levels consistent with direction",
+      "status": "PASS",
+      "detail": "0 inconsistent"
+    },
+    {
+      "check": "weights sum to 1",
+      "status": "PASS",
+      "detail": "sum = 0.9999"
+    },
+    {
+      "check": "live feed healthy",
+      "status": "PASS",
+      "detail": "6/6 ok"
+    },
+    {
+      "check": "feed correlations above guard",
+      "status": "PASS",
+      "detail": "min corr 0.803"
+    },
+    {
+      "check": "holdout Sharpe reproduces",
+      "status": "PASS",
+      "detail": "1.48 (expected ~1.4)"
+    }
+  ],
+  "all_passed": true
+}

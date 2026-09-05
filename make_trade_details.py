@@ -76,8 +76,14 @@ def leg_detail(inst):
     entry_date = d.index[start_i]
     entry_px = float(d["open"].iloc[start_i])   # executed at that session's open
 
-    # the price at which the signal reverses = the close L bars ago
-    flip = float(c.iloc[-L]) if len(c) > L else np.nan
+    # The signal is sign(close[-1] / close[-1-L] - 1), so the level at which it
+    # reverses is close[-(L+1)] -- NOT close[-L]. (Off-by-one caught by the audit.)
+    flip = float(c.iloc[-(L + 1)]) if len(c) > L else np.nan
+    # has the signal ALREADY crossed on today's close? then it flips next open
+    sig_now = float(np.sign(c.pct_change(L).iloc[-1]))
+    if long_only:
+        sig_now = max(sig_now, 0.0)
+    pending = bool(sig_now != cur)
     unreal = ((px_now - entry_px) / entry_px * 100 * (cur if cur != 0 else 0))
     dist = ((px_now - flip) / px_now * 100) if flip == flip else np.nan
 
@@ -93,6 +99,9 @@ def leg_detail(inst):
         "unrealised_pct": round(float(unreal), 2),
         "days_held": int((d.index[-1] - entry_date).days),
         "flip_level": round(flip, 5) if flip == flip else None,
+        "pending_flip": pending,
+        "next_direction": ("LONG" if sig_now > 0 else
+                           ("SHORT" if sig_now < 0 else "FLAT")) if pending else None,
         "pct_to_flip": round(float(dist), 2) if dist == dist else None,
         "atr14": round(a, 5),
         "round_trip_cost": COST[inst],

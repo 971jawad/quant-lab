@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-05 18:35 UTC",
+  "generated_utc": "2026-09-05 18:41 UTC",
   "positions": {
     "as_of": "2026-09-04",
     "positions": [
@@ -76,8 +76,10 @@
         "current_price": 4476.6001,
         "unrealised_pct": -7.2,
         "days_held": 77,
-        "flip_level": 5355.725,
-        "pct_to_flip": -19.64,
+        "flip_level": 5278.718,
+        "pending_flip": false,
+        "next_direction": null,
+        "pct_to_flip": -17.92,
         "atr14": 105.91856,
         "round_trip_cost": 0.45
       },
@@ -92,8 +94,10 @@
         "current_price": 29565.25,
         "unrealised_pct": 16.24,
         "days_held": 143,
-        "flip_level": 24720.258,
-        "pct_to_flip": 16.39,
+        "flip_level": 24931.706,
+        "pending_flip": false,
+        "next_direction": null,
+        "pct_to_flip": 15.67,
         "atr14": 363.02661,
         "round_trip_cost": 1.62
       },
@@ -108,8 +112,10 @@
         "current_price": 7722.0,
         "unrealised_pct": 37.6,
         "days_held": 491,
-        "flip_level": 6823.242,
-        "pct_to_flip": 11.64,
+        "flip_level": 6816.145,
+        "pending_flip": false,
+        "next_direction": null,
+        "pct_to_flip": 11.73,
         "atr14": 63.53636,
         "round_trip_cost": 0.62
       },
@@ -124,8 +130,10 @@
         "current_price": 1.16212,
         "unrealised_pct": -0.97,
         "days_held": 89,
-        "flip_level": 1.15928,
-        "pct_to_flip": 0.24,
+        "flip_level": 1.16809,
+        "pending_flip": false,
+        "next_direction": null,
+        "pct_to_flip": -0.51,
         "atr14": 0.00382,
         "round_trip_cost": 0.00016
       },
@@ -140,8 +148,10 @@
         "current_price": 156.22099,
         "unrealised_pct": 0.98,
         "days_held": 1,
-        "flip_level": 159.972,
-        "pct_to_flip": -2.4,
+        "flip_level": 159.894,
+        "pending_flip": false,
+        "next_direction": null,
+        "pct_to_flip": -2.35,
         "atr14": 1.16885,
         "round_trip_cost": 0.025
       },
@@ -156,8 +166,10 @@
         "current_price": 74.362,
         "unrealised_pct": 13.59,
         "days_held": 38,
-        "flip_level": 87.203,
-        "pct_to_flip": -17.27,
+        "flip_level": 86.263,
+        "pending_flip": false,
+        "next_direction": null,
+        "pct_to_flip": -16.0,
         "atr14": 2.53014,
         "round_trip_cost": 0.07
       },
@@ -172,8 +184,10 @@
         "current_price": 65054.55859,
         "unrealised_pct": 64.12,
         "days_held": 415,
-        "flip_level": 50191.366,
-        "pct_to_flip": 22.85,
+        "flip_level": 50106.468,
+        "pending_flip": false,
+        "next_direction": null,
+        "pct_to_flip": 22.98,
         "atr14": 1135.28571,
         "round_trip_cost": 20.0
       }
@@ -378,6 +392,179 @@
         "exit_price": 21616.332,
         "days": 4,
         "net_pct": 0.11
+      }
+    ]
+  },
+  "verification": {
+    "live_start": "2026-06-28",
+    "regimes": {
+      "dev": {
+        "days": 3395,
+        "start": "2012-09-25",
+        "end": "2022-06-30",
+        "total_return_pct": 226.14,
+        "max_dd_pct": -8.83,
+        "best_day_pct": 2.58,
+        "worst_day_pct": -3.32,
+        "pct_days_positive": 45.8,
+        "sharpe": 1.47,
+        "sortino": 1.7,
+        "calmar": 1.04,
+        "cagr_pct": 9.17,
+        "vol_pct": null
+      },
+      "holdout": {
+        "days": 1437,
+        "start": "2022-07-01",
+        "end": "2026-06-26",
+        "total_return_pct": 87.7,
+        "max_dd_pct": -10.53,
+        "best_day_pct": 2.79,
+        "worst_day_pct": -2.28,
+        "pct_days_positive": 49.1,
+        "sharpe": 1.48,
+        "sortino": 1.97,
+        "calmar": 1.11,
+        "cagr_pct": 11.68,
+        "vol_pct": null
+      },
+      "live": {
+        "days": 60,
+        "start": "2026-06-28",
+        "end": "2026-09-04",
+        "total_return_pct": -2.19,
+        "max_dd_pct": -3.83,
+        "best_day_pct": 0.54,
+        "worst_day_pct": -0.65,
+        "pct_days_positive": 48.3,
+        "sharpe": -2.25,
+        "sortino": -3.18,
+        "calmar": -2.32,
+        "cagr_pct": -8.87,
+        "vol_pct": null
+      }
+    },
+    "checks": [
+      {
+        "check": "no duplicate bars",
+        "status": "PASS",
+        "detail": "0 duplicates"
+      },
+      {
+        "check": "no non-positive prices",
+        "status": "PASS",
+        "detail": "0 bad values"
+      },
+      {
+        "check": "no unexplained data gaps",
+        "status": "PASS",
+        "detail": "4 gap(s); known: HistData outage w/c 2017-02-17"
+      },
+      {
+        "check": "archive->live seam is smooth",
+        "status": "PASS",
+        "detail": "largest 1-day jump at the seam: MNQ 1.90%"
+      },
+      {
+        "check": "live feed only appends",
+        "status": "PASS",
+        "detail": "0 overlapping bars"
+      },
+      {
+        "check": "signal is lagged (no lookahead)",
+        "status": "PASS",
+        "detail": "position at bar t uses close at t-1 or earlier"
+      },
+      {
+        "check": "flip levels consistent with direction",
+        "status": "PASS",
+        "detail": "0 inconsistent"
+      },
+      {
+        "check": "weights sum to 1",
+        "status": "PASS",
+        "detail": "sum = 0.9999"
+      },
+      {
+        "check": "live feed healthy",
+        "status": "PASS",
+        "detail": "6/6 ok"
+      },
+      {
+        "check": "feed correlations above guard",
+        "status": "PASS",
+        "detail": "min corr 0.803"
+      },
+      {
+        "check": "holdout Sharpe reproduces",
+        "status": "PASS",
+        "detail": "1.48 (expected ~1.4)"
+      }
+    ],
+    "all_passed": true
+  },
+  "live_feed": {
+    "checked_utc": "2026-09-05T18:35:34.719391+00:00",
+    "min_corr_guard": 0.7,
+    "markets": [
+      {
+        "market": "XAUUSD",
+        "status": "extended",
+        "added": 59,
+        "hist_end": "2026-06-26",
+        "live_end": "2026-09-04",
+        "corr": 0.973,
+        "level_diff_pct": 0.472
+      },
+      {
+        "market": "MNQ",
+        "status": "extended",
+        "added": 59,
+        "hist_end": "2026-06-26",
+        "live_end": "2026-09-04",
+        "corr": 0.99,
+        "level_diff_pct": 0.515
+      },
+      {
+        "market": "ES",
+        "status": "extended",
+        "added": 59,
+        "hist_end": "2026-06-26",
+        "live_end": "2026-09-04",
+        "corr": 0.989,
+        "level_diff_pct": 0.439
+      },
+      {
+        "market": "EURUSD",
+        "status": "extended",
+        "added": 60,
+        "hist_end": "2026-06-26",
+        "live_end": "2026-09-04",
+        "corr": 0.991,
+        "level_diff_pct": 0.032
+      },
+      {
+        "market": "USDJPY",
+        "status": "extended",
+        "added": 6,
+        "hist_end": "2026-08-28",
+        "live_end": "2026-09-04",
+        "corr": 0.984,
+        "level_diff_pct": 0.007
+      },
+      {
+        "market": "WTIUSD",
+        "status": "refused",
+        "reason": "overlap"
+      },
+      {
+        "market": "JPXJPY",
+        "status": "extended",
+        "added": 6,
+        "hist_end": "2026-08-28",
+        "live_end": "2026-09-04",
+        "corr": 0.803,
+        "level_diff_pct": 0.092
       }
     ]
   },

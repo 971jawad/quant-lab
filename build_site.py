@@ -75,6 +75,8 @@ def main():
         "generated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "positions": jload("ensembler_positions.json", {}),
         "trades": jload("trade_details.json", {}),
+        "verification": jload("verification.json", {}),
+        "live_feed": jload("live_feed.json", {}),
         "metrics": {
             "ensembler_full": metrics(ens),
             "ensembler_dev": metrics(ens[ens.index < DEV]) if ens is not None else {},
