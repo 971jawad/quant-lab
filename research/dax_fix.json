@@ -1,0 +1,34 @@
+{
+  "v1.1 (with corrupt DAX)|dev": {
+    "sharpe": 1.47,
+    "sortino": 1.8,
+    "calmar": 1.01,
+    "max_dd_pct": -8.53,
+    "cagr_pct": 8.59
+  },
+  "v1.1 (with corrupt DAX)|holdout": {
+    "sharpe": 1.41,
+    "sortino": 2.18,
+    "calmar": 1.26,
+    "max_dd_pct": -9.8,
+    "cagr_pct": 12.35,
+    "CI90": "[0.7,2.12]",
+    "DSR": 0.974
+  },
+  "v1.2 (DAX removed)|dev": {
+    "sharpe": 1.49,
+    "sortino": 1.86,
+    "calmar": 1.05,
+    "max_dd_pct": -8.6,
+    "cagr_pct": 9.07
+  },
+  "v1.2 (DAX removed)|holdout": {
+    "sharpe": 1.36,
+    "sortino": 1.85,
+    "calmar": 1.07,
+    "max_dd_pct": -9.76,
+    "cagr_pct": 10.43,
+    "CI90": "[0.53,2.16]",
+    "DSR": 0.942
+  }
+}

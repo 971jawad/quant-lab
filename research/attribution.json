@@ -1,0 +1,49 @@
+{
+  "champion_dev": {
+    "sharpe": 1.47,
+    "calmar": 1.01,
+    "max_dd_pct": -8.53,
+    "cagr_pct": 8.59
+  },
+  "naive_tsmom_dev": {
+    "sharpe": 0.44,
+    "calmar": 0.16,
+    "max_dd_pct": -14.34,
+    "cagr_pct": 2.29
+  },
+  "champion_holdout": {
+    "sharpe": 1.41,
+    "calmar": 1.26,
+    "max_dd_pct": -9.8,
+    "cagr_pct": 12.35
+  },
+  "naive_tsmom_holdout": {
+    "sharpe": 0.71,
+    "calmar": 0.98,
+    "max_dd_pct": -10.13,
+    "cagr_pct": 9.96
+  },
+  "attrib_dev": {
+    "r2": 0.2495,
+    "alpha_ann_pct": 7.165,
+    "alpha_t": 5.29,
+    "betas": {
+      "equity(ES)": -0.0043,
+      "duration(TLT)": 0.025,
+      "commodity(DBC)": -0.0025,
+      "naive_trend": 0.5654
+    }
+  },
+  "attrib_holdout": {
+    "r2": 0.4557,
+    "alpha_ann_pct": 7.422,
+    "alpha_t": 2.87,
+    "betas": {
+      "equity(ES)": 0.0532,
+      "duration(TLT)": -0.0092,
+      "commodity(DBC)": 0.0224,
+      "naive_trend": 0.4115
+    }
+  },
+  "crisis_book_mean_pct": -0.0285
+}

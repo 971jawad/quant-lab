@@ -1,0 +1,57 @@
+{
+  "trend_ES": {
+    "alpha": 3.69,
+    "t": 1.31,
+    "beta": 0.372
+  },
+  "trend_EURUSD": {
+    "alpha": 1.01,
+    "t": 0.39,
+    "beta": 0.18
+  },
+  "trend_NQ": {
+    "alpha": 5.83,
+    "t": 2.13,
+    "beta": 0.386
+  },
+  "trend_XAUUSD": {
+    "alpha": 5.48,
+    "t": 2.05,
+    "beta": 0.179
+  },
+  "xsec_ALL": {
+    "alpha": 4.94,
+    "t": 1.78,
+    "beta": 0.331
+  },
+  "MNQ_pull_C": {
+    "alpha": 4.5,
+    "t": 3.14,
+    "beta": 0.012
+  },
+  "COT_NQ_washout": {
+    "alpha": 9.43,
+    "t": 6.28,
+    "beta": -0.007
+  },
+  "trend_WTIUSD": {
+    "alpha": 2.15,
+    "t": 0.68,
+    "beta": 0.314
+  },
+  "trend_GRXEUR": {
+    "alpha": -3.87,
+    "t": -0.4,
+    "beta": 5.243
+  },
+  "trend_JPXJPY": {
+    "alpha": 2.39,
+    "t": 0.91,
+    "beta": 0.332
+  },
+  "trend_USDJPY": {
+    "alpha": 1.31,
+    "t": 0.49,
+    "beta": 0.183
+  }
+}

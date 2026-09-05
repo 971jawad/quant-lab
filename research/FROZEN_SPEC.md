@@ -153,3 +153,40 @@ printed ABOVE gross Sharpe, which is impossible.
   burn holdout looks. The fixed-income hole is real in theory but adding it
   did not pay here.
 - Holdout looks: 14.
+
+## Amendment 6 (2026-09-05) — cycle 7/8: attribution, DATA CORRUPTION FIX, eras
+
+DATA INTEGRITY FAILURE FOUND AND FIXED (the important one):
+- GRXEUR ("DAX") is CONTAMINATED: HistData spliced EURO STOXX 50 levels
+  (~3,000-4,400) into 2020-06-15 -> 2023-12-01 = 896 days = 21% of the series,
+  then jumped back to true DAX (16,756). Produced a leg with 64% ann vol vs a
+  10% target, one +222% day, kurtosis 2,836, and NEGATIVE alpha (-3.9%/yr) with
+  an absurd 5.24 beta to the naive book. The corrupt window OVERLAPS the holdout.
+- It slipped past cycle-3 verification because that check only counted >5% daily
+  moves; 2 bad bars in 4,258 tripped nothing. Detected instead by leg-level alpha
+  attribution — a diagnostic, not a data check, which is why attribution matters.
+- FIX: GRXEUR leg REMOVED. CHAMPION v1.2 = 10 legs / 7 markets.
+  CORRECTED holdout: Sharpe 1.36 (was 1.41), Sortino 1.85, Calmar 1.07 (was
+  1.26), maxDD -9.76%, CAGR 10.43%, DSR 0.942, CI90 [0.53, 2.16]. The corrupt
+  leg had been FLATTERING the published numbers. v1.2 is the honest champion.
+- NEW PERMANENT CHECK: level-continuity (quarterly median ratio outside
+  [0.60, 1.67]) added to run_breadth.verify. Rescan of all 10 series: only
+  GRXEUR contaminated (2 breaks). WTIUSD flags 1 break = the REAL 2020 oil
+  crash ($51->$30) -> known false positive; commodity crashes need human review.
+
+ATTRIBUTION (cycle 7) — what we are actually paid for:
+- vs THE DUMB BENCHMARK (naive 12m TSMOM, equal weight, zero fitting):
+  champion dev 1.47 vs 0.44; holdout 1.41 vs 0.71. The machinery earns its keep.
+- FACTOR REGRESSION (equity/duration/commodity/naive-trend): holdout ALPHA
+  +7.42%/yr, t = +2.87 SIGNIFICANT, R^2 45.6%; dev alpha +7.16%, t +5.29.
+  Alpha is stable across windows. Naive-trend beta 0.41 -> ~40% of returns are
+  generic trend beta anyone can buy cheaply; the remainder is genuine.
+- CRISIS: on the 20 worst equity days (mean -2.97%) the book returns -0.03%
+  -> effectively neutral, not a hedge but not a hidden long either.
+- LEG-LEVEL ALPHA (orthogonal to naive trend): COT_NQ_washout +9.4%/yr t 6.28
+  (beta -0.01, R^2 0%) and MNQ_pull_C +4.5% t 3.14 (beta 0.01) are the TRUE
+  alpha legs; trend_NQ t 2.13 and trend_XAUUSD t 2.05 genuine; ES/xsec/WTI/JPX
+  are pure trend beta; EURUSD/USDJPY legs are noise. FUTURE RESEARCH SHOULD
+  TARGET THE ORTHOGONAL EVENT/POSITIONING FAMILY, not more trend variants.
+- Holdout looks: 14 (attribution + the DAX fix are diagnostics/data repair,
+  not strategy searches).

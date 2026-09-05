@@ -41,7 +41,14 @@ def verify(name: str) -> dict:
     bad = ((df["high"] < df[["open", "close"]].max(axis=1)) |
            (df["low"] > df[["open", "close"]].min(axis=1))).sum()
     r = np.log(df["close"] / df["close"].shift(1))
-    return {"series": name, "bars": len(df),
+    # LEVEL-CONTINUITY CHECK (added after the GRXEUR contamination: HistData
+    # spliced Euro Stoxx 50 levels into 21% of the DAX series). A genuine index
+    # never halves or doubles its level regime; flag any quarter whose median
+    # level is <60% or >167% of the adjacent quarter's.
+    q = df["close"].resample("QE").median().dropna()
+    ratio = (q / q.shift(1)).dropna()
+    level_breaks = int(((ratio < 0.6) | (ratio > 1.67)).sum())
+    return {"series": name, "bars": len(df), "level_breaks": level_breaks,
             "range": f"{df.index[0].date()}->{df.index[-1].date()}",
             "ohlc_violations": int(bad), "dups": int(df.index.duplicated().sum()),
             "absret_gt5pct": int((r.abs() > 0.05).sum()),
