@@ -1,0 +1,23 @@
+{
+  "NDX": {
+    "n_on": 53,
+    "on_bp": 40.3,
+    "base_bp": 19.2,
+    "t_weekly": 0.43,
+    "p": 0.6673,
+    "verdict": "right sign, ns"
+  },
+  "GSPC": {
+    "n_on": 49,
+    "on_bp": -34.2,
+    "base_bp": 15.2,
+    "t_weekly": -1.35,
+    "p": 0.1811,
+    "verdict": "FAILS"
+  },
+  "pooled": {
+    "t": -0.41,
+    "p": 0.6823,
+    "on_bp": 4.5
+  }
+}

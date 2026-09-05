@@ -261,3 +261,4 @@
 {"phase": "cot_breadth", "n_configs": 11}
 {"phase": "cot_breadth_fixed", "holdout_look": 16, "n_configs": 11}
 {"phase": "cycle10_equity_family", "n_configs": 13}
+{"phase": "backward_validation_1999_2009", "n_configs": 2, "note": "independent decade"}

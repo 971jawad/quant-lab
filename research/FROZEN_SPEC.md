@@ -261,3 +261,39 @@ CONSEQUENCE — applying the pre-declared rule in the direction that hurts:
 
 PERMANENT RULE: t-stats must be computed on the native observation frequency of
 the signal. Documented in qlab/metrics.py. Holdout looks: 16.
+
+## Amendment 9 (2026-09-05) — cycle 11: BACKWARD VALIDATION. The honest ceiling.
+
+The champion was built on 2010-2022 and confirmed on 2022-2026. CFTC positioning
+goes back to 1986 and Nasdaq futures to 1999, so the ONE confirmed alpha
+mechanism was tested on 1999-2009 — an entirely independent decade (dot-com
+bust, 2003-07 bull, GFC) that played no part in its discovery. Rule frozen,
+nothing tuned, weekly t-stats per Amendment 8.
+
+RESULT — THE MECHANISM DOES NOT GENERALIZE:
+  Nasdaq  1999-2009: +40bp vs +19bp base, t = +0.43, p = 0.67 (right sign, ns)
+  S&P     1999-2009: -34bp vs +15bp base, t = -1.35, p = 0.18 (WRONG SIGN)
+  POOLED  1999-2009: +5bp vs +17bp,       t = -0.41, p = 0.68 (no effect)
+  vs 2010-2022 dev: Nasdaq +111bp vs +26bp, t = 2.32.
+
+=> the washout is a POST-GFC REGIME PHENOMENON (plausibly passive flows, the
+   vol-selling complex, the Fed put), not a timeless market truth. One decade
+   on, one decade off.
+
+BOOK SENSITIVITY: the COT leg carries a large share of the book's quality.
+  v1.2 as published      : holdout Sharpe 1.36, Calmar 1.07, DSR 0.935
+  v1.2 WITHOUT the COT leg: holdout Sharpe 1.17, Calmar 0.61, DSR 0.852
+The leg is not removed — it passed every pre-declared test on 2010-2026 — but
+its forward expectation MUST be discounted, and 1.17/0.61 is the honest
+worst-case if the post-GFC regime ends.
+
+PROGRAM STATUS: PRACTICAL CEILING REACHED with this dataset.
+  - ~250 models across every strategy family tested
+  - alpha-family breadth exhausted (equity indices, replication p = 0.061)
+  - beta-family breadth actively dilutes (cycle 6)
+  - the best alpha mechanism fails backward validation
+  - 16 holdout looks consumed; the holdout is worn
+  - 3 errors caught in one session (DAX contamination, CFTC renames, sqrt(5)
+    t-inflation) — two of which had FLATTERED results
+Further genuine improvement requires data that does not yet exist: FORWARD
+paper validation. Everything else is re-mining a worn sample.
