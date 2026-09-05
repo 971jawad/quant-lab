@@ -329,3 +329,42 @@ economically-motivated prior declared in advance:
   look; recorded so the ledger reflects the true look count.
 
 CHAMPION REMAINS v1.2. Holdout looks: 17.
+
+## Amendment 11 (2026-09-05) — cycles 13-14: the Committee, and the CAPSTONE verdict
+
+CYCLE 13 — "THE COMMITTEE" (the testable form of intuition/holistic judgment):
+eight schools each vote in [-1,+1]; equal weight; nothing fitted. Individual
+voters (dev Sharpe): trend +0.45, crossasset +0.17, breakout +0.14, macro +0.04,
+volregime +0.02, positioning -0.21, seasonal -0.59, meanrev -0.78.
+  COMMITTEE (all 8) = +0.29  -- WORSE than trend alone (+0.45)
+  conviction filter (|vote|>0.25, the "wait for the A+ setup" rule) = +0.29, no help
+  champion v1.2 = +1.45
+=> Signal-level consensus DESTROYS value: averaging in five worthless-or-negative
+   voters dilutes the one good signal. Combination must happen at the PORTFOLIO
+   level with evidence-based weights (what the champion does), never at the
+   signal level with equal votes. This is the quantitative refutation of
+   "combine everything the great traders do".
+
+CYCLE 14 — CAPSTONE META-ANALYSIS (4,572 configs, 23 phases, 251 scored models):
+  program distribution: median Sharpe -0.35, only 25.1% positive, max +2.03.
+  PBO / CSCV:  holdout 0.020, full sample 0.000  -> performance is CONSISTENT
+     across sub-periods, NOT a lucky-block artifact. This argues against
+     conventional overfitting.
+  EXPECTED MAX NULL SHARPE (the luck bar) vs the champion:
+     window        n_obs   trials    E[max null]   champion   verdict
+     holdout        1491       17          0.75      1.36      clears
+     holdout        1491      250          1.17      1.36      clears
+     holdout        1491     4572          1.51      1.36      FAILS
+     full sample    4886     4572          0.83      1.43      CLEARS
+  DSR(holdout): 0.931 at 17 trials, 0.679 at 250, 0.356 at 4,572.
+
+VERDICT — THE CHAMPION SITS AT THE BOUNDARY OF STATISTICAL DETECTABILITY.
+  It is neither proven nor refuted, and the answer hinges entirely on how trials
+  are counted. 4,572 counts every within-fold parameter evaluation; the number of
+  genuinely INDEPENDENT mechanisms tried is nearer 250 (distinct strategy
+  hypotheses), at which the champion clears every bar (E[max null] 1.17 < 1.36,
+  DSR 0.68). Under the maximally conservative count it does not clear on the
+  4-year holdout, though it does clear comfortably on the 19-year full sample
+  (1.43 vs 0.83) because the luck bar falls as 1/sqrt(n_obs).
+  Low PBO + backward-validation failure together give the sharpest reading:
+  the edge is internally consistent but REGIME-DEPENDENT, not universal.

@@ -1,0 +1,10 @@
+{
+  "n_trials": 4572,
+  "champion_holdout_sharpe": 1.356,
+  "champion_full_sharpe": 1.434,
+  "E_max_null_holdout": 1.507,
+  "E_max_null_full": 0.832,
+  "DSR_full_trials": 0.3563,
+  "PBO_holdout": 0.02,
+  "PBO_full": 0.0
+}

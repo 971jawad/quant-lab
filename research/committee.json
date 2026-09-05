@@ -1,0 +1,38 @@
+{
+  "voters": {
+    "trend": 0.45,
+    "breakout": 0.14,
+    "meanrev": -0.78,
+    "positioning": -0.21,
+    "macro": 0.04,
+    "volregime": 0.02,
+    "seasonal": -0.59,
+    "crossasset": 0.17
+  },
+  "committee": {
+    "committee|dev": {
+      "sharpe": 0.29,
+      "calmar": 0.09,
+      "max_dd_pct": -5.12,
+      "cagr_pct": 0.44
+    },
+    "committee|holdout": {
+      "sharpe": 0.25,
+      "calmar": 0.15,
+      "max_dd_pct": -2.53,
+      "cagr_pct": 0.38
+    },
+    "conviction (|vote|>0.25)|dev": {
+      "sharpe": 0.29,
+      "calmar": 0.08,
+      "max_dd_pct": -4.97,
+      "cagr_pct": 0.4
+    },
+    "conviction (|vote|>0.25)|holdout": {
+      "sharpe": 0.23,
+      "calmar": 0.13,
+      "max_dd_pct": -2.38,
+      "cagr_pct": 0.31
+    }
+  }
+}
