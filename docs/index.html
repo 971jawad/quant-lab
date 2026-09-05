@@ -123,6 +123,7 @@
   <button data-t="perf">Performance</button>
   <button data-t="status">Live vs Backtest</button>
   <button data-t="edges">Edges Tested</button>
+  <button data-t="candles">Candles</button>
   <button data-t="valid">Validation</button>
   <button data-t="risk">Sizing &amp; Risk</button>
   <button data-t="ops">Operating Rules</button>
@@ -230,6 +231,39 @@
     <h2>Leg-level alpha (orthogonal to generic trend)</h2>
     <div class="tw"><table><thead><tr><th>Leg</th><th class="n">Alpha %/yr</th><th class="n">t-stat</th>
       <th class="n opt2">Trend beta</th></tr></thead><tbody id="alphatbl"></tbody></table></div>
+  </section>
+
+
+  <section id="candles">
+    <h2>Candlestick patterns — the full program</h2>
+    <p class="note">Every canonical pattern from the literature (Nison, Bulkowski), defined with no
+      tuning, tested across 7 markets, plus machine-learning and neural models on raw candle
+      geometry, an ensemble test, and a multiple-testing correction. Same discipline as everything
+      else: no lookahead (patterns complete at bar <em>t</em>, entry at <em>t+1</em> open), all
+      markets reported win or lose, every trial ledgered.</p>
+    <div class="grid" id="cndgrid"></div>
+    <p class="note" id="cndverdict"></p>
+
+    <h2>All 22 patterns</h2>
+    <div class="tw"><table><thead><tr><th>Pattern</th><th class="n">Signals</th>
+      <th class="n">Mean return</th><th class="n">Markets positive</th>
+      <th class="n opt">Best t</th><th class="opt2">Best market</th></tr></thead>
+      <tbody id="cndtbl"></tbody></table></div>
+
+    <h2>The eight most significant results — and why they are still noise</h2>
+    <p class="note">With 122 tests you expect ~6 to clear p&lt;0.05 by chance alone. We got 11, and
+      the signs contradict each other across markets. Under Benjamini-Hochberg control for the
+      false-discovery rate, <strong>none survives</strong>.</p>
+    <div class="tw"><table><thead><tr><th>Pattern</th><th>Market</th><th class="n">n</th>
+      <th class="n">Mean</th><th class="n">t</th><th class="n opt">p</th></tr></thead>
+      <tbody id="cndsig"></tbody></table></div>
+
+    <h2>ML and AI on candle geometry</h2>
+    <p class="note">Gradient boosting and a neural net on raw candle shape (body ratios, shadows,
+      gaps, relative range) rather than named patterns — so the models could find combinations the
+      canon never described. Walk-forward, embargoed.</p>
+    <div class="tw"><table><thead><tr><th>Model</th><th class="n">Dev Sharpe</th>
+      <th class="n opt">CAGR</th></tr></thead><tbody id="cndml"></tbody></table></div>
   </section>
 
   <section id="valid">
@@ -395,6 +429,40 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
      <td class="n ${cls(r.net_pct)}">${num(r.net_pct)}%</td></tr>`).join("");
 
 
+
+
+  // ---- candles
+  const CN = D.candles||{};
+  if(CN.summary){
+    $("#cndgrid").innerHTML = `
+      <div class="card"><div class="k">Pattern tests</div><div class="v">${CN.n_tests}</div></div>
+      <div class="card"><div class="k">p &lt; 0.05</div><div class="v">${CN.n_p05}
+        <span class="dim" style="font-size:13px">/ ${CN.expected_by_chance} by chance</span></div></div>
+      <div class="card"><div class="k">Survive FDR control</div>
+        <div class="v neg">${CN.bh_survivors}</div></div>
+      <div class="card"><div class="k">Added to the book</div>
+        <div class="v neg">${CN.ensemble_delta_sharpe}%</div></div>`;
+    $("#cndverdict").innerHTML = `<strong>Verdict: no tradeable edge.</strong> The largest t-statistic
+      across all ${CN.n_tests} tests was ${CN.max_t_observed}, against ${CN.max_t_from_noise} expected
+      from pure noise at this many tests — essentially indistinguishable. Zero patterns survive
+      false-discovery-rate control. The ML and AI legs on candle geometry were mostly negative, and
+      adding the positive ones to the book <em>reduced</em> its Sharpe by
+      ${Math.abs(CN.ensemble_delta_sharpe)}% (they correlate ${CN.ensemble_corr} with it, so they are
+      not even diversifying). No holdout look was spent — nothing qualified for one.`;
+    $("#cndtbl").innerHTML = CN.summary.map(r=>
+      `<tr><td>${r.pattern}</td><td class="n">${r.n}</td>
+       <td class="n ${cls(r.mean_bp)}">${num(r.mean_bp,1)}bp</td>
+       <td class="n dim">${r.markets_positive}</td>
+       <td class="n opt">${num(r.best_t)}</td>
+       <td class="dim opt2">${r.best_market}</td></tr>`).join("");
+    $("#cndsig").innerHTML = (CN.top_nominal||[]).map(r=>
+      `<tr><td>${r.pattern}</td><td>${r.market}</td><td class="n">${r.n}</td>
+       <td class="n ${cls(r.mean_bp)}">${num(r.mean_bp,1)}bp</td>
+       <td class="n">${num(r.t)}</td><td class="n dim opt">${num(r.p,4)}</td></tr>`).join("");
+    $("#cndml").innerHTML = Object.entries(CN.ml||{}).map(([k,v])=>
+      `<tr><td>${k}</td><td class="n ${cls(v.sharpe)}">${num(v.sharpe)}</td>
+       <td class="n dim opt">${num(v.cagr)}%</td></tr>`).join("");
+  }
 
   // ---- decay monitor
   const DK = D.decay||{};

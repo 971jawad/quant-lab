@@ -77,6 +77,7 @@ def main():
         "trades": jload("trade_details.json", {}),
         "verification": jload("verification.json", {}),
         "decay": jload("decay_monitor.json", {}),
+        "candles": jload("candles_summary.json", {}),
         "live_feed": jload("live_feed.json", {}),
         "metrics": {
             "ensembler_full": metrics(ens),

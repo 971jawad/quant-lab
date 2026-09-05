@@ -1,0 +1,296 @@
+{
+  "summary": [
+    {
+      "pattern": "piercing",
+      "n": 299,
+      "mean_bp": 44.4,
+      "markets_positive": "5/7",
+      "best_t": 2.71,
+      "best_market": "USDJPY"
+    },
+    {
+      "pattern": "three_crows",
+      "n": 182,
+      "mean_bp": 15.7,
+      "markets_positive": "4/6",
+      "best_t": 1.14,
+      "best_market": "XAUUSD"
+    },
+    {
+      "pattern": "three_soldiers",
+      "n": 313,
+      "mean_bp": 11.5,
+      "markets_positive": "3/7",
+      "best_t": 1.91,
+      "best_market": "WTIUSD"
+    },
+    {
+      "pattern": "inside_bar",
+      "n": 4449,
+      "mean_bp": 4.8,
+      "markets_positive": "3/7",
+      "best_t": -2.83,
+      "best_market": "JPXJPY"
+    },
+    {
+      "pattern": "nr4",
+      "n": 6698,
+      "mean_bp": 3.7,
+      "markets_positive": "3/7",
+      "best_t": 2.07,
+      "best_market": "WTIUSD"
+    },
+    {
+      "pattern": "hammer",
+      "n": 760,
+      "mean_bp": 2.3,
+      "markets_positive": "5/7",
+      "best_t": 1.66,
+      "best_market": "USDJPY"
+    },
+    {
+      "pattern": "three_inside",
+      "n": 1116,
+      "mean_bp": -0.4,
+      "markets_positive": "4/7",
+      "best_t": 2.02,
+      "best_market": "ES"
+    },
+    {
+      "pattern": "tweezer",
+      "n": 1217,
+      "mean_bp": -1.1,
+      "markets_positive": "3/7",
+      "best_t": 1.77,
+      "best_market": "JPXJPY"
+    },
+    {
+      "pattern": "inverted_hammer",
+      "n": 527,
+      "mean_bp": -2.4,
+      "markets_positive": "3/7",
+      "best_t": 2.46,
+      "best_market": "MNQ"
+    },
+    {
+      "pattern": "harami",
+      "n": 2366,
+      "mean_bp": -4.7,
+      "markets_positive": "4/7",
+      "best_t": -1.63,
+      "best_market": "MNQ"
+    },
+    {
+      "pattern": "engulfing",
+      "n": 1984,
+      "mean_bp": -5.1,
+      "markets_positive": "2/7",
+      "best_t": -1.02,
+      "best_market": "MNQ"
+    },
+    {
+      "pattern": "dark_cloud",
+      "n": 299,
+      "mean_bp": -5.8,
+      "markets_positive": "3/7",
+      "best_t": -1.65,
+      "best_market": "MNQ"
+    },
+    {
+      "pattern": "outside_bar",
+      "n": 3684,
+      "mean_bp": -8.8,
+      "markets_positive": "2/7",
+      "best_t": -3.07,
+      "best_market": "ES"
+    },
+    {
+      "pattern": "hanging_man",
+      "n": 924,
+      "mean_bp": -15.7,
+      "markets_positive": "3/7",
+      "best_t": -2.72,
+      "best_market": "WTIUSD"
+    },
+    {
+      "pattern": "shooting_star",
+      "n": 725,
+      "mean_bp": -23.1,
+      "markets_positive": "0/7",
+      "best_t": -2.65,
+      "best_market": "MNQ"
+    },
+    {
+      "pattern": "marubozu",
+      "n": 513,
+      "mean_bp": -23.5,
+      "markets_positive": "4/7",
+      "best_t": -1.9,
+      "best_market": "XAUUSD"
+    },
+    {
+      "pattern": "belt_hold",
+      "n": 713,
+      "mean_bp": -25.5,
+      "markets_positive": "2/7",
+      "best_t": -2.34,
+      "best_market": "WTIUSD"
+    },
+    {
+      "pattern": "gap_go",
+      "n": 128,
+      "mean_bp": -41.0,
+      "markets_positive": "2/4",
+      "best_t": -1.51,
+      "best_market": "WTIUSD"
+    }
+  ],
+  "top_nominal": [
+    {
+      "n": 564,
+      "mean_bp": -24.34,
+      "base_bp": 16.71,
+      "t": -3.07,
+      "p": 0.0,
+      "win_rate": 0.43,
+      "pattern": "outside_bar",
+      "market": "ES"
+    },
+    {
+      "n": 480,
+      "mean_bp": -31.36,
+      "base_bp": 16.18,
+      "t": -2.83,
+      "p": 0.0,
+      "win_rate": 0.45,
+      "pattern": "inside_bar",
+      "market": "JPXJPY"
+    },
+    {
+      "n": 143,
+      "mean_bp": -103.93,
+      "base_bp": 13.07,
+      "t": -2.72,
+      "p": 0.01,
+      "win_rate": 0.38,
+      "pattern": "hanging_man",
+      "market": "WTIUSD"
+    },
+    {
+      "n": 50,
+      "mean_bp": 47.12,
+      "base_bp": 4.99,
+      "t": 2.71,
+      "p": 0.01,
+      "win_rate": 0.66,
+      "pattern": "piercing",
+      "market": "USDJPY"
+    },
+    {
+      "n": 89,
+      "mean_bp": -57.33,
+      "base_bp": 25.87,
+      "t": -2.65,
+      "p": 0.01,
+      "win_rate": 0.36,
+      "pattern": "shooting_star",
+      "market": "MNQ"
+    },
+    {
+      "n": 669,
+      "mean_bp": 44.61,
+      "base_bp": 18.46,
+      "t": 2.46,
+      "p": 0.01,
+      "win_rate": 0.57,
+      "pattern": "inside_bar",
+      "market": "WTIUSD"
+    },
+    {
+      "n": 54,
+      "mean_bp": 81.37,
+      "base_bp": 25.81,
+      "t": 2.46,
+      "p": 0.02,
+      "win_rate": 0.65,
+      "pattern": "inverted_hammer",
+      "market": "MNQ"
+    },
+    {
+      "n": 25,
+      "mean_bp": 84.0,
+      "base_bp": 17.95,
+      "t": 2.51,
+      "p": 0.02,
+      "win_rate": 0.76,
+      "pattern": "piercing",
+      "market": "ES"
+    }
+  ],
+  "n_tests": 122,
+  "n_p05": 11,
+  "expected_by_chance": 6,
+  "bh_survivors": 0,
+  "max_t_observed": 3.07,
+  "max_t_from_noise": 2.64,
+  "ml": {
+    "gbm_XAUUSD": {
+      "sharpe": -0.36,
+      "cagr": -3.46
+    },
+    "gbm_MNQ": {
+      "sharpe": 0.2,
+      "cagr": 1.37
+    },
+    "gbm_ES": {
+      "sharpe": 0.25,
+      "cagr": 1.82
+    },
+    "gbm_EURUSD": {
+      "sharpe": -0.4,
+      "cagr": -3.79
+    },
+    "gbm_USDJPY": {
+      "sharpe": -0.17,
+      "cagr": -1.83
+    },
+    "gbm_WTIUSD": {
+      "sharpe": -0.24,
+      "cagr": -2.52
+    },
+    "gbm_JPXJPY": {
+      "sharpe": -0.61,
+      "cagr": -5.57
+    },
+    "nn_XAUUSD": {
+      "sharpe": 0.06,
+      "cagr": 0.18
+    },
+    "nn_MNQ": {
+      "sharpe": 0.72,
+      "cagr": 6.2
+    },
+    "nn_ES": {
+      "sharpe": 0.56,
+      "cagr": 4.76
+    },
+    "nn_EURUSD": {
+      "sharpe": -0.13,
+      "cagr": -1.53
+    },
+    "nn_USDJPY": {
+      "sharpe": -0.07,
+      "cagr": -0.97
+    },
+    "nn_WTIUSD": {
+      "sharpe": -0.64,
+      "cagr": -5.92
+    },
+    "nn_JPXJPY": {
+      "sharpe": 0.12,
+      "cagr": 0.64
+    }
+  },
+  "ensemble_corr": 0.437,
+  "ensemble_delta_sharpe": -20.1
+}

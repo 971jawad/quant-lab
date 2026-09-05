@@ -407,3 +407,38 @@ CURRENT TARGET POSITIONS (data as of 2026-08-28, refresh before any use):
   COT_NQ_washout 12.1% | trend_ES 10.6% LONG | trend_MNQ 9.6% LONG |
   trend_JPXJPY 8.8% LONG | trend_WTIUSD 1.7% SHORT | trend_EURUSD 1.2% SHORT |
   trend_USDJPY 1.2% LONG
+
+## Amendment 13 (2026-09-06) — cycle 15: CANDLESTICKS, the full program
+
+The one school never tested as a family. Full method applied: 22 canonical
+patterns (Nison / Bulkowski definitions, zero tuning, thresholds expressed
+relative to trailing ATR or the bar's own range) x 7 markets, plus ML and AI on
+raw candle GEOMETRY, an ensemble test and a multiple-testing correction.
+No lookahead (pattern completes at bar t, entry at t+1 open); all markets
+reported win or lose (no survivorship selection); every trial ledgered.
+
+PHASE 1 — PATTERNS: 122 pattern-market tests.
+  11 reached p<0.05; ~6 are expected from chance alone at this many tests.
+  Largest |t| observed = 3.07 vs 2.64 expected from PURE NOISE at n=122.
+  BENJAMINI-HOCHBERG FDR CONTROL AT 5%: **0 of 122 survive**.
+  Signs contradict across markets, which is the signature of noise: inside_bar
+  is -31bp on JPXJPY (t -2.83) but +45bp on WTIUSD (t +2.46); outside_bar is
+  the single "most significant" result and it is NEGATIVE (-24bp, t -3.07).
+  Famous patterns outright fail: shooting_star positive in 0/7 markets,
+  belt_hold -25.5bp, gap_go -41.0bp, marubozu -23.5bp mean.
+
+PHASE 2/3 — ML + AI on candle geometry (walk-forward, embargoed):
+  GBM 2/7 markets positive (best 0.25). NN 4/7 (best MNQ 0.72, ES 0.56).
+  Mostly negative; nothing near the bar used elsewhere in this program.
+
+PHASE 4 — ENSEMBLE: the six dev-positive candle legs correlate +0.437 with the
+  champion (not even diversifying) and adding them takes the book from
+  Sharpe 1.49 -> 1.19, i.e. **-20.1%**. REJECTED at Stage 5.
+
+PHASE 5 — META: the best single result is what running 122 tests on noise
+  produces. No holdout look was spent, because nothing qualified for one —
+  spending one would have been the waste the protocol exists to prevent.
+
+VERDICT: candlesticks carry no tradeable edge in this data at realistic costs.
+This matches the academic literature, and it is now the 16th independent family
+to fail. Champion unchanged. Holdout looks still 17.
