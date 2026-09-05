@@ -1,0 +1,44 @@
+[
+  {
+    "scale": 0.5,
+    "maxdd": -5.4,
+    "cagr": 4.75,
+    "pass": 28.1,
+    "breach": 6.2
+  },
+  {
+    "scale": 0.75,
+    "maxdd": -8.0,
+    "cagr": 7.16,
+    "pass": 50.9,
+    "breach": 21.4
+  },
+  {
+    "scale": 1.0,
+    "maxdd": -10.53,
+    "cagr": 9.6,
+    "pass": 60.5,
+    "breach": 30.9
+  },
+  {
+    "scale": 1.25,
+    "maxdd": -13.0,
+    "cagr": 12.07,
+    "pass": 59.7,
+    "breach": 38.0
+  },
+  {
+    "scale": 1.5,
+    "maxdd": -15.4,
+    "cagr": 14.56,
+    "pass": 56.8,
+    "breach": 42.6
+  },
+  {
+    "scale": 2.0,
+    "maxdd": -20.02,
+    "cagr": 19.61,
+    "pass": 52.0,
+    "breach": 47.9
+  }
+]

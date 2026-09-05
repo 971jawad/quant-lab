@@ -1,90 +1,119 @@
 # quant-lab
 
-Walk-forward research framework for prop-firm futures/CFD trading:
-5 strategy families x 3 risk styles x 5 instruments (MES, ES, MNQ, XAUUSD,
-EURUSD), built and evaluated with strict no-lookahead discipline.
+Systematic trading research on gold, equity indices, FX and oil — built to find
+out whether a tradeable edge exists, and to be honest when it doesn't.
 
-## The honest headline
+**📊 Live dashboard: [971jawad.github.io/quant-lab](https://971jawad.github.io/quant-lab/)**
 
-**On 13-15 years of out-of-sample 15-minute data, none of the 75 model
-variants has a positive edge after realistic costs.** Results on short
-histories (~2.4y hourly) that looked promising did not survive the larger
-sample. A pre-registered meta-labeling filter (Lopez de Prado) did not flip
-any negative family positive. Details in `results2/report.md` and
-`results2/meta_labeling.json`.
+> **Research signals only.** This repository publishes what the models compute.
+> It is not connected to any broker, places no orders, and is not investment
+> advice. Past performance — including out-of-sample — does not guarantee
+> future results.
 
-This repo's value is the machine, not a magic signal: verified data pipeline,
-leak-free walk-forward, adversarially reviewed backtester, honest statistics.
+---
 
-## Extension: RULE + ML + AI ensemble + genuine-edge meta-analysis (2026)
+## The headline
 
-A later build adds a fourth **AI** leg and combines all three approaches:
+Across **4,572 configurations** in **23 research phases**, the median model
+scored a Sharpe of **−0.35** and only **25% were positive**. Almost everything
+the trading world believes in did not survive contact with realistic costs.
 
-- `qlab/strategies.py::_nn_fit` — **AI leg**: a neural net (sklearn `MLPClassifier`)
-  refit per fold through the *same* embargoed walk-forward as the tree ML leg.
-  Runs as family `ai`; generate it with `python run_ai.py`.
-- `qlab/ensemble.py` + `run_ensemble.py` — leak-free **ensemble**: each fold picks
-  every approach's best variant on trailing (already-closed) trades only, keeps
-  those with positive trailing avg-R, inverse-variance weights them, and holds
-  **cash** when none qualifies. Per-instrument books + a global cross-market book.
-- `run_meta_analysis.py` — **genuine-edge** stats corrected for the number of
-  strategies tried: Deflated Sharpe (Bailey/LdP), White's Reality Check
-  (studentized stationary bootstrap), and PBO/CSCV.
-- `run_conditional.py` — **rule-based conditional-edge** search: does avg-R turn
-  positive under a time/session/volatility/trend condition? Best bucket picked on
-  the first 60% by date, verified on the untouched last 40%, plus BH-FDR.
-- `run_live.py` — **walk-forward live, PAPER ONLY** (`--replay` / `--watch`). No
-  broker, no real orders. Metrics now also report **Calmar** alongside Sharpe.
-- `make_ensemble_report.py` — assembles it all into `results3/report_ensemble.md`.
+What did survive is a diversified daily book — the **ENSEMBLER**:
 
-Reproduce: `python run_ai.py && python run_ensemble.py && python run_meta_analysis.py
-&& python run_conditional.py && python make_ensemble_report.py`.
+| Window | Sharpe | Sortino | CAGR | Max DD | Calmar |
+|---|--:|--:|--:|--:|--:|
+| Dev (2010 → 2022-06) | 1.47 | — | 9.17% | −8.83% | 1.04 |
+| **Holdout (2022-07 → 2026)** | **1.39** | — | **10.59%** | −10.53% | 1.01 |
+| Full sample | 1.43 | — | 9.60% | −10.53% | 0.91 |
 
-## Extension: multi-timeframe prop-edge research program (2026-09)
+It beats a naive 12-month momentum benchmark 2:1 out-of-sample and carries
+**+7.4%/yr alpha (t = 2.87)** after controlling for equity, duration, commodity
+and generic-trend factors.
 
-`run_research.py` + `run_final_holdout.py`: 204 models (session breakouts,
-London fade, ORB, trend-pullback, squeeze, mean reversion, ICT fib-zone,
-session/day-of-week drifts, ML/AI with cross-asset features) × {XAUUSD, MNQ,
-EURUSD} × {15m, 1h, 1d}, iterated on a dev window (2010→2022-06) with a
-trials ledger (4,272 configs) and tested ONCE on a frozen holdout
-(2022-07→2026-06). Full metrics suite in `qlab/metrics.py`.
+## The honest caveats — read these
 
-**Result** (`research/final_report.md`): no intraday edge at realistic costs —
-again. One thin slow edge survived: **Nasdaq daily trend-pullback momentum**,
-holdout Sharpe 0.82 / Calmar 0.45 / max DD −3.7% (ensemble book), DSR 0.78
-holdout-frame (0.94 for the corroborating lowfreq momentum book). Real-ish,
-small, lumpy; not an intraday challenge machine. The `ict` family
-(sweep→displacement→0.618 retest, session liquidity pools, Heikin-Ashi and
-break-even/structural-TP variants) is negative over 16y on gold and Nasdaq
-(`results_ict/report.md`).
+- **~40% of returns are generic trend beta** available cheaply elsewhere.
+- The Nasdaq positioning leg **fails backward validation** on 1999–2009
+  (t = 0.43 Nasdaq, −1.35 S&P). It is a post-GFC regime effect, not a market
+  law. Without it the book scores Sharpe **1.17**.
+- Under the most conservative trial accounting (all 4,572 configs), the holdout
+  Sharpe (1.36) **does not clear** the expected-maximum-luck bar (1.51). It
+  clears at ~250 independent mechanisms and on the full 19-year sample.
+- **PBO = 0.02** — performance is consistent across sub-periods, so this is not
+  classic curve-fitting. The edge is *real but regime-dependent*.
+- You will be **underwater ~88% of days** and win only **31–38%** of trades.
+
+## What was tested and rejected
+
+Intraday (15m/1h, all families) · ICT/SMC fib-zone · the "Muso" funded-trader
+setup · ML and neural nets with cross-asset features · volume/auction gating ·
+FX carry · VIX term-structure gating · Turtle & Turtle Soup · Larry Williams
+volatility breakout · Holy Grail · Raschke squeeze · Ichimoku · BNF dip ·
+bonds/ETF breadth · dedicated short models · pre-FOMC drift · turn-of-month ·
+session drifts · gold/silver reversion · the all-schools voting Committee.
+
+Three findings worth the whole exercise:
+
+1. **Timeframe is monotone.** 15m: 3% of models positive. 1h: 12%. **1d: 50%.**
+   Longer than daily is worse again. Cost drag dominates everything fast.
+2. **The edge is long-only.** Split by side across 7 markets: long **+484%**,
+   short **−108%**. Crowded shorts get squeezed; crowded longs just keep drifting.
+3. **Combining everything loses.** The Committee — all eight schools voting —
+   scored 0.29 versus 0.45 for trend alone. Combination belongs at the
+   *portfolio* level with evidence-based weights, never at the signal level.
+
+## Method
+
+- **Dev / holdout split.** All iteration on 2010→2022-06. The holdout was frozen
+  and every look is counted in `research/ledger.jsonl`.
+- **No lookahead.** Features use trailing windows only; signals read at the daily
+  close, executed at the next open; session levels use the previous completed
+  session; COT positioning applies 6 days after its as-of date.
+- **Conservative costs** — spread + slippage + commission on every trade, never
+  revised downward.
+- **Multiple-testing corrections** — Deflated Sharpe, expected-maximum-null
+  Sharpe, PBO/CSCV, stationary block bootstrap.
+- **A 5-stage admission test** for every candidate leg (`research/FROZEN_SPEC.md`).
+
+Three data/methodology bugs were caught and are documented in full, two of which
+had *flattered* results: a vendor series splicing Euro Stoxx 50 into 21% of the
+DAX history, silent CFTC contract renames that voided a holdout test, and a
+√5 t-statistic inflation from weekly→daily spreading.
 
 ## Layout
 
-- `qlab/` - engine: features, strategies (SMC/ML/TA), backtester, walk-forward
-- `run_data.py` / `run_data_15m.py` - data download + multi-institution
-  cross-verification (Yahoo, HistData vs Nasdaq/LBMA/ECB)
-- `run_all.py --profile {1h,15m}` - full model sweep -> results*/, weights*/
-- `run_meta.py` - pre-registered meta-labeling stage-2 filter
-- `run_risk_matrix.py` - prop-firm contract sizing tables
-- `weights/`, `weights2/` - deployment manifests + fitted models (hourly / 15m)
-- `results/`, `results2/` - OOS metrics, fold logs, reports
+```
+qlab/            engine: features, strategies, backtester, walk-forward, metrics
+run_research.py  the main dev/holdout sweep across families and timeframes
+run_ensembler.py THE PRODUCTION BUILD — positions, risk engine, operating rules
+run_attribution.py  what are we actually paid for (vs naive benchmark + factors)
+run_shorter.py   long/short attribution and dedicated short models
+run_committee.py the all-schools voting ensemble ("intuition", mechanized)
+run_capstone_meta.py  multiple-testing verdict over the whole program
+build_site.py    generates the dashboard payload
+research/        FROZEN_SPEC.md, learnings.md, ledger.jsonl, all result artifacts
+docs/            the GitHub Pages dashboard
+```
 
 ## Reproduce
 
+```bash
+pip install pandas numpy scikit-learn scipy yfinance requests
+python run_data_15m.py        # 16y of 15-minute data + cross-verification
+python run_research.py --phase rules --tf 1d
+python run_ensembler.py       # positions + performance
+python build_site.py          # refresh the dashboard
 ```
-pip install pandas numpy scikit-learn yfinance requests tabulate
-python run_data.py          # hourly data + verification
-python run_data_15m.py      # 16y of minute data from HistData (~15 min)
-python run_all.py --profile 15m
-python run_meta.py
-python make_report.py results2
-```
 
-## Execution assumptions
+## Data
 
-Signal at bar close -> market entry next bar open; stop-before-target intrabar;
-spread + slippage per side + commissions; 3% daily loss cap; 5% trailing-DD
-tracking. See `weights/README.md` for the full deployment contract.
+15-minute bars from HistData (2010→2026), cross-verified against **LBMA** (gold,
+r = 0.93 over 4,131 days), **ECB** (EURUSD), and Yahoo futures (indices, r = 0.98).
+Plus FRED macro series, CFTC Commitments of Traders back to 1999, and Yahoo
+futures/ETF volume. Bulk data is gitignored and regenerated by the download
+scripts.
 
-**Nothing here is trading advice. Past (even out-of-sample) performance does
-not guarantee future results.**
+## Licence
+
+MIT for the code. The research conclusions are offered as-is, and the most
+valuable thing in this repository is the list of things that **didn't** work.

@@ -9,3 +9,5 @@ __pycache__/
 *.pyc
 quant_lab_release.zip
 smoke_15m.py
+# COT archives are re-downloadable via run_cot.py / the refresh workflow
+data/external/cot/*.zip
