@@ -297,3 +297,35 @@ PROGRAM STATUS: PRACTICAL CEILING REACHED with this dataset.
     t-inflation) — two of which had FLATTERED results
 Further genuine improvement requires data that does not yet exist: FORWARD
 paper validation. Everything else is re-mining a worn sample.
+
+## Amendment 10 (2026-09-05) — cycle 12 "SHORTER": the edge is LONG-ONLY
+
+Nobody had asked whether the edge is symmetric. It is not.
+
+SIDE ATTRIBUTION (trend legs, full sample, P&L by side):
+  TOTAL across 7 markets:  LONG +483.7%   SHORT -108.4%
+  MNQ  +141 / -19 | ES +105 / -22 | JPXJPY +48 / -74 | USDJPY +64 / -32
+  Only EURUSD (+30) and WTI (+8) earn anything short; gold is flat (+0.9).
+  => shorting is a net DRAG of ~108% and the entire edge is the long side.
+
+DEDICATED SHORT SIGNALS (dev, native-frequency t-stats) — none works:
+  euphoria (COT z > +1.5 -> short, the exact MIRROR of the washout):
+      MNQ t = +0.25 (p 0.80), ES t = +0.57 (p 0.57) -> NO EDGE.
+      This is the cleanest asymmetry in the whole program: crowded SHORTS get
+      squeezed (washout works), crowded LONGS simply keep drifting up.
+  downtrend / crashvol / vix_bw / credit short rules: negative Sharpe on every
+  equity index; small positives ONLY on EURUSD, USDJPY, WTI -- precisely the
+  markets with no structural drift. The pattern is economically exact.
+
+CANDIDATE TESTED — v1.4, long-only on the drift markets (MNQ/ES/JPXJPY), an
+economically-motivated prior declared in advance:
+  per-leg dev Sharpe: MNQ 0.59->0.73, ES 0.34->0.49, JPXJPY -0.11->0.23
+  book dev 1.45 -> 1.49 (+2.8%); holdout 1.35 -> 1.40 (+3.7%), DSR 0.929 ->
+  0.942, CI floor 0.52 -> 0.59, but Calmar 1.06 -> 1.02 and maxDD -9.78 ->
+  -10.44.
+  VERDICT: NOT PROMOTED. +2.8% dev is below the Amendment-5 material bar of 5%.
+  PROCESS SLIP DISCLOSED: I took holdout look #17 on a candidate that had not
+  cleared the dev bar first. The dev gate must be applied BEFORE any holdout
+  look; recorded so the ledger reflects the true look count.
+
+CHAMPION REMAINS v1.2. Holdout looks: 17.

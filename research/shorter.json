@@ -1,0 +1,169 @@
+{
+  "side_attribution": {
+    "XAUUSD": {
+      "pct_long": 0.659,
+      "long_pnl": 135.3,
+      "short_pnl": 0.92
+    },
+    "MNQ": {
+      "pct_long": 0.816,
+      "long_pnl": 141.02,
+      "short_pnl": -19.03
+    },
+    "ES": {
+      "pct_long": 0.799,
+      "long_pnl": 104.57,
+      "short_pnl": -22.25
+    },
+    "EURUSD": {
+      "pct_long": 0.472,
+      "long_pnl": 4.39,
+      "short_pnl": 29.84
+    },
+    "USDJPY": {
+      "pct_long": 0.563,
+      "long_pnl": 64.33,
+      "short_pnl": -31.65
+    },
+    "WTIUSD": {
+      "pct_long": 0.532,
+      "long_pnl": -13.64,
+      "short_pnl": 7.69
+    },
+    "JPXJPY": {
+      "pct_long": 0.636,
+      "long_pnl": 47.68,
+      "short_pnl": -73.87
+    },
+    "TOTAL": {
+      "long": 483.7,
+      "short": -108.4
+    }
+  },
+  "short_signals": {
+    "euphoria_MNQ": {
+      "n": 45,
+      "on_bp": -25.1,
+      "t": 0.25,
+      "p": 0.8011
+    },
+    "euphoria_ES": {
+      "n": 59,
+      "on_bp": -9.4,
+      "t": 0.57,
+      "p": 0.5677
+    },
+    "downtrend_XAUUSD": {
+      "sharpe": -0.16,
+      "t": -0.63
+    },
+    "downtrend_MNQ": {
+      "sharpe": -0.38,
+      "t": -1.43
+    },
+    "downtrend_ES": {
+      "sharpe": -0.34,
+      "t": -1.29
+    },
+    "downtrend_EURUSD": {
+      "sharpe": 0.28,
+      "t": 1.08
+    },
+    "downtrend_USDJPY": {
+      "sharpe": -0.08,
+      "t": -0.31
+    },
+    "downtrend_WTIUSD": {
+      "sharpe": 0.27,
+      "t": 1.0
+    },
+    "downtrend_JPXJPY": {
+      "sharpe": -0.56,
+      "t": -2.09
+    },
+    "crashvol_XAUUSD": {
+      "sharpe": -0.06,
+      "t": -0.25
+    },
+    "crashvol_MNQ": {
+      "sharpe": -0.16,
+      "t": -0.61
+    },
+    "crashvol_ES": {
+      "sharpe": -0.12,
+      "t": -0.44
+    },
+    "crashvol_EURUSD": {
+      "sharpe": 0.28,
+      "t": 1.09
+    },
+    "crashvol_USDJPY": {
+      "sharpe": 0.28,
+      "t": 1.11
+    },
+    "crashvol_WTIUSD": {
+      "sharpe": 0.33,
+      "t": 1.22
+    },
+    "crashvol_JPXJPY": {
+      "sharpe": -0.31,
+      "t": -1.17
+    },
+    "vix_bw_XAUUSD": {
+      "sharpe": -0.28,
+      "t": -1.1
+    },
+    "vix_bw_MNQ": {
+      "sharpe": -0.19,
+      "t": -0.71
+    },
+    "vix_bw_ES": {
+      "sharpe": -0.11,
+      "t": -0.41
+    },
+    "vix_bw_EURUSD": {
+      "sharpe": 0.19,
+      "t": 0.76
+    },
+    "vix_bw_USDJPY": {
+      "sharpe": -0.04,
+      "t": -0.17
+    },
+    "vix_bw_WTIUSD": {
+      "sharpe": 0.18,
+      "t": 0.69
+    },
+    "vix_bw_JPXJPY": {
+      "sharpe": -0.07,
+      "t": -0.26
+    },
+    "credit_XAUUSD": {
+      "sharpe": -0.58,
+      "t": -2.26
+    },
+    "credit_MNQ": {
+      "sharpe": -0.62,
+      "t": -2.31
+    },
+    "credit_ES": {
+      "sharpe": -0.56,
+      "t": -2.12
+    },
+    "credit_EURUSD": {
+      "sharpe": -0.1,
+      "t": -0.38
+    },
+    "credit_USDJPY": {
+      "sharpe": -0.27,
+      "t": -1.07
+    },
+    "credit_WTIUSD": {
+      "sharpe": 0.25,
+      "t": 0.95
+    },
+    "credit_JPXJPY": {
+      "sharpe": -0.27,
+      "t": -1.01
+    }
+  }
+}
