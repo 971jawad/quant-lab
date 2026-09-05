@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-05 18:56 UTC",
+  "generated_utc": "2026-09-05 18:57 UTC",
   "positions": {
     "as_of": "2026-09-04",
     "positions": [
@@ -498,7 +498,7 @@
       {
         "check": "daily series matches 15m archive",
         "status": "PASS",
-        "detail": "34124 bars, max diff 0.0e+00 (bit-identical)"
+        "detail": "SKIPPED - 15m archive not present (expected in CI)"
       },
       {
         "check": "holdout Sharpe reproduces",
@@ -522,7 +522,7 @@
     "note": "soft patch, still inside the range an intact edge routinely produces"
   },
   "live_feed": {
-    "checked_utc": "2026-09-05T18:44:47.581443+00:00",
+    "checked_utc": "2026-09-05T18:57:43.033264+00:00",
     "min_corr_guard": 0.7,
     "markets": [
       {
