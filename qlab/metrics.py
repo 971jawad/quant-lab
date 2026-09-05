@@ -37,7 +37,7 @@ def deflated_sharpe(daily_ret: pd.Series, n_trials: int) -> float:
 
 
 def full_metrics(trades_R=None, daily_ret: pd.Series | None = None,
-                 n_trials: int = 1) -> dict:
+                 n_trials: int = 1, periods_per_year: int = 252) -> dict:
     out = {}
 
     # ---------------- equity-curve family (needs daily returns) ----------------
@@ -47,7 +47,8 @@ def full_metrics(trades_R=None, daily_ret: pd.Series | None = None,
             eq = (1 + r).cumprod()
             n = len(r)
             total = float(eq.iloc[-1] - 1)
-            cagr = float(eq.iloc[-1] ** (252 / n) - 1)
+            PY = periods_per_year
+            cagr = float(eq.iloc[-1] ** (PY / n) - 1)
             peak = eq.cummax()
             dd = eq / peak - 1
             max_dd = float(dd.min())
@@ -56,14 +57,14 @@ def full_metrics(trades_R=None, daily_ret: pd.Series | None = None,
                 "cagr_pct": round(cagr * 100, 2),
                 "max_dd_pct": round(max_dd * 100, 2),
                 "calmar": round(cagr / abs(max_dd), 2) if max_dd < 0 else None,
-                "ann_vol_pct": round(float(r.std() * np.sqrt(252)) * 100, 2),
-                "sharpe": round(float(r.mean() / (r.std() + 1e-12) * np.sqrt(252)), 2),
+                "ann_vol_pct": round(float(r.std() * np.sqrt(PY)) * 100, 2),
+                "sharpe": round(float(r.mean() / (r.std() + 1e-12) * np.sqrt(PY)), 2),
                 "pct_time_underwater": round(float((dd < 0).mean()) * 100, 1),
                 "n_days": n,
             })
             downside = r[r < 0]
             out["sortino"] = round(float(r.mean() / (downside.std() + 1e-12)
-                                         * np.sqrt(252)), 2) if len(downside) > 5 else None
+                                         * np.sqrt(PY)), 2) if len(downside) > 5 else None
             # longest peak-to-recovery stretch, in trading days
             under, longest, cur = dd < -1e-12, 0, 0
             for u in under.values:

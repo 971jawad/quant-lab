@@ -250,3 +250,6 @@
 {"phase": "cycle2", "n_configs": 16, "note": "multi-speed trend + TWAP-MR + regime gate"}
 {"phase": "admission", "holdout_look": 12, "n_configs": 17}
 {"phase": "cycle3", "holdout_look": 13, "n_configs": 11}
+{"phase": "volume", "n_configs": 13}
+{"phase": "muso_ict", "n_configs": 9}
+{"phase": "cycle5", "n_configs": 25}

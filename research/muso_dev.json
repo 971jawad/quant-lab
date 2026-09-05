@@ -1,0 +1,182 @@
+{
+  "EURUSD_std": {
+    "n_trades": 1048,
+    "win_rate": 0.3683,
+    "avg_win_R": 1.112,
+    "avg_loss_R": -0.852,
+    "win_loss_ratio": 1.31,
+    "profit_factor": 0.761,
+    "expectancy_R": -0.1284,
+    "median_trade_R": -0.1704,
+    "p5_trade_R": -1.178,
+    "worst_trade_R": -1.628,
+    "t_stat_trades": -3.61,
+    "max_consecutive_losses": 15,
+    "expectancy_wo_top5_R": -0.1544,
+    "expectancy_thirds_R": [
+      -0.17,
+      -0.102,
+      -0.114
+    ]
+  },
+  "GBPUSD_std": {
+    "n_trades": 1143,
+    "win_rate": 0.3666,
+    "avg_win_R": 1.1,
+    "avg_loss_R": -0.833,
+    "win_loss_ratio": 1.32,
+    "profit_factor": 0.765,
+    "expectancy_R": -0.1241,
+    "median_trade_R": -0.1414,
+    "p5_trade_R": -1.175,
+    "worst_trade_R": -1.799,
+    "t_stat_trades": -3.65,
+    "max_consecutive_losses": 17,
+    "expectancy_wo_top5_R": -0.1513,
+    "expectancy_thirds_R": [
+      -0.129,
+      -0.144,
+      -0.099
+    ]
+  },
+  "XAUUSD_std": {
+    "n_trades": 1025,
+    "win_rate": 0.3912,
+    "avg_win_R": 1.13,
+    "avg_loss_R": -0.864,
+    "win_loss_ratio": 1.31,
+    "profit_factor": 0.84,
+    "expectancy_R": -0.0841,
+    "median_trade_R": -0.1242,
+    "p5_trade_R": -1.142,
+    "worst_trade_R": -1.395,
+    "t_stat_trades": -2.33,
+    "max_consecutive_losses": 13,
+    "expectancy_wo_top5_R": -0.1079,
+    "expectancy_thirds_R": [
+      -0.047,
+      -0.077,
+      -0.128
+    ]
+  },
+  "EURUSD_tight": {
+    "n_trades": 1050,
+    "win_rate": 0.3752,
+    "avg_win_R": 1.167,
+    "avg_loss_R": -0.794,
+    "win_loss_ratio": 1.47,
+    "profit_factor": 0.882,
+    "expectancy_R": -0.0584,
+    "median_trade_R": -0.0652,
+    "p5_trade_R": -1.086,
+    "worst_trade_R": -1.339,
+    "t_stat_trades": -1.61,
+    "max_consecutive_losses": 13,
+    "expectancy_wo_top5_R": -0.0867,
+    "expectancy_thirds_R": [
+      -0.121,
+      -0.035,
+      -0.019
+    ]
+  },
+  "GBPUSD_tight": {
+    "n_trades": 1143,
+    "win_rate": 0.3745,
+    "avg_win_R": 1.133,
+    "avg_loss_R": -0.765,
+    "win_loss_ratio": 1.48,
+    "profit_factor": 0.886,
+    "expectancy_R": -0.0543,
+    "median_trade_R": -0.0536,
+    "p5_trade_R": -1.079,
+    "worst_trade_R": -1.456,
+    "t_stat_trades": -1.59,
+    "max_consecutive_losses": 15,
+    "expectancy_wo_top5_R": -0.0833,
+    "expectancy_thirds_R": [
+      -0.055,
+      -0.072,
+      -0.036
+    ]
+  },
+  "XAUUSD_tight": {
+    "n_trades": 1025,
+    "win_rate": 0.3863,
+    "avg_win_R": 1.179,
+    "avg_loss_R": -0.8,
+    "win_loss_ratio": 1.47,
+    "profit_factor": 0.928,
+    "expectancy_R": -0.0352,
+    "median_trade_R": -0.0593,
+    "p5_trade_R": -1.068,
+    "worst_trade_R": -1.151,
+    "t_stat_trades": -0.96,
+    "max_consecutive_losses": 13,
+    "expectancy_wo_top5_R": -0.0622,
+    "expectancy_thirds_R": [
+      -0.027,
+      -0.008,
+      -0.07
+    ]
+  },
+  "EURUSD_nobreak": {
+    "n_trades": 1067,
+    "win_rate": 0.3693,
+    "avg_win_R": 1.116,
+    "avg_loss_R": -0.853,
+    "win_loss_ratio": 1.31,
+    "profit_factor": 0.766,
+    "expectancy_R": -0.1256,
+    "median_trade_R": -0.1751,
+    "p5_trade_R": -1.177,
+    "worst_trade_R": -1.628,
+    "t_stat_trades": -3.56,
+    "max_consecutive_losses": 16,
+    "expectancy_wo_top5_R": -0.1511,
+    "expectancy_thirds_R": [
+      -0.181,
+      -0.093,
+      -0.103
+    ]
+  },
+  "GBPUSD_nobreak": {
+    "n_trades": 1176,
+    "win_rate": 0.3682,
+    "avg_win_R": 1.125,
+    "avg_loss_R": -0.832,
+    "win_loss_ratio": 1.35,
+    "profit_factor": 0.788,
+    "expectancy_R": -0.1113,
+    "median_trade_R": -0.1331,
+    "p5_trade_R": -1.175,
+    "worst_trade_R": -1.799,
+    "t_stat_trades": -3.25,
+    "max_consecutive_losses": 17,
+    "expectancy_wo_top5_R": -0.1388,
+    "expectancy_thirds_R": [
+      -0.136,
+      -0.122,
+      -0.076
+    ]
+  },
+  "XAUUSD_nobreak": {
+    "n_trades": 1054,
+    "win_rate": 0.3937,
+    "avg_win_R": 1.119,
+    "avg_loss_R": -0.862,
+    "win_loss_ratio": 1.3,
+    "profit_factor": 0.843,
+    "expectancy_R": -0.0819,
+    "median_trade_R": -0.1232,
+    "p5_trade_R": -1.142,
+    "worst_trade_R": -1.395,
+    "t_stat_trades": -2.31,
+    "max_consecutive_losses": 14,
+    "expectancy_wo_top5_R": -0.1051,
+    "expectancy_thirds_R": [
+      -0.062,
+      -0.071,
+      -0.113
+    ]
+  }
+}

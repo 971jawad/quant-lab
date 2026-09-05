@@ -103,3 +103,34 @@ bond CFD legs for diversification, paper forward-validation via run_live.py.
 - DSR > 0.95 achieved for the first time (0.977).
 - Prop MC updated: P(pass 8%/5%-trail, 1y) ~60% at 1.0x, breach risk 38%->29%.
 - Holdout looks: 13. Series: research/strength_breadth_daily.csv.
+
+## Amendment 4 (2026-09-05) — cycle 4/5: volume, ICT-Muso, carry, VIX-TS, timeframes
+
+TOOLING BUG FOUND AND FIXED: `full_metrics` hard-coded 252-period annualization.
+Harmless for every daily series (the champion and all book legs -> UNAFFECTED,
+re-verified: Sharpe 1.41 / Calmar 1.26 / DSR 0.977), but it inflated any
+non-daily Sharpe (2-week by 3.1x) and briefly produced a false "longer bars are
+better" result. Now takes `periods_per_year`. Tell that exposed it: net Sharpe
+printed ABOVE gross Sharpe, which is impossible.
+
+- VOLUME/AUCTION (real volume sourced: Yahoo CME futures NQ/ES/CL/6E verified
+  magnitudes, GLD proxy for gold since Yahoo GC=F volume is broken at 189
+  contracts/day, plus CFTC OI). 13 legs. Wyckoff/VSA participation gating
+  DESTROYS trend edge (4/5 voltrend legs negative) — sitting out quiet days
+  removes the drift trend-following harvests. 5 legs pass Stage 1 (Sharpe
+  0.1-0.3); block corr 0.28; Stage 5 REJECT (book 1.47 -> 1.02).
+- ICT "Muso" variant (DXY-bias + FVG/fib + BE + session circuit-breaker),
+  15m, EURUSD/GBPUSD/XAUUSD (GBPUSD downloaded). NEGATIVE everywhere:
+  std cost -0.084 to -0.128 R; even at optimistic retail-ECN cost -0.035 to
+  -0.058 R. Session circuit-breaker ABLATION: removing it changes expectancy by
+  only -0.002 to -0.013 R, i.e. the breaker is ~neutral-to-slightly-harmful —
+  post-loss trades were not worse than average.
+- FX CARRY (largest documented FX factor, first test here): all three pairs
+  NEGATIVE on dev (-0.22 to -0.48). Consistent with post-GFC carry decay.
+- VIX TERM STRUCTURE regime gate: underperforms simply staying long
+  (ES 0.47 vs 0.53; MNQ 0.61 vs 0.71). Same lesson as volume gating.
+- TIMEFRAME EXTENSION past daily (2d/3d/1w/2w), correctly annualized:
+  daily is the SWEET SPOT — net Sharpe 0.427 (t 1.61, bootstrap CI floor +0.01)
+  vs 1w 0.303 (t 0.99) and 2w 0.228 (t 0.69). t-stats decline monotonically with
+  bar size; only daily's CI clears zero. Gradient rises 15m->1d then flattens.
+- Holdout looks: still 13 (nothing new was promoted; all dev-only).

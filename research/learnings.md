@@ -180,3 +180,24 @@ XAU/MNQ/EUR daily.
 - Silver: Stage-1 fail (costs). WTI data ends 2023-12 (vendor stopped).
 - Prop math: pass prob 58%->60%, breach risk 38%->29% at 1.0x.
 - Pattern intact: every gain since round 3 is construction, not prediction.
+
+## Round 9 — cycles 4 & 5 (2026-09-05)
+
+- Volume IS obtainable (Yahoo CME futures + GLD + CFTC OI) — my earlier
+  "untestable" applied only to HistData quote files. Tested properly: volume
+  gating HURTS trend (removes quiet-drift days); climax fades weak; block
+  REJECTED at Stage 5 (1.47 -> 1.02).
+- ICT "Muso" funded-trader variant mechanized faithfully (DXY bias + FVG/fib +
+  BE + session circuit-breaker): negative on EURUSD/GBPUSD/XAUUSD even with
+  optimistic ECN costs. The circuit-breaker ("stop after a session loss") is
+  ~neutral — folk wisdom not supported.
+- FX carry: negative (post-GFC decay). VIX term-structure gate: worse than
+  always-long. Both are regime FILTERS, and every filter tested in this program
+  has destroyed more edge than it saved.
+- SELF-CAUGHT BUG: metrics annualization was hard-coded 252, briefly showing a
+  spectacular fake "2-week bars are 4x better" result. Corrected: DAILY is the
+  optimum; longer bars have lower t-stats and CIs spanning zero.
+- Trade blotter produced (research/trade_blotter.csv, 316 real round-trips with
+  entry/exit dates+prices): win rate 31-38%, median hold 5-6 days, edge carried
+  by rare runners (one MNQ long: 737 days, +55%).
+- Champion v1.1 UNCHANGED and re-verified after the fix.
