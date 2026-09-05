@@ -1,0 +1,32 @@
+{
+  "champion_v1.2": {
+    "sharpe": 1.36,
+    "sortino": 1.85,
+    "calmar": 1.07,
+    "max_dd_pct": -9.76,
+    "cagr_pct": 10.43,
+    "DSR": 0.938,
+    "CI90": "[0.53,2.16]",
+    "legs": 10
+  },
+  "v1.3 = +SPX washout (DECLARED)": {
+    "sharpe": 1.35,
+    "sortino": 1.84,
+    "calmar": 1.06,
+    "max_dd_pct": -9.5,
+    "cagr_pct": 10.09,
+    "DSR": 0.936,
+    "CI90": "[0.52,2.15]",
+    "legs": 11
+  },
+  "diagnostic: +all 6 washouts": {
+    "sharpe": 1.33,
+    "sortino": 1.69,
+    "calmar": 1.09,
+    "max_dd_pct": -5.97,
+    "cagr_pct": 6.53,
+    "DSR": 0.93,
+    "CI90": "[0.5,2.13]",
+    "legs": 16
+  }
+}

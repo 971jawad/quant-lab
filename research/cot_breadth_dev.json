@@ -1,0 +1,56 @@
+{
+  "XAUUSD": {
+    "n_signals": 93,
+    "fwd_on_bp": 1.7,
+    "fwd_base_bp": 4.1,
+    "dev_sharpe": 0.08
+  },
+  "XAGUSD": {
+    "n_signals": 80,
+    "fwd_on_bp": 0.0,
+    "fwd_base_bp": -0.3,
+    "dev_sharpe": -0.09
+  },
+  "WTIUSD": {
+    "n_signals": 35,
+    "fwd_on_bp": 38.9,
+    "fwd_base_bp": 19.1,
+    "dev_sharpe": 0.2
+  },
+  "SPXUSD": {
+    "n_signals": 44,
+    "fwd_on_bp": 63.2,
+    "fwd_base_bp": 19.0,
+    "dev_sharpe": 1.13
+  },
+  "GBPUSD": {
+    "n_signals": 55,
+    "fwd_on_bp": -1.1,
+    "fwd_base_bp": -4.5,
+    "dev_sharpe": -0.07
+  },
+  "EURUSD": {
+    "n_signals": 54,
+    "fwd_on_bp": -24.7,
+    "fwd_base_bp": -1.9,
+    "dev_sharpe": -1.13
+  },
+  "USDJPY": {
+    "n_signals": 44,
+    "fwd_on_bp": -8.4,
+    "fwd_base_bp": -11.5,
+    "dev_sharpe": -0.47
+  },
+  "IEF": {
+    "n_signals": 54,
+    "fwd_on_bp": 4.0,
+    "fwd_base_bp": 4.8,
+    "dev_sharpe": 0.22
+  },
+  "NSXUSD": {
+    "n_signals": 44,
+    "fwd_on_bp": 111.2,
+    "fwd_base_bp": 25.6,
+    "dev_sharpe": 1.99
+  }
+}

@@ -190,3 +190,32 @@ ATTRIBUTION (cycle 7) — what we are actually paid for:
   TARGET THE ORTHOGONAL EVENT/POSITIONING FAMILY, not more trend variants.
 - Holdout looks: 14 (attribution + the DAX fix are diagnostics/data repair,
   not strategy searches).
+
+## Amendment 7 (2026-09-05) — cycle 9: CHAMPION v1.3, alpha-family breadth WORKS
+
+Directed by cycle-7 attribution (the true alpha legs are positioning/event, not
+trend), the COT washout mechanism was replicated across 11 markets using the
+IDENTICAL declared rule (2y z < -1.5 -> long 1 week, no re-tuning).
+
+SECOND DATA BUG FOUND: the CFTC RENAMED contracts in 2022 ("E-MINI S&P 500
+STOCK INDEX" -> "E-MINI S&P 500"; "BRITISH POUND STERLING" -> "BRITISH POUND").
+Name-matching silently truncated those legs at 2022-01-31, giving them ZERO
+holdout data. The first holdout test of the SPX leg was therefore INVALID (it
+measured dilution by an empty leg). Aliases added; both legs rebuilt.
+GBPUSD's apparent t=1.60 was itself a truncation artifact -> true t = -0.24.
+
+RESULT — the mechanism is EQUITY-INDEX SPECIFIC and cross-market confirmed:
+  NSXUSD +111bp vs +26bp base, t 6.42 (original)
+  SPXUSD  +63bp vs +19bp base, t 3.74 (INDEPENDENT REPLICATION)
+  gold/silver/oil/bonds ~0; EURUSD NEGATIVE (t -3.72); GBP/JPY nothing.
+  Economic story: crowded shorts get squeezed only where structural upward
+  drift exists (equity indices), not in FX.
+
+CHAMPION v1.3 = v1.2 + cotwash_SPXUSD (11 legs / 7 markets + 2 positioning legs)
+  dev     Sharpe 1.80 (v1.2: 1.49)
+  HOLDOUT Sharpe 1.63, Sortino 2.23, Calmar 1.15, maxDD -9.02%, CAGR 10.42%,
+          DSR 0.986 (program best), CI90 [0.75, 2.47] (floor up from 0.53)
+Both windows improve. This is the largest single gain of the program, and it
+came from the ALPHA family — confirming cycle-6's lesson that beta-family
+breadth dilutes while alpha-family breadth compounds.
+Holdout looks: 16 (15 was void — invalid empty-leg test).

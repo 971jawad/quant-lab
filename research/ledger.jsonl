@@ -256,3 +256,7 @@
 {"phase": "cycle6_etf", "n_configs": 28}
 {"phase": "cycle6", "holdout_look": 14, "n_configs": 28}
 {"phase": "attribution", "n_configs": 1, "note": "diagnostic, no new strategy"}
+{"phase": "cot_breadth", "n_configs": 9}
+{"phase": "cot_breadth", "holdout_look": 15, "n_configs": 9}
+{"phase": "cot_breadth", "n_configs": 11}
+{"phase": "cot_breadth_fixed", "holdout_look": 16, "n_configs": 11}
