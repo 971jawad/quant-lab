@@ -157,7 +157,34 @@ def audit(ls):
     chk("feed correlations above guard", all(c >= 0.70 for c in corrs),
         f"min corr {min(corrs):.3f}" if corrs else "n/a")
 
-    # 10: metrics reproduce from the committed series
+    # 10: the committed daily series must be BIT-IDENTICAL to the 15m-derived
+    # bars whenever the archive is present locally. Skipped in CI (no archive),
+    # which is exactly why it must be enforced whenever it CAN be checked.
+    try:
+        from run_research import load_15m, to_tf
+        SER = {"XAUUSD": "XAUUSD", "MNQ": "NSXUSD", "ES": "SPXUSD",
+               "EURUSD": "EURUSD", "USDJPY": "USDJPY", "WTIUSD": "WTIUSD",
+               "JPXJPY": "JPXJPY"}
+        worst, nbars = 0.0, 0
+        for k, v in SER.items():
+            src = to_tf(load_15m(v), "1d")
+            src.index = src.index.tz_convert("America/New_York").tz_localize(None).normalize()
+            com = pd.read_csv(ROOT / "data" / "daily" / f"{k}.csv",
+                              index_col=0, parse_dates=True)
+            com.index = pd.to_datetime(com.index).tz_localize(None).normalize()
+            cols = ["open", "high", "low", "close"]
+            j = src[cols].join(com[cols], lsuffix="_s", rsuffix="_c", how="inner")
+            d = np.abs(j[[c + "_s" for c in cols]].values -
+                       j[[c + "_c" for c in cols]].values)
+            worst = max(worst, float(d.max()))
+            nbars += len(j)
+        chk("daily series matches 15m archive", worst == 0.0,
+            f"{nbars} bars, max diff {worst:.1e} (bit-identical)")
+    except FileNotFoundError:
+        chk("daily series matches 15m archive", True,
+            "SKIPPED - 15m archive not present (expected in CI)")
+
+    # 11: metrics reproduce from the committed series
     ens = pd.read_csv(OUT / "ensembler_daily.csv", index_col=0, parse_dates=True)["ret"]
     ens.index = pd.to_datetime(ens.index).tz_localize(None).normalize()
     h = ens[(ens.index >= DEV_END) & (ens.index < ls)]

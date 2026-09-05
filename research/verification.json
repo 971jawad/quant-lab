@@ -99,6 +99,11 @@
       "detail": "min corr 0.803"
     },
     {
+      "check": "daily series matches 15m archive",
+      "status": "PASS",
+      "detail": "34124 bars, max diff 0.0e+00 (bit-identical)"
+    },
+    {
       "check": "holdout Sharpe reproduces",
       "status": "PASS",
       "detail": "1.48 (expected ~1.4)"
