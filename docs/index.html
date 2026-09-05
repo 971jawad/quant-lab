@@ -84,12 +84,21 @@
     .grid{grid-template-columns:1fr 1fr;gap:8px}
     .card{padding:10px 12px} .card .v{font-size:17px} .card .k{font-size:10.5px}
     .banner{font-size:11.5px;padding:9px 11px}
-    .tw table{min-width:460px}
     .bar{min-width:44px}
     footer{padding:0 14px 32px}
   }
   @media (min-width:1500px){
     header,nav,main,footer,.banner{max-width:1320px}
+  }
+  /* phones: hide optional columns and let tables fit the screen exactly.
+     Declared LAST so nothing downstream re-imposes a min-width. */
+  @media (max-width:700px){
+    .opt{display:none!important}
+    .tw table{min-width:0!important}
+  }
+  @media (max-width:430px){
+    .opt2{display:none!important}
+    th,td{padding:6px 7px}
   }
   @media (prefers-reduced-motion:no-preference){
     section{animation:fade .18s ease-out}
