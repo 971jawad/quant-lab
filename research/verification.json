@@ -91,7 +91,7 @@
     {
       "check": "live feed healthy",
       "status": "PASS",
-      "detail": "6/6 ok"
+      "detail": "6/7 ok, refused: ['WTIUSD']"
     },
     {
       "check": "feed correlations above guard",

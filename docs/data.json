@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-05 18:41 UTC",
+  "generated_utc": "2026-09-05 18:44 UTC",
   "positions": {
     "as_of": "2026-09-04",
     "positions": [
@@ -488,7 +488,7 @@
       {
         "check": "live feed healthy",
         "status": "PASS",
-        "detail": "6/6 ok"
+        "detail": "6/7 ok, refused: ['WTIUSD']"
       },
       {
         "check": "feed correlations above guard",
@@ -504,7 +504,7 @@
     "all_passed": true
   },
   "live_feed": {
-    "checked_utc": "2026-09-05T18:35:34.719391+00:00",
+    "checked_utc": "2026-09-05T18:44:47.581443+00:00",
     "min_corr_guard": 0.7,
     "markets": [
       {
