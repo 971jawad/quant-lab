@@ -1,0 +1,13 @@
+{
+  "live_start": "2026-06-28",
+  "live_days": 60,
+  "live_return_pct": -2.189,
+  "live_sharpe": -2.249,
+  "null_median_return_pct": 2.499,
+  "null_p5_return_pct": -3.912,
+  "null_p95_return_pct": 10.575,
+  "live_return_percentile": 12.2,
+  "live_sharpe_percentile": 5.5,
+  "verdict": "WATCH",
+  "note": "soft patch, still inside the range an intact edge routinely produces"
+}

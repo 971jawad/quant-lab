@@ -186,6 +186,29 @@
       <tbody id="regtbl"></tbody></table></div>
     <p class="note" id="livenote"></p>
 
+    <h2>Is the live edge still working?</h2>
+    <p class="note">The live run is compared against the holdout return distribution — the null of
+      "the edge is intact" — using bootstrapped windows of the same length. A result below the
+      5th percentile is a genuine warning; anything above it is a soft patch of the kind an intact
+      edge produces routinely.</p>
+    <div class="grid" id="decaygrid"></div>
+    <p class="note" id="decaynote"></p>
+
+    <h2>What adapts automatically</h2>
+    <div class="tw"><table><thead><tr><th>Mechanism</th><th>Updates</th>
+      <th class="opt">What it does</th></tr></thead><tbody>
+      <tr><td>Signal direction</td><td>every bar</td>
+        <td class="dim opt">momentum recomputes on each new close; positions flip at the next open</td></tr>
+      <tr><td>Volatility sizing</td><td>every bar</td>
+        <td class="dim opt">60-day trailing vol; size scales inversely as volatility rises</td></tr>
+      <tr><td>Strength weights</td><td>daily (2% drift)</td>
+        <td class="dim opt">trailing 756-day Sharpe × inverse correlation — legs that stop working are down-weighted on their own</td></tr>
+      <tr><td>Lookback selection</td><td>per walk-forward fold (~yearly)</td>
+        <td class="dim opt">re-chosen from {40, 80, 160, 240} on training data only</td></tr>
+      <tr><td>Strategy definitions</td><td><span class="pill no">never</span></td>
+        <td class="dim opt">frozen by design — auto-reoptimising on live data is how systems overfit themselves to death</td></tr>
+    </tbody></table></div>
+
     <h2>System audit</h2>
     <p class="note">Automated integrity checks over the data, the seam between the frozen archive
       and the live feed, lookahead, and metric reproducibility. Re-run on every refresh.</p>
@@ -371,6 +394,29 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
      <td class="n dim opt">${r.days}</td>
      <td class="n ${cls(r.net_pct)}">${num(r.net_pct)}%</td></tr>`).join("");
 
+
+
+  // ---- decay monitor
+  const DK = D.decay||{};
+  if(DK.live_days){
+    const v = DK.verdict||"", k = v==="WARNING"?"no":(v==="WATCH"?"flat":"ok");
+    $("#decaygrid").innerHTML = `
+      <div class="card"><div class="k">Live verdict</div>
+        <div class="v"><span class="pill ${k}">${v}</span></div></div>
+      <div class="card"><div class="k">Live return</div>
+        <div class="v ${cls(DK.live_return_pct)}">${num(DK.live_return_pct)}%</div></div>
+      <div class="card"><div class="k">Expected (median)</div>
+        <div class="v dim">${num(DK.null_median_return_pct)}%</div></div>
+      <div class="card"><div class="k">Percentile vs null</div>
+        <div class="v">${num(DK.live_return_percentile,0)}th</div></div>`;
+    $("#decaynote").innerHTML = `Over ${DK.live_days} live days an intact edge would typically return
+      <strong>${num(DK.null_median_return_pct)}%</strong> (5th–95th percentile
+      ${num(DK.null_p5_return_pct)}% to ${num(DK.null_p95_return_pct)}%). Live is
+      <strong>${num(DK.live_return_pct)}%</strong>, the ${num(DK.live_return_percentile,0)}th percentile —
+      ${DK.note}. Roughly 1 in ${Math.max(1,Math.round(100/Math.max(DK.live_return_percentile,1)))} healthy
+      stretches of this length look this bad or worse. A live sample big enough to separate skill from
+      noise needs about <strong>2+ years</strong>.`;
+  }
 
   // ---- live vs backtest
   const V = D.verification||{}, R = V.regimes||{};

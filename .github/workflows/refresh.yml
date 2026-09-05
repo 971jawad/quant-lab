@@ -70,6 +70,9 @@ jobs:
       - name: Verify integrity and separate track records
         run: python run_verify.py
 
+      - name: Monitor live edge decay
+        run: python run_decay_monitor.py
+
       - name: Rebuild dashboard payload
         run: |
           python build_site.py

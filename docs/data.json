@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-05 18:44 UTC",
+  "generated_utc": "2026-09-05 18:56 UTC",
   "positions": {
     "as_of": "2026-09-04",
     "positions": [
@@ -496,12 +496,30 @@
         "detail": "min corr 0.803"
       },
       {
+        "check": "daily series matches 15m archive",
+        "status": "PASS",
+        "detail": "34124 bars, max diff 0.0e+00 (bit-identical)"
+      },
+      {
         "check": "holdout Sharpe reproduces",
         "status": "PASS",
         "detail": "1.48 (expected ~1.4)"
       }
     ],
     "all_passed": true
+  },
+  "decay": {
+    "live_start": "2026-06-28",
+    "live_days": 60,
+    "live_return_pct": -2.189,
+    "live_sharpe": -2.249,
+    "null_median_return_pct": 2.499,
+    "null_p5_return_pct": -3.912,
+    "null_p95_return_pct": 10.575,
+    "live_return_percentile": 12.2,
+    "live_sharpe_percentile": 5.5,
+    "verdict": "WATCH",
+    "note": "soft patch, still inside the range an intact edge routinely produces"
   },
   "live_feed": {
     "checked_utc": "2026-09-05T18:44:47.581443+00:00",
