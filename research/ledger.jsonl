@@ -266,3 +266,4 @@
 {"phase": "longonly_drift", "holdout_look": 17, "n_configs": 2}
 {"phase": "committee", "n_configs": 58}
 {"phase": "ensembler_production", "n_configs": 1, "note": "deployment build"}
+{"phase": "ensembler_production", "n_configs": 1, "note": "deployment build"}

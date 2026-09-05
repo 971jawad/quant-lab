@@ -1,67 +1,67 @@
 {
-  "generated_utc": "2026-09-05 18:23 UTC",
+  "generated_utc": "2026-09-05 18:28 UTC",
   "positions": {
-    "as_of": "2026-08-28",
+    "as_of": "2026-09-04",
     "positions": [
       {
         "leg": "trend_XAUUSD",
-        "weight": 0.1992,
+        "weight": 0.2081,
         "direction": "SHORT",
         "lookback_days": 160
       },
       {
         "leg": "trend_MNQ",
-        "weight": 0.0955,
+        "weight": 0.0472,
         "direction": "LONG",
         "lookback_days": 160
       },
       {
         "leg": "trend_ES",
-        "weight": 0.1064,
+        "weight": 0.056,
         "direction": "LONG",
         "lookback_days": 240
       },
       {
         "leg": "trend_EURUSD",
-        "weight": 0.0116,
+        "weight": 0.0113,
         "direction": "SHORT",
         "lookback_days": 160
       },
       {
         "leg": "trend_USDJPY",
-        "weight": 0.0117,
-        "direction": "LONG",
+        "weight": 0.0098,
+        "direction": "SHORT",
         "lookback_days": 80
       },
       {
         "leg": "trend_WTIUSD",
-        "weight": 0.0172,
+        "weight": 0.0214,
         "direction": "SHORT",
         "lookback_days": 40
       },
       {
         "leg": "trend_JPXJPY",
-        "weight": 0.0885,
+        "weight": 0.0599,
         "direction": "LONG",
         "lookback_days": 240
       },
       {
         "leg": "xsec_ALL",
-        "weight": 0.228,
+        "weight": 0.2842,
         "direction": "event-driven"
       },
       {
         "leg": "MNQ_pull_C",
-        "weight": 0.1214,
+        "weight": 0.1514,
         "direction": "event-driven"
       },
       {
         "leg": "COT_NQ_washout",
-        "weight": 0.1206,
+        "weight": 0.1507,
         "direction": "event-driven"
       }
     ],
-    "risk_events": 653
+    "risk_events": 633
   },
   "trades": {
     "open": [
@@ -73,12 +73,12 @@
         "lookback_days": 160,
         "entry_date": "2026-06-19",
         "entry_price": 4175.995,
-        "current_price": 4089.248,
-        "unrealised_pct": 2.08,
-        "days_held": 7,
-        "flip_level": 4482.335,
-        "pct_to_flip": -9.61,
-        "atr14": 102.26144,
+        "current_price": 4476.6001,
+        "unrealised_pct": -7.2,
+        "days_held": 77,
+        "flip_level": 5355.725,
+        "pct_to_flip": -19.64,
+        "atr14": 105.91856,
         "round_trip_cost": 0.45
       },
       {
@@ -89,12 +89,12 @@
         "lookback_days": 160,
         "entry_date": "2026-04-14",
         "entry_price": 25434.936,
-        "current_price": 29041.965,
-        "unrealised_pct": 14.18,
-        "days_held": 73,
-        "flip_level": 25456.581,
-        "pct_to_flip": 12.35,
-        "atr14": 677.55256,
+        "current_price": 29565.25,
+        "unrealised_pct": 16.24,
+        "days_held": 143,
+        "flip_level": 24720.258,
+        "pct_to_flip": 16.39,
+        "atr14": 363.02661,
         "round_trip_cost": 1.62
       },
       {
@@ -105,12 +105,12 @@
         "lookback_days": 240,
         "entry_date": "2025-05-01",
         "entry_price": 5611.919,
-        "current_price": 7344.364,
-        "unrealised_pct": 30.87,
-        "days_held": 421,
-        "flip_level": 6661.281,
-        "pct_to_flip": 9.3,
-        "atr14": 94.03685,
+        "current_price": 7722.0,
+        "unrealised_pct": 37.6,
+        "days_held": 491,
+        "flip_level": 6823.242,
+        "pct_to_flip": 11.64,
+        "atr14": 63.53636,
         "round_trip_cost": 0.62
       },
       {
@@ -121,28 +121,28 @@
         "lookback_days": 160,
         "entry_date": "2026-06-07",
         "entry_price": 1.15093,
-        "current_price": 1.13854,
-        "unrealised_pct": 1.08,
-        "days_held": 19,
-        "flip_level": 1.17911,
-        "pct_to_flip": -3.56,
-        "atr14": 0.00596,
+        "current_price": 1.16212,
+        "unrealised_pct": -0.97,
+        "days_held": 89,
+        "flip_level": 1.15928,
+        "pct_to_flip": 0.24,
+        "atr14": 0.00382,
         "round_trip_cost": 0.00016
       },
       {
         "market": "USDJPY",
         "timeframe": "1 day",
         "mode": "long/short",
-        "direction": "LONG",
+        "direction": "SHORT",
         "lookback_days": 80,
-        "entry_date": "2026-08-25",
-        "entry_price": 159.36,
-        "current_price": 160.097,
-        "unrealised_pct": 0.46,
-        "days_held": 3,
-        "flip_level": 159.312,
-        "pct_to_flip": 0.49,
-        "atr14": 0.71892,
+        "entry_date": "2026-09-03",
+        "entry_price": 157.765,
+        "current_price": 156.22099,
+        "unrealised_pct": 0.98,
+        "days_held": 1,
+        "flip_level": 159.972,
+        "pct_to_flip": -2.4,
+        "atr14": 1.16885,
         "round_trip_cost": 0.025
       },
       {
@@ -169,16 +169,26 @@
         "lookback_days": 240,
         "entry_date": "2025-07-16",
         "entry_price": 39638.999,
-        "current_price": 65755.315,
-        "unrealised_pct": 65.89,
-        "days_held": 408,
-        "flip_level": 48718.519,
-        "pct_to_flip": 25.91,
-        "atr14": 1335.41171,
+        "current_price": 65054.55859,
+        "unrealised_pct": 64.12,
+        "days_held": 415,
+        "flip_level": 50191.366,
+        "pct_to_flip": 22.85,
+        "atr14": 1135.28571,
         "round_trip_cost": 20.0
       }
     ],
     "recent": [
+      {
+        "market": "USDJPY",
+        "dir": "LONG",
+        "entry_date": "2026-08-25",
+        "entry_price": 159.36,
+        "exit_date": "2026-09-03",
+        "exit_price": 157.765,
+        "days": 9,
+        "net_pct": -1.02
+      },
       {
         "market": "USDJPY",
         "dir": "SHORT",
@@ -228,16 +238,6 @@
         "exit_price": 157.716,
         "days": 2,
         "net_pct": -0.38
-      },
-      {
-        "market": "USDJPY",
-        "dir": "LONG",
-        "entry_date": "2026-05-11",
-        "entry_price": 157.14,
-        "exit_date": "2026-08-02",
-        "exit_price": 157.148,
-        "days": 83,
-        "net_pct": -0.01
       },
       {
         "market": "XAUUSD",
@@ -385,12 +385,12 @@
     "ensembler_full": {
       "sharpe": 1.43,
       "sortino": 1.73,
-      "cagr_pct": 9.6,
+      "cagr_pct": 9.63,
       "max_dd_pct": -10.53,
-      "calmar": 0.91,
-      "vol_pct": 6.54,
+      "calmar": 0.92,
+      "vol_pct": 6.58,
       "pct_underwater": 88.3,
-      "days": 4886
+      "days": 4892
     },
     "ensembler_dev": {
       "sharpe": 1.47,
@@ -403,14 +403,14 @@
       "days": 3395
     },
     "ensembler_holdout": {
-      "sharpe": 1.39,
+      "sharpe": 1.38,
       "sortino": 1.84,
-      "cagr_pct": 10.59,
+      "cagr_pct": 10.69,
       "max_dd_pct": -10.53,
-      "calmar": 1.01,
-      "vol_pct": 7.47,
-      "pct_underwater": 88.3,
-      "days": 1491
+      "calmar": 1.02,
+      "vol_pct": 7.55,
+      "pct_underwater": 88.2,
+      "days": 1497
     },
     "champion_holdout": {
       "sharpe": 1.36,
@@ -4233,119 +4233,123 @@
       },
       {
         "d": "2026-03-18",
-        "v": 5.9891
+        "v": 5.9844
       },
       {
         "d": "2026-03-24",
-        "v": 5.9454
+        "v": 5.9308
       },
       {
         "d": "2026-03-30",
-        "v": 5.9445
+        "v": 5.9158
       },
       {
         "d": "2026-04-05",
-        "v": 5.9595
-      },
-      {
-        "d": "2026-04-10",
-        "v": 5.9779
-      },
-      {
-        "d": "2026-04-16",
-        "v": 5.9737
-      },
-      {
-        "d": "2026-04-22",
-        "v": 5.9278
-      },
-      {
-        "d": "2026-04-28",
-        "v": 5.9045
-      },
-      {
-        "d": "2026-05-04",
-        "v": 6.0207
-      },
-      {
-        "d": "2026-05-10",
-        "v": 6.0218
-      },
-      {
-        "d": "2026-05-15",
-        "v": 6.0905
-      },
-      {
-        "d": "2026-05-21",
-        "v": 6.2125
-      },
-      {
-        "d": "2026-05-27",
-        "v": 6.1154
-      },
-      {
-        "d": "2026-06-02",
-        "v": 6.1672
-      },
-      {
-        "d": "2026-06-08",
-        "v": 6.163
-      },
-      {
-        "d": "2026-06-14",
-        "v": 6.0937
-      },
-      {
-        "d": "2026-06-19",
-        "v": 5.9581
-      },
-      {
-        "d": "2026-06-25",
-        "v": 5.9831
-      },
-      {
-        "d": "2026-07-01",
-        "v": 5.9547
-      },
-      {
-        "d": "2026-07-07",
-        "v": 5.9458
-      },
-      {
-        "d": "2026-07-13",
         "v": 5.9425
       },
       {
+        "d": "2026-04-10",
+        "v": 5.9744
+      },
+      {
+        "d": "2026-04-16",
+        "v": 5.9912
+      },
+      {
+        "d": "2026-04-22",
+        "v": 5.9571
+      },
+      {
+        "d": "2026-04-28",
+        "v": 5.9439
+      },
+      {
+        "d": "2026-05-04",
+        "v": 6.0757
+      },
+      {
+        "d": "2026-05-10",
+        "v": 6.1134
+      },
+      {
+        "d": "2026-05-15",
+        "v": 6.1758
+      },
+      {
+        "d": "2026-05-21",
+        "v": 6.3173
+      },
+      {
+        "d": "2026-05-27",
+        "v": 6.2364
+      },
+      {
+        "d": "2026-06-02",
+        "v": 6.322
+      },
+      {
+        "d": "2026-06-08",
+        "v": 6.2465
+      },
+      {
+        "d": "2026-06-14",
+        "v": 6.2071
+      },
+      {
+        "d": "2026-06-19",
+        "v": 6.0921
+      },
+      {
+        "d": "2026-06-25",
+        "v": 6.0699
+      },
+      {
+        "d": "2026-07-01",
+        "v": 6.0904
+      },
+      {
+        "d": "2026-07-07",
+        "v": 6.0617
+      },
+      {
+        "d": "2026-07-13",
+        "v": 6.0826
+      },
+      {
         "d": "2026-07-19",
-        "v": 5.9338
+        "v": 6.0627
       },
       {
         "d": "2026-07-24",
-        "v": 5.9382
+        "v": 6.047
       },
       {
         "d": "2026-07-30",
-        "v": 5.9198
+        "v": 6.0161
       },
       {
         "d": "2026-08-05",
-        "v": 5.9183
+        "v": 5.9963
       },
       {
         "d": "2026-08-11",
-        "v": 5.9268
+        "v": 5.9741
       },
       {
         "d": "2026-08-17",
-        "v": 5.9299
+        "v": 5.9771
       },
       {
         "d": "2026-08-23",
-        "v": 5.9186
+        "v": 5.9011
       },
       {
         "d": "2026-08-28",
-        "v": 5.9175
+        "v": 5.9506
+      },
+      {
+        "d": "2026-09-03",
+        "v": 5.9568
       }
     ],
     "naive": [

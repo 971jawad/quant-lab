@@ -44,8 +44,20 @@ DASH = "-"
 
 
 def daily(inst):
+    """Frozen HistData history, extended with the live Yahoo feed when present.
+
+    The extension is produced by run_live_update.py, which rebuilds ET-day bars
+    from Yahoo HOURLY data so the bar convention matches, and refuses to write
+    anything if the overlap return-correlation drops below its guard."""
     d = to_tf(load_15m(MKT[inst]), "1d")
     d.index = d.index.tz_convert("America/New_York").tz_localize(None).normalize()
+    ext = ROOT / "data" / "live" / f"{inst}_ext.csv"
+    if ext.exists():
+        e = pd.read_csv(ext, index_col=0, parse_dates=True)
+        e.index = pd.to_datetime(e.index).tz_localize(None).normalize()
+        e = e[e.index > d.index[-1]]
+        if len(e):
+            d = pd.concat([d, e[["open", "high", "low", "close"]]])
     return d
 
 

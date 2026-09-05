@@ -6,8 +6,11 @@ name: refresh dashboard
 # NOTE: this computes and publishes SIGNALS ONLY. It does not connect to a
 # broker and places no orders.
 #
-# The 15-minute HistData price history is not refreshed here (it requires a
-# scraped multi-hour download). Run `python run_data_15m.py` locally to extend it.
+# Prices ARE refreshed here: run_live_update.py rebuilds ET-day bars from Yahoo
+# HOURLY data (matching the HistData bar convention - naive daily bars break FX
+# return alignment) and refuses to append if the overlap correlation degrades.
+# The deep 15-minute HistData archive is only needed for re-running research;
+# extend it locally with `python run_data_15m.py`.
 
 on:
   schedule:
@@ -54,6 +57,16 @@ jobs:
               "https://fred.stlouisfed.org/graph/fredgraph.csv?id=$s" || true
           done
 
+      - name: Refresh LIVE prices (Yahoo hourly -> ET-day bars)
+        run: |
+          python run_live_update.py
+          cat research/live_feed.json
+
+      - name: Recompute signals and trade details
+        run: |
+          python run_ensembler.py | tail -25
+          python make_trade_details.py | tail -15
+
       - name: Rebuild dashboard payload
         run: |
           python build_site.py
@@ -64,7 +77,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/data.json
+          git add docs/data.json data/live research/live_feed.json                   research/ensembler_positions.json research/trade_details.json
           if git diff --staged --quiet; then
             echo "no dashboard changes"
           else

@@ -1,0 +1,65 @@
+{
+  "checked_utc": "2026-09-05T18:27:47.754387+00:00",
+  "min_corr_guard": 0.7,
+  "markets": [
+    {
+      "market": "XAUUSD",
+      "status": "extended",
+      "added": 59,
+      "hist_end": "2026-06-26",
+      "live_end": "2026-09-04",
+      "corr": 0.973,
+      "level_diff_pct": 0.472
+    },
+    {
+      "market": "MNQ",
+      "status": "extended",
+      "added": 59,
+      "hist_end": "2026-06-26",
+      "live_end": "2026-09-04",
+      "corr": 0.99,
+      "level_diff_pct": 0.515
+    },
+    {
+      "market": "ES",
+      "status": "extended",
+      "added": 59,
+      "hist_end": "2026-06-26",
+      "live_end": "2026-09-04",
+      "corr": 0.989,
+      "level_diff_pct": 0.439
+    },
+    {
+      "market": "EURUSD",
+      "status": "extended",
+      "added": 60,
+      "hist_end": "2026-06-26",
+      "live_end": "2026-09-04",
+      "corr": 0.991,
+      "level_diff_pct": 0.032
+    },
+    {
+      "market": "USDJPY",
+      "status": "extended",
+      "added": 6,
+      "hist_end": "2026-08-28",
+      "live_end": "2026-09-04",
+      "corr": 0.984,
+      "level_diff_pct": 0.007
+    },
+    {
+      "market": "WTIUSD",
+      "status": "refused",
+      "reason": "overlap"
+    },
+    {
+      "market": "JPXJPY",
+      "status": "extended",
+      "added": 6,
+      "hist_end": "2026-08-28",
+      "live_end": "2026-09-04",
+      "corr": 0.803,
+      "level_diff_pct": 0.092
+    }
+  ]
+}
