@@ -37,7 +37,7 @@ jobs:
           cache: pip
 
       - name: Install dependencies
-        run: pip install pandas numpy scipy scikit-learn yfinance requests
+        run: pip install -r requirements.txt
 
       - name: Refresh CFTC Commitments of Traders
         continue-on-error: true
