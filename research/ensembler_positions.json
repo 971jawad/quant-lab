@@ -3,19 +3,19 @@
   "positions": [
     {
       "leg": "trend_XAUUSD",
-      "weight": 0.2081,
+      "weight": 0.1984,
       "direction": "SHORT",
       "lookback_days": 160
     },
     {
       "leg": "trend_MNQ",
-      "weight": 0.0472,
+      "weight": 0.0479,
       "direction": "LONG",
       "lookback_days": 160
     },
     {
       "leg": "trend_ES",
-      "weight": 0.056,
+      "weight": 0.0561,
       "direction": "LONG",
       "lookback_days": 240
     },
@@ -27,37 +27,37 @@
     },
     {
       "leg": "trend_USDJPY",
-      "weight": 0.0098,
+      "weight": 0.0096,
       "direction": "SHORT",
       "lookback_days": 80
     },
     {
       "leg": "trend_WTIUSD",
-      "weight": 0.0214,
+      "weight": 0.0212,
       "direction": "SHORT",
       "lookback_days": 40
     },
     {
       "leg": "trend_JPXJPY",
-      "weight": 0.0599,
+      "weight": 0.059,
       "direction": "LONG",
       "lookback_days": 240
     },
     {
       "leg": "xsec_ALL",
-      "weight": 0.2842,
+      "weight": 0.2852,
       "direction": "event-driven"
     },
     {
       "leg": "MNQ_pull_C",
-      "weight": 0.1514,
+      "weight": 0.1496,
       "direction": "event-driven"
     },
     {
       "leg": "COT_NQ_washout",
-      "weight": 0.1507,
+      "weight": 0.1616,
       "direction": "event-driven"
     }
   ],
-  "risk_events": 633
+  "risk_events": 632
 }

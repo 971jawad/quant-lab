@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-09-05T18:27:47.754387+00:00",
+  "checked_utc": "2026-09-05T18:31:51.070191+00:00",
   "min_corr_guard": 0.7,
   "markets": [
     {
@@ -46,11 +46,6 @@
       "live_end": "2026-09-04",
       "corr": 0.984,
       "level_diff_pct": 0.007
-    },
-    {
-      "market": "WTIUSD",
-      "status": "refused",
-      "reason": "overlap"
     },
     {
       "market": "JPXJPY",

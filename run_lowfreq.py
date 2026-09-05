@@ -38,12 +38,31 @@ WARMUP, MIN_TRAIN, TEST_LEN = 260, 750, 250   # daily bars (~1y / 3y / 1y)
 Phi, Phi_inv, EULER = stats.norm.cdf, stats.norm.ppf, 0.5772156649
 
 
+# series name -> the compact committed daily file (lets CI run without the
+# multi-hundred-MB 15-minute archive, and picks up the live Yahoo extension)
+_DAILY_ALIAS = {"NSXUSD": "MNQ", "SPXUSD": "ES", "XAUUSD": "XAUUSD",
+                "EURUSD": "EURUSD", "USDJPY": "USDJPY", "WTIUSD": "WTIUSD",
+                "JPXJPY": "JPXJPY"}
+
+
 def to_daily(series: str) -> pd.DataFrame:
+    alias = _DAILY_ALIAS.get(series)
+    frozen = DATA / "daily" / f"{alias}.csv" if alias else None
+    if frozen is not None and frozen.exists():
+        d = pd.read_csv(frozen, index_col=0, parse_dates=True)
+        d.index = pd.to_datetime(d.index).tz_localize("America/New_York")
+        ext = DATA / "live" / f"{alias}_ext.csv"
+        if ext.exists():
+            e = pd.read_csv(ext, index_col=0, parse_dates=True)
+            e.index = pd.to_datetime(e.index).tz_localize("America/New_York")
+            e = e[e.index > d.index[-1]]
+            if len(e):
+                d = pd.concat([d, e[["open", "high", "low", "close"]]])
+        return d[["open", "high", "low", "close"]]
     df = pd.read_csv(DATA / f"{series}_15m.csv", index_col=0)
     df.index = pd.to_datetime(df.index, utc=True).tz_convert("America/New_York")
-    d = df.resample("1D").agg({"open": "first", "high": "max", "low": "min",
-                               "close": "last"}).dropna()
-    return d
+    return df.resample("1D").agg({"open": "first", "high": "max", "low": "min",
+                                  "close": "last"}).dropna()
 
 
 def perf(sret: pd.Series, n_trials: int = 1) -> dict:

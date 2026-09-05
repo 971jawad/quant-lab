@@ -86,8 +86,35 @@ def to_tf(df15: pd.DataFrame, tf: str) -> pd.DataFrame:
     return out.tz_convert("UTC")
 
 
+# instrument -> compact committed daily file (CI runs without the 15m archive)
+_DAILY_ALIAS = {"XAUUSD": "XAUUSD", "MNQ": "MNQ", "ES": "ES", "EURUSD": "EURUSD",
+                "USDJPY": "USDJPY", "WTIUSD": "WTIUSD", "JPXJPY": "JPXJPY"}
+
+
+def _daily_from_repo(inst: str):
+    """Committed daily series + live extension, returned UTC-aware like to_tf."""
+    alias = _DAILY_ALIAS.get(inst)
+    if not alias:
+        return None
+    f = DATA / "daily" / f"{alias}.csv"
+    if not f.exists():
+        return None
+    d = pd.read_csv(f, index_col=0, parse_dates=True)
+    d.index = pd.to_datetime(d.index).tz_localize("America/New_York")
+    ext = DATA / "live" / f"{alias}_ext.csv"
+    if ext.exists():
+        e = pd.read_csv(ext, index_col=0, parse_dates=True)
+        e.index = pd.to_datetime(e.index).tz_localize("America/New_York")
+        e = e[e.index > d.index[-1]]
+        if len(e):
+            d = pd.concat([d, e[["open", "high", "low", "close"]]])
+    return d[["open", "high", "low", "close"]].tz_convert("UTC")
+
+
 def prep(inst: str, tf: str, final: bool) -> tuple[pd.DataFrame, pd.DataFrame]:
-    bars = to_tf(load_15m(SERIES[inst]), tf)
+    bars = _daily_from_repo(inst) if tf == "1d" else None
+    if bars is None:
+        bars = to_tf(load_15m(SERIES[inst]), tf)
     if not final:
         bars = bars[bars.index < DEV_END]
     return bars, build_features(bars)

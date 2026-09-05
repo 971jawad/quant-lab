@@ -49,8 +49,13 @@ def daily(inst):
     The extension is produced by run_live_update.py, which rebuilds ET-day bars
     from Yahoo HOURLY data so the bar convention matches, and refuses to write
     anything if the overlap return-correlation drops below its guard."""
-    d = to_tf(load_15m(MKT[inst]), "1d")
-    d.index = d.index.tz_convert("America/New_York").tz_localize(None).normalize()
+    frozen = ROOT / "data" / "daily" / f"{inst}.csv"
+    if frozen.exists():                      # committed daily series (CI path)
+        d = pd.read_csv(frozen, index_col=0, parse_dates=True)
+        d.index = pd.to_datetime(d.index).tz_localize(None).normalize()
+    else:                                    # local path: derive from the 15m archive
+        d = to_tf(load_15m(MKT[inst]), "1d")
+        d.index = d.index.tz_convert("America/New_York").tz_localize(None).normalize()
     ext = ROOT / "data" / "live" / f"{inst}_ext.csv"
     if ext.exists():
         e = pd.read_csv(ext, index_col=0, parse_dates=True)

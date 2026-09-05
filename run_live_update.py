@@ -42,7 +42,13 @@ YMAP = {"XAUUSD": "GC=F", "MNQ": "NQ=F", "ES": "ES=F", "EURUSD": "EURUSD=X",
 
 
 def hist_daily(inst):
-    """The frozen HistData-derived daily series (no live extension)."""
+    """The frozen daily series (committed to the repo, so CI works without the
+    multi-hundred-MB 15-minute archive)."""
+    f = ROOT / "data" / "daily" / f"{inst}.csv"
+    if f.exists():
+        d = pd.read_csv(f, index_col=0, parse_dates=True)
+        d.index = pd.to_datetime(d.index).tz_localize(None).normalize()
+        return d
     from run_research import load_15m, to_tf
     PSER = {"XAUUSD": "XAUUSD", "MNQ": "NSXUSD", "ES": "SPXUSD",
             "EURUSD": "EURUSD", "USDJPY": "USDJPY", "WTIUSD": "WTIUSD",

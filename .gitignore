@@ -14,3 +14,6 @@ data/external/cot/*.zip
 
 # live extension IS tracked (small, needed by the dashboard)
 !data/live/
+
+# compact daily series + live extension ARE tracked (CI needs them)
+!data/daily/

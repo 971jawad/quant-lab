@@ -29,7 +29,26 @@ SERIES = {"XAUUSD": "XAUUSD", "MNQ": "NSXUSD", "SPX": "SPXUSD", "EURUSD": "EURUS
 COST_RT = {"XAUUSD": 0.45, "MNQ": 1.62, "SPX": 0.62, "EURUSD": 0.00016}
 
 
+# series -> compact committed daily file (CI runs without the 15m archive)
+_DAILY_ALIAS = {"NSXUSD": "MNQ", "SPXUSD": "ES", "XAUUSD": "XAUUSD",
+                "EURUSD": "EURUSD", "USDJPY": "USDJPY", "WTIUSD": "WTIUSD",
+                "JPXJPY": "JPXJPY"}
+
+
 def daily_close(series: str) -> pd.Series:
+    alias = _DAILY_ALIAS.get(series)
+    f = DATA / "daily" / f"{alias}.csv" if alias else None
+    if f is not None and f.exists():
+        d = pd.read_csv(f, index_col=0, parse_dates=True)["close"]
+        d.index = pd.to_datetime(d.index).tz_localize(None).normalize()
+        ext = DATA / "live" / f"{alias}_ext.csv"
+        if ext.exists():
+            e = pd.read_csv(ext, index_col=0, parse_dates=True)["close"]
+            e.index = pd.to_datetime(e.index).tz_localize(None).normalize()
+            e = e[e.index > d.index[-1]]
+            if len(e):
+                d = pd.concat([d, e])
+        return d
     df = pd.read_csv(DATA / f"{series}_15m.csv", index_col=0)
     df.index = pd.to_datetime(df.index, utc=True)
     c = df["close"].tz_convert("America/New_York").resample("1D").last().dropna()
