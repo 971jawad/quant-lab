@@ -1,0 +1,58 @@
+{
+  "IWM": {
+    "n_sig": 21,
+    "on_bp": -9.8,
+    "dev_sharpe": -0.2,
+    "dev_t": -0.34,
+    "holdout_rows": 1082,
+    "admitted": false
+  },
+  "DIA": {
+    "n_sig": 78,
+    "on_bp": 44.7,
+    "dev_sharpe": 1.04,
+    "dev_t": 3.35,
+    "holdout_rows": 1082,
+    "admitted": true
+  },
+  "MDY": {
+    "n_sig": 78,
+    "on_bp": 89.8,
+    "dev_sharpe": 1.34,
+    "dev_t": 4.41,
+    "holdout_rows": 1082,
+    "admitted": true
+  },
+  "XLF": {
+    "n_sig": 1,
+    "on_bp": -156.4,
+    "dev_sharpe": -0.45,
+    "dev_t": -0.77,
+    "holdout_rows": 887,
+    "admitted": false
+  },
+  "XLU": {
+    "n_sig": 4,
+    "on_bp": 54.3,
+    "dev_sharpe": 1.58,
+    "dev_t": 2.71,
+    "holdout_rows": 822,
+    "admitted": true
+  },
+  "XLE": {
+    "n_sig": 19,
+    "on_bp": 30.6,
+    "dev_sharpe": 0.47,
+    "dev_t": 0.65,
+    "holdout_rows": 1077,
+    "admitted": false
+  },
+  "JPXJPY": {
+    "n_sig": 82,
+    "on_bp": 21.7,
+    "dev_sharpe": 0.37,
+    "dev_t": 1.22,
+    "holdout_rows": 1082,
+    "admitted": false
+  }
+}

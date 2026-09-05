@@ -219,3 +219,45 @@ Both windows improve. This is the largest single gain of the program, and it
 came from the ALPHA family — confirming cycle-6's lesson that beta-family
 breadth dilutes while alpha-family breadth compounds.
 Holdout looks: 16 (15 was void — invalid empty-leg test).
+
+## Amendment 8 (2026-09-05) — cycle 10: v1.3 WITHDRAWN, CHAMPION REVERTS TO v1.2
+
+THIRD SELF-CAUGHT ERROR, and this one reverses a promotion. The COT legs spread
+each weekly return across 5 daily rows (repeat(5)/5). That preserves the mean
+but shrinks the std, INFLATING every t-stat by sqrt(5) = 2.24x. Corrected
+t-stats on the actual weekly observations (the independent unit):
+
+  market   ON vs base      t_weekly    t_daily(inflated, as previously reported)
+  NSXUSD   +111 vs +26bp     2.32              6.42
+  MDY       +90 vs +12bp     1.69              4.41
+  SPXUSD    +63 vs +19bp     1.18              3.74
+  DIA       +45 vs +21bp     0.77              3.35
+  IWM       -10 vs +25bp    -0.47             -0.34
+  JPXJPY    +22 vs +25bp    -0.09              1.22
+
+The corrected NQ value (2.32) matches round 4's original weekly test (2.30),
+confirming which statistic was right all along.
+
+POOLED / META-ANALYTIC TEST of the equity-index family (dev):
+  all 5 markets pooled: ON +67.8bp vs +19.8bp, t = +2.50, p = 0.013
+  EXCLUDING the discovery market NQ (the honest replication test):
+      +59.1bp vs +18.0bp, t = +1.88, p = 0.061 -> NOT SIGNIFICANT
+  sign test 4/5 positive, binomial p = 0.375 -> not significant
+  => the washout mechanism is established on NASDAQ ONLY. Cross-market
+     replication is suggestive (p=0.06) but not demonstrated.
+
+CONSEQUENCE — applying the pre-declared rule in the direction that hurts:
+  The cycle-9 promotion of v1.3 (+SPX washout) rested on t=3.74, which was the
+  inflated figure. The true standalone t is 1.18, BELOW the pre-declared
+  admission bar of 2.0. v1.3 IS THEREFORE WITHDRAWN despite its favourable
+  holdout (1.63 vs 1.36) — retaining a leg that fails its own pre-declared bar
+  because the holdout happened to look good is precisely the post-hoc
+  rationalisation this program exists to prevent.
+
+  CHAMPION REVERTS TO v1.2: 10 legs / 7 markets, holdout Sharpe 1.36,
+  Sortino 1.85, Calmar 1.07, maxDD -9.76%, CAGR 10.43%, DSR 0.935,
+  CI90 [0.53, 2.16]. Series: research/champion_v12_daily.csv.
+  The Nasdaq washout leg (t 2.32) remains in the book and remains valid.
+
+PERMANENT RULE: t-stats must be computed on the native observation frequency of
+the signal. Documented in qlab/metrics.py. Holdout looks: 16.

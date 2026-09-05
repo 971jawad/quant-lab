@@ -36,6 +36,14 @@ def deflated_sharpe(daily_ret: pd.Series, n_trials: int) -> float:
     return float(stats.norm.cdf((sr0 - emax) * np.sqrt(max(len(r) - 1, 1)) / denom))
 
 
+# WEEKLY-SPREAD WARNING: never compute t-stats on a series built by spreading a
+# weekly return across 5 daily rows (repeat(5)/5). That preserves the mean but
+# shrinks the std, inflating t by sqrt(5) ~ 2.24. Compute t on the ORIGINAL
+# weekly observations. This error inflated every COT t-stat in cycle 9-10
+# (NQ 6.42 -> true 2.32; SPX 3.74 -> true 1.18) and briefly promoted a leg that
+# did not meet the pre-declared bar.
+
+
 def full_metrics(trades_R=None, daily_ret: pd.Series | None = None,
                  n_trials: int = 1, periods_per_year: int = 252) -> dict:
     out = {}

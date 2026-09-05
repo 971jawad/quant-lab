@@ -260,3 +260,4 @@
 {"phase": "cot_breadth", "holdout_look": 15, "n_configs": 9}
 {"phase": "cot_breadth", "n_configs": 11}
 {"phase": "cot_breadth_fixed", "holdout_look": 16, "n_configs": 11}
+{"phase": "cycle10_equity_family", "n_configs": 13}
