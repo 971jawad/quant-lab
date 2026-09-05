@@ -1,0 +1,35 @@
+{
+  "champion_v1.1": {
+    "sharpe": 1.41,
+    "sortino": 2.18,
+    "calmar": 1.26,
+    "max_dd_pct": -9.8,
+    "cagr_pct": 12.35,
+    "DSR": 0.974,
+    "CI90": "[0.7,2.12]",
+    "P(SR>0)": 0.998,
+    "legs": 11
+  },
+  "plus_bonds": {
+    "sharpe": 1.29,
+    "sortino": 2.09,
+    "calmar": 1.15,
+    "max_dd_pct": -9.92,
+    "cagr_pct": 11.38,
+    "DSR": 0.956,
+    "CI90": "[0.64,1.99]",
+    "P(SR>0)": 0.999,
+    "legs": 13
+  },
+  "plus_all_etf": {
+    "sharpe": 1.26,
+    "sortino": 2.03,
+    "calmar": 1.08,
+    "max_dd_pct": -9.97,
+    "cagr_pct": 10.8,
+    "DSR": 0.946,
+    "CI90": "[0.62,1.95]",
+    "P(SR>0)": 0.999,
+    "legs": 15
+  }
+}

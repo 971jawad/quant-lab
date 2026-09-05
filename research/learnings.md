@@ -201,3 +201,14 @@ XAU/MNQ/EUR daily.
   entry/exit dates+prices): win rate 31-38%, median hold 5-6 days, edge carried
   by rare runners (one MNQ long: 737 days, +55%).
 - Champion v1.1 UNCHANGED and re-verified after the fix.
+
+## Round 10 — cycle 6: bonds/ETF breadth (2026-09-05)
+
+- Filled the book's one structural hole (zero fixed income) with clean ETF
+  series. Dev said marginal ADMIT; HOLDOUT said clear REJECT (1.41 -> 1.29).
+- LESSON: a +1.4% dev improvement is noise. Stage 5 now demands >=5% material
+  dev improvement before a holdout look is spent.
+- Breadth is NOT unconditionally good: cycle-3 breadth (4 FX/index markets,
+  same asset classes as the book) WORKED; cycle-6 breadth (new asset classes,
+  weak standalone legs) did NOT. What mattered was leg STRENGTH, not novelty.
+- Champion v1.1 survives its 3rd consecutive challenge cycle.

@@ -253,3 +253,5 @@
 {"phase": "volume", "n_configs": 13}
 {"phase": "muso_ict", "n_configs": 9}
 {"phase": "cycle5", "n_configs": 25}
+{"phase": "cycle6_etf", "n_configs": 28}
+{"phase": "cycle6", "holdout_look": 14, "n_configs": 28}

@@ -134,3 +134,22 @@ printed ABOVE gross Sharpe, which is impossible.
   vs 1w 0.303 (t 0.99) and 2w 0.228 (t 0.69). t-stats decline monotonically with
   bar size; only daily's CI clears zero. Gradient rises 15m->1d then flattens.
 - Holdout looks: still 13 (nothing new was promoted; all dev-only).
+
+## Amendment 5 (2026-09-05) — cycle 6: bonds/ETF breadth REJECTED by holdout
+
+- Added clean ETF series (TLT, IEF, HYG, EEM, EFA, VNQ, DBC) — chosen over
+  futures deliberately: Yahoo '=F' front-month carries unadjusted roll gaps
+  that manufacture fake trends. Stage 1 pass: TLT .20, IEF .29, HYG .26,
+  DBC .73; fail: EEM, EFA, VNQ. Block corr vs champion +0.185.
+- Dev Stage 5 said ADMIT (Sharpe 1.47->1.49, Sortino 1.81->1.86, Calmar -5%,
+  inside the 10% tolerance). Look #14 taken because the rule was pre-declared
+  and declining a passed test is rule-shopping.
+- HOLDOUT VERDICT: REJECT. +bonds 1.29 (Calmar 1.15, DSR .956); +all ETF 1.26
+  (1.08, .946) vs CHAMPION 1.41 (1.26, .974). A +1.4% dev gain became -8.5%
+  OOS. CHAMPION v1.1 STANDS UNCHANGED.
+- RULE UPGRADE (learned from this, applies to all FUTURE candidates): Stage 5
+  now requires a MATERIAL dev improvement — >=5% on the primary metric — not
+  merely any improvement inside tolerance. Marginal dev gains are noise and
+  burn holdout looks. The fixed-income hole is real in theory but adding it
+  did not pay here.
+- Holdout looks: 14.

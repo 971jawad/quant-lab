@@ -1,0 +1,23 @@
+{
+  "etf_block": {
+    "sharpe": 1.49,
+    "calmar": 0.92,
+    "max_dd_pct": -8.75,
+    "cagr_pct": 8.08,
+    "sortino": 1.86
+  },
+  "bonds_only": {
+    "sharpe": 1.49,
+    "calmar": 0.96,
+    "max_dd_pct": -8.59,
+    "cagr_pct": 8.21,
+    "sortino": 1.86
+  },
+  "champion": {
+    "sharpe": 1.47,
+    "calmar": 1.01,
+    "max_dd_pct": -8.53,
+    "cagr_pct": 8.62,
+    "sortino": 1.81
+  }
+}
