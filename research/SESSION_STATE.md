@@ -1,6 +1,6 @@
 # SESSION STATE — resume checkpoint
 
-Last updated: 2026-09-06. Read this first if you are picking the project up cold.
+Last updated: 2026-09-06 (cycle 17). Read this first if you are picking the project up cold.
 
 ---
 
@@ -134,3 +134,42 @@ have **already breached** the 5% trailing limit within 60 days.
 
 **Never wire this to a broker for automatic order execution.** The system
 publishes signals only.
+
+---
+
+## 8. Cycle 17 additions (latest)
+
+**HISTORICAL prop-firm backtest** (`run_prop_backtest.py`) — 4,832 real challenge
+starts, actual forward paths, not Monte Carlo. **It corrected the MC, which was
+optimistic**: 8%/5%-trailing at 1.0x is **46.1% pass** in real history, not 60.5%.
+
+| Ruleset (at 1.00x) | Pass | Fail | Timeout |
+|---|--:|--:|--:|
+| 8% target / **5% trailing** | 46.1% | 33.2% | 20.7% |
+| 10% target / **10% STATIC** | 49.6% | **0.1%** | 50.3% |
+| 8% / 5% trailing, 60-day | 14.4% | 9.3% | 76.3% |
+| 6% target / 4% trailing | 50.8% | 34.1% | 15.1% |
+
+**Choose a STATIC-drawdown firm.** Under 10% static the book essentially never
+breaches; conditional on resolving it passes 99.8% vs 58.1% under 5% trailing.
+The trailing rule, not the strategy, kills accounts. Leverage is only safe under
+static DD (1.25x static = 60.1% pass, 0.5% fail).
+Median time to pass at 1.0x is **86 trading days**, so 30-60 day evaluations are
+structurally hostile. Cohort dependence is extreme: 0% pass for starts in
+2012-09..2013-02, 100% for 2014-02..2014-05.
+
+**Daily picks** now carry the full round-trip per action (entry date/price, exit
+price, days held, net %). 57 round-trips: 25% winners, mean +1.32%,
+best +109.50% (932-day gold long), worst -10.04%.
+
+**Macro-edge-hunt workflow**: 6 discovery agents completed (30 hypotheses across
+5 lenses + data scout). The 31 refutation/synthesis agents FAILED on a **monthly
+spend limit** — so those hypotheses are **UNVERIFIED, not refuted**. Do not
+report them as refuted. Outputs in `research/workflow_runs/`; resume with
+`Workflow({scriptPath: research/workflow_runs/macro-edge-hunt-wf_5884517c-d7f.js,
+resumeFromRunId: "wf_5884517c-d7f"})`.
+
+Data-scout keeper: **Treasury buybacks are free** (fiscaldata API, 219 ops
+2000-2026) **but ~159 of 219 fall after 2022-07-01 = entirely inside holdout**;
+the dev window holds only the economically different 2000-2002 surplus-era
+program. A buyback signal is **essentially untestable** under this discipline.

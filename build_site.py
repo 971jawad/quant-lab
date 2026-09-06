@@ -79,6 +79,7 @@ def main():
         "decay": jload("decay_monitor.json", {}),
         "candles": jload("candles_summary.json", {}),
         "picks": jload("daily_picks.json", {}),
+        "prop": jload("prop_backtest.json", {}),
         "live_trades": jload("live_trades.json", {}),
         "macro": jload("macro_dev.json", {}),
         "live_feed": jload("live_feed.json", {}),

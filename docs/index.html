@@ -160,7 +160,10 @@
     <p class="note">Every position change, with the date the signal fired and the date/price it
       executed. This is the same sequence the equity curve is built from.</p>
     <div class="tw"><table><thead><tr><th>Signal date</th><th>Execute date</th><th>Market</th>
-      <th>Action</th><th class="n">Fill price</th></tr></thead><tbody id="picklog"></tbody></table></div>
+      <th>Action</th><th class="n">Fill price</th><th class="n opt">Closed entry</th>
+      <th class="n opt">Exit</th><th class="n opt2">Days</th>
+      <th class="n">Net %</th></tr></thead><tbody id="picklog"></tbody></table></div>
+    <p class="note" id="picklogstats"></p>
   </section>
 
   <section id="trades">
@@ -317,6 +320,21 @@
     <div class="tw"><table><thead><tr><th class="n">Scale</th><th class="n">Max DD</th><th class="n">CAGR</th>
       <th class="n">Pass</th><th class="n">Blow-up</th><th class="opt" style="width:180px">Pass vs blow-up</th>
       </tr></thead><tbody id="sizetbl"></tbody></table></div>
+
+    <h2>Historical rule backtest — 4,832 real challenge starts</h2>
+    <p class="note">Not a simulation. A challenge is started on <strong>every</strong> trading day
+      and the actual forward path is walked under the real rules. This <em>corrects</em> the Monte
+      Carlo above, which was optimistic: bootstrap resampling destroys the serial correlation of
+      real drawdowns, so it understates how often a live path grinds into a trailing limit.</p>
+    <div class="tw"><table><thead><tr><th>Ruleset</th><th class="n">Scale</th><th class="n">Pass</th>
+      <th class="n">Fail (DD)</th><th class="n opt">Timeout</th>
+      <th class="n opt2">Median days</th><th class="n">Pass if resolved</th></tr></thead>
+      <tbody id="proptbl"></tbody></table></div>
+    <p class="note"><strong>The single most useful finding for a funded account:</strong> under a
+      <em>static</em> 10% drawdown rule the book almost never breaches (0.1% vs 33.2% under a 5%
+      trailing rule) — it either reaches target or times out. The trailing rule, not the strategy,
+      is what kills accounts. Time limits matter more than size: a 60-day window drops the pass
+      rate from 46% to 14%, because the median time to pass is 86 trading days.</p>
 
     <h2>The same scales, on LIVE data</h2>
     <p class="note">Not a simulation — this is what each sizing choice actually did over the live
@@ -487,6 +505,30 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
     `<tr><td class="dim">${p.signal_date}</td><td>${p.execute_date}</td><td>${p.market}</td>
      <td><span class="pill ${p.action.includes("LONG")?"long":(p.action.includes("SHORT")?"short":"flat")}">${p.action}</span></td>
      <td class="n">${p.exec_price}</td></tr>`).join("");
+
+
+  // ---- historical prop backtest
+  const PR = (D.prop&&D.prop.results)||{};
+  const order = ["8% target / 5% trailing","10% target / 10% static","8% target / 5% trail / 60d","6% target / 4% trailing"];
+  const rows=[];
+  order.forEach(rs=>{ [0.5,0.75,1.0,1.25,1.5].forEach(sc=>{
+    const v = PR[`${rs}|${sc}`]; if(!v) return;
+    const hot = (rs==="8% target / 5% trailing" && sc===1.0);
+    rows.push(`<tr${hot?' style="background:rgba(88,166,255,.08)"':''}>
+      <td class="dim">${sc===0.5?rs:""}</td><td class="n">${sc.toFixed(2)}×</td>
+      <td class="n pos">${num(v.pass_rate*100,1)}%</td>
+      <td class="n neg">${num((v.fail_dd+v.fail_daily)/v.starts*100,1)}%</td>
+      <td class="n dim opt">${num(v.timeout/v.starts*100,1)}%</td>
+      <td class="n dim opt2">${v.median_days_to_pass??"—"}</td>
+      <td class="n">${v.pass_given_resolved==null?"—":num(v.pass_given_resolved*100,1)+"%"}</td></tr>`);
+  });});
+  $("#proptbl").innerHTML = rows.join("");
+  const dn=(PK.log||[]).filter(p=>p.net_pct!=null);
+  if(dn.length){ const w=dn.filter(p=>p.net_pct>0).length;
+    $("#picklogstats").innerHTML = `${dn.length} completed round-trips in this log · winners
+      ${w} (${Math.round(w/dn.length*100)}%) · mean ${num(dn.reduce((a,b)=>a+b.net_pct,0)/dn.length)}%
+      · best ${num(Math.max(...dn.map(p=>p.net_pct)))}% · worst ${num(Math.min(...dn.map(p=>p.net_pct)))}%.
+      Few winners, carried by rare runners — that is what trend following looks like.`; }
 
   // ---- live trades + live sizing
   const LT = D.live_trades||{};
