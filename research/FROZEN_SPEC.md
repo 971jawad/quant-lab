@@ -486,3 +486,51 @@ NEW ARTEFACTS: make_daily_picks.py (action-at-next-open + dated pick log),
 make_live_trades.py (live-only trade ledger with entry/exit dates, prices and
 per-scale P&L). Live sizing evidence: at 1.5x and 2.0x the 5% trailing limit is
 ALREADY breached within the first 60 live days.
+
+## Amendment 15 (2026-09-06) — cycle 17: HISTORICAL prop-firm backtest + picks
+
+The sizing table published earlier came from a Monte Carlo (block-bootstrapped
+paths). run_prop_backtest.py does the harder test: start a challenge on EVERY
+trading day (4,832 starts) and walk the ACTUAL forward path under real rules.
+
+**THE MONTE CARLO WAS OPTIMISTIC.** 8% target / 5% trailing at 1.00x:
+    Monte Carlo said   60.5% pass / 30.9% blow-up
+    ACTUAL HISTORY     46.1% pass / 33.2% blow-up / 20.7% timeout
+Bootstrap resampling destroys the serial correlation of real drawdowns, so it
+under-states how often a real path grinds into the trailing limit. Trust the
+historical number.
+
+RULESET COMPARISON at 1.00x (4,832 historical starts each):
+    8% target / 5% TRAILING      46.1% pass  33.2% fail  20.7% timeout
+    10% target / 10% STATIC      49.6% pass   0.1% fail  50.3% timeout
+    8% / 5% trailing, 60d limit  14.4% pass   9.3% fail  76.3% timeout
+    6% target / 4% trailing      50.8% pass  34.1% fail  15.1% timeout
+
+**THE BIGGEST PRACTICAL FINDING OF THE PROJECT: choose a STATIC-drawdown firm,
+not a trailing-drawdown one.** Under a 10% static rule the book essentially
+never breaches (0.1%); it either reaches target or times out. Conditional on
+resolving, it passes 99.8% of the time vs 58.1% under a 5% trailing rule. The
+trailing rule, not the strategy, is what kills the account.
+At 1.25x static: 60.1% pass, 0.5% fail. Leverage is only safe under static DD.
+
+TIME LIMITS MATTER MORE THAN SIZE: cutting the window to 60 days drops the pass
+rate from 46.1% to 14.4%. Median time to pass at 1.00x is 86 trading days, so a
+30-60 day evaluation is structurally hostile to a Sharpe-1.4 daily book.
+
+COHORT DEPENDENCE IS EXTREME: start-month pass rates run from 0% (2012-09
+through 2013-02) to 100% (2012-02 through 2014-05). When you start dominates.
+
+DAILY PICKS now carry the full round-trip on every action (entry date/price,
+exit price, days held, net %). Log stats: 57 round-trips, 25% winners,
+mean +1.32%, best +109.50% (a 932-day gold long), worst -10.04% — the shape of
+the edge in one line.
+
+MACRO-EDGE-HUNT WORKFLOW: 6 discovery agents completed (5 lenses + data scout,
+30 hypotheses); the 31 refutation/synthesis agents FAILED on a monthly spend
+limit, so those hypotheses are UNVERIFIED, not refuted. Outputs preserved in
+research/workflow_runs/. Data-scout finding worth keeping: Treasury buyback
+operations ARE free (fiscaldata API, 219 ops 2000-2026) BUT ~159 of 219 fall
+after 2022-07-01, i.e. entirely inside the holdout; the dev window holds only
+the economically different 2000-2002 surplus-era program. **A buyback signal is
+essentially untestable under this project's discipline** — do not let it be fit
+on 2024-2026.

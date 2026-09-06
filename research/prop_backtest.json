@@ -1,0 +1,240 @@
+{
+  "rulesets": {
+    "8% target / 5% trailing": {
+      "target": 0.08,
+      "trail": 0.05,
+      "daily": 0.05,
+      "limit": 252
+    },
+    "10% target / 10% static": {
+      "target": 0.1,
+      "trail": null,
+      "static": 0.1,
+      "daily": 0.05,
+      "limit": 252
+    },
+    "8% target / 5% trail / 60d": {
+      "target": 0.08,
+      "trail": 0.05,
+      "daily": 0.05,
+      "limit": 60
+    },
+    "6% target / 4% trailing": {
+      "target": 0.06,
+      "trail": 0.04,
+      "daily": 0.04,
+      "limit": 252
+    }
+  },
+  "results": {
+    "8% target / 5% trailing|0.5": {
+      "starts": 4832,
+      "pass": 1338,
+      "fail_dd": 222,
+      "fail_daily": 0,
+      "timeout": 3272,
+      "pass_rate": 0.2769,
+      "pass_given_resolved": 0.8577,
+      "median_days_to_pass": 171
+    },
+    "8% target / 5% trailing|0.75": {
+      "starts": 4832,
+      "pass": 1908,
+      "fail_dd": 1047,
+      "fail_daily": 0,
+      "timeout": 1877,
+      "pass_rate": 0.3949,
+      "pass_given_resolved": 0.6457,
+      "median_days_to_pass": 115
+    },
+    "8% target / 5% trailing|1.0": {
+      "starts": 4832,
+      "pass": 2227,
+      "fail_dd": 1604,
+      "fail_daily": 0,
+      "timeout": 1001,
+      "pass_rate": 0.4609,
+      "pass_given_resolved": 0.5813,
+      "median_days_to_pass": 86
+    },
+    "8% target / 5% trailing|1.25": {
+      "starts": 4832,
+      "pass": 2345,
+      "fail_dd": 1733,
+      "fail_daily": 0,
+      "timeout": 754,
+      "pass_rate": 0.4853,
+      "pass_given_resolved": 0.575,
+      "median_days_to_pass": 70
+    },
+    "8% target / 5% trailing|1.5": {
+      "starts": 4832,
+      "pass": 2398,
+      "fail_dd": 1949,
+      "fail_daily": 0,
+      "timeout": 485,
+      "pass_rate": 0.4963,
+      "pass_given_resolved": 0.5516,
+      "median_days_to_pass": 61
+    },
+    "10% target / 10% static|0.5": {
+      "starts": 4832,
+      "pass": 813,
+      "fail_dd": 0,
+      "fail_daily": 0,
+      "timeout": 4019,
+      "pass_rate": 0.1683,
+      "pass_given_resolved": 1.0,
+      "median_days_to_pass": 165
+    },
+    "10% target / 10% static|0.75": {
+      "starts": 4832,
+      "pass": 1856,
+      "fail_dd": 0,
+      "fail_daily": 0,
+      "timeout": 2976,
+      "pass_rate": 0.3841,
+      "pass_given_resolved": 1.0,
+      "median_days_to_pass": 147
+    },
+    "10% target / 10% static|1.0": {
+      "starts": 4832,
+      "pass": 2397,
+      "fail_dd": 5,
+      "fail_daily": 0,
+      "timeout": 2430,
+      "pass_rate": 0.4961,
+      "pass_given_resolved": 0.9979,
+      "median_days_to_pass": 122
+    },
+    "10% target / 10% static|1.25": {
+      "starts": 4832,
+      "pass": 2902,
+      "fail_dd": 24,
+      "fail_daily": 0,
+      "timeout": 1906,
+      "pass_rate": 0.6006,
+      "pass_given_resolved": 0.9918,
+      "median_days_to_pass": 103
+    },
+    "10% target / 10% static|1.5": {
+      "starts": 4832,
+      "pass": 3270,
+      "fail_dd": 101,
+      "fail_daily": 0,
+      "timeout": 1461,
+      "pass_rate": 0.6767,
+      "pass_given_resolved": 0.97,
+      "median_days_to_pass": 96
+    },
+    "8% target / 5% trail / 60d|0.5": {
+      "starts": 4832,
+      "pass": 81,
+      "fail_dd": 30,
+      "fail_daily": 0,
+      "timeout": 4721,
+      "pass_rate": 0.0168,
+      "pass_given_resolved": 0.7297,
+      "median_days_to_pass": 47
+    },
+    "8% target / 5% trail / 60d|0.75": {
+      "starts": 4832,
+      "pass": 248,
+      "fail_dd": 220,
+      "fail_daily": 0,
+      "timeout": 4364,
+      "pass_rate": 0.0513,
+      "pass_given_resolved": 0.5299,
+      "median_days_to_pass": 39
+    },
+    "8% target / 5% trail / 60d|1.0": {
+      "starts": 4832,
+      "pass": 697,
+      "fail_dd": 448,
+      "fail_daily": 0,
+      "timeout": 3687,
+      "pass_rate": 0.1442,
+      "pass_given_resolved": 0.6087,
+      "median_days_to_pass": 40
+    },
+    "8% target / 5% trail / 60d|1.25": {
+      "starts": 4832,
+      "pass": 981,
+      "fail_dd": 744,
+      "fail_daily": 0,
+      "timeout": 3107,
+      "pass_rate": 0.203,
+      "pass_given_resolved": 0.5687,
+      "median_days_to_pass": 38
+    },
+    "8% target / 5% trail / 60d|1.5": {
+      "starts": 4832,
+      "pass": 1186,
+      "fail_dd": 1062,
+      "fail_daily": 0,
+      "timeout": 2584,
+      "pass_rate": 0.2454,
+      "pass_given_resolved": 0.5276,
+      "median_days_to_pass": 35
+    },
+    "6% target / 4% trailing|0.5": {
+      "starts": 4832,
+      "pass": 2002,
+      "fail_dd": 393,
+      "fail_daily": 0,
+      "timeout": 2437,
+      "pass_rate": 0.4143,
+      "pass_given_resolved": 0.8359,
+      "median_days_to_pass": 136
+    },
+    "6% target / 4% trailing|0.75": {
+      "starts": 4832,
+      "pass": 2257,
+      "fail_dd": 1550,
+      "fail_daily": 0,
+      "timeout": 1025,
+      "pass_rate": 0.4671,
+      "pass_given_resolved": 0.5929,
+      "median_days_to_pass": 88
+    },
+    "6% target / 4% trailing|1.0": {
+      "starts": 4832,
+      "pass": 2456,
+      "fail_dd": 1648,
+      "fail_daily": 0,
+      "timeout": 728,
+      "pass_rate": 0.5083,
+      "pass_given_resolved": 0.5984,
+      "median_days_to_pass": 69
+    },
+    "6% target / 4% trailing|1.25": {
+      "starts": 4832,
+      "pass": 2424,
+      "fail_dd": 1987,
+      "fail_daily": 92,
+      "timeout": 329,
+      "pass_rate": 0.5017,
+      "pass_given_resolved": 0.5383,
+      "median_days_to_pass": 55
+    },
+    "6% target / 4% trailing|1.5": {
+      "starts": 4832,
+      "pass": 2460,
+      "fail_dd": 2130,
+      "fail_daily": 190,
+      "timeout": 52,
+      "pass_rate": 0.5091,
+      "pass_given_resolved": 0.5146,
+      "median_days_to_pass": 43
+    }
+  },
+  "worst_cohorts": {
+    "2012-09": 0.0,
+    "2012-10": 0.0,
+    "2012-11": 0.0,
+    "2012-12": 0.0,
+    "2013-01": 0.0,
+    "2013-02": 0.0
+  },
+  "overall_pass_1x": 0.4609
+}

@@ -76,20 +76,44 @@ def main():
         sig_today = float(sig.iloc[-1])
         cur = float(acted.iloc[-1])
 
-        # historical action log
+        # historical action log, with each action carrying the round-trip it
+        # CLOSED (entry price, exit price, return) so a pick is self-contained
         chg = acted.diff().fillna(0.0)
-        for i in np.flatnonzero(chg.values != 0):
+        idxs = list(np.flatnonzero(chg.values != 0))
+        open_i, open_dir = None, 0.0
+        for i in idxs:
+            prev, now = float(acted.iloc[i - 1]), float(acted.iloc[i])
+            exec_px = float(d["open"].iloc[i])
+            closed = None
+            if open_i is not None and open_dir != 0:
+                en = float(d["open"].iloc[open_i])
+                gross = (exec_px - en) / en * open_dir * 100
+                closed = {
+                    "closed_dir": "LONG" if open_dir > 0 else "SHORT",
+                    "entry_date": d.index[open_i].strftime("%Y-%m-%d"),
+                    "entry_price": round(en, 5),
+                    "exit_price": round(exec_px, 5),
+                    "days_held": int((d.index[i] - d.index[open_i]).days),
+                    "gross_pct": round(gross, 3),
+                    "net_pct": round(gross - COST[inst] / en * 100, 3),
+                }
+            if now != 0:
+                open_i, open_dir = i, now
+            else:
+                open_i, open_dir = None, 0.0
             if i < len(d) - LOOKBACK_DAYS * 3:
                 continue
-            prev, now = float(acted.iloc[i - 1]), float(acted.iloc[i])
-            picks.append({
+            rec = {
                 "signal_date": d.index[i - 1].strftime("%Y-%m-%d"),
                 "execute_date": d.index[i].strftime("%Y-%m-%d"),
                 "market": inst,
                 "action": label(prev, now),
                 "direction": "LONG" if now > 0 else ("SHORT" if now < 0 else "FLAT"),
-                "exec_price": round(float(d["open"].iloc[i]), 5),
-            })
+                "exec_price": round(exec_px, 5),
+            }
+            if closed:
+                rec.update(closed)
+            picks.append(rec)
 
         # what to do at the NEXT open
         pending = label(cur, sig_today)
@@ -117,11 +141,28 @@ def main():
     acts = [r for r in today_rows if r["action_next_open"] != "HOLD"]
     print(f"\n  {len(acts)} action(s) pending, {len(today_rows) - len(acts)} holds")
 
-    print(f"\nRECENT PICKS (last {min(len(picks), 12)} of {len(picks)} in the log)")
-    print(f"  {'signal':11} {'execute':11} {'market':9} {'action':15} {'price':>12}")
-    for p in picks[:12]:
-        print(f"  {p['signal_date']:11} {p['execute_date']:11} {p['market']:9} "
-              f"{p['action']:15} {p['exec_price']:>12}")
+    print("")
+    print("RECENT PICKS - each row shows the round-trip it CLOSED")
+    hdr = "  {:11} {:8} {:14} {:>11} {:>13} {:>11} {:>5} {:>8}".format(
+        "execute", "market", "action", "fill", "closed entry", "exit", "days", "net %")
+    print(hdr)
+    for p in picks[:14]:
+        if "entry_price" in p:
+            print("  {:11} {:8} {:14} {:>11} {:>13} {:>11} {:>5} {:>+8.2f}".format(
+                p["execute_date"], p["market"], p["action"], p["exec_price"],
+                p["entry_price"], p["exit_price"], p["days_held"], p["net_pct"]))
+        else:
+            print("  {:11} {:8} {:14} {:>11} {:>13} {:>11} {:>5} {:>8}".format(
+                p["execute_date"], p["market"], p["action"], p["exec_price"],
+                "-", "-", "-", "-"))
+    done = [x for x in picks if "net_pct" in x]
+    if done:
+        w = [x for x in done if x["net_pct"] > 0]
+        print("")
+        print("  round-trips: {} | winners {} ({:.0%}) | mean {:+.2f}% | best {:+.2f}% | worst {:+.2f}%".format(
+            len(done), len(w), len(w)/len(done),
+            float(np.mean([x["net_pct"] for x in done])),
+            max(x["net_pct"] for x in done), min(x["net_pct"] for x in done)))
 
     json.dump({"today": today_rows, "log": picks,
                "n_pending": len(acts)},
