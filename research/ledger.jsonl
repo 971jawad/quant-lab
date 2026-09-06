@@ -267,3 +267,4 @@
 {"phase": "committee", "n_configs": 58}
 {"phase": "ensembler_production", "n_configs": 1, "note": "deployment build"}
 {"phase": "candles_dev", "n_configs": 136}
+{"phase": "macro_policy_liquidity", "n_configs": 735}

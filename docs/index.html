@@ -119,6 +119,7 @@
 
 <nav>
   <button class="on" data-t="sig">Live Signals</button>
+  <button data-t="picks">Daily Picks</button>
   <button data-t="trades">Trade Details</button>
   <button data-t="perf">Performance</button>
   <button data-t="status">Live vs Backtest</button>
@@ -139,6 +140,28 @@
       <tbody id="postbl"></tbody></table></div>
   </section>
 
+
+
+  <section id="picks">
+    <h2>What to do at the next open</h2>
+    <p class="note"><strong>Execution convention:</strong> the signal is computed from the
+      <strong>close of day D</strong> (23:59 ET) and the order fills at the <strong>open of day
+      D+1, 00:00 ET</strong>. These are 24-hour markets, so that is a live tradeable moment.
+      Measured sensitivity: filling at the signal close instead gives Sharpe 0.85 vs 0.87 for
+      next-open — immaterial. Being a full day late costs ~0.10. We do <em>not</em> trade
+      intraday: median hold is 7 days, the longest open position is 491 days.</p>
+    <div class="tw"><table><thead><tr><th>Market</th><th>Holding now</th><th>Signal</th>
+      <th>Action at next open</th><th class="n">Last close</th>
+      <th class="n opt">Lookback</th><th class="opt2">Mode</th></tr></thead>
+      <tbody id="todaytbl"></tbody></table></div>
+    <p class="note" id="picksnote"></p>
+
+    <h2>Pick log</h2>
+    <p class="note">Every position change, with the date the signal fired and the date/price it
+      executed. This is the same sequence the equity curve is built from.</p>
+    <div class="tw"><table><thead><tr><th>Signal date</th><th>Execute date</th><th>Market</th>
+      <th>Action</th><th class="n">Fill price</th></tr></thead><tbody id="picklog"></tbody></table></div>
+  </section>
 
   <section id="trades">
     <h2>Open positions — full trade detail</h2>
@@ -294,6 +317,21 @@
     <div class="tw"><table><thead><tr><th class="n">Scale</th><th class="n">Max DD</th><th class="n">CAGR</th>
       <th class="n">Pass</th><th class="n">Blow-up</th><th class="opt" style="width:180px">Pass vs blow-up</th>
       </tr></thead><tbody id="sizetbl"></tbody></table></div>
+
+    <h2>The same scales, on LIVE data</h2>
+    <p class="note">Not a simulation — this is what each sizing choice actually did over the live
+      period. Note where the 5% trailing limit is already breached.</p>
+    <div class="tw"><table><thead><tr><th class="n">Scale</th><th class="n">Live return</th>
+      <th class="n">Live max DD</th><th class="n opt">Worst day</th>
+      <th>5% trailing breached?</th></tr></thead><tbody id="livesize"></tbody></table></div>
+
+    <h2>Live trade ledger</h2>
+    <p class="note" id="ledgernote"></p>
+    <div class="tw"><table><thead><tr><th>Market</th><th>Dir</th><th>Entry</th>
+      <th class="n">@</th><th>Exit</th><th class="n">@</th><th class="n opt">Days</th>
+      <th class="n">Net</th><th class="opt2">Status</th></tr></thead>
+      <tbody id="livetrades"></tbody></table></div>
+  
   </section>
 
   <section id="ops">
@@ -430,6 +468,49 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
 
 
 
+
+
+  // ---- daily picks
+  const PK = D.picks||{};
+  $("#todaytbl").innerHTML = (PK.today||[]).map(r=>{
+    const act = r.action_next_open, isAct = act!=="HOLD";
+    const k = r.held_now==="LONG"?"long":(r.held_now==="SHORT"?"short":"flat");
+    return `<tr><td>${r.market}</td><td><span class="pill ${k}">${r.held_now}</span></td>
+      <td class="dim">${r.signal_on_last_close}</td>
+      <td>${isAct?`<span class="pill no">${act}</span>`:`<span class="dim">HOLD</span>`}</td>
+      <td class="n">${r.last_close}</td><td class="n dim opt">${r.lookback_days}d</td>
+      <td class="dim opt2">${r.mode}</td></tr>`;}).join("");
+  if(PK.today) $("#picksnote").innerHTML = PK.n_pending
+    ? `<strong>${PK.n_pending} action(s) pending</strong> at the next open.`
+    : `No actions pending — all ${(PK.today||[]).length} positions hold at the next open.`;
+  $("#picklog").innerHTML = (PK.log||[]).slice(0,25).map(p=>
+    `<tr><td class="dim">${p.signal_date}</td><td>${p.execute_date}</td><td>${p.market}</td>
+     <td><span class="pill ${p.action.includes("LONG")?"long":(p.action.includes("SHORT")?"short":"flat")}">${p.action}</span></td>
+     <td class="n">${p.exec_price}</td></tr>`).join("");
+
+  // ---- live trades + live sizing
+  const LT = D.live_trades||{};
+  $("#livesize").innerHTML = (LT.sizing||[]).map(s=>
+    `<tr><td class="n">${s.scale.toFixed(2)}×</td>
+     <td class="n ${cls(s.live_return_pct)}">${num(s.live_return_pct)}%</td>
+     <td class="n neg">${num(s.live_max_dd_pct)}%</td>
+     <td class="n dim opt">${num(s.worst_day_pct)}%</td>
+     <td>${s.breached_5pct_trailing?'<span class="pill no">BREACHED</span>':'<span class="pill ok">survived</span>'}</td></tr>`).join("");
+  if(LT.trades){
+    const cl=(LT.trades||[]).filter(t=>t.status==="CLOSED");
+    const wins=cl.filter(t=>t.net_pct>0).length;
+    $("#ledgernote").innerHTML = `Since ${LT.live_start} · execution at <strong>${LT.exec_time}</strong>
+      (${LT.exec_convention}). ${LT.n_closed} closed, ${LT.n_open} open.
+      ${cl.length?`Closed win rate ${wins}/${cl.length}.`:""}`;
+    $("#livetrades").innerHTML = LT.trades.map(t=>
+      `<tr><td>${t.market}</td>
+       <td><span class="pill ${t.direction==="LONG"?"long":"short"}">${t.direction}</span></td>
+       <td class="dim">${t.entry_date}</td><td class="n">${t.entry_price}</td>
+       <td class="dim">${t.exit_date||"—"}</td><td class="n">${t.exit_price}</td>
+       <td class="n dim opt">${t.days_held}</td>
+       <td class="n ${cls(t.net_pct)}">${num(t.net_pct)}%</td>
+       <td class="opt2"><span class="pill ${t.status==="OPEN"?"ok":"flat"}">${t.status}</span></td></tr>`).join("");
+  }
 
   // ---- candles
   const CN = D.candles||{};

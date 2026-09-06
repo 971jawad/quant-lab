@@ -1,0 +1,557 @@
+{
+  "today": [
+    {
+      "market": "XAUUSD",
+      "held_now": "SHORT",
+      "signal_on_last_close": "SHORT",
+      "action_next_open": "HOLD",
+      "last_close": 4476.6001,
+      "as_of": "2026-09-04",
+      "mode": "long/short",
+      "lookback_days": 160
+    },
+    {
+      "market": "MNQ",
+      "held_now": "LONG",
+      "signal_on_last_close": "LONG",
+      "action_next_open": "HOLD",
+      "last_close": 29565.25,
+      "as_of": "2026-09-04",
+      "mode": "LONG-ONLY",
+      "lookback_days": 160
+    },
+    {
+      "market": "ES",
+      "held_now": "LONG",
+      "signal_on_last_close": "LONG",
+      "action_next_open": "HOLD",
+      "last_close": 7722.0,
+      "as_of": "2026-09-04",
+      "mode": "LONG-ONLY",
+      "lookback_days": 240
+    },
+    {
+      "market": "EURUSD",
+      "held_now": "SHORT",
+      "signal_on_last_close": "SHORT",
+      "action_next_open": "HOLD",
+      "last_close": 1.16212,
+      "as_of": "2026-09-04",
+      "mode": "long/short",
+      "lookback_days": 160
+    },
+    {
+      "market": "USDJPY",
+      "held_now": "SHORT",
+      "signal_on_last_close": "SHORT",
+      "action_next_open": "HOLD",
+      "last_close": 156.22099,
+      "as_of": "2026-09-04",
+      "mode": "long/short",
+      "lookback_days": 80
+    },
+    {
+      "market": "WTIUSD",
+      "held_now": "SHORT",
+      "signal_on_last_close": "SHORT",
+      "action_next_open": "HOLD",
+      "last_close": 74.362,
+      "as_of": "2023-12-01",
+      "mode": "long/short",
+      "lookback_days": 40
+    },
+    {
+      "market": "JPXJPY",
+      "held_now": "LONG",
+      "signal_on_last_close": "LONG",
+      "action_next_open": "HOLD",
+      "last_close": 65054.55859,
+      "as_of": "2026-09-04",
+      "mode": "LONG-ONLY",
+      "lookback_days": 240
+    }
+  ],
+  "log": [
+    {
+      "signal_date": "2026-09-02",
+      "execute_date": "2026-09-03",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 157.765
+    },
+    {
+      "signal_date": "2026-08-24",
+      "execute_date": "2026-08-25",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 159.36
+    },
+    {
+      "signal_date": "2026-08-21",
+      "execute_date": "2026-08-23",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 158.976
+    },
+    {
+      "signal_date": "2026-08-20",
+      "execute_date": "2026-08-21",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 158.969
+    },
+    {
+      "signal_date": "2026-08-19",
+      "execute_date": "2026-08-20",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 158.441
+    },
+    {
+      "signal_date": "2026-08-03",
+      "execute_date": "2026-08-04",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 157.716
+    },
+    {
+      "signal_date": "2026-07-31",
+      "execute_date": "2026-08-02",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 157.148
+    },
+    {
+      "signal_date": "2026-06-18",
+      "execute_date": "2026-06-19",
+      "market": "XAUUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 4175.995
+    },
+    {
+      "signal_date": "2026-06-12",
+      "execute_date": "2026-06-14",
+      "market": "XAUUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 4273.098
+    },
+    {
+      "signal_date": "2026-06-09",
+      "execute_date": "2026-06-10",
+      "market": "XAUUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 4173.735
+    },
+    {
+      "signal_date": "2026-06-05",
+      "execute_date": "2026-06-07",
+      "market": "EURUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 1.15093
+    },
+    {
+      "signal_date": "2026-05-20",
+      "execute_date": "2026-05-21",
+      "market": "EURUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 1.16176
+    },
+    {
+      "signal_date": "2026-05-19",
+      "execute_date": "2026-05-20",
+      "market": "EURUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 1.15977
+    },
+    {
+      "signal_date": "2026-05-10",
+      "execute_date": "2026-05-11",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 157.14
+    },
+    {
+      "signal_date": "2026-05-08",
+      "execute_date": "2026-05-10",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 156.501
+    },
+    {
+      "signal_date": "2026-04-19",
+      "execute_date": "2026-04-20",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 158.879
+    },
+    {
+      "signal_date": "2026-04-17",
+      "execute_date": "2026-04-19",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 158.765
+    },
+    {
+      "signal_date": "2026-04-16",
+      "execute_date": "2026-04-17",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 159.375
+    },
+    {
+      "signal_date": "2026-04-15",
+      "execute_date": "2026-04-16",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 158.512
+    },
+    {
+      "signal_date": "2026-04-13",
+      "execute_date": "2026-04-14",
+      "market": "MNQ",
+      "action": "OPEN LONG",
+      "direction": "LONG",
+      "exec_price": 25434.936
+    },
+    {
+      "signal_date": "2026-04-12",
+      "execute_date": "2026-04-13",
+      "market": "MNQ",
+      "action": "CLOSE",
+      "direction": "FLAT",
+      "exec_price": 24912.849
+    },
+    {
+      "signal_date": "2026-04-10",
+      "execute_date": "2026-04-12",
+      "market": "EURUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 1.16739
+    },
+    {
+      "signal_date": "2026-04-09",
+      "execute_date": "2026-04-10",
+      "market": "MNQ",
+      "action": "OPEN LONG",
+      "direction": "LONG",
+      "exec_price": 25108.804
+    },
+    {
+      "signal_date": "2026-04-08",
+      "execute_date": "2026-04-09",
+      "market": "MNQ",
+      "action": "CLOSE",
+      "direction": "FLAT",
+      "exec_price": 24859.586
+    },
+    {
+      "signal_date": "2026-04-07",
+      "execute_date": "2026-04-08",
+      "market": "MNQ",
+      "action": "OPEN LONG",
+      "direction": "LONG",
+      "exec_price": 24945.149
+    },
+    {
+      "signal_date": "2026-03-20",
+      "execute_date": "2026-03-22",
+      "market": "MNQ",
+      "action": "CLOSE",
+      "direction": "FLAT",
+      "exec_price": 23688.403
+    },
+    {
+      "signal_date": "2026-03-03",
+      "execute_date": "2026-03-04",
+      "market": "EURUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 1.1593
+    },
+    {
+      "signal_date": "2026-02-27",
+      "execute_date": "2026-03-01",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 155.948
+    },
+    {
+      "signal_date": "2026-02-19",
+      "execute_date": "2026-02-20",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 155.206
+    },
+    {
+      "signal_date": "2026-02-18",
+      "execute_date": "2026-02-19",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 155.118
+    },
+    {
+      "signal_date": "2026-02-10",
+      "execute_date": "2026-02-11",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 153.312
+    },
+    {
+      "signal_date": "2026-01-28",
+      "execute_date": "2026-01-29",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 152.976
+    },
+    {
+      "signal_date": "2026-01-27",
+      "execute_date": "2026-01-28",
+      "market": "USDJPY",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 152.559
+    },
+    {
+      "signal_date": "2026-01-18",
+      "execute_date": "2026-01-19",
+      "market": "EURUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 1.16332
+    },
+    {
+      "signal_date": "2026-01-02",
+      "execute_date": "2026-01-04",
+      "market": "EURUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 1.17203
+    },
+    {
+      "signal_date": "2023-10-23",
+      "execute_date": "2023-10-24",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 86.053
+    },
+    {
+      "signal_date": "2023-07-11",
+      "execute_date": "2023-07-12",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 74.978
+    },
+    {
+      "signal_date": "2023-07-09",
+      "execute_date": "2023-07-10",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 73.433
+    },
+    {
+      "signal_date": "2023-07-05",
+      "execute_date": "2023-07-06",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 71.968
+    },
+    {
+      "signal_date": "2023-06-30",
+      "execute_date": "2023-07-02",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 70.343
+    },
+    {
+      "signal_date": "2023-06-29",
+      "execute_date": "2023-06-30",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 69.978
+    },
+    {
+      "signal_date": "2023-06-22",
+      "execute_date": "2023-06-23",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 69.073
+    },
+    {
+      "signal_date": "2023-06-19",
+      "execute_date": "2023-06-20",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 71.223
+    },
+    {
+      "signal_date": "2023-05-14",
+      "execute_date": "2023-05-15",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 69.558
+    },
+    {
+      "signal_date": "2023-05-04",
+      "execute_date": "2023-05-05",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 68.868
+    },
+    {
+      "signal_date": "2023-05-03",
+      "execute_date": "2023-05-04",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 68.598
+    },
+    {
+      "signal_date": "2023-04-30",
+      "execute_date": "2023-05-01",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 76.173
+    },
+    {
+      "signal_date": "2023-04-26",
+      "execute_date": "2023-04-27",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 74.433
+    },
+    {
+      "signal_date": "2023-04-24",
+      "execute_date": "2023-04-25",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 78.718
+    },
+    {
+      "signal_date": "2023-04-20",
+      "execute_date": "2023-04-21",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 77.223
+    },
+    {
+      "signal_date": "2023-04-02",
+      "execute_date": "2023-04-03",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 79.643
+    },
+    {
+      "signal_date": "2023-03-07",
+      "execute_date": "2023-03-08",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 77.618
+    },
+    {
+      "signal_date": "2023-03-06",
+      "execute_date": "2023-03-07",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 80.658
+    },
+    {
+      "signal_date": "2023-03-05",
+      "execute_date": "2023-03-06",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 78.883
+    },
+    {
+      "signal_date": "2023-03-03",
+      "execute_date": "2023-03-05",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 79.743
+    },
+    {
+      "signal_date": "2023-02-27",
+      "execute_date": "2023-02-28",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 75.898
+    },
+    {
+      "signal_date": "2023-02-19",
+      "execute_date": "2023-02-20",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 76.882
+    },
+    {
+      "signal_date": "2023-02-16",
+      "execute_date": "2023-02-17",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 77.862
+    },
+    {
+      "signal_date": "2023-02-15",
+      "execute_date": "2023-02-16",
+      "market": "WTIUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 79.127
+    },
+    {
+      "signal_date": "2023-02-12",
+      "execute_date": "2023-02-13",
+      "market": "WTIUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 78.777
+    }
+  ],
+  "n_pending": 0
+}

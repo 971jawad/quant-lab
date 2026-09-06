@@ -78,6 +78,9 @@ def main():
         "verification": jload("verification.json", {}),
         "decay": jload("decay_monitor.json", {}),
         "candles": jload("candles_summary.json", {}),
+        "picks": jload("daily_picks.json", {}),
+        "live_trades": jload("live_trades.json", {}),
+        "macro": jload("macro_dev.json", {}),
         "live_feed": jload("live_feed.json", {}),
         "metrics": {
             "ensembler_full": metrics(ens),

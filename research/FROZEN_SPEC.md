@@ -442,3 +442,47 @@ PHASE 5 — META: the best single result is what running 122 tests on noise
 VERDICT: candlesticks carry no tradeable edge in this data at realistic costs.
 This matches the academic literature, and it is now the 16th independent family
 to fail. Champion unchanged. Holdout looks still 17.
+
+## Amendment 14 (2026-09-06) — cycle 16: macro/policy/liquidity, picks, live ledger
+
+MACRO / POLICY / LIQUIDITY (run_macro.py, qlab/macro.py). 31 FRED series added
+including the ones never held before: Fed balance sheet (WALCL), Treasury cash
+(WTREGEN), reverse repo (RRPONTSYD), bank reserves, term premium, HY/IG credit
+spreads, NFCI, STLFSI, BOJ balance sheet, initial claims, federal debt.
+  CRITICAL: every series carries an explicit PUBLICATION LAG (PUB_LAG) in
+  calendar days — FRED timestamps are AS-OF dates, not release dates. Payrolls
+  dated 2026-08-01 is published in September; the Fed's Wednesday balance sheet
+  is released Thursday. Using as-of dates would manufacture edge from nothing.
+  Includes NET LIQUIDITY = WALCL - TGA - RRP, the macro-trader thesis never
+  tested here.
+  RESULT: 735 feature x market x horizon tests, t deflated by sqrt(horizon) for
+  overlapping returns. 28 nominal p<0.05 vs 37 EXPECTED BY CHANCE — fewer hits
+  than noise produces. **0 of 735 survive Benjamini-Hochberg FDR.**
+  Most cross-market-consistent: term premium (100% sign agreement, mean |t| 1.27),
+  reserves change (100%, 1.02), policy-rate change (100%, 0.84) — consistent in
+  direction but far too weak to trade; their tradeable versions are positive in
+  only 2-3 of 7 markets.
+
+EXECUTION TIMING measured, not assumed (an earlier variant of this test had
+LOOKAHEAD - position from close[t] earning the return INTO close[t] - and
+briefly showed Sharpe 1.95; corrected):
+  MOC at the signal close   0.86 dev / 0.85 holdout
+  NEXT OPEN (what we use)   0.89 dev / 0.80 holdout
+  next close (a day late)   0.76 dev / 0.80 holdout
+  => close-vs-open is immaterial; being a full day late costs ~0.10.
+  Convention: signal from close of day D, fill at open of D+1 = 00:00 ET.
+  Not day trading: median hold 7 days, longest open position 491 days.
+
+EURUSD SIDE-ASYMMETRY (raised from the dashboard: short side earned +29.8% vs
+long +4.4%): TESTED AND REJECTED. That table was FULL-SAMPLE, i.e. holdout-
+contaminated. Dev/holdout split: both-ways +0.39/-0.44, short-only +0.38/-0.46,
+INVERTED -0.45/+0.36. The sign flips completely between windows — inverting
+looks good on holdout only because it is the worst thing on dev. Long-vs-short
+difference on dev alone: t = -0.52, p = 0.60, NOT distinguishable.
+JPXJPY's -73.9% short P&L was already handled: it is in DRIFT_MARKETS and runs
+LONG-ONLY in production.
+
+NEW ARTEFACTS: make_daily_picks.py (action-at-next-open + dated pick log),
+make_live_trades.py (live-only trade ledger with entry/exit dates, prices and
+per-scale P&L). Live sizing evidence: at 1.5x and 2.0x the 5% trailing limit is
+ALREADY breached within the first 60 live days.
