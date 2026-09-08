@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 from run_ensembler import DRIFT_MARKETS, LOOKBACKS, MIN_TRAIN, TEST_LEN, WARMUP
-from run_shorter import COST, MKT, daily
+from run_shorter import COST, MKT, daily, live_markets, stale_markets
 
 ROOT, OUT = Path(__file__).parent, Path(__file__).parent / "research"
 
@@ -139,7 +139,7 @@ def closed_trades(inst, k=6):
 
 def main():
     open_legs, recent = [], []
-    for inst in MKT:
+    for inst in live_markets():
         open_legs.append(leg_detail(inst))
         recent += closed_trades(inst)
     recent.sort(key=lambda r: r["exit_date"], reverse=True)

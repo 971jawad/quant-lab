@@ -24,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 from run_ensembler import DRIFT_MARKETS, LOOKBACKS, MIN_TRAIN, TEST_LEN, WARMUP
-from run_shorter import COST, MKT, daily
+from run_shorter import COST, MKT, daily, live_markets, stale_markets
 
 ROOT, OUT = Path(__file__).parent, Path(__file__).parent / "research"
 SCALES = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0]
@@ -67,7 +67,7 @@ def chosen_lookback(inst, long_only):
 def main():
     ls = live_start()
     trades = []
-    for inst in MKT:
+    for inst in live_markets():
         long_only = inst in DRIFT_MARKETS
         d, L = chosen_lookback(inst, long_only)
         c = d["close"]

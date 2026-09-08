@@ -42,6 +42,36 @@ COT_EQ = {"MNQ": ["NASDAQ-100 Consolidated - CHICAGO MERCANTILE EXCHANGE"],
                  "E-MINI S&P 500 - CHICAGO MERCANTILE EXCHANGE"]}
 DASH = "-"
 
+# STALENESS GUARD. A market whose feed dies must never keep appearing as a live
+# position. WTIUSD taught this: HistData stopped publishing it on 2023-12-01 and
+# the live-feed guard correctly REFUSED to splice Yahoo CL=F (return correlation
+# only 0.336 — Yahoo's daily oil bar closes at NYMEX settlement, ours is an ET
+# calendar day, and hourly cannot reach back that far to fix the convention).
+# The guard kept bad data OUT, but nothing stopped a 1,010-day-old price from
+# being published as a live SHORT. This closes that hole.
+#
+# Staleness is measured against the FRESHEST market rather than the wall clock,
+# so it is deterministic and works in backtests, CI and live alike.
+MAX_STALE_DAYS = 10
+
+
+def market_freshness():
+    """{market: days behind the freshest market}."""
+    last = {i: daily(i).index[-1] for i in MKT}
+    newest = max(last.values())
+    return {i: int((newest - d).days) for i, d in last.items()}
+
+
+def live_markets():
+    """MKT restricted to markets with a currently-live feed."""
+    f = market_freshness()
+    return [i for i in MKT if f[i] <= MAX_STALE_DAYS]
+
+
+def stale_markets():
+    f = market_freshness()
+    return {i: f[i] for i in MKT if f[i] > MAX_STALE_DAYS}
+
 
 def daily(inst):
     """Frozen HistData history, extended with the live Yahoo feed when present.

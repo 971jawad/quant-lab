@@ -22,7 +22,7 @@ import numpy as np
 import pandas as pd
 
 from run_ensembler import DRIFT_MARKETS, LOOKBACKS, MIN_TRAIN, TEST_LEN, WARMUP
-from run_shorter import COST, MKT, daily
+from run_shorter import COST, MKT, daily, live_markets, stale_markets
 
 ROOT, OUT = Path(__file__).parent, Path(__file__).parent / "research"
 LOOKBACK_DAYS = 90          # how much pick history to publish
@@ -64,7 +64,7 @@ def label(prev, cur):
 
 def main():
     picks, today_rows = [], []
-    for inst in MKT:
+    for inst in live_markets():
         long_only = inst in DRIFT_MARKETS
         d, L = chosen_lookback(inst, long_only)
         c = d["close"]

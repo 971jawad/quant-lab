@@ -510,11 +510,11 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
   // ---- historical prop backtest
   const PR = (D.prop&&D.prop.results)||{};
   const order = ["8% target / 5% trailing","10% target / 10% static","8% target / 5% trail / 60d","6% target / 4% trailing"];
-  const rows=[];
+  const propRows=[];
   order.forEach(rs=>{ [0.5,0.75,1.0,1.25,1.5].forEach(sc=>{
     const v = PR[`${rs}|${sc}`]; if(!v) return;
     const hot = (rs==="8% target / 5% trailing" && sc===1.0);
-    rows.push(`<tr${hot?' style="background:rgba(88,166,255,.08)"':''}>
+    propRows.push(`<tr${hot?' style="background:rgba(88,166,255,.08)"':''}>
       <td class="dim">${sc===0.5?rs:""}</td><td class="n">${sc.toFixed(2)}×</td>
       <td class="n pos">${num(v.pass_rate*100,1)}%</td>
       <td class="n neg">${num((v.fail_dd+v.fail_daily)/v.starts*100,1)}%</td>
@@ -522,7 +522,7 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
       <td class="n dim opt2">${v.median_days_to_pass??"—"}</td>
       <td class="n">${v.pass_given_resolved==null?"—":num(v.pass_given_resolved*100,1)+"%"}</td></tr>`);
   });});
-  $("#proptbl").innerHTML = rows.join("");
+  $("#proptbl").innerHTML = propRows.join("");
   const dn=(PK.log||[]).filter(p=>p.net_pct!=null);
   if(dn.length){ const w=dn.filter(p=>p.net_pct>0).length;
     $("#picklogstats").innerHTML = `${dn.length} completed round-trips in this log · winners

@@ -58,6 +58,22 @@ def hist_daily(inst):
     return d
 
 
+def yahoo_daily_fallback(symbol):
+    """Plain daily bars. Hourly only reaches back ~730 days, so a series whose
+    frozen history ended long ago (WTI ended 2023-12) has NO hourly overlap to
+    verify against. Daily reaches back years, so it is the correct fallback for
+    the OVERLAP CHECK even though hourly is preferred for bar-convention match."""
+    d = yf.download(symbol, start="2015-01-01", interval="1d",
+                    auto_adjust=False, progress=False)
+    if d is None or len(d) == 0:
+        return None
+    if isinstance(d.columns, pd.MultiIndex):
+        d.columns = d.columns.get_level_values(0)
+    d = d.rename(columns=str.lower)[["open", "high", "low", "close"]].dropna()
+    d.index = pd.to_datetime(d.index).tz_localize(None).normalize()
+    return d
+
+
 def yahoo_et_daily(symbol):
     """Yahoo hourly -> ET-day OHLC, matching the HistData bar convention."""
     d = yf.download(symbol, period="730d", interval="1h",
@@ -91,8 +107,17 @@ def main():
 
         j = pd.concat([hist["close"], y["close"]], axis=1,
                       keys=["h", "y"]).dropna()
+        src = "hourly->ET-day"
         if len(j) < MIN_OVERLAP:
-            print(f"  {inst:8} REFUSED — overlap only {len(j)} bars")
+            # hourly could not reach back far enough; verify against daily instead
+            y2 = yahoo_daily_fallback(sym)
+            if y2 is not None and not y2.empty:
+                j2 = pd.concat([hist["close"], y2["close"]], axis=1,
+                               keys=["h", "y"]).dropna()
+                if len(j2) >= MIN_OVERLAP:
+                    y, j, src = y2, j2, "daily-fallback"
+        if len(j) < MIN_OVERLAP:
+            print(f"  {inst:8} REFUSED — overlap only {len(j)} bars (hourly and daily)")
             report.append({"market": inst, "status": "refused", "reason": "overlap"})
             continue
         corr = float(j["h"].pct_change().corr(j["y"].pct_change()))
@@ -103,6 +128,19 @@ def main():
             report.append({"market": inst, "status": "refused",
                            "reason": f"corr {corr:.3f}"})
             continue
+
+        # LEVEL BACK-ADJUSTMENT. Yahoo's symbol is often a different contract
+        # from the frozen series (e.g. our XAUUSD is SPOT but GC=F is FUTURES,
+        # which carries a basis). Returns match, LEVELS do not — and a level jump
+        # at the seam corrupts every momentum lookback that spans it. So rescale
+        # the appended bars by the overlap ratio to make the splice continuous.
+        adj = float((j["h"] / j["y"]).tail(60).median())
+        if not (0.5 < adj < 2.0):
+            print(f"  {inst:8} REFUSED — implausible level adjustment {adj:.3f}")
+            report.append({"market": inst, "status": "refused",
+                           "reason": f"level adj {adj:.3f}"})
+            continue
+        y = y.mul(adj)
 
         # keep only bars strictly newer than the frozen history
         new = y[y.index > hist.index[-1]]
@@ -115,11 +153,12 @@ def main():
             continue
         new.to_csv(LIVE / f"{inst}_ext.csv")
         print(f"  {inst:8} +{len(new):>3} bars -> {new.index[-1].date()}  "
-              f"(corr {corr:.3f}, level diff {lvl:.2f}%)")
+              f"(corr {corr:.3f}, raw level diff {lvl:.2f}%, x{adj:.4f} adj, {src})")
         report.append({"market": inst, "status": "extended", "added": len(new),
                        "hist_end": str(hist.index[-1].date()),
                        "live_end": str(new.index[-1].date()),
-                       "corr": round(corr, 3), "level_diff_pct": round(lvl, 3)})
+                       "corr": round(corr, 3), "level_diff_pct": round(lvl, 3),
+                       "level_adjustment": round(adj, 5), "overlap_source": src})
 
     (ROOT / "research" / "live_feed.json").write_text(
         json.dumps({"checked_utc": pd.Timestamp.now(tz="UTC").isoformat(),

@@ -8,6 +8,7 @@ not place orders.
 """
 import json
 from datetime import datetime, timezone
+import pathlib
 from pathlib import Path
 
 import numpy as np
@@ -63,6 +64,31 @@ def jload(name, default=None):
         return json.loads(p.read_text())
     except Exception:
         return default
+
+
+def validate_dashboard_js():
+    """Fail the build if docs/index.html contains broken JavaScript.
+
+    A duplicate `const rows` once shipped to production: a SyntaxError kills the
+    ENTIRE script, so the page rendered its shell and sat on "loading..." forever
+    while data.json returned 200. Nothing else caught it. This does."""
+    import re, shutil, subprocess, tempfile
+    html = (DOCS / "index.html").read_text(encoding="utf-8")
+    m = re.search(r"<script>(.*?)</script>", html, re.S)
+    if not m:
+        raise SystemExit("BUILD FAILED: no <script> block in docs/index.html")
+    node = shutil.which("node")
+    if not node:
+        print("  (node not found - skipping JS syntax check)")
+        return
+    with tempfile.TemporaryDirectory() as td:
+        f = pathlib.Path(td) / "dash.js"
+        f.write_text(m.group(1), encoding="utf-8")
+        r = subprocess.run([node, "--check", str(f)], capture_output=True, text=True)
+    if r.returncode != 0:
+        raise SystemExit("BUILD FAILED - dashboard JS syntax error:
+" + r.stderr)
+    print("  dashboard JS syntax: OK")
 
 
 def main():
@@ -134,6 +160,7 @@ def main():
              "note": "0.29 vs 0.45 for trend alone"},
         ],
     }
+    validate_dashboard_js()
     (DOCS / "data.json").write_text(json.dumps(payload, indent=2, default=str))
     print(f"wrote docs/data.json  ({len(json.dumps(payload))} bytes)")
     print(f"  positions: {len(payload['positions'].get('positions', []))}")

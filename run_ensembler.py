@@ -44,7 +44,7 @@ import run_superbook as SB
 from qlab.metrics import full_metrics
 from run_admission import baseline_legs, book, mm, w_invcorr
 from run_breadth import new_trend_legs
-from run_shorter import COST, MKT, daily
+from run_shorter import COST, MKT, daily, live_markets, stale_markets
 
 ROOT, OUT = Path(__file__).parent, Path(__file__).parent / "research"
 DEV = pd.Timestamp("2022-07-01")
@@ -191,7 +191,12 @@ def main():
     print(f"  data as of {asof}  (HistData publishes with a lag; refresh before use)")
     print(f"  {'leg':18} {'weight':>8}  {'direction':>10}  {'lookback':>9}")
     rows = []
-    for inst in MKT:
+    stale = stale_markets()
+    # A dead feed must not be published as a tradeable position. Weight is NOT
+    # renormalised across the survivors: the backtest zero-fills a dead leg's
+    # return while its weight still sits there, so holding the rest unchanged is
+    # what actually matches the measured curve. Renormalising would overstate it.
+    for inst in live_markets():
         d = daily(inst)
         L = chosen[inst]
         sig = float(np.sign(d['close'].pct_change(L).iloc[-1]))
@@ -222,7 +227,15 @@ def main():
   8. Expect to be underwater ~88% of days and to win only 31-38% of trades.
      The edge arrives through a few long runners; cutting them destroys it.""")
 
+    if stale:
+        print("")
+        print("  EXCLUDED (feed stale, not tradeable): "
+              + ", ".join(f"{k} {v}d behind" for k, v in stale.items()))
+        print("   weights are NOT renormalised - the dead leg's capital sits idle,")
+        print("   exactly as the backtest models it.")
+
     json.dump({"as_of": str(asof), "positions": rows,
+               "stale_excluded": {k: int(v) for k, v in stale.items()},
                "risk_events": len(events)},
               open(OUT / "ensembler_positions.json", "w"), indent=2, default=str)
     governed.to_csv(OUT / "ensembler_daily.csv", header=["ret"])
