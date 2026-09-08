@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-08 07:31 UTC",
+  "generated_utc": "2026-09-08 07:59 UTC",
   "positions": {
     "as_of": "2026-09-07",
     "positions": [
@@ -61,55 +61,98 @@
     "idle_weight_total": 0.2066,
     "risk_events": 653
   },
-  "attribution": {
-    "champion_dev": {
-      "sharpe": 1.47,
-      "calmar": 1.01,
-      "max_dd_pct": -8.53,
-      "cagr_pct": 8.59
+  "leg_attribution": [
+    {
+      "leg": "xsec_ALL",
+      "kind": "event-driven",
+      "weight": 0.198,
+      "status": "LIVE",
+      "live_contrib_pct": -0.513,
+      "days_active": 58,
+      "live_days": 71
     },
-    "naive_tsmom_dev": {
-      "sharpe": 0.44,
-      "calmar": 0.16,
-      "max_dd_pct": -14.34,
-      "cagr_pct": 2.29
+    {
+      "leg": "MNQ_pull_C",
+      "kind": "event-driven",
+      "weight": 0.1827,
+      "status": "STALE-IDLE",
+      "live_contrib_pct": 0.0,
+      "days_active": 0,
+      "live_days": 71
     },
-    "champion_holdout": {
-      "sharpe": 1.41,
-      "calmar": 1.26,
-      "max_dd_pct": -9.8,
-      "cagr_pct": 12.35
+    {
+      "leg": "COT_NQ_washout",
+      "kind": "event-driven",
+      "weight": 0.1468,
+      "status": "LIVE",
+      "live_contrib_pct": -0.183,
+      "days_active": 41,
+      "live_days": 71
     },
-    "naive_tsmom_holdout": {
-      "sharpe": 0.71,
-      "calmar": 0.98,
-      "max_dd_pct": -10.13,
-      "cagr_pct": 9.96
+    {
+      "leg": "trend_XAUUSD",
+      "kind": "trend/momentum",
+      "weight": 0.2112,
+      "status": "LIVE",
+      "live_contrib_pct": -0.729,
+      "days_active": 59,
+      "live_days": 71
     },
-    "attrib_dev": {
-      "r2": 0.2495,
-      "alpha_ann_pct": 7.165,
-      "alpha_t": 5.29,
-      "betas": {
-        "equity(ES)": -0.0043,
-        "duration(TLT)": 0.025,
-        "commodity(DBC)": -0.0025,
-        "naive_trend": 0.5654
-      }
+    {
+      "leg": "trend_MNQ",
+      "kind": "trend/momentum",
+      "weight": 0.0638,
+      "status": "LIVE",
+      "live_contrib_pct": 0.022,
+      "days_active": 59,
+      "live_days": 71
     },
-    "attrib_holdout": {
-      "r2": 0.4557,
-      "alpha_ann_pct": 7.422,
-      "alpha_t": 2.87,
-      "betas": {
-        "equity(ES)": 0.0532,
-        "duration(TLT)": -0.0092,
-        "commodity(DBC)": 0.0224,
-        "naive_trend": 0.4115
-      }
+    {
+      "leg": "trend_ES",
+      "kind": "trend/momentum",
+      "weight": 0.0669,
+      "status": "LIVE",
+      "live_contrib_pct": 0.238,
+      "days_active": 59,
+      "live_days": 71
     },
-    "crisis_book_mean_pct": -0.0285
-  },
+    {
+      "leg": "trend_EURUSD",
+      "kind": "trend/momentum",
+      "weight": 0.0126,
+      "status": "LIVE",
+      "live_contrib_pct": -0.077,
+      "days_active": 62,
+      "live_days": 71
+    },
+    {
+      "leg": "trend_USDJPY",
+      "kind": "trend/momentum",
+      "weight": 0.0106,
+      "status": "LIVE",
+      "live_contrib_pct": -0.065,
+      "days_active": 62,
+      "live_days": 71
+    },
+    {
+      "leg": "trend_WTIUSD",
+      "kind": "trend/momentum",
+      "weight": 0.0239,
+      "status": "STALE-IDLE",
+      "live_contrib_pct": 0.0,
+      "days_active": 0,
+      "live_days": 71
+    },
+    {
+      "leg": "trend_JPXJPY",
+      "kind": "trend/momentum",
+      "weight": 0.0834,
+      "status": "LIVE",
+      "live_contrib_pct": -0.101,
+      "days_active": 62,
+      "live_days": 71
+    }
+  ],
   "relive": {
     "xsec_ALL": {
       "rebuilt": true,
@@ -10332,6 +10375,55 @@
     "DSR_full_trials": 0.3563,
     "PBO_holdout": 0.02,
     "PBO_full": 0.0
+  },
+  "attribution": {
+    "champion_dev": {
+      "sharpe": 1.47,
+      "calmar": 1.01,
+      "max_dd_pct": -8.53,
+      "cagr_pct": 8.59
+    },
+    "naive_tsmom_dev": {
+      "sharpe": 0.44,
+      "calmar": 0.16,
+      "max_dd_pct": -14.34,
+      "cagr_pct": 2.29
+    },
+    "champion_holdout": {
+      "sharpe": 1.41,
+      "calmar": 1.26,
+      "max_dd_pct": -9.8,
+      "cagr_pct": 12.35
+    },
+    "naive_tsmom_holdout": {
+      "sharpe": 0.71,
+      "calmar": 0.98,
+      "max_dd_pct": -10.13,
+      "cagr_pct": 9.96
+    },
+    "attrib_dev": {
+      "r2": 0.2495,
+      "alpha_ann_pct": 7.165,
+      "alpha_t": 5.29,
+      "betas": {
+        "equity(ES)": -0.0043,
+        "duration(TLT)": 0.025,
+        "commodity(DBC)": -0.0025,
+        "naive_trend": 0.5654
+      }
+    },
+    "attrib_holdout": {
+      "r2": 0.4557,
+      "alpha_ann_pct": 7.422,
+      "alpha_t": 2.87,
+      "betas": {
+        "equity(ES)": 0.0532,
+        "duration(TLT)": -0.0092,
+        "commodity(DBC)": 0.0224,
+        "naive_trend": 0.4115
+      }
+    },
+    "crisis_book_mean_pct": -0.0285
   },
   "committee": {
     "voters": {

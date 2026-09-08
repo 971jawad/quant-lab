@@ -66,6 +66,31 @@ def jload(name, default=None):
         return default
 
 
+def validate_no_duplicate_keys():
+    """Fail the build on a duplicate key in the payload literal.
+
+    Python silently keeps the LAST value when a dict literal repeats a key, so
+    adding "attribution" a second time quietly replaced the first and the
+    dashboard panel reading it rendered zero rows with no error anywhere. ast
+    sees what the interpreter discards.
+    """
+    import ast as _ast
+    tree = _ast.parse(pathlib.Path(__file__).read_text(encoding="utf-8"))
+    dupes = []
+    for node in _ast.walk(tree):
+        if isinstance(node, _ast.Dict):
+            seen = set()
+            for k in node.keys:
+                if isinstance(k, _ast.Constant) and isinstance(k.value, str):
+                    if k.value in seen:
+                        dupes.append((k.value, k.lineno))
+                    seen.add(k.value)
+    if dupes:
+        raise SystemExit("BUILD FAILED - duplicate dict keys (later silently wins): "
+                         + ", ".join(f"{k!r} at line {n}" for k, n in dupes))
+    print("  payload keys: no duplicates")
+
+
 def validate_dashboard_js():
     """Fail the build if docs/index.html contains broken JavaScript.
 
@@ -99,7 +124,7 @@ def main():
     payload = {
         "generated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "positions": jload("ensembler_positions.json", {}),
-        "attribution": jload("live_attribution.json", []),
+        "leg_attribution": jload("live_attribution.json", []),   # NB: "attribution" is already taken by the champion-vs-naive comparison
         "relive": jload("relive.json", {}),
         "trades": jload("trade_details.json", {}),
         "verification": jload("verification.json", {}),
@@ -161,6 +186,7 @@ def main():
              "note": "0.29 vs 0.45 for trend alone"},
         ],
     }
+    validate_no_duplicate_keys()
     validate_dashboard_js()
     (DOCS / "data.json").write_text(json.dumps(payload, indent=2, default=str))
     print(f"wrote docs/data.json  ({len(json.dumps(payload))} bytes)")

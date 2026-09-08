@@ -424,7 +424,7 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
   }).join("");
 
   // ---- engine status: which legs are live, which have gone dark
-  const A = D.attribution || [];
+  const A = D.leg_attribution || [];
   const idleW = (D.positions && D.positions.idle_weight) || {};
   const engRows = A.map(a=>{
     const live = a.status === "LIVE";
