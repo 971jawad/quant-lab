@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-09-05T18:57:43.033264+00:00",
+  "checked_utc": "2026-09-08T00:56:25.167324+00:00",
   "min_corr_guard": 0.7,
   "markets": [
     {
@@ -9,7 +9,7 @@
       "hist_end": "2026-06-26",
       "live_end": "2026-09-04",
       "corr": 0.973,
-      "level_diff_pct": 0.472
+      "level_diff_pct": 0.47
     },
     {
       "market": "MNQ",
@@ -26,24 +26,24 @@
       "added": 59,
       "hist_end": "2026-06-26",
       "live_end": "2026-09-04",
-      "corr": 0.989,
+      "corr": 0.988,
       "level_diff_pct": 0.439
     },
     {
       "market": "EURUSD",
       "status": "extended",
-      "added": 60,
+      "added": 62,
       "hist_end": "2026-06-26",
-      "live_end": "2026-09-04",
+      "live_end": "2026-09-07",
       "corr": 0.991,
       "level_diff_pct": 0.032
     },
     {
       "market": "USDJPY",
       "status": "extended",
-      "added": 6,
+      "added": 8,
       "hist_end": "2026-08-28",
-      "live_end": "2026-09-04",
+      "live_end": "2026-09-07",
       "corr": 0.984,
       "level_diff_pct": 0.007
     },
@@ -55,9 +55,9 @@
     {
       "market": "JPXJPY",
       "status": "extended",
-      "added": 6,
+      "added": 8,
       "hist_end": "2026-08-28",
-      "live_end": "2026-09-04",
+      "live_end": "2026-09-07",
       "corr": 0.803,
       "level_diff_pct": 0.092
     }

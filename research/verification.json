@@ -32,18 +32,18 @@
       "vol_pct": null
     },
     "live": {
-      "days": 60,
+      "days": 62,
       "start": "2026-06-28",
-      "end": "2026-09-04",
-      "total_return_pct": -2.19,
+      "end": "2026-09-07",
+      "total_return_pct": -2.05,
       "max_dd_pct": -3.83,
       "best_day_pct": 0.54,
       "worst_day_pct": -0.65,
-      "pct_days_positive": 48.3,
-      "sharpe": -2.25,
-      "sortino": -3.18,
-      "calmar": -2.32,
-      "cagr_pct": -8.87,
+      "pct_days_positive": 50.0,
+      "sharpe": -2.06,
+      "sortino": -2.87,
+      "calmar": -2.11,
+      "cagr_pct": -8.07,
       "vol_pct": null
     }
   },
