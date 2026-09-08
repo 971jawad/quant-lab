@@ -138,6 +138,18 @@
     <div class="tw"><table><thead><tr><th>Leg</th><th>Direction</th><th class="n">Weight</th>
       <th class="opt" style="width:160px">Allocation</th><th class="n opt2">Lookback</th></tr></thead>
       <tbody id="postbl"></tbody></table></div>
+
+    <h2 style="margin-top:26px">Engine status &mdash; what is actually trading</h2>
+    <p class="note">Every leg in the book, whether its data feed is alive, and what it has
+      contributed since the live feed began. A leg whose source stops updating is
+      <b>excluded from the published book</b> rather than silently zero-filled. Its weight is
+      deliberately <b>not</b> redistributed: the backtest allocates to that leg and receives
+      zero from it, so holding the survivors at their tested weights is what matches the
+      measured curve. Renormalising would quietly run the book hotter than anything tested.</p>
+    <div id="idlewarn"></div>
+    <div class="tw"><table><thead><tr><th>Leg</th><th>Type</th><th>Status</th>
+      <th class="n">Weight</th><th class="n">Live P&amp;L</th><th class="n opt">Days active</th>
+      </tr></thead><tbody id="engtbl"></tbody></table></div>
   </section>
 
 
@@ -410,6 +422,33 @@ fetch("data.json?v="+Date.now()).then(r=>r.json()).then(D=>{
       <td class="opt"><div class="bar"><i style="width:${((p.weight||0)/maxw*100).toFixed(0)}%"></i></div></td>
       <td class="n dim opt2">${p.lookback_days? p.lookback_days+"d" : "—"}</td></tr>`;
   }).join("");
+
+  // ---- engine status: which legs are live, which have gone dark
+  const A = D.attribution || [];
+  const idleW = (D.positions && D.positions.idle_weight) || {};
+  const engRows = A.map(a=>{
+    const live = a.status === "LIVE";
+    const pill = live ? "long" : "short";
+    const pl = a.live_contrib_pct;
+    return `<tr${live?"":' style="opacity:.62"'}>
+      <td>${a.leg}</td>
+      <td class="dim">${a.kind}</td>
+      <td><span class="pill ${pill}">${live?"RUNNING":"IDLE &mdash; feed dark"}</span></td>
+      <td class="n">${((a.weight||0)*100).toFixed(1)}%</td>
+      <td class="n" style="color:${pl>0?'var(--up,#3a9)':pl<0?'var(--dn,#c55)':'inherit'}">
+        ${pl>0?"+":""}${(pl||0).toFixed(2)}%</td>
+      <td class="n dim opt">${a.days_active}/${a.live_days}</td></tr>`;
+  }).join("");
+  if ($("#engtbl")) $("#engtbl").innerHTML = engRows;
+  const idleKeys = Object.keys(idleW);
+  if ($("#idlewarn") && idleKeys.length){
+    const tot = (D.positions.idle_weight_total||0)*100;
+    $("#idlewarn").innerHTML = `<p class="note" style="border-left:3px solid #c93;padding-left:10px">
+      <b>${tot.toFixed(1)}% of the book is idle.</b> ${idleKeys.join(", ")} cannot be traded
+      because their data source has stopped updating, so that capital sits in cash.
+      The book is running at ${(100-tot).toFixed(1)}% of its tested exposure &mdash; expect
+      returns and drawdowns roughly scaled by that factor until the feeds are restored.</p>`;
+  }
 
   // ---- metrics
   const M = D.metrics||{};

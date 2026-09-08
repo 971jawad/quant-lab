@@ -53,6 +53,15 @@ LOOKBACKS = [40, 80, 160, 240]
 WARMUP, MIN_TRAIN, TEST_LEN = 260, 750, 250
 TARGET_VOL, LEG_CLIP, BOOK_CLIP = 0.10, 3.0, 2.0
 REBAL_THRESH = 0.02
+MAX_LEG_STALE_DAYS = 10   # a leg that stops updating must stop being published
+# How long each leg may legitimately sit without new data. This is DECLARED, not
+# inferred: two heuristics (index spacing, then value-change cadence) both failed
+# to tell a weekly-release leg apart from a dead daily one, and a staleness guard
+# that is silently wrong is worse than no guard. A leg's tolerance is a property
+# of its data SOURCE, which is a known fact, so it is written down.
+#   COT_NQ_washout: CFTC surveys Tuesday, publishes the following Friday, and we
+#   enter 6 days after the as-of date -> ~16 days of normal lag, plus slack.
+LEG_CADENCE = {"COT_NQ_washout": 25.0}
 # --- risk engine (pre-declared, prop-firm shaped) ---
 DAILY_LOSS_CAP = 0.03
 TRAILING_DD_LIMIT = 0.05
@@ -164,6 +173,29 @@ def main():
         if not k.startswith("trend_"):
             print(f"  {k:17} {'event/positioning leg':11}")
 
+    # ---- LEG-LEVEL STALENESS GUARD ----------------------------------------
+    # fillna(0.0) below is necessary (legs start at different dates) but it is
+    # also how two legs holding 43.9% of the book went dark for months without
+    # a single error: a leg that stops producing data becomes a leg producing
+    # zeros, and zero is a valid return. Staleness must therefore be measured
+    # BEFORE the fill, from each leg's own last observation.
+    # The tolerance cannot be one fixed number: a daily price leg is late after
+    # a week, but COT_NQ_washout is built from a WEEKLY CFTC release that is
+    # published days after its as-of date, so 15 days idle is normal for it and
+    # flagging that would be a false alarm. So each leg is judged against its
+    # OWN historical update cadence -- the largest gap it has ever shown -- with
+    # a floor of 10 days. Self-calibrating, and it needs no per-leg table.
+    leg_end, leg_tol = {}, {}
+    for k, v in legs.items():
+        v = v.dropna()
+        if not len(v):
+            continue
+        leg_end[k] = v.index[-1]
+        leg_tol[k] = LEG_CADENCE.get(k, MAX_LEG_STALE_DAYS)
+    newest = max(leg_end.values())
+    leg_stale = {k: int((newest - e).days) for k, e in leg_end.items()
+                 if (newest - e).days > leg_tol[k]}
+
     fr = pd.DataFrame(legs).fillna(0.0)
     W = threshold_weights(w_strength(fr))
     raw = book(fr, W)
@@ -191,7 +223,9 @@ def main():
     print(f"  data as of {asof}  (HistData publishes with a lag; refresh before use)")
     print(f"  {'leg':18} {'weight':>8}  {'direction':>10}  {'lookback':>9}")
     rows = []
-    stale = stale_markets()
+    stale = dict(stale_markets())
+    for k, v in leg_stale.items():                 # non-price legs go dark too
+        stale.setdefault(k.replace("trend_", ""), v)
     # A dead feed must not be published as a tradeable position. Weight is NOT
     # renormalised across the survivors: the backtest zero-fills a dead leg's
     # return while its weight still sits there, so holding the rest unchanged is
@@ -209,6 +243,8 @@ def main():
                      "direction": direction, "lookback_days": L})
     for k in legs:
         if not k.startswith("trend_"):
+            if k in leg_stale:
+                continue                            # dark leg: do not publish it
             wgt = float(last_w.get(k, 0.0))
             print(f"  {k:18} {wgt:>7.1%}  {'event-driven':>10}  {'-':>9}")
             rows.append({"leg": k, "weight": round(wgt, 4), "direction": "event-driven"})
@@ -234,8 +270,15 @@ def main():
         print("   weights are NOT renormalised - the dead leg's capital sits idle,")
         print("   exactly as the backtest models it.")
 
+    idle = {}
+    for k in stale_markets():
+        idle[f"trend_{k}"] = round(float(last_w.get(f"trend_{k}", 0.0)), 4)
+    for k in leg_stale:
+        idle[k] = round(float(last_w.get(k, 0.0)), 4)
     json.dump({"as_of": str(asof), "positions": rows,
                "stale_excluded": {k: int(v) for k, v in stale.items()},
+               "idle_weight": idle,
+               "idle_weight_total": round(sum(idle.values()), 4),
                "risk_events": len(events)},
               open(OUT / "ensembler_positions.json", "w"), indent=2, default=str)
     governed.to_csv(OUT / "ensembler_daily.csv", header=["ret"])

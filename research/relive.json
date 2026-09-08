@@ -1,0 +1,14 @@
+{
+  "xsec_ALL": {
+    "rebuilt": true,
+    "corr_with_frozen": 1.0,
+    "max_abs_diff": 9.985502008591496e-17,
+    "old_end": "2026-03-17",
+    "new_end": "2026-09-04",
+    "bars_recovered": 145
+  },
+  "MNQ_pull_C": {
+    "rebuilt": false,
+    "reason": "needs 15m bars; archive not refreshed daily"
+  }
+}

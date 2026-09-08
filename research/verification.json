@@ -2,48 +2,48 @@
   "live_start": "2026-06-28",
   "regimes": {
     "dev": {
-      "days": 3395,
+      "days": 3437,
       "start": "2012-09-25",
       "end": "2022-06-30",
-      "total_return_pct": 226.14,
-      "max_dd_pct": -8.83,
-      "best_day_pct": 2.58,
-      "worst_day_pct": -3.32,
-      "pct_days_positive": 45.8,
-      "sharpe": 1.47,
-      "sortino": 1.7,
-      "calmar": 1.04,
-      "cagr_pct": 9.17,
+      "total_return_pct": 210.96,
+      "max_dd_pct": -10.41,
+      "best_day_pct": 2.1,
+      "worst_day_pct": -3.11,
+      "pct_days_positive": 50.7,
+      "sharpe": 1.46,
+      "sortino": 1.77,
+      "calmar": 0.83,
+      "cagr_pct": 8.67,
       "vol_pct": null
     },
     "holdout": {
-      "days": 1437,
+      "days": 1453,
       "start": "2022-07-01",
-      "end": "2026-06-26",
-      "total_return_pct": 87.7,
-      "max_dd_pct": -10.53,
-      "best_day_pct": 2.79,
-      "worst_day_pct": -2.28,
-      "pct_days_positive": 49.1,
-      "sharpe": 1.48,
-      "sortino": 1.97,
-      "calmar": 1.11,
-      "cagr_pct": 11.68,
+      "end": "2026-06-27",
+      "total_return_pct": 91.34,
+      "max_dd_pct": -10.61,
+      "best_day_pct": 3.06,
+      "worst_day_pct": -2.23,
+      "pct_days_positive": 55.6,
+      "sharpe": 1.53,
+      "sortino": 2.13,
+      "calmar": 1.12,
+      "cagr_pct": 11.91,
       "vol_pct": null
     },
     "live": {
-      "days": 62,
+      "days": 71,
       "start": "2026-06-28",
       "end": "2026-09-07",
-      "total_return_pct": -2.05,
-      "max_dd_pct": -3.83,
-      "best_day_pct": 0.54,
-      "worst_day_pct": -0.65,
-      "pct_days_positive": 50.0,
-      "sharpe": -2.06,
-      "sortino": -2.87,
-      "calmar": -2.11,
-      "cagr_pct": -8.07,
+      "total_return_pct": -3.22,
+      "max_dd_pct": -6.0,
+      "best_day_pct": 0.81,
+      "worst_day_pct": -0.9,
+      "pct_days_positive": 46.5,
+      "sharpe": -2.26,
+      "sortino": -3.02,
+      "calmar": -1.83,
+      "cagr_pct": -10.95,
       "vol_pct": null
     }
   },
@@ -66,7 +66,7 @@
     {
       "check": "archive->live seam is smooth",
       "status": "PASS",
-      "detail": "largest 1-day jump at the seam: MNQ 1.90%"
+      "detail": "largest 1-day jump at the seam: MNQ 1.44%"
     },
     {
       "check": "live feed only appends",
@@ -84,9 +84,9 @@
       "detail": "0 inconsistent"
     },
     {
-      "check": "weights sum to 1",
+      "check": "weights account for 1.0 (published + idle)",
       "status": "PASS",
-      "detail": "sum = 0.9999"
+      "detail": "published 0.7933 + idle 0.2066 = 0.9999  [idle: trend_WTIUSD, MNQ_pull_C]"
     },
     {
       "check": "live feed healthy",
@@ -101,12 +101,12 @@
     {
       "check": "daily series matches 15m archive",
       "status": "PASS",
-      "detail": "SKIPPED - 15m archive not present (expected in CI)"
+      "detail": "34124 bars, max diff 0.0e+00 (bit-identical)"
     },
     {
       "check": "holdout Sharpe reproduces",
       "status": "PASS",
-      "detail": "1.48 (expected ~1.4)"
+      "detail": "1.53 (expected ~1.4)"
     }
   ],
   "all_passed": true

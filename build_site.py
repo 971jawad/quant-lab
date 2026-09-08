@@ -86,8 +86,7 @@ def validate_dashboard_js():
         f.write_text(m.group(1), encoding="utf-8")
         r = subprocess.run([node, "--check", str(f)], capture_output=True, text=True)
     if r.returncode != 0:
-        raise SystemExit("BUILD FAILED - dashboard JS syntax error:
-" + r.stderr)
+        raise SystemExit("BUILD FAILED - dashboard JS syntax error: " + r.stderr)
     print("  dashboard JS syntax: OK")
 
 
@@ -100,6 +99,8 @@ def main():
     payload = {
         "generated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "positions": jload("ensembler_positions.json", {}),
+        "attribution": jload("live_attribution.json", []),
+        "relive": jload("relive.json", {}),
         "trades": jload("trade_details.json", {}),
         "verification": jload("verification.json", {}),
         "decay": jload("decay_monitor.json", {}),

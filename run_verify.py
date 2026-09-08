@@ -142,7 +142,15 @@ def audit(ls):
     # 7: weights are a valid allocation
     pos = json.loads((OUT / "ensembler_positions.json").read_text())
     tot = sum(p["weight"] for p in pos["positions"])
-    chk("weights sum to 1", abs(tot - 1.0) < 0.02, f"sum = {tot:.4f}")
+    # A stale-feed leg is dropped from the published book but its weight is
+    # deliberately NOT redistributed -- the backtest zero-fills that leg's return
+    # while still allocating to it, so the survivors must stay at their original
+    # weights or live sizing would exceed what was measured. What must hold is
+    # that published + idle = 1: nothing vanished, nothing was silently scaled up.
+    idle = float(pos.get("idle_weight_total", 0.0))
+    chk("weights account for 1.0 (published + idle)", abs(tot + idle - 1.0) < 0.02,
+        f"published {tot:.4f} + idle {idle:.4f} = {tot + idle:.4f}"
+        + (f"  [idle: {', '.join(pos['idle_weight'])}]" if idle else ""))
 
     # 8: live feed health guard
     lf = json.loads((OUT / "live_feed.json").read_text())
