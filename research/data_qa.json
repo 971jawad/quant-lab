@@ -1,0 +1,68 @@
+{
+  "checks": [],
+  "intrinsic": {
+    "XAUUSD": {
+      "problems": [],
+      "notes": [
+        "858 Sunday bars (expected: the week opens 17:00 ET Sunday)",
+        "2 returns beyond 10 robust-sigma, largest -6.6% on 2013-04-15 (persisted - real event)"
+      ]
+    },
+    "MNQ": {
+      "problems": [],
+      "notes": [
+        "811 Sunday bars (expected: the week opens 17:00 ET Sunday)",
+        "1 flat bars o==h==l==c (2014-01-01)",
+        "4 returns beyond 10 robust-sigma, largest +13.9% on 2020-03-13 (persisted - real event)"
+      ]
+    },
+    "ES": {
+      "problems": [],
+      "notes": [
+        "812 Sunday bars (expected: the week opens 17:00 ET Sunday)",
+        "1 flat bars o==h==l==c (2014-01-01)",
+        "8 returns beyond 10 robust-sigma, largest +12.4% on 2020-03-13 (persisted - real event)"
+      ]
+    },
+    "EURUSD": {
+      "problems": [],
+      "notes": [
+        "863 Sunday bars (expected: the week opens 17:00 ET Sunday)"
+      ]
+    },
+    "USDJPY": {
+      "problems": [],
+      "notes": [
+        "864 Sunday bars (expected: the week opens 17:00 ET Sunday)",
+        "4 returns beyond 10 robust-sigma, largest +4.5% on 2011-10-30 (persisted - real event)"
+      ]
+    },
+    "WTIUSD": {
+      "problems": [],
+      "notes": [
+        "671 Sunday bars (expected: the week opens 17:00 ET Sunday)",
+        "KNOWN DEFECT 2020-04-27 -32.2%: -32.2% then +28% during the post-negative-oil dislocation. Plausible for a CFD in that week but unverifiable now; WTIUSD is excluded from the live book as stale in any case, so it cannot affect published signals.",
+        "14 returns beyond 10 robust-sigma, largest -40.3% on 2020-04-21 (persisted - real event)"
+      ]
+    },
+    "JPXJPY": {
+      "problems": [],
+      "notes": [
+        "812 Sunday bars (expected: the week opens 17:00 ET Sunday)",
+        "2 flat bars o==h==l==c (2010-12-24, 2011-12-26)",
+        "KNOWN DEFECT 2011-03-14 -22.0%: bad tick: low and close both print exactly 7500 (round number) while the Nikkei closed ~9620; 2011-03-15 then opens at the bad 7500. IMPACT MEASURED: leg dev Sharpe 0.38 -> 0.39 if repaired, holdout 0.88 unchanged, only 2 bars differ (Dec-2011, via the 240d lookback). No effect on holdout or live.",
+        "2 returns beyond 10 robust-sigma, largest -22.0% on 2011-03-14 (persisted - real event)"
+      ]
+    }
+  },
+  "problems": [
+    "XAUUSD: reference unavailable",
+    "MNQ: reference unavailable",
+    "ES: reference unavailable",
+    "EURUSD: reference unavailable",
+    "USDJPY: reference unavailable",
+    "WTIUSD: reference unavailable",
+    "JPXJPY: reference unavailable"
+  ],
+  "corr_floor": 0.9
+}
