@@ -5,8 +5,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 4459.68972,
-      "as_of": "2026-09-04",
+      "last_close": 4385.53938,
+      "as_of": "2026-09-08",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -15,8 +15,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 29430.44264,
-      "as_of": "2026-09-04",
+      "last_close": 29423.47456,
+      "as_of": "2026-09-08",
       "mode": "LONG-ONLY",
       "lookback_days": 160
     },
@@ -25,8 +25,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 7692.59072,
-      "as_of": "2026-09-04",
+      "last_close": 7652.74306,
+      "as_of": "2026-09-08",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     },
@@ -35,8 +35,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 1.16306,
-      "as_of": "2026-09-07",
+      "last_close": 1.16283,
+      "as_of": "2026-09-08",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -45,8 +45,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 153.774,
-      "as_of": "2026-09-07",
+      "last_close": 153.65293,
+      "as_of": "2026-09-08",
       "mode": "long/short",
       "lookback_days": 80
     },
@@ -55,8 +55,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 66376.42969,
-      "as_of": "2026-09-07",
+      "last_close": 65489.85405,
+      "as_of": "2026-09-08",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     }
@@ -68,14 +68,14 @@
       "market": "EURUSD",
       "action": "FLIP TO LONG",
       "direction": "LONG",
-      "exec_price": 1.16144,
+      "exec_price": 1.16107,
       "closed_dir": "SHORT",
       "entry_date": "2026-06-07",
       "entry_price": 1.15093,
-      "exit_price": 1.16144,
+      "exit_price": 1.16107,
       "days_held": 92,
-      "gross_pct": -0.913,
-      "net_pct": -0.927
+      "gross_pct": -0.881,
+      "net_pct": -0.895
     },
     {
       "signal_date": "2026-09-02",
@@ -83,14 +83,14 @@
       "market": "USDJPY",
       "action": "FLIP TO SHORT",
       "direction": "SHORT",
-      "exec_price": 157.765,
+      "exec_price": 157.76597,
       "closed_dir": "LONG",
       "entry_date": "2026-08-25",
       "entry_price": 159.36,
-      "exit_price": 157.765,
+      "exit_price": 157.76597,
       "days_held": 9,
-      "gross_pct": -1.001,
-      "net_pct": -1.017
+      "gross_pct": -1.0,
+      "net_pct": -1.016
     },
     {
       "signal_date": "2026-08-24",

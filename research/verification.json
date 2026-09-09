@@ -32,18 +32,18 @@
       "vol_pct": null
     },
     "live": {
-      "days": 71,
+      "days": 72,
       "start": "2026-06-28",
-      "end": "2026-09-07",
-      "total_return_pct": -3.22,
+      "end": "2026-09-08",
+      "total_return_pct": -3.08,
       "max_dd_pct": -6.0,
       "best_day_pct": 0.81,
       "worst_day_pct": -0.9,
-      "pct_days_positive": 46.5,
-      "sharpe": -2.26,
-      "sortino": -3.02,
-      "calmar": -1.83,
-      "cagr_pct": -10.95,
+      "pct_days_positive": 47.2,
+      "sharpe": -2.14,
+      "sortino": -2.85,
+      "calmar": -1.73,
+      "cagr_pct": -10.38,
       "vol_pct": null
     }
   },
@@ -86,7 +86,7 @@
     {
       "check": "weights account for 1.0 (published + idle)",
       "status": "PASS",
-      "detail": "published 0.7933 + idle 0.2066 = 0.9999  [idle: trend_WTIUSD, MNQ_pull_C]"
+      "detail": "published 0.7933 + idle 0.2068 = 1.0001  [idle: trend_WTIUSD, MNQ_pull_C]"
     },
     {
       "check": "live feed healthy",
@@ -101,7 +101,7 @@
     {
       "check": "daily series matches 15m archive",
       "status": "PASS",
-      "detail": "34124 bars, max diff 0.0e+00 (bit-identical)"
+      "detail": "SKIPPED - 15m archive not present (expected in CI)"
     },
     {
       "check": "holdout Sharpe reproduces",
