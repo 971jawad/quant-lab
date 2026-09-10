@@ -11,10 +11,10 @@
       "entry_price": 1.16107,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 1.16283,
-      "days_held": 1,
-      "gross_pct": 0.151,
-      "net_pct": 0.137,
+      "exit_price": 1.16323,
+      "days_held": 2,
+      "gross_pct": 0.186,
+      "net_pct": 0.172,
       "status": "OPEN"
     },
     {
@@ -26,7 +26,7 @@
       "exit_date": null,
       "exit_time": null,
       "exit_price": 153.65293,
-      "days_held": 5,
+      "days_held": 6,
       "gross_pct": 2.607,
       "net_pct": 2.591,
       "status": "OPEN"
@@ -123,10 +123,10 @@
       "entry_price": 4175.995,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 4385.53938,
-      "days_held": 81,
-      "gross_pct": -5.018,
-      "net_pct": -5.029,
+      "exit_price": 4423.08752,
+      "days_held": 82,
+      "gross_pct": -5.917,
+      "net_pct": -5.928,
       "status": "OPEN"
     },
     {
@@ -165,10 +165,10 @@
       "entry_price": 25434.936,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 29423.47456,
-      "days_held": 147,
-      "gross_pct": 15.681,
-      "net_pct": 15.675,
+      "exit_price": 29310.24322,
+      "days_held": 148,
+      "gross_pct": 15.236,
+      "net_pct": 15.23,
       "status": "OPEN"
     },
     {
@@ -179,10 +179,10 @@
       "entry_price": 39638.999,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 65489.85405,
-      "days_held": 419,
-      "gross_pct": 65.216,
-      "net_pct": 65.165,
+      "exit_price": 64471.83716,
+      "days_held": 420,
+      "gross_pct": 62.647,
+      "net_pct": 62.597,
       "status": "OPEN"
     },
     {
@@ -193,17 +193,17 @@
       "entry_price": 5611.919,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 7652.74306,
-      "days_held": 495,
-      "gross_pct": 36.366,
-      "net_pct": 36.355,
+      "exit_price": 7623.35541,
+      "days_held": 496,
+      "gross_pct": 35.842,
+      "net_pct": 35.831,
       "status": "OPEN"
     }
   ],
   "sizing": [
     {
       "scale": 0.5,
-      "live_return_pct": -1.54,
+      "live_return_pct": -1.72,
       "live_max_dd_pct": -3.04,
       "worst_day_pct": -0.45,
       "best_day_pct": 0.41,
@@ -211,7 +211,7 @@
     },
     {
       "scale": 0.75,
-      "live_return_pct": -2.31,
+      "live_return_pct": -2.58,
       "live_max_dd_pct": -4.53,
       "worst_day_pct": -0.68,
       "best_day_pct": 0.61,
@@ -219,7 +219,7 @@
     },
     {
       "scale": 1.0,
-      "live_return_pct": -3.08,
+      "live_return_pct": -3.43,
       "live_max_dd_pct": -6.0,
       "worst_day_pct": -0.9,
       "best_day_pct": 0.81,
@@ -227,7 +227,7 @@
     },
     {
       "scale": 1.25,
-      "live_return_pct": -3.85,
+      "live_return_pct": -4.29,
       "live_max_dd_pct": -7.45,
       "worst_day_pct": -1.13,
       "best_day_pct": 1.02,
@@ -235,7 +235,7 @@
     },
     {
       "scale": 1.5,
-      "live_return_pct": -4.61,
+      "live_return_pct": -5.13,
       "live_max_dd_pct": -8.88,
       "worst_day_pct": -1.35,
       "best_day_pct": 1.22,
@@ -243,7 +243,7 @@
     },
     {
       "scale": 2.0,
-      "live_return_pct": -6.14,
+      "live_return_pct": -6.82,
       "live_max_dd_pct": -11.68,
       "worst_day_pct": -1.8,
       "best_day_pct": 1.63,
