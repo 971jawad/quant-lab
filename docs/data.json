@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-09-11 00:51 UTC",
+  "generated_utc": "2026-09-12 00:56 UTC",
   "positions": {
-    "as_of": "2026-09-10",
+    "as_of": "2026-09-11",
     "positions": [
       {
         "leg": "trend_XAUUSD",
@@ -24,7 +24,7 @@
       {
         "leg": "trend_EURUSD",
         "weight": 0.0126,
-        "direction": "LONG",
+        "direction": "SHORT",
         "lookback_days": 160
       },
       {
@@ -51,15 +51,15 @@
       }
     ],
     "stale_excluded": {
-      "WTIUSD": 1014,
-      "MNQ_pull_C": 187
+      "WTIUSD": 1015,
+      "MNQ_pull_C": 188
     },
     "idle_weight": {
       "trend_WTIUSD": 0.024,
       "MNQ_pull_C": 0.1828
     },
     "idle_weight_total": 0.2068,
-    "risk_events": 656
+    "risk_events": 657
   },
   "leg_attribution": [
     {
@@ -69,7 +69,7 @@
       "status": "LIVE",
       "live_contrib_pct": -0.513,
       "days_active": 58,
-      "live_days": 74
+      "live_days": 75
     },
     {
       "leg": "MNQ_pull_C",
@@ -78,7 +78,7 @@
       "status": "STALE-IDLE",
       "live_contrib_pct": 0.0,
       "days_active": 0,
-      "live_days": 74
+      "live_days": 75
     },
     {
       "leg": "COT_NQ_washout",
@@ -87,52 +87,52 @@
       "status": "LIVE",
       "live_contrib_pct": -0.182,
       "days_active": 41,
-      "live_days": 74
+      "live_days": 75
     },
     {
       "leg": "trend_XAUUSD",
       "kind": "trend/momentum",
       "weight": 0.2112,
       "status": "LIVE",
-      "live_contrib_pct": -0.484,
-      "days_active": 62,
-      "live_days": 74
+      "live_contrib_pct": -0.548,
+      "days_active": 63,
+      "live_days": 75
     },
     {
       "leg": "trend_MNQ",
       "kind": "trend/momentum",
       "weight": 0.0638,
       "status": "LIVE",
-      "live_contrib_pct": -0.036,
-      "days_active": 62,
-      "live_days": 74
+      "live_contrib_pct": -0.0,
+      "days_active": 63,
+      "live_days": 75
     },
     {
       "leg": "trend_ES",
       "kind": "trend/momentum",
       "weight": 0.067,
       "status": "LIVE",
-      "live_contrib_pct": 0.127,
-      "days_active": 62,
-      "live_days": 74
+      "live_contrib_pct": 0.178,
+      "days_active": 63,
+      "live_days": 75
     },
     {
       "leg": "trend_EURUSD",
       "kind": "trend/momentum",
       "weight": 0.0126,
       "status": "LIVE",
-      "live_contrib_pct": -0.08,
-      "days_active": 65,
-      "live_days": 74
+      "live_contrib_pct": -0.084,
+      "days_active": 66,
+      "live_days": 75
     },
     {
       "leg": "trend_USDJPY",
       "kind": "trend/momentum",
       "weight": 0.0106,
       "status": "LIVE",
-      "live_contrib_pct": -0.068,
-      "days_active": 65,
-      "live_days": 74
+      "live_contrib_pct": -0.063,
+      "days_active": 66,
+      "live_days": 75
     },
     {
       "leg": "trend_WTIUSD",
@@ -141,16 +141,16 @@
       "status": "STALE-IDLE",
       "live_contrib_pct": 0.0,
       "days_active": 0,
-      "live_days": 74
+      "live_days": 75
     },
     {
       "leg": "trend_JPXJPY",
       "kind": "trend/momentum",
       "weight": 0.0834,
       "status": "LIVE",
-      "live_contrib_pct": -0.271,
-      "days_active": 65,
-      "live_days": 74
+      "live_contrib_pct": -0.236,
+      "days_active": 66,
+      "live_days": 75
     }
   ],
   "relive": {
@@ -177,14 +177,14 @@
         "lookback_days": 160,
         "entry_date": "2026-06-19",
         "entry_price": 4175.995,
-        "current_price": 4345.60151,
-        "unrealised_pct": -4.06,
-        "days_held": 83,
-        "flip_level": 5156.525,
+        "current_price": 4373.41675,
+        "unrealised_pct": -4.73,
+        "days_held": 84,
+        "flip_level": 5171.365,
         "pending_flip": false,
         "next_direction": null,
-        "pct_to_flip": -18.66,
-        "atr14": 103.95901,
+        "pct_to_flip": -18.25,
+        "atr14": 106.12423,
         "round_trip_cost": 0.45
       },
       {
@@ -195,14 +195,14 @@
         "lookback_days": 160,
         "entry_date": "2026-04-14",
         "entry_price": 25434.936,
-        "current_price": 29013.85086,
-        "unrealised_pct": 14.07,
-        "days_held": 149,
-        "flip_level": 24553.279,
+        "current_price": 29257.73374,
+        "unrealised_pct": 15.03,
+        "days_held": 150,
+        "flip_level": 25068.219,
         "pending_flip": false,
         "next_direction": null,
-        "pct_to_flip": 15.37,
-        "atr14": 365.44421,
+        "pct_to_flip": 14.32,
+        "atr14": 375.78111,
         "round_trip_cost": 1.62
       },
       {
@@ -213,14 +213,14 @@
         "lookback_days": 240,
         "entry_date": "2025-05-01",
         "entry_price": 5611.919,
-        "current_price": 7581.51537,
-        "unrealised_pct": 35.1,
-        "days_held": 497,
-        "flip_level": 6795.599,
+        "current_price": 7631.57399,
+        "unrealised_pct": 35.99,
+        "days_held": 498,
+        "flip_level": 6809.254,
         "pending_flip": false,
         "next_direction": null,
-        "pct_to_flip": 10.37,
-        "atr14": 64.45964,
+        "pct_to_flip": 10.78,
+        "atr14": 66.78992,
         "round_trip_cost": 0.62
       },
       {
@@ -231,14 +231,14 @@
         "lookback_days": 160,
         "entry_date": "2026-09-07",
         "entry_price": 1.16107,
-        "current_price": 1.16134,
-        "unrealised_pct": 0.02,
-        "days_held": 3,
-        "flip_level": 1.15164,
-        "pending_flip": false,
-        "next_direction": null,
-        "pct_to_flip": 0.84,
-        "atr14": 0.00347,
+        "current_price": 1.15986,
+        "unrealised_pct": -0.1,
+        "days_held": 4,
+        "flip_level": 1.16095,
+        "pending_flip": true,
+        "next_direction": "SHORT",
+        "pct_to_flip": -0.09,
+        "atr14": 0.0036,
         "round_trip_cost": 0.00016
       },
       {
@@ -249,14 +249,14 @@
         "lookback_days": 80,
         "entry_date": "2026-09-03",
         "entry_price": 157.76597,
-        "current_price": 154.52594,
-        "unrealised_pct": 2.05,
-        "days_held": 7,
-        "flip_level": 160.364,
+        "current_price": 153.55494,
+        "unrealised_pct": 2.67,
+        "days_held": 8,
+        "flip_level": 160.514,
         "pending_flip": false,
         "next_direction": null,
-        "pct_to_flip": -3.78,
-        "atr14": 1.29642,
+        "pct_to_flip": -4.53,
+        "atr14": 1.2913,
         "round_trip_cost": 0.025
       },
       {
@@ -267,14 +267,14 @@
         "lookback_days": 240,
         "entry_date": "2025-07-16",
         "entry_price": 39638.999,
-        "current_price": 63384.32233,
-        "unrealised_pct": 59.9,
-        "days_held": 421,
-        "flip_level": 50741.366,
+        "current_price": 63993.73274,
+        "unrealised_pct": 61.44,
+        "days_held": 422,
+        "flip_level": 50341.468,
         "pending_flip": false,
         "next_direction": null,
-        "pct_to_flip": 19.95,
-        "atr14": 1312.45454,
+        "pct_to_flip": 21.33,
+        "atr14": 1215.9315,
         "round_trip_cost": 20.0
       }
     ],
@@ -515,18 +515,18 @@
         "vol_pct": null
       },
       "live": {
-        "days": 74,
+        "days": 75,
         "start": "2026-06-28",
-        "end": "2026-09-10",
-        "total_return_pct": -3.41,
+        "end": "2026-09-11",
+        "total_return_pct": -3.3,
         "max_dd_pct": -6.0,
         "best_day_pct": 0.81,
         "worst_day_pct": -0.9,
-        "pct_days_positive": 47.3,
-        "sharpe": -2.34,
-        "sortino": -3.12,
-        "calmar": -1.86,
-        "cagr_pct": -11.14,
+        "pct_days_positive": 48.0,
+        "sharpe": -2.24,
+        "sortino": -2.97,
+        "calmar": -1.78,
+        "cagr_pct": -10.65,
         "vol_pct": null
       }
     },
@@ -564,7 +564,7 @@
       {
         "check": "flip levels consistent with direction",
         "status": "PASS",
-        "detail": "0 inconsistent"
+        "detail": "0 inconsistent; 1 pending flip ['EURUSD']"
       },
       {
         "check": "weights account for 1.0 (published + idle)",
@@ -579,7 +579,7 @@
       {
         "check": "feed correlations above guard",
         "status": "PASS",
-        "detail": "min corr 0.802"
+        "detail": "min corr 0.803"
       },
       {
         "check": "daily series matches 15m archive",
@@ -596,14 +596,14 @@
   },
   "decay": {
     "live_start": "2026-06-28",
-    "live_days": 74,
-    "live_return_pct": -3.41,
-    "live_sharpe": -2.338,
-    "null_median_return_pct": 3.113,
-    "null_p5_return_pct": -4.493,
-    "null_p95_return_pct": 12.262,
-    "live_return_percentile": 8.1,
-    "live_sharpe_percentile": 4.2,
+    "live_days": 75,
+    "live_return_pct": -3.297,
+    "live_sharpe": -2.241,
+    "null_median_return_pct": 3.121,
+    "null_p5_return_pct": -4.504,
+    "null_p95_return_pct": 12.362,
+    "live_return_percentile": 8.4,
+    "live_sharpe_percentile": 4.5,
     "verdict": "WATCH",
     "note": "soft patch, still inside the range an intact edge routinely produces"
   },
@@ -910,8 +910,8 @@
         "held_now": "SHORT",
         "signal_on_last_close": "SHORT",
         "action_next_open": "HOLD",
-        "last_close": 4345.60151,
-        "as_of": "2026-09-10",
+        "last_close": 4373.41675,
+        "as_of": "2026-09-11",
         "mode": "long/short",
         "lookback_days": 160
       },
@@ -920,8 +920,8 @@
         "held_now": "LONG",
         "signal_on_last_close": "LONG",
         "action_next_open": "HOLD",
-        "last_close": 29013.85086,
-        "as_of": "2026-09-10",
+        "last_close": 29257.73374,
+        "as_of": "2026-09-11",
         "mode": "LONG-ONLY",
         "lookback_days": 160
       },
@@ -930,18 +930,18 @@
         "held_now": "LONG",
         "signal_on_last_close": "LONG",
         "action_next_open": "HOLD",
-        "last_close": 7581.51537,
-        "as_of": "2026-09-10",
+        "last_close": 7631.57399,
+        "as_of": "2026-09-11",
         "mode": "LONG-ONLY",
         "lookback_days": 240
       },
       {
         "market": "EURUSD",
         "held_now": "LONG",
-        "signal_on_last_close": "LONG",
-        "action_next_open": "HOLD",
-        "last_close": 1.16134,
-        "as_of": "2026-09-10",
+        "signal_on_last_close": "SHORT",
+        "action_next_open": "FLIP TO SHORT",
+        "last_close": 1.15986,
+        "as_of": "2026-09-11",
         "mode": "long/short",
         "lookback_days": 160
       },
@@ -950,8 +950,8 @@
         "held_now": "SHORT",
         "signal_on_last_close": "SHORT",
         "action_next_open": "HOLD",
-        "last_close": 154.52594,
-        "as_of": "2026-09-10",
+        "last_close": 153.55494,
+        "as_of": "2026-09-11",
         "mode": "long/short",
         "lookback_days": 80
       },
@@ -960,8 +960,8 @@
         "held_now": "LONG",
         "signal_on_last_close": "LONG",
         "action_next_open": "HOLD",
-        "last_close": 63384.32233,
-        "as_of": "2026-09-10",
+        "last_close": 63993.73274,
+        "as_of": "2026-09-11",
         "mode": "LONG-ONLY",
         "lookback_days": 240
       }
@@ -1487,7 +1487,7 @@
         "net_pct": 3.686
       }
     ],
-    "n_pending": 0
+    "n_pending": 1
   },
   "prop": {
     "rulesets": {
@@ -1742,10 +1742,10 @@
         "entry_price": 1.16107,
         "exit_date": null,
         "exit_time": null,
-        "exit_price": 1.16134,
-        "days_held": 3,
-        "gross_pct": 0.023,
-        "net_pct": 0.009,
+        "exit_price": 1.15986,
+        "days_held": 4,
+        "gross_pct": -0.104,
+        "net_pct": -0.118,
         "status": "OPEN"
       },
       {
@@ -1756,10 +1756,10 @@
         "entry_price": 157.76597,
         "exit_date": null,
         "exit_time": null,
-        "exit_price": 154.52594,
-        "days_held": 7,
-        "gross_pct": 2.054,
-        "net_pct": 2.038,
+        "exit_price": 153.55494,
+        "days_held": 8,
+        "gross_pct": 2.669,
+        "net_pct": 2.653,
         "status": "OPEN"
       },
       {
@@ -1854,10 +1854,10 @@
         "entry_price": 4175.995,
         "exit_date": null,
         "exit_time": null,
-        "exit_price": 4345.60151,
-        "days_held": 83,
-        "gross_pct": -4.061,
-        "net_pct": -4.072,
+        "exit_price": 4373.41675,
+        "days_held": 84,
+        "gross_pct": -4.728,
+        "net_pct": -4.738,
         "status": "OPEN"
       },
       {
@@ -1896,10 +1896,10 @@
         "entry_price": 25434.936,
         "exit_date": null,
         "exit_time": null,
-        "exit_price": 29013.85086,
-        "days_held": 149,
-        "gross_pct": 14.071,
-        "net_pct": 14.064,
+        "exit_price": 29257.73374,
+        "days_held": 150,
+        "gross_pct": 15.03,
+        "net_pct": 15.023,
         "status": "OPEN"
       },
       {
@@ -1910,10 +1910,10 @@
         "entry_price": 39638.999,
         "exit_date": null,
         "exit_time": null,
-        "exit_price": 63384.32233,
-        "days_held": 421,
-        "gross_pct": 59.904,
-        "net_pct": 59.853,
+        "exit_price": 63993.73274,
+        "days_held": 422,
+        "gross_pct": 61.441,
+        "net_pct": 61.391,
         "status": "OPEN"
       },
       {
@@ -1924,17 +1924,17 @@
         "entry_price": 5611.919,
         "exit_date": null,
         "exit_time": null,
-        "exit_price": 7581.51537,
-        "days_held": 497,
-        "gross_pct": 35.097,
-        "net_pct": 35.086,
+        "exit_price": 7631.57399,
+        "days_held": 498,
+        "gross_pct": 35.989,
+        "net_pct": 35.978,
         "status": "OPEN"
       }
     ],
     "sizing": [
       {
         "scale": 0.5,
-        "live_return_pct": -1.71,
+        "live_return_pct": -1.65,
         "live_max_dd_pct": -3.04,
         "worst_day_pct": -0.45,
         "best_day_pct": 0.41,
@@ -1942,7 +1942,7 @@
       },
       {
         "scale": 0.75,
-        "live_return_pct": -2.56,
+        "live_return_pct": -2.48,
         "live_max_dd_pct": -4.53,
         "worst_day_pct": -0.68,
         "best_day_pct": 0.61,
@@ -1950,7 +1950,7 @@
       },
       {
         "scale": 1.0,
-        "live_return_pct": -3.41,
+        "live_return_pct": -3.3,
         "live_max_dd_pct": -6.0,
         "worst_day_pct": -0.9,
         "best_day_pct": 0.81,
@@ -1958,7 +1958,7 @@
       },
       {
         "scale": 1.25,
-        "live_return_pct": -4.26,
+        "live_return_pct": -4.12,
         "live_max_dd_pct": -7.45,
         "worst_day_pct": -1.13,
         "best_day_pct": 1.02,
@@ -1966,7 +1966,7 @@
       },
       {
         "scale": 1.5,
-        "live_return_pct": -5.1,
+        "live_return_pct": -4.93,
         "live_max_dd_pct": -8.88,
         "worst_day_pct": -1.35,
         "best_day_pct": 1.22,
@@ -1974,9 +1974,9 @@
       },
       {
         "scale": 2.0,
-        "live_return_pct": -6.77,
+        "live_return_pct": -6.56,
         "live_max_dd_pct": -11.68,
-        "worst_day_pct": -1.8,
+        "worst_day_pct": -1.81,
         "best_day_pct": 1.63,
         "breached_5pct_trailing": true
       }
@@ -2312,27 +2312,27 @@
     ]
   },
   "live_feed": {
-    "checked_utc": "2026-09-11T00:51:06.057225+00:00",
+    "checked_utc": "2026-09-12T00:56:21.505898+00:00",
     "min_corr_guard": 0.7,
     "markets": [
       {
         "market": "XAUUSD",
         "status": "extended",
-        "added": 62,
+        "added": 63,
         "hist_end": "2026-06-26",
-        "live_end": "2026-09-10",
-        "corr": 0.964,
-        "level_diff_pct": 0.478,
-        "level_adjustment": 0.99597,
+        "live_end": "2026-09-11",
+        "corr": 0.973,
+        "level_diff_pct": 0.466,
+        "level_adjustment": 0.99622,
         "overlap_source": "hourly->ET-day"
       },
       {
         "market": "MNQ",
         "status": "extended",
-        "added": 62,
+        "added": 63,
         "hist_end": "2026-06-26",
-        "live_end": "2026-09-10",
-        "corr": 0.984,
+        "live_end": "2026-09-11",
+        "corr": 0.99,
         "level_diff_pct": 0.514,
         "level_adjustment": 0.99544,
         "overlap_source": "hourly->ET-day"
@@ -2340,21 +2340,21 @@
       {
         "market": "ES",
         "status": "extended",
-        "added": 62,
+        "added": 63,
         "hist_end": "2026-06-26",
-        "live_end": "2026-09-10",
-        "corr": 0.988,
-        "level_diff_pct": 0.441,
+        "live_end": "2026-09-11",
+        "corr": 0.989,
+        "level_diff_pct": 0.438,
         "level_adjustment": 0.99619,
         "overlap_source": "hourly->ET-day"
       },
       {
         "market": "EURUSD",
         "status": "extended",
-        "added": 65,
+        "added": 66,
         "hist_end": "2026-06-26",
-        "live_end": "2026-09-10",
-        "corr": 0.99,
+        "live_end": "2026-09-11",
+        "corr": 0.991,
         "level_diff_pct": 0.032,
         "level_adjustment": 0.99968,
         "overlap_source": "hourly->ET-day"
@@ -2362,9 +2362,9 @@
       {
         "market": "USDJPY",
         "status": "extended",
-        "added": 11,
+        "added": 12,
         "hist_end": "2026-08-28",
-        "live_end": "2026-09-10",
+        "live_end": "2026-09-11",
         "corr": 0.984,
         "level_diff_pct": 0.008,
         "level_adjustment": 1.00001,
@@ -2378,11 +2378,11 @@
       {
         "market": "JPXJPY",
         "status": "extended",
-        "added": 11,
+        "added": 12,
         "hist_end": "2026-08-28",
-        "live_end": "2026-09-10",
-        "corr": 0.802,
-        "level_diff_pct": 0.092,
+        "live_end": "2026-09-11",
+        "corr": 0.803,
+        "level_diff_pct": 0.091,
         "level_adjustment": 0.9998,
         "overlap_source": "hourly->ET-day"
       }
@@ -2392,12 +2392,12 @@
     "ensembler_full": {
       "sharpe": 1.43,
       "sortino": 1.81,
-      "cagr_pct": 9.28,
+      "cagr_pct": 9.29,
       "max_dd_pct": -10.73,
       "calmar": 0.87,
       "vol_pct": 6.36,
       "pct_underwater": 88.5,
-      "days": 4964
+      "days": 4965
     },
     "ensembler_dev": {
       "sharpe": 1.46,
@@ -2412,12 +2412,12 @@
     "ensembler_holdout": {
       "sharpe": 1.4,
       "sortino": 1.95,
-      "cagr_pct": 10.67,
+      "cagr_pct": 10.68,
       "max_dd_pct": -10.73,
-      "calmar": 0.99,
+      "calmar": 1.0,
       "vol_pct": 7.46,
       "pct_underwater": 88.6,
-      "days": 1527
+      "days": 1528
     },
     "champion_holdout": {
       "sharpe": 1.36,
@@ -6356,63 +6356,63 @@
       },
       {
         "d": "2026-06-28",
-        "v": 5.9785
+        "v": 5.9783
       },
       {
         "d": "2026-07-03",
-        "v": 5.9328
+        "v": 5.9326
       },
       {
         "d": "2026-07-08",
-        "v": 5.9304
+        "v": 5.9302
       },
       {
         "d": "2026-07-13",
-        "v": 5.9142
+        "v": 5.9139
       },
       {
         "d": "2026-07-18",
-        "v": 5.8047
+        "v": 5.8044
       },
       {
         "d": "2026-07-23",
-        "v": 5.806
+        "v": 5.8058
       },
       {
         "d": "2026-07-28",
-        "v": 5.7937
+        "v": 5.7935
       },
       {
         "d": "2026-08-02",
-        "v": 5.841
+        "v": 5.8407
       },
       {
         "d": "2026-08-07",
-        "v": 5.8289
+        "v": 5.8286
       },
       {
         "d": "2026-08-12",
-        "v": 5.7908
+        "v": 5.7905
       },
       {
         "d": "2026-08-17",
-        "v": 5.7408
+        "v": 5.7405
       },
       {
         "d": "2026-08-22",
-        "v": 5.6685
+        "v": 5.6682
       },
       {
         "d": "2026-08-27",
-        "v": 5.7177
+        "v": 5.7174
       },
       {
         "d": "2026-09-01",
-        "v": 5.7478
+        "v": 5.7475
       },
       {
         "d": "2026-09-07",
-        "v": 5.7608
+        "v": 5.7605
       }
     ],
     "naive": [

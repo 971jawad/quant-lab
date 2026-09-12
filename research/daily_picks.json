@@ -5,8 +5,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 4345.60151,
-      "as_of": "2026-09-10",
+      "last_close": 4373.41675,
+      "as_of": "2026-09-11",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -15,8 +15,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 29013.85086,
-      "as_of": "2026-09-10",
+      "last_close": 29257.73374,
+      "as_of": "2026-09-11",
       "mode": "LONG-ONLY",
       "lookback_days": 160
     },
@@ -25,18 +25,18 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 7581.51537,
-      "as_of": "2026-09-10",
+      "last_close": 7631.57399,
+      "as_of": "2026-09-11",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     },
     {
       "market": "EURUSD",
       "held_now": "LONG",
-      "signal_on_last_close": "LONG",
-      "action_next_open": "HOLD",
-      "last_close": 1.16134,
-      "as_of": "2026-09-10",
+      "signal_on_last_close": "SHORT",
+      "action_next_open": "FLIP TO SHORT",
+      "last_close": 1.15986,
+      "as_of": "2026-09-11",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -45,8 +45,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 154.52594,
-      "as_of": "2026-09-10",
+      "last_close": 153.55494,
+      "as_of": "2026-09-11",
       "mode": "long/short",
       "lookback_days": 80
     },
@@ -55,8 +55,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 63384.32233,
-      "as_of": "2026-09-10",
+      "last_close": 63993.73274,
+      "as_of": "2026-09-11",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     }
@@ -582,5 +582,5 @@
       "net_pct": 3.686
     }
   ],
-  "n_pending": 0
+  "n_pending": 1
 }

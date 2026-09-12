@@ -32,18 +32,18 @@
       "vol_pct": null
     },
     "live": {
-      "days": 74,
+      "days": 75,
       "start": "2026-06-28",
-      "end": "2026-09-10",
-      "total_return_pct": -3.41,
+      "end": "2026-09-11",
+      "total_return_pct": -3.3,
       "max_dd_pct": -6.0,
       "best_day_pct": 0.81,
       "worst_day_pct": -0.9,
-      "pct_days_positive": 47.3,
-      "sharpe": -2.34,
-      "sortino": -3.12,
-      "calmar": -1.86,
-      "cagr_pct": -11.14,
+      "pct_days_positive": 48.0,
+      "sharpe": -2.24,
+      "sortino": -2.97,
+      "calmar": -1.78,
+      "cagr_pct": -10.65,
       "vol_pct": null
     }
   },
@@ -81,7 +81,7 @@
     {
       "check": "flip levels consistent with direction",
       "status": "PASS",
-      "detail": "0 inconsistent"
+      "detail": "0 inconsistent; 1 pending flip ['EURUSD']"
     },
     {
       "check": "weights account for 1.0 (published + idle)",
@@ -96,7 +96,7 @@
     {
       "check": "feed correlations above guard",
       "status": "PASS",
-      "detail": "min corr 0.802"
+      "detail": "min corr 0.803"
     },
     {
       "check": "daily series matches 15m archive",
