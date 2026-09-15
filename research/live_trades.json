@@ -5,17 +5,31 @@
   "trades": [
     {
       "market": "EURUSD",
+      "direction": "SHORT",
+      "entry_date": "2026-09-13",
+      "entry_time": "00:00 ET",
+      "entry_price": 1.15905,
+      "exit_date": null,
+      "exit_time": null,
+      "exit_price": 1.1541,
+      "days_held": 1,
+      "gross_pct": 0.427,
+      "net_pct": 0.413,
+      "status": "OPEN"
+    },
+    {
+      "market": "EURUSD",
       "direction": "LONG",
       "entry_date": "2026-09-07",
       "entry_time": "00:00 ET",
       "entry_price": 1.16107,
-      "exit_date": null,
-      "exit_time": null,
-      "exit_price": 1.15986,
-      "days_held": 4,
-      "gross_pct": -0.104,
-      "net_pct": -0.118,
-      "status": "OPEN"
+      "exit_date": "2026-09-13",
+      "exit_time": "00:00 ET",
+      "exit_price": 1.15905,
+      "days_held": 6,
+      "gross_pct": -0.174,
+      "net_pct": -0.188,
+      "status": "CLOSED"
     },
     {
       "market": "USDJPY",
@@ -25,10 +39,10 @@
       "entry_price": 157.76597,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 153.55494,
-      "days_held": 8,
-      "gross_pct": 2.669,
-      "net_pct": 2.653,
+      "exit_price": 154.63194,
+      "days_held": 11,
+      "gross_pct": 1.987,
+      "net_pct": 1.971,
       "status": "OPEN"
     },
     {
@@ -123,10 +137,10 @@
       "entry_price": 4175.995,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 4373.41675,
-      "days_held": 84,
-      "gross_pct": -4.728,
-      "net_pct": -4.738,
+      "exit_price": 4312.83382,
+      "days_held": 87,
+      "gross_pct": -3.277,
+      "net_pct": -3.288,
       "status": "OPEN"
     },
     {
@@ -165,10 +179,10 @@
       "entry_price": 25434.936,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 29257.73374,
-      "days_held": 150,
-      "gross_pct": 15.03,
-      "net_pct": 15.023,
+      "exit_price": 29333.63607,
+      "days_held": 153,
+      "gross_pct": 15.328,
+      "net_pct": 15.322,
       "status": "OPEN"
     },
     {
@@ -179,10 +193,10 @@
       "entry_price": 39638.999,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 63993.73274,
-      "days_held": 422,
-      "gross_pct": 61.441,
-      "net_pct": 61.391,
+      "exit_price": 63620.09589,
+      "days_held": 425,
+      "gross_pct": 60.499,
+      "net_pct": 60.448,
       "status": "OPEN"
     },
     {
@@ -193,17 +207,17 @@
       "entry_price": 5611.919,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 7631.57399,
-      "days_held": 498,
-      "gross_pct": 35.989,
-      "net_pct": 35.978,
+      "exit_price": 7668.18403,
+      "days_held": 501,
+      "gross_pct": 36.641,
+      "net_pct": 36.63,
       "status": "OPEN"
     }
   ],
   "sizing": [
     {
       "scale": 0.5,
-      "live_return_pct": -1.65,
+      "live_return_pct": -1.48,
       "live_max_dd_pct": -3.04,
       "worst_day_pct": -0.45,
       "best_day_pct": 0.41,
@@ -211,7 +225,7 @@
     },
     {
       "scale": 0.75,
-      "live_return_pct": -2.48,
+      "live_return_pct": -2.22,
       "live_max_dd_pct": -4.53,
       "worst_day_pct": -0.68,
       "best_day_pct": 0.61,
@@ -219,7 +233,7 @@
     },
     {
       "scale": 1.0,
-      "live_return_pct": -3.3,
+      "live_return_pct": -2.96,
       "live_max_dd_pct": -6.0,
       "worst_day_pct": -0.9,
       "best_day_pct": 0.81,
@@ -227,7 +241,7 @@
     },
     {
       "scale": 1.25,
-      "live_return_pct": -4.12,
+      "live_return_pct": -3.7,
       "live_max_dd_pct": -7.45,
       "worst_day_pct": -1.13,
       "best_day_pct": 1.02,
@@ -235,7 +249,7 @@
     },
     {
       "scale": 1.5,
-      "live_return_pct": -4.93,
+      "live_return_pct": -4.44,
       "live_max_dd_pct": -8.88,
       "worst_day_pct": -1.35,
       "best_day_pct": 1.22,
@@ -243,13 +257,13 @@
     },
     {
       "scale": 2.0,
-      "live_return_pct": -6.56,
+      "live_return_pct": -5.91,
       "live_max_dd_pct": -11.68,
-      "worst_day_pct": -1.81,
+      "worst_day_pct": -1.8,
       "best_day_pct": 1.63,
       "breached_5pct_trailing": true
     }
   ],
-  "n_closed": 8,
+  "n_closed": 9,
   "n_open": 6
 }
