@@ -5,8 +5,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 4300.18534,
-      "as_of": "2026-09-15",
+      "last_close": 4300.59279,
+      "as_of": "2026-09-16",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -15,8 +15,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 29141.51608,
-      "as_of": "2026-09-15",
+      "last_close": 29312.2341,
+      "as_of": "2026-09-16",
       "mode": "LONG-ONLY",
       "lookback_days": 160
     },
@@ -25,18 +25,18 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 7636.05685,
-      "as_of": "2026-09-15",
+      "last_close": 7633.81542,
+      "as_of": "2026-09-16",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     },
     {
       "market": "EURUSD",
-      "held_now": "SHORT",
+      "held_now": "LONG",
       "signal_on_last_close": "LONG",
-      "action_next_open": "FLIP TO LONG",
-      "last_close": 1.15343,
-      "as_of": "2026-09-15",
+      "action_next_open": "HOLD",
+      "last_close": 1.1459,
+      "as_of": "2026-09-16",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -45,8 +45,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 155.36895,
-      "as_of": "2026-09-15",
+      "last_close": 156.14596,
+      "as_of": "2026-09-16",
       "mode": "long/short",
       "lookback_days": 80
     },
@@ -55,13 +55,28 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 63437.96013,
-      "as_of": "2026-09-15",
+      "last_close": 64068.48745,
+      "as_of": "2026-09-16",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     }
   ],
   "log": [
+    {
+      "signal_date": "2026-09-15",
+      "execute_date": "2026-09-16",
+      "market": "EURUSD",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 1.1541,
+      "closed_dir": "SHORT",
+      "entry_date": "2026-09-13",
+      "entry_price": 1.15905,
+      "exit_price": 1.1541,
+      "days_held": 3,
+      "gross_pct": 0.427,
+      "net_pct": 0.413
+    },
     {
       "signal_date": "2026-09-11",
       "execute_date": "2026-09-13",
@@ -597,5 +612,5 @@
       "net_pct": 3.686
     }
   ],
-  "n_pending": 1
+  "n_pending": 0
 }
