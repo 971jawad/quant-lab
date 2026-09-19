@@ -1,25 +1,25 @@
 {
-  "checked_utc": "2026-09-18T01:04:39.232174+00:00",
+  "checked_utc": "2026-09-19T01:00:21.337307+00:00",
   "min_corr_guard": 0.7,
   "markets": [
     {
       "market": "XAUUSD",
       "status": "extended",
-      "added": 68,
+      "added": 69,
       "hist_end": "2026-06-26",
-      "live_end": "2026-09-17",
-      "corr": 0.973,
-      "level_diff_pct": 0.466,
-      "level_adjustment": 0.99622,
+      "live_end": "2026-09-18",
+      "corr": 0.965,
+      "level_diff_pct": 0.475,
+      "level_adjustment": 0.99597,
       "overlap_source": "hourly->ET-day"
     },
     {
       "market": "MNQ",
       "status": "extended",
-      "added": 68,
+      "added": 69,
       "hist_end": "2026-06-26",
-      "live_end": "2026-09-17",
-      "corr": 0.99,
+      "live_end": "2026-09-18",
+      "corr": 0.984,
       "level_diff_pct": 0.511,
       "level_adjustment": 0.99544,
       "overlap_source": "hourly->ET-day"
@@ -27,21 +27,21 @@
     {
       "market": "ES",
       "status": "extended",
-      "added": 68,
+      "added": 69,
       "hist_end": "2026-06-26",
-      "live_end": "2026-09-17",
+      "live_end": "2026-09-18",
       "corr": 0.988,
-      "level_diff_pct": 0.437,
+      "level_diff_pct": 0.438,
       "level_adjustment": 0.99619,
       "overlap_source": "hourly->ET-day"
     },
     {
       "market": "EURUSD",
       "status": "extended",
-      "added": 71,
+      "added": 72,
       "hist_end": "2026-06-26",
-      "live_end": "2026-09-17",
-      "corr": 0.991,
+      "live_end": "2026-09-18",
+      "corr": 0.99,
       "level_diff_pct": 0.032,
       "level_adjustment": 0.99968,
       "overlap_source": "hourly->ET-day"
@@ -49,9 +49,9 @@
     {
       "market": "USDJPY",
       "status": "extended",
-      "added": 17,
+      "added": 18,
       "hist_end": "2026-08-28",
-      "live_end": "2026-09-17",
+      "live_end": "2026-09-18",
       "corr": 0.984,
       "level_diff_pct": 0.008,
       "level_adjustment": 1.00001,
@@ -65,10 +65,10 @@
     {
       "market": "JPXJPY",
       "status": "extended",
-      "added": 17,
+      "added": 18,
       "hist_end": "2026-08-28",
-      "live_end": "2026-09-17",
-      "corr": 0.803,
+      "live_end": "2026-09-18",
+      "corr": 0.802,
       "level_diff_pct": 0.091,
       "level_adjustment": 0.9998,
       "overlap_source": "hourly->ET-day"
