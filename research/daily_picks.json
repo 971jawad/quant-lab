@@ -5,8 +5,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 4398.08866,
-      "as_of": "2026-09-18",
+      "last_close": 4370.69958,
+      "as_of": "2026-09-21",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -15,8 +15,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 29818.41551,
-      "as_of": "2026-09-18",
+      "last_close": 30735.46493,
+      "as_of": "2026-09-21",
       "mode": "LONG-ONLY",
       "lookback_days": 160
     },
@@ -25,18 +25,18 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 7695.57929,
-      "as_of": "2026-09-18",
+      "last_close": 7802.91893,
+      "as_of": "2026-09-21",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     },
     {
       "market": "EURUSD",
-      "held_now": "LONG",
+      "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
-      "action_next_open": "FLIP TO SHORT",
-      "last_close": 1.14853,
-      "as_of": "2026-09-18",
+      "action_next_open": "HOLD",
+      "last_close": 1.14655,
+      "as_of": "2026-09-21",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -45,8 +45,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 156.85596,
-      "as_of": "2026-09-18",
+      "last_close": 157.46396,
+      "as_of": "2026-09-21",
       "mode": "long/short",
       "lookback_days": 80
     },
@@ -62,6 +62,21 @@
     }
   ],
   "log": [
+    {
+      "signal_date": "2026-09-18",
+      "execute_date": "2026-09-20",
+      "market": "EURUSD",
+      "action": "FLIP TO SHORT",
+      "direction": "SHORT",
+      "exec_price": 1.148,
+      "closed_dir": "LONG",
+      "entry_date": "2026-09-16",
+      "entry_price": 1.1541,
+      "exit_price": 1.148,
+      "days_held": 4,
+      "gross_pct": -0.528,
+      "net_pct": -0.542
+    },
     {
       "signal_date": "2026-09-15",
       "execute_date": "2026-09-16",
@@ -612,5 +627,5 @@
       "net_pct": 3.686
     }
   ],
-  "n_pending": 1
+  "n_pending": 0
 }

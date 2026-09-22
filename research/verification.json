@@ -32,18 +32,18 @@
       "vol_pct": null
     },
     "live": {
-      "days": 81,
+      "days": 83,
       "start": "2026-06-28",
-      "end": "2026-09-18",
-      "total_return_pct": -3.06,
+      "end": "2026-09-21",
+      "total_return_pct": -2.48,
       "max_dd_pct": -6.0,
       "best_day_pct": 0.81,
       "worst_day_pct": -0.9,
-      "pct_days_positive": 45.7,
-      "sharpe": -1.96,
-      "sortino": -2.59,
-      "calmar": -1.54,
-      "cagr_pct": -9.22,
+      "pct_days_positive": 47.0,
+      "sharpe": -1.53,
+      "sortino": -2.05,
+      "calmar": -1.23,
+      "cagr_pct": -7.35,
       "vol_pct": null
     }
   },
@@ -81,7 +81,7 @@
     {
       "check": "flip levels consistent with direction",
       "status": "PASS",
-      "detail": "0 inconsistent; 1 pending flip ['EURUSD']"
+      "detail": "0 inconsistent"
     },
     {
       "check": "weights account for 1.0 (published + idle)",

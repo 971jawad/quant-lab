@@ -5,17 +5,31 @@
   "trades": [
     {
       "market": "EURUSD",
+      "direction": "SHORT",
+      "entry_date": "2026-09-20",
+      "entry_time": "00:00 ET",
+      "entry_price": 1.148,
+      "exit_date": null,
+      "exit_time": null,
+      "exit_price": 1.14655,
+      "days_held": 1,
+      "gross_pct": 0.126,
+      "net_pct": 0.112,
+      "status": "OPEN"
+    },
+    {
+      "market": "EURUSD",
       "direction": "LONG",
       "entry_date": "2026-09-16",
       "entry_time": "00:00 ET",
       "entry_price": 1.1541,
-      "exit_date": null,
-      "exit_time": null,
-      "exit_price": 1.14853,
-      "days_held": 2,
-      "gross_pct": -0.483,
-      "net_pct": -0.496,
-      "status": "OPEN"
+      "exit_date": "2026-09-20",
+      "exit_time": "00:00 ET",
+      "exit_price": 1.148,
+      "days_held": 4,
+      "gross_pct": -0.528,
+      "net_pct": -0.542,
+      "status": "CLOSED"
     },
     {
       "market": "EURUSD",
@@ -53,10 +67,10 @@
       "entry_price": 157.76597,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 156.85596,
-      "days_held": 15,
-      "gross_pct": 0.577,
-      "net_pct": 0.561,
+      "exit_price": 157.46396,
+      "days_held": 18,
+      "gross_pct": 0.191,
+      "net_pct": 0.176,
       "status": "OPEN"
     },
     {
@@ -151,10 +165,10 @@
       "entry_price": 4175.995,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 4398.08866,
-      "days_held": 91,
-      "gross_pct": -5.318,
-      "net_pct": -5.329,
+      "exit_price": 4370.69958,
+      "days_held": 94,
+      "gross_pct": -4.662,
+      "net_pct": -4.673,
       "status": "OPEN"
     },
     {
@@ -193,10 +207,10 @@
       "entry_price": 25434.936,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 29818.41551,
-      "days_held": 157,
-      "gross_pct": 17.234,
-      "net_pct": 17.228,
+      "exit_price": 30735.46493,
+      "days_held": 160,
+      "gross_pct": 20.84,
+      "net_pct": 20.833,
       "status": "OPEN"
     },
     {
@@ -221,17 +235,17 @@
       "entry_price": 5611.919,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 7695.57929,
-      "days_held": 505,
-      "gross_pct": 37.129,
-      "net_pct": 37.118,
+      "exit_price": 7802.91893,
+      "days_held": 508,
+      "gross_pct": 39.042,
+      "net_pct": 39.031,
       "status": "OPEN"
     }
   ],
   "sizing": [
     {
       "scale": 0.5,
-      "live_return_pct": -1.53,
+      "live_return_pct": -1.24,
       "live_max_dd_pct": -3.04,
       "worst_day_pct": -0.45,
       "best_day_pct": 0.41,
@@ -239,7 +253,7 @@
     },
     {
       "scale": 0.75,
-      "live_return_pct": -2.3,
+      "live_return_pct": -1.86,
       "live_max_dd_pct": -4.53,
       "worst_day_pct": -0.68,
       "best_day_pct": 0.61,
@@ -247,7 +261,7 @@
     },
     {
       "scale": 1.0,
-      "live_return_pct": -3.06,
+      "live_return_pct": -2.48,
       "live_max_dd_pct": -6.0,
       "worst_day_pct": -0.9,
       "best_day_pct": 0.81,
@@ -255,7 +269,7 @@
     },
     {
       "scale": 1.25,
-      "live_return_pct": -3.82,
+      "live_return_pct": -3.11,
       "live_max_dd_pct": -7.45,
       "worst_day_pct": -1.13,
       "best_day_pct": 1.02,
@@ -263,7 +277,7 @@
     },
     {
       "scale": 1.5,
-      "live_return_pct": -4.58,
+      "live_return_pct": -3.73,
       "live_max_dd_pct": -8.88,
       "worst_day_pct": -1.35,
       "best_day_pct": 1.22,
@@ -271,13 +285,13 @@
     },
     {
       "scale": 2.0,
-      "live_return_pct": -6.1,
+      "live_return_pct": -4.98,
       "live_max_dd_pct": -11.68,
       "worst_day_pct": -1.8,
       "best_day_pct": 1.63,
       "breached_5pct_trailing": true
     }
   ],
-  "n_closed": 10,
+  "n_closed": 11,
   "n_open": 6
 }
