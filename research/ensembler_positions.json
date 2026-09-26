@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-24",
+  "as_of": "2026-09-25",
   "positions": [
     {
       "leg": "trend_XAUUSD",
@@ -39,10 +39,10 @@
     }
   ],
   "stale_excluded": {
-    "WTIUSD": 1028,
-    "xsec_ALL": 21,
-    "MNQ_pull_C": 201,
-    "COT_NQ_washout": 32
+    "WTIUSD": 1029,
+    "xsec_ALL": 22,
+    "MNQ_pull_C": 202,
+    "COT_NQ_washout": 33
   },
   "idle_weight": {
     "trend_WTIUSD": 0.024,
@@ -51,5 +51,5 @@
     "COT_NQ_washout": 0.1468
   },
   "idle_weight_total": 0.5515,
-  "risk_events": 668
+  "risk_events": 669
 }
