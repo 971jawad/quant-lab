@@ -32,18 +32,18 @@
       "vol_pct": null
     },
     "live": {
-      "days": 91,
+      "days": 92,
       "start": "2026-06-28",
-      "end": "2026-09-30",
-      "total_return_pct": -1.28,
+      "end": "2026-10-01",
+      "total_return_pct": -1.16,
       "max_dd_pct": -6.0,
       "best_day_pct": 0.81,
       "worst_day_pct": -0.9,
-      "pct_days_positive": 51.6,
-      "sharpe": -0.72,
-      "sortino": -0.94,
-      "calmar": -0.59,
-      "cagr_pct": -3.51,
+      "pct_days_positive": 52.2,
+      "sharpe": -0.64,
+      "sortino": -0.84,
+      "calmar": -0.52,
+      "cagr_pct": -3.13,
       "vol_pct": null
     }
   },
@@ -96,7 +96,7 @@
     {
       "check": "feed correlations above guard",
       "status": "PASS",
-      "detail": "min corr 0.802"
+      "detail": "min corr 0.801"
     },
     {
       "check": "daily series matches 15m archive",
