@@ -11,10 +11,10 @@
       "entry_price": 1.148,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 1.12387,
-      "days_held": 11,
-      "gross_pct": 2.102,
-      "net_pct": 2.088,
+      "exit_price": 1.12539,
+      "days_held": 12,
+      "gross_pct": 1.97,
+      "net_pct": 1.956,
       "status": "OPEN"
     },
     {
@@ -67,10 +67,10 @@
       "entry_price": 157.76597,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 158.04597,
-      "days_held": 28,
-      "gross_pct": -0.177,
-      "net_pct": -0.193,
+      "exit_price": 157.83097,
+      "days_held": 29,
+      "gross_pct": -0.041,
+      "net_pct": -0.057,
       "status": "OPEN"
     },
     {
@@ -165,10 +165,10 @@
       "entry_price": 4175.995,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 4161.91891,
-      "days_held": 104,
-      "gross_pct": 0.337,
-      "net_pct": 0.326,
+      "exit_price": 4156.33997,
+      "days_held": 105,
+      "gross_pct": 0.471,
+      "net_pct": 0.46,
       "status": "OPEN"
     },
     {
@@ -207,10 +207,10 @@
       "entry_price": 25434.936,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 30712.32094,
-      "days_held": 170,
-      "gross_pct": 20.749,
-      "net_pct": 20.742,
+      "exit_price": 30907.42725,
+      "days_held": 171,
+      "gross_pct": 21.516,
+      "net_pct": 21.509,
       "status": "OPEN"
     },
     {
@@ -221,10 +221,10 @@
       "entry_price": 39638.999,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 68155.96211,
-      "days_held": 442,
-      "gross_pct": 71.942,
-      "net_pct": 71.891,
+      "exit_price": 68176.62208,
+      "days_held": 443,
+      "gross_pct": 71.994,
+      "net_pct": 71.943,
       "status": "OPEN"
     },
     {
@@ -235,17 +235,17 @@
       "entry_price": 5611.919,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 7706.5374,
-      "days_held": 518,
-      "gross_pct": 37.324,
-      "net_pct": 37.313,
+      "exit_price": 7746.88316,
+      "days_held": 519,
+      "gross_pct": 38.043,
+      "net_pct": 38.032,
       "status": "OPEN"
     }
   ],
   "sizing": [
     {
       "scale": 0.5,
-      "live_return_pct": -0.57,
+      "live_return_pct": -0.49,
       "live_max_dd_pct": -3.04,
       "worst_day_pct": -0.45,
       "best_day_pct": 0.41,
@@ -253,7 +253,7 @@
     },
     {
       "scale": 0.75,
-      "live_return_pct": -0.86,
+      "live_return_pct": -0.74,
       "live_max_dd_pct": -4.53,
       "worst_day_pct": -0.68,
       "best_day_pct": 0.61,
@@ -261,7 +261,7 @@
     },
     {
       "scale": 1.0,
-      "live_return_pct": -1.16,
+      "live_return_pct": -1.0,
       "live_max_dd_pct": -6.0,
       "worst_day_pct": -0.9,
       "best_day_pct": 0.81,
@@ -269,7 +269,7 @@
     },
     {
       "scale": 1.25,
-      "live_return_pct": -1.45,
+      "live_return_pct": -1.26,
       "live_max_dd_pct": -7.45,
       "worst_day_pct": -1.13,
       "best_day_pct": 1.02,
@@ -277,7 +277,7 @@
     },
     {
       "scale": 1.5,
-      "live_return_pct": -1.76,
+      "live_return_pct": -1.52,
       "live_max_dd_pct": -8.88,
       "worst_day_pct": -1.35,
       "best_day_pct": 1.22,
@@ -285,7 +285,7 @@
     },
     {
       "scale": 2.0,
-      "live_return_pct": -2.38,
+      "live_return_pct": -2.06,
       "live_max_dd_pct": -11.68,
       "worst_day_pct": -1.81,
       "best_day_pct": 1.63,
