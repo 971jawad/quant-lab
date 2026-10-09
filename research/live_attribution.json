@@ -2,91 +2,91 @@
   {
     "leg": "xsec_ALL",
     "kind": "event-driven",
-    "weight": 0.1979,
+    "weight": 0.2002,
     "status": "STALE-IDLE",
-    "live_contrib_pct": -0.513,
+    "live_contrib_pct": -0.52,
     "days_active": 58,
-    "live_days": 97
+    "live_days": 98
   },
   {
     "leg": "MNQ_pull_C",
     "kind": "event-driven",
-    "weight": 0.1828,
+    "weight": 0.1948,
     "status": "STALE-IDLE",
     "live_contrib_pct": 0.0,
     "days_active": 0,
-    "live_days": 97
+    "live_days": 98
   },
   {
     "leg": "COT_NQ_washout",
     "kind": "event-driven",
-    "weight": 0.1468,
+    "weight": 0.1519,
     "status": "STALE-IDLE",
-    "live_contrib_pct": -0.182,
+    "live_contrib_pct": -0.21,
     "days_active": 41,
-    "live_days": 97
+    "live_days": 98
   },
   {
     "leg": "trend_XAUUSD",
     "kind": "trend/momentum",
-    "weight": 0.2112,
+    "weight": 0.186,
     "status": "LIVE",
-    "live_contrib_pct": 0.005,
-    "days_active": 85,
-    "live_days": 97
+    "live_contrib_pct": -0.092,
+    "days_active": 86,
+    "live_days": 98
   },
   {
     "leg": "trend_MNQ",
     "kind": "trend/momentum",
-    "weight": 0.0638,
+    "weight": 0.0711,
     "status": "LIVE",
-    "live_contrib_pct": 0.295,
-    "days_active": 85,
-    "live_days": 97
+    "live_contrib_pct": 0.26,
+    "days_active": 83,
+    "live_days": 98
   },
   {
     "leg": "trend_ES",
     "kind": "trend/momentum",
-    "weight": 0.067,
+    "weight": 0.0666,
     "status": "LIVE",
-    "live_contrib_pct": 0.37,
-    "days_active": 85,
-    "live_days": 97
+    "live_contrib_pct": 0.379,
+    "days_active": 83,
+    "live_days": 98
   },
   {
     "leg": "trend_EURUSD",
     "kind": "trend/momentum",
-    "weight": 0.0126,
+    "weight": 0.0096,
     "status": "LIVE",
-    "live_contrib_pct": -0.012,
-    "days_active": 88,
-    "live_days": 97
+    "live_contrib_pct": -0.013,
+    "days_active": 89,
+    "live_days": 98
   },
   {
     "leg": "trend_USDJPY",
     "kind": "trend/momentum",
-    "weight": 0.0106,
+    "weight": 0.0102,
     "status": "LIVE",
-    "live_contrib_pct": -0.084,
-    "days_active": 88,
-    "live_days": 97
+    "live_contrib_pct": -0.086,
+    "days_active": 89,
+    "live_days": 98
   },
   {
     "leg": "trend_WTIUSD",
     "kind": "trend/momentum",
-    "weight": 0.024,
+    "weight": 0.0238,
     "status": "STALE-IDLE",
     "live_contrib_pct": 0.0,
     "days_active": 0,
-    "live_days": 97
+    "live_days": 98
   },
   {
     "leg": "trend_JPXJPY",
     "kind": "trend/momentum",
-    "weight": 0.0834,
+    "weight": 0.0858,
     "status": "LIVE",
-    "live_contrib_pct": 0.1,
-    "days_active": 85,
-    "live_days": 97
+    "live_contrib_pct": 0.048,
+    "days_active": 86,
+    "live_days": 98
   }
 ]
