@@ -1,55 +1,55 @@
 {
-  "as_of": "2026-10-12",
+  "as_of": "2026-10-13",
   "positions": [
     {
       "leg": "trend_XAUUSD",
-      "weight": 0.1842,
+      "weight": 0.1876,
       "direction": "SHORT",
       "lookback_days": 160
     },
     {
       "leg": "trend_MNQ",
-      "weight": 0.0697,
+      "weight": 0.0708,
       "direction": "LONG",
       "lookback_days": 160
     },
     {
       "leg": "trend_ES",
-      "weight": 0.0646,
+      "weight": 0.066,
       "direction": "LONG",
       "lookback_days": 240
     },
     {
       "leg": "trend_EURUSD",
-      "weight": 0.0095,
+      "weight": 0.0098,
       "direction": "SHORT",
       "lookback_days": 160
     },
     {
       "leg": "trend_USDJPY",
-      "weight": 0.0101,
+      "weight": 0.0103,
       "direction": "SHORT",
       "lookback_days": 80
     },
     {
       "leg": "trend_JPXJPY",
-      "weight": 0.0848,
+      "weight": 0.0876,
       "direction": "LONG",
       "lookback_days": 240
     }
   ],
   "stale_excluded": {
-    "WTIUSD": 1046,
-    "xsec_ALL": 39,
-    "MNQ_pull_C": 219,
-    "COT_NQ_washout": 50
+    "WTIUSD": 1047,
+    "xsec_ALL": 40,
+    "MNQ_pull_C": 220,
+    "COT_NQ_washout": 51
   },
   "idle_weight": {
-    "trend_WTIUSD": 0.0237,
-    "xsec_ALL": 0.2012,
-    "MNQ_pull_C": 0.194,
-    "COT_NQ_washout": 0.1584
+    "trend_WTIUSD": 0.0236,
+    "xsec_ALL": 0.2014,
+    "MNQ_pull_C": 0.1934,
+    "COT_NQ_washout": 0.1497
   },
-  "idle_weight_total": 0.5773,
+  "idle_weight_total": 0.5681,
   "risk_events": 683
 }
