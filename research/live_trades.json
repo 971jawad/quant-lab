@@ -11,10 +11,10 @@
       "entry_price": 1.148,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 1.124,
-      "days_held": 26,
-      "gross_pct": 2.091,
-      "net_pct": 2.077,
+      "exit_price": 1.12147,
+      "days_held": 29,
+      "gross_pct": 2.311,
+      "net_pct": 2.297,
       "status": "OPEN"
     },
     {
@@ -67,10 +67,10 @@
       "entry_price": 157.76597,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 157.98797,
-      "days_held": 43,
-      "gross_pct": -0.141,
-      "net_pct": -0.157,
+      "exit_price": 158.57197,
+      "days_held": 46,
+      "gross_pct": -0.511,
+      "net_pct": -0.527,
       "status": "OPEN"
     },
     {
@@ -165,10 +165,10 @@
       "entry_price": 4175.995,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 4169.81341,
-      "days_held": 119,
-      "gross_pct": 0.148,
-      "net_pct": 0.137,
+      "exit_price": 4120.51307,
+      "days_held": 122,
+      "gross_pct": 1.329,
+      "net_pct": 1.318,
       "status": "OPEN"
     },
     {
@@ -207,10 +207,10 @@
       "entry_price": 25434.936,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 29257.23602,
-      "days_held": 185,
-      "gross_pct": 15.028,
-      "net_pct": 15.021,
+      "exit_price": 29499.37688,
+      "days_held": 188,
+      "gross_pct": 15.98,
+      "net_pct": 15.973,
       "status": "OPEN"
     },
     {
@@ -221,10 +221,10 @@
       "entry_price": 39638.999,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 65336.93515,
-      "days_held": 457,
-      "gross_pct": 64.83,
-      "net_pct": 64.779,
+      "exit_price": 64119.51639,
+      "days_held": 460,
+      "gross_pct": 61.759,
+      "net_pct": 61.708,
       "status": "OPEN"
     },
     {
@@ -235,10 +235,10 @@
       "entry_price": 5611.919,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 7673.66308,
-      "days_held": 533,
-      "gross_pct": 36.739,
-      "net_pct": 36.728,
+      "exit_price": 7705.79026,
+      "days_held": 536,
+      "gross_pct": 37.311,
+      "net_pct": 37.3,
       "status": "OPEN"
     }
   ],
