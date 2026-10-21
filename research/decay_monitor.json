@@ -1,13 +1,13 @@
 {
   "live_start": "2026-06-28",
-  "live_days": 107,
-  "live_return_pct": -1.016,
-  "live_sharpe": -0.498,
-  "null_median_return_pct": 4.663,
-  "null_p5_return_pct": -4.56,
-  "null_p95_return_pct": 15.412,
-  "live_return_percentile": 15.9,
-  "live_sharpe_percentile": 13.6,
+  "live_days": 108,
+  "live_return_pct": -1.062,
+  "live_sharpe": -0.532,
+  "null_median_return_pct": 4.652,
+  "null_p5_return_pct": -4.47,
+  "null_p95_return_pct": 15.505,
+  "live_return_percentile": 15.7,
+  "live_sharpe_percentile": 13.0,
   "verdict": "WATCH",
   "note": "soft patch, still inside the range an intact edge routinely produces"
 }
