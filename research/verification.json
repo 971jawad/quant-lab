@@ -32,18 +32,18 @@
       "vol_pct": null
     },
     "live": {
-      "days": 115,
+      "days": 116,
       "start": "2026-06-28",
-      "end": "2026-10-28",
-      "total_return_pct": -1.02,
-      "max_dd_pct": -6.0,
-      "best_day_pct": 0.81,
-      "worst_day_pct": -0.9,
-      "pct_days_positive": 47.0,
-      "sharpe": -0.48,
-      "sortino": -0.59,
-      "calmar": -0.37,
-      "cagr_pct": -2.21,
+      "end": "2026-10-29",
+      "total_return_pct": -1.06,
+      "max_dd_pct": -6.01,
+      "best_day_pct": 0.92,
+      "worst_day_pct": -0.76,
+      "pct_days_positive": 44.0,
+      "sharpe": -0.51,
+      "sortino": -0.67,
+      "calmar": -0.38,
+      "cagr_pct": -2.29,
       "vol_pct": null
     }
   },
@@ -86,7 +86,7 @@
     {
       "check": "weights account for 1.0 (published + idle)",
       "status": "PASS",
-      "detail": "published 0.3779 + idle 0.6220 = 0.9999  [idle: trend_WTIUSD, xsec_ALL, MNQ_pull_C, COT_NQ_washout]"
+      "detail": "published 0.3799 + idle 0.6201 = 1.0000  [idle: trend_WTIUSD, xsec_ALL, MNQ_pull_C, COT_NQ_washout]"
     },
     {
       "check": "live feed healthy",
