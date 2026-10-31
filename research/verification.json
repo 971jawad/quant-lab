@@ -32,18 +32,18 @@
       "vol_pct": null
     },
     "live": {
-      "days": 116,
+      "days": 117,
       "start": "2026-06-28",
-      "end": "2026-10-29",
+      "end": "2026-10-30",
       "total_return_pct": -1.06,
       "max_dd_pct": -6.01,
       "best_day_pct": 0.92,
       "worst_day_pct": -0.76,
-      "pct_days_positive": 44.0,
+      "pct_days_positive": 43.6,
       "sharpe": -0.51,
       "sortino": -0.67,
       "calmar": -0.38,
-      "cagr_pct": -2.29,
+      "cagr_pct": -2.27,
       "vol_pct": null
     }
   },
@@ -86,7 +86,7 @@
     {
       "check": "weights account for 1.0 (published + idle)",
       "status": "PASS",
-      "detail": "published 0.3799 + idle 0.6201 = 1.0000  [idle: trend_WTIUSD, xsec_ALL, MNQ_pull_C, COT_NQ_washout]"
+      "detail": "published 0.3924 + idle 0.6077 = 1.0001  [idle: trend_WTIUSD, xsec_ALL, MNQ_pull_C, COT_NQ_washout]"
     },
     {
       "check": "live feed healthy",

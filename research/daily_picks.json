@@ -5,8 +5,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 4006.27551,
-      "as_of": "2026-10-29",
+      "last_close": 3869.23041,
+      "as_of": "2026-10-30",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -15,8 +15,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 28744.33538,
-      "as_of": "2026-10-29",
+      "last_close": 28412.85375,
+      "as_of": "2026-10-30",
       "mode": "LONG-ONLY",
       "lookback_days": 160
     },
@@ -25,8 +25,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 7642.5321,
-      "as_of": "2026-10-29",
+      "last_close": 7585.50013,
+      "as_of": "2026-10-30",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     },
@@ -35,8 +35,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 1.11959,
-      "as_of": "2026-10-29",
+      "last_close": 1.11621,
+      "as_of": "2026-10-30",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -45,8 +45,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 157.478,
-      "as_of": "2026-10-29",
+      "last_close": 157.519,
+      "as_of": "2026-10-30",
       "mode": "long/short",
       "lookback_days": 80
     },
@@ -55,8 +55,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 62828.58096,
-      "as_of": "2026-10-29",
+      "last_close": 63069.76361,
+      "as_of": "2026-10-30",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     }
