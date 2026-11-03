@@ -32,18 +32,18 @@
       "vol_pct": null
     },
     "live": {
-      "days": 117,
+      "days": 119,
       "start": "2026-06-28",
-      "end": "2026-10-30",
-      "total_return_pct": -1.06,
-      "max_dd_pct": -6.01,
-      "best_day_pct": 0.92,
-      "worst_day_pct": -0.76,
-      "pct_days_positive": 43.6,
-      "sharpe": -0.51,
-      "sortino": -0.67,
-      "calmar": -0.38,
-      "cagr_pct": -2.27,
+      "end": "2026-11-02",
+      "total_return_pct": -1.02,
+      "max_dd_pct": -6.0,
+      "best_day_pct": 0.81,
+      "worst_day_pct": -0.9,
+      "pct_days_positive": 45.4,
+      "sharpe": -0.47,
+      "sortino": -0.57,
+      "calmar": -0.36,
+      "cagr_pct": -2.14,
       "vol_pct": null
     }
   },
@@ -81,12 +81,12 @@
     {
       "check": "flip levels consistent with direction",
       "status": "PASS",
-      "detail": "0 inconsistent"
+      "detail": "0 inconsistent; 1 pending flip ['USDJPY']"
     },
     {
       "check": "weights account for 1.0 (published + idle)",
       "status": "PASS",
-      "detail": "published 0.3924 + idle 0.6077 = 1.0001  [idle: trend_WTIUSD, xsec_ALL, MNQ_pull_C, COT_NQ_washout]"
+      "detail": "published 0.3816 + idle 0.6185 = 1.0001  [idle: trend_WTIUSD, xsec_ALL, MNQ_pull_C, COT_NQ_washout]"
     },
     {
       "check": "live feed healthy",
@@ -96,7 +96,7 @@
     {
       "check": "feed correlations above guard",
       "status": "PASS",
-      "detail": "min corr 0.799"
+      "detail": "min corr 0.798"
     },
     {
       "check": "daily series matches 15m archive",
