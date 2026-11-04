@@ -4,6 +4,20 @@
   "exec_convention": "signal from close of day D; order fills at the open of D+1 (00:00 ET)",
   "trades": [
     {
+      "market": "USDJPY",
+      "direction": "LONG",
+      "entry_date": "2026-11-03",
+      "entry_time": "00:00 ET",
+      "entry_price": 157.89097,
+      "exit_date": null,
+      "exit_time": null,
+      "exit_price": 157.68297,
+      "days_held": 0,
+      "gross_pct": -0.132,
+      "net_pct": -0.148,
+      "status": "OPEN"
+    },
+    {
       "market": "EURUSD",
       "direction": "SHORT",
       "entry_date": "2026-09-20",
@@ -11,10 +25,10 @@
       "entry_price": 1.148,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 1.11859,
-      "days_held": 43,
-      "gross_pct": 2.562,
-      "net_pct": 2.548,
+      "exit_price": 1.12539,
+      "days_held": 44,
+      "gross_pct": 1.97,
+      "net_pct": 1.956,
       "status": "OPEN"
     },
     {
@@ -65,13 +79,13 @@
       "entry_date": "2026-09-03",
       "entry_time": "00:00 ET",
       "entry_price": 157.76597,
-      "exit_date": null,
-      "exit_time": null,
-      "exit_price": 157.88596,
-      "days_held": 60,
-      "gross_pct": -0.076,
-      "net_pct": -0.092,
-      "status": "OPEN"
+      "exit_date": "2026-11-03",
+      "exit_time": "00:00 ET",
+      "exit_price": 157.89097,
+      "days_held": 61,
+      "gross_pct": -0.079,
+      "net_pct": -0.095,
+      "status": "CLOSED"
     },
     {
       "market": "USDJPY",
@@ -165,10 +179,10 @@
       "entry_price": 4175.995,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 3920.02471,
-      "days_held": 136,
-      "gross_pct": 6.13,
-      "net_pct": 6.119,
+      "exit_price": 3930.28321,
+      "days_held": 137,
+      "gross_pct": 5.884,
+      "net_pct": 5.873,
       "status": "OPEN"
     },
     {
@@ -207,10 +221,10 @@
       "entry_price": 25434.936,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 28065.94279,
-      "days_held": 202,
-      "gross_pct": 10.344,
-      "net_pct": 10.338,
+      "exit_price": 27606.29821,
+      "days_held": 203,
+      "gross_pct": 8.537,
+      "net_pct": 8.531,
       "status": "OPEN"
     },
     {
@@ -221,10 +235,10 @@
       "entry_price": 39638.999,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 63052.00932,
-      "days_held": 474,
-      "gross_pct": 59.066,
-      "net_pct": 59.015,
+      "exit_price": 60823.2989,
+      "days_held": 475,
+      "gross_pct": 53.443,
+      "net_pct": 53.393,
       "status": "OPEN"
     },
     {
@@ -235,10 +249,10 @@
       "entry_price": 5611.919,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 7541.16961,
-      "days_held": 550,
-      "gross_pct": 34.378,
-      "net_pct": 34.367,
+      "exit_price": 7480.90003,
+      "days_held": 551,
+      "gross_pct": 33.304,
+      "net_pct": 33.293,
       "status": "OPEN"
     }
   ],
@@ -292,6 +306,6 @@
       "breached_5pct_trailing": true
     }
   ],
-  "n_closed": 11,
+  "n_closed": 12,
   "n_open": 6
 }

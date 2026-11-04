@@ -5,8 +5,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 3920.02471,
-      "as_of": "2026-11-02",
+      "last_close": 3930.28321,
+      "as_of": "2026-11-03",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -15,8 +15,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 28065.94279,
-      "as_of": "2026-11-02",
+      "last_close": 27606.29821,
+      "as_of": "2026-11-03",
       "mode": "LONG-ONLY",
       "lookback_days": 160
     },
@@ -25,8 +25,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 7541.16961,
-      "as_of": "2026-11-02",
+      "last_close": 7480.90003,
+      "as_of": "2026-11-03",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     },
@@ -35,18 +35,18 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 1.11859,
-      "as_of": "2026-11-02",
+      "last_close": 1.12539,
+      "as_of": "2026-11-03",
       "mode": "long/short",
       "lookback_days": 160
     },
     {
       "market": "USDJPY",
-      "held_now": "SHORT",
+      "held_now": "LONG",
       "signal_on_last_close": "LONG",
-      "action_next_open": "FLIP TO LONG",
-      "last_close": 157.88596,
-      "as_of": "2026-11-02",
+      "action_next_open": "HOLD",
+      "last_close": 157.68297,
+      "as_of": "2026-11-03",
       "mode": "long/short",
       "lookback_days": 80
     },
@@ -55,13 +55,28 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 63052.00932,
-      "as_of": "2026-11-02",
+      "last_close": 60823.2989,
+      "as_of": "2026-11-03",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     }
   ],
   "log": [
+    {
+      "signal_date": "2026-11-02",
+      "execute_date": "2026-11-03",
+      "market": "USDJPY",
+      "action": "FLIP TO LONG",
+      "direction": "LONG",
+      "exec_price": 157.89097,
+      "closed_dir": "SHORT",
+      "entry_date": "2026-09-03",
+      "entry_price": 157.76597,
+      "exit_price": 157.89097,
+      "days_held": 61,
+      "gross_pct": -0.079,
+      "net_pct": -0.095
+    },
     {
       "signal_date": "2026-09-18",
       "execute_date": "2026-09-20",
@@ -627,5 +642,5 @@
       "net_pct": 3.686
     }
   ],
-  "n_pending": 1
+  "n_pending": 0
 }
