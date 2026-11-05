@@ -1,13 +1,13 @@
 {
-  "checked_utc": "2026-11-04T02:55:54.530514+00:00",
+  "checked_utc": "2026-11-05T03:14:15.219323+00:00",
   "min_corr_guard": 0.7,
   "markets": [
     {
       "market": "XAUUSD",
       "status": "extended",
-      "added": 108,
+      "added": 106,
       "hist_end": "2026-06-26",
-      "live_end": "2026-11-03",
+      "live_end": "2026-11-04",
       "corr": 0.964,
       "level_diff_pct": 0.483,
       "level_adjustment": 0.99597,
@@ -16,9 +16,9 @@
     {
       "market": "MNQ",
       "status": "extended",
-      "added": 108,
+      "added": 106,
       "hist_end": "2026-06-26",
-      "live_end": "2026-11-03",
+      "live_end": "2026-11-04",
       "corr": 0.984,
       "level_diff_pct": 0.514,
       "level_adjustment": 0.99544,
@@ -27,9 +27,9 @@
     {
       "market": "ES",
       "status": "extended",
-      "added": 108,
+      "added": 106,
       "hist_end": "2026-06-26",
-      "live_end": "2026-11-03",
+      "live_end": "2026-11-04",
       "corr": 0.988,
       "level_diff_pct": 0.44,
       "level_adjustment": 0.99619,
@@ -38,9 +38,9 @@
     {
       "market": "EURUSD",
       "status": "extended",
-      "added": 111,
+      "added": 109,
       "hist_end": "2026-06-26",
-      "live_end": "2026-11-03",
+      "live_end": "2026-11-04",
       "corr": 0.99,
       "level_diff_pct": 0.032,
       "level_adjustment": 0.99968,
@@ -49,12 +49,12 @@
     {
       "market": "USDJPY",
       "status": "extended",
-      "added": 57,
+      "added": 58,
       "hist_end": "2026-08-28",
-      "live_end": "2026-11-03",
+      "live_end": "2026-11-04",
       "corr": 0.982,
       "level_diff_pct": 0.009,
-      "level_adjustment": 1.00001,
+      "level_adjustment": 1.0,
       "overlap_source": "hourly->ET-day"
     },
     {
@@ -65,9 +65,9 @@
     {
       "market": "JPXJPY",
       "status": "extended",
-      "added": 53,
+      "added": 54,
       "hist_end": "2026-08-28",
-      "live_end": "2026-11-03",
+      "live_end": "2026-11-04",
       "corr": 0.799,
       "level_diff_pct": 0.091,
       "level_adjustment": 0.9998,
