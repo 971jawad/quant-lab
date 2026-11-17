@@ -5,8 +5,8 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 3871.91972,
-      "as_of": "2026-11-13",
+      "last_close": 3859.76873,
+      "as_of": "2026-11-16",
       "mode": "long/short",
       "lookback_days": 160
     },
@@ -15,8 +15,8 @@
       "held_now": "FLAT",
       "signal_on_last_close": "FLAT",
       "action_next_open": "HOLD",
-      "last_close": 27799.91136,
-      "as_of": "2026-11-13",
+      "last_close": 27268.34621,
+      "as_of": "2026-11-16",
       "mode": "LONG-ONLY",
       "lookback_days": 160
     },
@@ -25,8 +25,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 7532.20389,
-      "as_of": "2026-11-13",
+      "last_close": 7413.40805,
+      "as_of": "2026-11-16",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     },
@@ -35,18 +35,18 @@
       "held_now": "SHORT",
       "signal_on_last_close": "SHORT",
       "action_next_open": "HOLD",
-      "last_close": 1.10243,
-      "as_of": "2026-11-13",
+      "last_close": 1.10036,
+      "as_of": "2026-11-16",
       "mode": "long/short",
       "lookback_days": 160
     },
     {
       "market": "USDJPY",
       "held_now": "LONG",
-      "signal_on_last_close": "LONG",
-      "action_next_open": "HOLD",
-      "last_close": 159.68698,
-      "as_of": "2026-11-13",
+      "signal_on_last_close": "SHORT",
+      "action_next_open": "FLIP TO SHORT",
+      "last_close": 159.25098,
+      "as_of": "2026-11-16",
       "mode": "long/short",
       "lookback_days": 80
     },
@@ -55,8 +55,8 @@
       "held_now": "LONG",
       "signal_on_last_close": "LONG",
       "action_next_open": "HOLD",
-      "last_close": 61143.96578,
-      "as_of": "2026-11-13",
+      "last_close": 59053.46233,
+      "as_of": "2026-11-16",
       "mode": "LONG-ONLY",
       "lookback_days": 240
     }
@@ -693,22 +693,7 @@
       "days_held": 15,
       "gross_pct": 0.743,
       "net_pct": 0.73
-    },
-    {
-      "signal_date": "2026-01-02",
-      "execute_date": "2026-01-04",
-      "market": "EURUSD",
-      "action": "FLIP TO SHORT",
-      "direction": "SHORT",
-      "exec_price": 1.17203,
-      "closed_dir": "LONG",
-      "entry_date": "2025-04-11",
-      "entry_price": 1.13021,
-      "exit_price": 1.17203,
-      "days_held": 268,
-      "gross_pct": 3.7,
-      "net_pct": 3.686
     }
   ],
-  "n_pending": 0
+  "n_pending": 1
 }

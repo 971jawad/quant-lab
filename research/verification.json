@@ -32,18 +32,18 @@
       "vol_pct": null
     },
     "live": {
-      "days": 129,
+      "days": 131,
       "start": "2026-06-28",
-      "end": "2026-11-13",
+      "end": "2026-11-16",
       "total_return_pct": -1.02,
       "max_dd_pct": -6.0,
       "best_day_pct": 0.81,
       "worst_day_pct": -0.9,
-      "pct_days_positive": 41.9,
+      "pct_days_positive": 41.2,
       "sharpe": -0.45,
-      "sortino": -0.53,
-      "calmar": -0.33,
-      "cagr_pct": -1.98,
+      "sortino": -0.52,
+      "calmar": -0.32,
+      "cagr_pct": -1.95,
       "vol_pct": null
     }
   },
@@ -81,12 +81,12 @@
     {
       "check": "flip levels consistent with direction",
       "status": "PASS",
-      "detail": "0 inconsistent"
+      "detail": "0 inconsistent; 1 pending flip ['USDJPY']"
     },
     {
       "check": "weights account for 1.0 (published + idle)",
       "status": "PASS",
-      "detail": "published 0.3816 + idle 0.6185 = 1.0001  [idle: trend_WTIUSD, xsec_ALL, MNQ_pull_C, COT_NQ_washout]"
+      "detail": "published 0.3757 + idle 0.6364 = 1.0121  [idle: trend_WTIUSD, xsec_ALL, MNQ_pull_C, COT_NQ_washout, trend_USDJPY]"
     },
     {
       "check": "live feed healthy",

@@ -25,10 +25,10 @@
       "entry_price": 157.95896,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 159.68698,
-      "days_held": 3,
-      "gross_pct": 1.094,
-      "net_pct": 1.078,
+      "exit_price": 159.25098,
+      "days_held": 6,
+      "gross_pct": 0.818,
+      "net_pct": 0.802,
       "status": "OPEN"
     },
     {
@@ -67,10 +67,10 @@
       "entry_price": 1.148,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 1.10243,
-      "days_held": 54,
-      "gross_pct": 3.97,
-      "net_pct": 3.956,
+      "exit_price": 1.10036,
+      "days_held": 57,
+      "gross_pct": 4.15,
+      "net_pct": 4.136,
       "status": "OPEN"
     },
     {
@@ -221,10 +221,10 @@
       "entry_price": 4175.995,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 3871.91972,
-      "days_held": 147,
-      "gross_pct": 7.282,
-      "net_pct": 7.271,
+      "exit_price": 3859.76873,
+      "days_held": 150,
+      "gross_pct": 7.572,
+      "net_pct": 7.562,
       "status": "OPEN"
     },
     {
@@ -277,10 +277,10 @@
       "entry_price": 39638.999,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 61143.96578,
-      "days_held": 485,
-      "gross_pct": 54.252,
-      "net_pct": 54.202,
+      "exit_price": 59053.46233,
+      "days_held": 488,
+      "gross_pct": 48.978,
+      "net_pct": 48.928,
       "status": "OPEN"
     },
     {
@@ -291,10 +291,10 @@
       "entry_price": 5611.919,
       "exit_date": null,
       "exit_time": null,
-      "exit_price": 7532.20389,
-      "days_held": 561,
-      "gross_pct": 34.218,
-      "net_pct": 34.207,
+      "exit_price": 7413.40805,
+      "days_held": 564,
+      "gross_pct": 32.101,
+      "net_pct": 32.09,
       "status": "OPEN"
     }
   ],
